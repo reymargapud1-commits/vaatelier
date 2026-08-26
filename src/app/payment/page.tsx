@@ -30,7 +30,7 @@ export default function PaymentPage() {
       const res = await fetch("/api/payment/create-checkout", { method: "POST" });
       const data = await res.json();
       if (!res.ok) {
-        setError(data.error || "Hindi ma-start ang payment. Please try again.");
+        setError(data.error || "Couldn't start the payment. Please try again.");
         setLoading(false);
         return;
       }
@@ -57,8 +57,8 @@ export default function PaymentPage() {
             One Step Away From Full Access
           </h1>
           <p className="mb-6 text-gray-600">
-            Bayaran muna ang training program para ma-unlock ang lahat ng video lessons, quizzes,
-            at Certificate of Completion. Isang beses lang ang bayad, lifetime access na.
+            Complete your payment to unlock every video lesson, quiz, and your Certificates of
+            Completion. It's a one-time payment for lifetime access.
           </p>
 
           <div className="mb-6 rounded-lg bg-brand-50 p-5">

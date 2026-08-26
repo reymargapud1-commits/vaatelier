@@ -83,7 +83,7 @@ function getTransport() {
 
 /**
  * Emails the coach whenever a student books their live training session, so
- * "iischedule niya yun sa calendar, para manotify sken" actually happens.
+ * it lands on the coach's calendar and they get notified automatically.
  * If SMTP_* env vars aren't configured, this silently no-ops - the booking
  * is still saved and always visible on the /admin/bookings page.
  */

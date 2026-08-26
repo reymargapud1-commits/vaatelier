@@ -115,8 +115,8 @@ export default function BookingForm() {
         </div>
         <h2 className="mb-2 text-xl font-bold text-gray-900">Finishing Your Booking</h2>
         <p className="mb-6 text-sm text-gray-600">
-          Sandali lang — kina-confirm pa ang bayad mo sa PayMongo. Kung na-redirect ka dito
-          pabalik, i-refresh lang ang page na ito.
+          Just a moment — we're confirming your payment with PayMongo. If you were redirected
+          back here, just refresh this page.
         </p>
         <button onClick={() => window.location.reload()} className="btn-secondary w-full">
           Refresh
@@ -137,27 +137,26 @@ export default function BookingForm() {
           1-on-1 Live Coaching Session with Coach Reymar
         </h2>
         <p className="mb-4 text-sm text-gray-600">
-          Hindi na ito required para makakuha ng certificate — kaya mo nang tapusin ang training
-          at makuha ang lahat ng certificates mo kahit hindi ka mag-book nito. Pero kung gusto
-          mong mapabilis ang paglapad ng career mo bilang VA, sulit ang isang session na ito:
+          This is no longer required to earn your certificate — you can finish the training and
+          get all your certificates without ever booking this. But if you want to speed up your
+          growth as a VA, this session is worth it:
         </p>
         <ul className="mb-5 space-y-2 text-sm text-gray-700">
           <li className="flex items-start gap-2">
             <span className="mt-0.5 text-brand-500">✓</span>
-            Personal na feedback sa resume, portfolio, at proposals mo — hindi generic advice
+            Personal feedback on your resume, portfolio, and proposals — not generic advice
           </li>
           <li className="flex items-start gap-2">
             <span className="mt-0.5 text-brand-500">✓</span>
-            Mock interview practice para hindi ka ma-panic sa totoong client interview
+            Mock interview practice so you're not caught off guard in a real client interview
           </li>
           <li className="flex items-start gap-2">
             <span className="mt-0.5 text-brand-500">✓</span>
-            Direktang tanungin ang mga totoong tanong mo — walang generic FAQ, ikaw at si Coach
-            Reymar lang
+            Ask your real questions directly — no generic FAQ, just you and Coach Reymar
           </li>
           <li className="flex items-start gap-2">
             <span className="mt-0.5 text-brand-500">✓</span>
-            2 full hours, sa oras na bagay sa schedule mo
+            2 full hours, at a time that fits your schedule
           </li>
         </ul>
         <div className="flex items-baseline gap-2 rounded-lg bg-white p-4 shadow-sm">
@@ -169,8 +168,8 @@ export default function BookingForm() {
       <div className="card">
         <h3 className="mb-1 text-lg font-bold text-gray-900">Book & Pay for Your Session</h3>
         <p className="mb-6 text-sm text-gray-600">
-          Pumili ng date at time, ma-redirect ka sa secure PayMongo checkout. Kapag na-confirm na
-          ang bayad, ma-notify na si Coach Reymar at i-schedule na ang session mo.
+          Pick a date and time, then you'll be redirected to secure PayMongo checkout. Once your
+          payment is confirmed, Coach Reymar is notified and your session is scheduled.
         </p>
         <BookingInnerForm
           date={date}
@@ -244,7 +243,7 @@ function BookingInnerForm({
           rows={3}
           value={note}
           onChange={(e) => setNote(e.target.value)}
-          placeholder="e.g. tulong sa resume, mock interview, questions about pricing..."
+          placeholder="e.g. help with my resume, a mock interview, questions about pricing..."
         />
       </div>
       {error && <p className="text-sm text-red-600">{error}</p>}

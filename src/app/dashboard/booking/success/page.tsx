@@ -43,7 +43,7 @@ export default function BookingPaymentSuccessPage() {
             <>
               <div className="mx-auto mb-4 h-10 w-10 animate-spin rounded-full border-4 border-brand-200 border-t-brand-600" />
               <h1 className="mb-2 text-xl font-bold text-gray-900">Confirming your payment...</h1>
-              <p className="text-sm text-gray-600">Sandali lang, kina-confirm pa ang bayad mo.</p>
+              <p className="text-sm text-gray-600">Just a moment, we're confirming your payment.</p>
             </>
           )}
 
@@ -54,7 +54,7 @@ export default function BookingPaymentSuccessPage() {
               </div>
               <h1 className="mb-2 text-2xl font-bold text-gray-900">Session Booked!</h1>
               <p className="mb-6 text-gray-600">
-                Salamat! Na-notify na si Coach Reymar. Makikita mo ang schedule mo sa page na ito.
+                Thank you! Coach Reymar has been notified. You'll see your schedule right here on this page.
               </p>
               <Link href="/dashboard/booking" className="btn-primary w-full">
                 View My Session
@@ -69,8 +69,8 @@ export default function BookingPaymentSuccessPage() {
               </div>
               <h1 className="mb-2 text-2xl font-bold text-gray-900">Still Processing</h1>
               <p className="mb-6 text-gray-600">
-                Minsan a few minutes bago ma-confirm ng PayMongo ang payment. Check ulit sa page
-                ng booking mo shortly.
+                It can sometimes take a few minutes for PayMongo to confirm the payment. Check
+                your booking page again shortly.
               </p>
               <Link href="/dashboard/booking" className="btn-secondary w-full">
                 Check My Booking

@@ -46,7 +46,7 @@ export default function PaymentSuccessPage() {
             <>
               <div className="mx-auto mb-4 h-10 w-10 animate-spin rounded-full border-4 border-brand-200 border-t-brand-600" />
               <h1 className="mb-2 text-xl font-bold text-gray-900">Confirming your payment...</h1>
-              <p className="text-sm text-gray-600">Sandali lang, kina-confirm pa ang bayad mo.</p>
+              <p className="text-sm text-gray-600">Just a moment, we're confirming your payment.</p>
             </>
           )}
 
@@ -57,7 +57,7 @@ export default function PaymentSuccessPage() {
               </div>
               <h1 className="mb-2 text-2xl font-bold text-gray-900">Payment Successful!</h1>
               <p className="mb-6 text-gray-600">
-                Buksan mo na ang lahat ng video lessons, quizzes, at simulan ang training mo.
+                All video lessons and quizzes are now unlocked — start your training whenever you're ready.
               </p>
               <Link href="/dashboard" className="btn-primary w-full">
                 Go to My Dashboard
@@ -72,8 +72,8 @@ export default function PaymentSuccessPage() {
               </div>
               <h1 className="mb-2 text-2xl font-bold text-gray-900">Still Processing</h1>
               <p className="mb-6 text-gray-600">
-                Minsan a few minutes bago ma-confirm ng PayMongo ang payment. Refresh this page
-                shortly, or check your dashboard again in a bit.
+                It can sometimes take a few minutes for PayMongo to confirm the payment. Refresh
+                this page shortly, or check your dashboard again in a bit.
               </p>
               <Link href="/dashboard" className="btn-secondary w-full">
                 Check My Dashboard

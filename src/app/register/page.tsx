@@ -51,7 +51,7 @@ export default function RegisterPage() {
         <div className="card">
           <h1 className="mb-1 text-2xl font-bold text-gray-900">Create your account</h1>
           <p className="mb-6 text-sm text-gray-600">
-            Sign up para simulan ang The VA Atelier training program.
+            Sign up to get started with The VA Atelier training program.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -94,7 +94,7 @@ export default function RegisterPage() {
           </form>
 
           <p className="mt-6 text-center text-sm text-gray-600">
-            May account ka na?{" "}
+            Already have an account?{" "}
             <Link href="/login" className="font-semibold text-brand-700 hover:underline">
               Log in
             </Link>

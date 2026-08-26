@@ -26,7 +26,7 @@ export default function LoginPage() {
 
     setLoading(false);
     if (res?.error) {
-      setError("Mali ang email o password. Please try again.");
+      setError("Incorrect email or password. Please try again.");
       return;
     }
     router.push("/dashboard");
@@ -69,7 +69,7 @@ export default function LoginPage() {
           </form>
 
           <p className="mt-6 text-center text-sm text-gray-600">
-            Wala pang account?{" "}
+            Don't have an account yet?{" "}
             <Link href="/register" className="font-semibold text-brand-700 hover:underline">
               Create one here
             </Link>

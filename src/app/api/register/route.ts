@@ -10,7 +10,7 @@ export async function POST(req: Request) {
     const { name, email, password } = await req.json();
 
     if (!name || !email || !password) {
-      return NextResponse.json({ error: "Kailangan ng name, email, at password." }, { status: 400 });
+      return NextResponse.json({ error: "Name, email, and password are required." }, { status: 400 });
     }
     if (password.length < 8) {
       return NextResponse.json(
@@ -23,7 +23,7 @@ export async function POST(req: Request) {
     const [existing] = await db.select().from(users).where(eq(users.email, normalizedEmail)).limit(1);
     if (existing) {
       return NextResponse.json(
-        { error: "May account na gamit ang email na ito. Try logging in instead." },
+        { error: "An account already uses this email. Try logging in instead." },
         { status: 409 }
       );
     }

@@ -186,22 +186,22 @@ export default function LandingPage() {
                 Book a 1-on-1 Session With Coach Reymar
               </h2>
               <p className="mb-5 text-gray-600">
-                Hindi ito required — makukuha mo pa rin lahat ng 4 certificates kahit hindi ka
-                mag-book. Pero kung gusto mong mapabilis ang landing ng first client mo, sulit ang
-                dalawang oras na ito:
+                It's not required — you'll still earn all 4 certificates even if you never book a
+                session. But if you want to fast-track landing your first client, these two hours
+                are worth it:
               </p>
               <ul className="mb-6 space-y-2 text-sm text-gray-700">
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 text-brand-500">✓</span>
-                  Personal feedback sa resume, portfolio, at proposals — hindi generic advice
+                  Personal feedback on your resume, portfolio, and proposals — not generic advice
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 text-brand-500">✓</span>
-                  Mock interview practice para handa ka sa totoong client interview
+                  Mock interview practice so you're ready for the real thing
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 text-brand-500">✓</span>
-                  Direktang tanungin ang mga totoong tanong mo kay Coach Reymar mismo
+                  Ask Coach Reymar your real questions directly — no generic FAQ
                 </li>
               </ul>
               <div className="flex items-baseline gap-2">

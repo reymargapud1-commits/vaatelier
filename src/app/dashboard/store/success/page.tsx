@@ -43,7 +43,7 @@ export default function StorePaymentSuccessPage() {
             <>
               <div className="mx-auto mb-4 h-10 w-10 animate-spin rounded-full border-4 border-brand-200 border-t-brand-600" />
               <h1 className="mb-2 text-xl font-bold text-gray-900">Confirming your payment...</h1>
-              <p className="text-sm text-gray-600">Sandali lang, kina-confirm pa ang bayad mo.</p>
+              <p className="text-sm text-gray-600">Just a moment, we're confirming your payment.</p>
             </>
           )}
 
@@ -54,8 +54,8 @@ export default function StorePaymentSuccessPage() {
               </div>
               <h1 className="mb-2 text-2xl font-bold text-gray-900">Order Placed!</h1>
               <p className="mb-6 text-gray-600">
-                Salamat sa order! Gagawin na ni Coach Reymar ang hiningi mong document — babantayan
-                mo na lang ang email mo.
+                Thank you for your order! Coach Reymar will get started on your document — just
+                keep an eye on your email.
               </p>
               <Link href="/dashboard/store" className="btn-primary w-full">
                 Back to Store
@@ -70,7 +70,8 @@ export default function StorePaymentSuccessPage() {
               </div>
               <h1 className="mb-2 text-2xl font-bold text-gray-900">Still Processing</h1>
               <p className="mb-6 text-gray-600">
-                Minsan a few minutes bago ma-confirm ng PayMongo ang payment. Check ulit shortly.
+                It can sometimes take a few minutes for PayMongo to confirm the payment. Check
+                again shortly.
               </p>
               <Link href="/dashboard/store" className="btn-secondary w-full">
                 Back to Store
