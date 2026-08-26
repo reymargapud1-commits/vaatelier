@@ -1,0 +1,82 @@
+{
+  "quizzes": [
+    {
+      "id": "quiz-m1",
+      "moduleId": "m1",
+      "title": "Module 1 Quiz: Starting Out as a VA",
+      "passingScore": 70,
+      "questions": [
+        { "id": "m1-q1", "text": "What is a Virtual Assistant (VA)?", "choices": ["A remote professional who provides support to clients online", "An in-office secretary only", "A type of accounting software", "A social media influencer"], "correctIndex": 0 },
+        { "id": "m1-q2", "text": "Why do businesses hire VAs?", "choices": ["To increase office rent costs", "To save time and money and access global talent", "Because it is required by law", "To replace their entire management team"], "correctIndex": 1 },
+        { "id": "m1-q3", "text": "Which of these is NOT a common VA specialization?", "choices": ["Social Media Management", "Bookkeeping", "Customer Service", "Deep-sea diving"], "correctIndex": 3 },
+        { "id": "m1-q4", "text": "What mindset trait do clients value most in a VA?", "choices": ["Waiting to be told every single detail", "Being proactive and solution-focused", "Ignoring deadlines", "Avoiding communication"], "correctIndex": 1 },
+        { "id": "m1-q5", "text": "Why is a backup power or internet plan important for a VA?", "choices": ["It is not important at all", "To ensure reliability despite outages common in the Philippines", "It is only needed for gamers", "Clients never expect availability"], "correctIndex": 1 }
+      ]
+    },
+    {
+      "id": "quiz-m2",
+      "moduleId": "m2",
+      "title": "Module 2 Quiz: Essential VA Tools",
+      "passingScore": 70,
+      "questions": [
+        { "id": "m2-q1", "text": "Which tool is best known for simple visual task boards?", "choices": ["Trello", "QuickBooks", "Zendesk", "Canva"], "correctIndex": 0 },
+        { "id": "m2-q2", "text": "What is Canva primarily used for?", "choices": ["Bookkeeping", "Design and graphics", "Time tracking", "Email hosting"], "correctIndex": 1 },
+        { "id": "m2-q3", "text": "Which tool is commonly used to track hourly work for clients?", "choices": ["Toggl Track", "Grammarly", "Google Slides", "CapCut"], "correctIndex": 0 },
+        { "id": "m2-q4", "text": "Which platform is part of Google Workspace?", "choices": ["Slack", "Google Docs", "Zendesk", "Hubstaff"], "correctIndex": 1 },
+        { "id": "m2-q5", "text": "Why should client files be organized in Drive or Dropbox?", "choices": ["It looks nice but has no real benefit", "For security, easy access, and professionalism", "It is required by every government", "To make files harder to find"], "correctIndex": 1 }
+      ]
+    },
+    {
+      "id": "quiz-m3",
+      "moduleId": "m3",
+      "title": "Module 3 Quiz: Core VA Skills",
+      "passingScore": 70,
+      "questions": [
+        { "id": "m3-q1", "text": "What does the 'Inbox Zero' approach help a VA do?", "choices": ["Delete every email immediately without reading", "Organize and act on emails efficiently", "Ignore all emails from clients", "Send more spam emails"], "correctIndex": 1 },
+        { "id": "m3-q2", "text": "What should a Social Media VA do with negative comments?", "choices": ["Delete the client's entire account", "Ignore them completely", "Flag them to the client and respond professionally", "Argue with the customer publicly"], "correctIndex": 2 },
+        { "id": "m3-q3", "text": "In customer support, what should you do with a complex issue you can't resolve?", "choices": ["Guess an answer and hope it's right", "Escalate it properly to the client", "Ignore the customer", "Close the ticket without a response"], "correctIndex": 1 },
+        { "id": "m3-q4", "text": "What is a key rule in bookkeeping VA work?", "choices": ["Mix personal and client funds for convenience", "Never mix client and personal funds", "Skip double-checking entries", "Guess the numbers if unsure"], "correctIndex": 1 },
+        { "id": "m3-q5", "text": "When doing research or content writing for a client, you should:", "choices": ["Use any source, even unreliable ones", "Use credible sources and match the client's tone", "Copy content directly from competitors", "Ignore the client's preferred style"], "correctIndex": 1 }
+      ]
+    },
+    {
+      "id": "quiz-m4",
+      "moduleId": "m4",
+      "title": "Module 4 Quiz: Building Your Portfolio",
+      "passingScore": 70,
+      "questions": [
+        { "id": "m4-q1", "text": "Why is a portfolio valuable even without paid job experience?", "choices": ["It has no real value", "It proves your skills and builds credibility", "It replaces the need for any skills", "Clients never look at portfolios"], "correctIndex": 1 },
+        { "id": "m4-q2", "text": "What is a 'mock project'?", "choices": ["A real paid client project", "A sample project created to demonstrate your skills", "A type of scam", "An illegal activity"], "correctIndex": 1 },
+        { "id": "m4-q3", "text": "How should mock projects be labeled?", "choices": ["As real client testimonials", "Clearly and honestly as samples", "They should not be labeled at all", "As guaranteed results"], "correctIndex": 1 },
+        { "id": "m4-q4", "text": "How many strong samples are recommended over ten weak ones?", "choices": ["Zero", "Three to five", "Fifty", "One hundred"], "correctIndex": 1 },
+        { "id": "m4-q5", "text": "What are good free tools for building a simple portfolio page?", "choices": ["Canva, Google Sites, or Carrd", "Only expensive custom-built websites", "None exist for free", "Only printed paper portfolios"], "correctIndex": 0 }
+      ]
+    },
+    {
+      "id": "quiz-m5",
+      "moduleId": "m5",
+      "title": "Module 5 Quiz: Resume and Applications",
+      "passingScore": 70,
+      "questions": [
+        { "id": "m5-q1", "text": "What should a VA resume bullet point focus on?", "choices": ["Vague statements with no detail", "Results and value delivered, with numbers when possible", "Only job titles", "Personal hobbies unrelated to work"], "correctIndex": 1 },
+        { "id": "m5-q2", "text": "Which platforms are commonly used by Filipino VAs to find work?", "choices": ["OnlineJobs.ph and Upwork", "Only local newspapers", "Random unrelated apps", "None, VAs cannot find jobs online"], "correctIndex": 0 },
+        { "id": "m5-q3", "text": "What makes a strong proposal or cover letter?", "choices": ["A generic copy-paste message sent to everyone", "Personalization referencing the specific job post", "Extremely long, unfocused paragraphs", "No mention of relevant skills"], "correctIndex": 1 },
+        { "id": "m5-q4", "text": "What should you do after a client interview?", "choices": ["Never contact the client again", "Send a short, genuine thank-you message", "Demand an answer immediately", "Ask for payment before being hired"], "correctIndex": 1 },
+        { "id": "m5-q5", "text": "A good freelance profile headline should be:", "choices": ["Vague, like 'Hardworking VA'", "Specific and benefit-driven for your ideal client", "Left blank", "Written in a language the client doesn't understand"], "correctIndex": 1 }
+      ]
+    },
+    {
+      "id": "quiz-m6",
+      "moduleId": "m6",
+      "title": "Module 6 Quiz: Landing Your First Client",
+      "passingScore": 70,
+      "questions": [
+        { "id": "m6-q1", "text": "What should you NEVER do when applying for VA jobs?", "choices": ["Apply early to new postings", "Pay money to apply for a job", "Track your applications", "Use specific keywords"], "correctIndex": 1 },
+        { "id": "m6-q2", "text": "Which is a common VA pricing model?", "choices": ["Monthly retainer", "Random guessing", "Refusing to state a price", "Charging only in a foreign currency you don't understand"], "correctIndex": 0 },
+        { "id": "m6-q3", "text": "How should you communicate your rate to a client?", "choices": ["Apologetically and unsure", "Clearly and confidently, with the value explained", "Never mention your rate at all", "Only through a third party"], "correctIndex": 1 },
+        { "id": "m6-q4", "text": "What is a good first step when onboarding a new client?", "choices": ["Guess what they want without asking", "Clarify tasks, tools, and expectations, then put it in writing", "Immediately increase your rate", "Avoid all communication in week one"], "correctIndex": 1 },
+        { "id": "m6-q5", "text": "What helps build a long-term VA career?", "choices": ["Refusing to learn new tools", "Asking for testimonials and continuously learning", "Never asking for client feedback", "Avoiding all specialization"], "correctIndex": 1 }
+      ]
+    }
+  ]
+}

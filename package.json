@@ -1,0 +1,41 @@
+{
+  "name": "va-training-portal",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
+    "seed": "tsx src/db/seed.ts"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^13.0.3",
+    "drizzle-orm": "^0.45.2",
+    "next": "14.2.35",
+    "next-auth": "^4.24.7",
+    "nodemailer": "^7.0.7",
+    "@pdf-lib/fontkit": "^1.1.1",
+    "pdf-lib": "^1.17.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/node": "^20.14.9",
+    "@types/nodemailer": "^6.4.19",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.19",
+    "dotenv": "^16.4.5",
+    "drizzle-kit": "^0.31.6",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.4",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.3"
+  }
+}

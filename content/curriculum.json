@@ -1,0 +1,616 @@
+{
+  "courseId": "va-foundations",
+  "courseTitle": "Virtual Assistant Foundations: From Zero to First Client",
+  "courseDescription": "A complete beginner-to-job-ready training program for aspiring Filipino Virtual Assistants. Covers VA fundamentals, must-know tools, core service skills, portfolio building, resume and proposal writing, and how to land your first paying client.",
+  "priceNote": "One-time payment unlocks lifetime access to all modules, video lessons, quizzes, and your Certificate of Completion.",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Module 1: Starting Out as a Virtual Assistant",
+      "lessons": [
+        {
+          "id": "m1-l1",
+          "title": "What Is a Virtual Assistant?",
+          "slides": [
+            {
+              "heading": "What Is a Virtual Assistant?",
+              "bullets": ["Welcome to your VA journey", "Remote support professional", "Works with clients worldwide"],
+              "narration": "Welcome to Module 1 of your Virtual Assistant training. In this lesson, we answer the most important question: what exactly is a Virtual Assistant? A Virtual Assistant, or VA, is a remote professional who provides administrative, technical, creative, or personal support to clients or businesses from a home-based office, using the internet and digital tools to get work done."
+            },
+            {
+              "heading": "Why Businesses Hire VAs",
+              "bullets": ["Save on office and equipment costs", "Access global talent 24/7", "Focus on growing their business"],
+              "narration": "Business owners hire Virtual Assistants because it saves them money on office space and equipment, gives them access to skilled talent anywhere in the world, and frees up their time so they can focus on growing their business instead of doing repetitive tasks themselves. This is why the demand for VAs has grown so quickly in the last few years."
+            },
+            {
+              "heading": "Who Can Become a VA?",
+              "bullets": ["No office job experience required", "Organization and willingness to learn matter most", "Filipinos are in high global demand"],
+              "narration": "You do not need a corporate background to become a Virtual Assistant. What matters most is being organized, reliable, a good communicator, and willing to keep learning. Filipino VAs are especially in demand worldwide because of strong English skills, a strong work ethic, and a natural talent for customer service."
+            },
+            {
+              "heading": "Key Takeaways",
+              "bullets": ["A VA works remotely to support clients", "Businesses hire VAs to save time and money", "Anyone with the right mindset can start"],
+              "narration": "To summarize this lesson: a Virtual Assistant works remotely to support businesses with tasks they need done. Companies hire VAs to save time, save money, and access skilled talent. And with the right mindset and training, which is exactly what this course will give you, anyone can start a career as a VA."
+            }
+          ]
+        },
+        {
+          "id": "m1-l2",
+          "title": "Types of VA Services You Can Offer",
+          "slides": [
+            {
+              "heading": "Types of VA Services",
+              "bullets": ["General Administrative VA", "Social Media VA", "E-commerce VA", "Bookkeeping VA"],
+              "narration": "There are many kinds of Virtual Assistant services you can specialize in. The most common are General Administrative VA work, Social Media Management, E-commerce support for stores like Shopify and Amazon, and Bookkeeping or basic accounting support."
+            },
+            {
+              "heading": "More VA Specializations",
+              "bullets": ["Customer Service and Chat Support", "Content Writing and Research", "Graphic Design VA", "Real Estate and Executive VA"],
+              "narration": "Beyond the basics, you can also specialize as a Customer Service or Chat Support VA, a Content Writing and Research VA, a Graphic Design VA using tools like Canva, or even a niche Executive Assistant or Real Estate VA. Each specialization has its own set of skills, which we will explore later in this course."
+            },
+            {
+              "heading": "Choosing Your Path",
+              "bullets": ["Start general, specialize later", "Pick skills you enjoy", "Specialists often earn more"],
+              "narration": "Many successful VAs start as generalists, offering a wide range of admin support, and then specialize once they discover what they enjoy and are good at. Specialists, such as a dedicated Social Media Manager or Bookkeeping VA, often earn more per hour than generalists because clients pay a premium for expertise."
+            },
+            {
+              "heading": "Key Takeaways",
+              "bullets": ["Many VA niches exist", "Start broad, then specialize", "Specializing can increase your rate"],
+              "narration": "Remember: there is no single definition of a VA job. You can choose from admin support, social media, e-commerce, bookkeeping, customer service, content writing, design, and more. Start broad if you are unsure, gain experience, and specialize in the niche that fits your strengths best."
+            }
+          ]
+        },
+        {
+          "id": "m1-l3",
+          "title": "Skills and Mindset of a Successful VA",
+          "slides": [
+            {
+              "heading": "Core Skills Every VA Needs",
+              "bullets": ["Clear written and verbal communication", "Time management", "Basic computer literacy", "Attention to detail"],
+              "narration": "Every successful Virtual Assistant, no matter their specialization, needs a core set of skills. These include clear written and verbal communication in English, strong time management so you meet deadlines, basic computer literacy, and sharp attention to detail so mistakes do not slip through."
+            },
+            {
+              "heading": "The Right Mindset",
+              "bullets": ["Be proactive, not just reactive", "Treat every client like a business partner", "Stay coachable and keep learning"],
+              "narration": "Skills alone are not enough. Clients love VAs who are proactive, meaning you spot problems and suggest solutions before being asked. Treat every client relationship like a business partnership, communicate professionally, and always stay coachable, since the tools and best practices in this industry keep evolving."
+            },
+            {
+              "heading": "Handling Time Zones and Independence",
+              "bullets": ["Most clients are in different time zones", "You must self-manage your schedule", "Set clear working hours and boundaries"],
+              "narration": "Because most of your clients will be in different time zones, such as the United States, Australia, or Europe, you need to be comfortable working independently without constant supervision. Set clear working hours, communicate your availability, and protect your boundaries so you can do great work without burning out."
+            },
+            {
+              "heading": "Key Takeaways",
+              "bullets": ["Master communication and time management", "Be proactive and professional", "Manage your own schedule confidently"],
+              "narration": "In summary, the skills and mindset that separate successful VAs from the rest are strong communication, excellent time management, a proactive attitude, and the confidence to manage your own schedule across time zones. Build these habits now, and clients will notice the difference."
+            }
+          ]
+        },
+        {
+          "id": "m1-l4",
+          "title": "Setting Up Your Home Office",
+          "slides": [
+            {
+              "heading": "Setting Up Your Home Office",
+              "bullets": ["Stable internet connection", "A dedicated, quiet work area", "Reliable computer or laptop"],
+              "narration": "Before you apply for your first VA job, you need a proper home office setup. The three essentials are a stable internet connection with a backup option, a dedicated and quiet work area free from distractions, and a reliable computer or laptop that can handle video calls and everyday office software."
+            },
+            {
+              "heading": "Recommended Equipment",
+              "bullets": ["Headset with a good microphone", "Webcam for video calls", "Backup power or mobile data"],
+              "narration": "On top of your computer and internet, invest in a decent headset with a clear microphone, since clear audio matters a lot in calls, a working webcam for video meetings, and a backup plan such as a power bank, generator, or mobile data in case of outages, especially here in the Philippines."
+            },
+            {
+              "heading": "Creating a Professional Environment",
+              "bullets": ["Clean, well-lit background for calls", "Minimize noise and interruptions", "Set an accessible daily schedule"],
+              "narration": "First impressions matter, even remotely. Choose a clean, well-lit background for your video calls, minimize background noise during work hours, and set a consistent daily schedule that you clearly communicate to clients and to the people you live with, so interruptions are kept to a minimum."
+            },
+            {
+              "heading": "Key Takeaways",
+              "bullets": ["Stable internet and backup power are non-negotiable", "A quiet, professional space builds trust", "Good equipment reflects your professionalism"],
+              "narration": "To wrap up this lesson: a stable internet connection and backup power are non-negotiable, a quiet and professional-looking workspace builds client trust from day one, and investing in decent equipment shows clients that you take your VA career seriously."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m2",
+      "title": "Module 2: Essential Tools Every VA Must Know",
+      "lessons": [
+        {
+          "id": "m2-l1",
+          "title": "Communication Tools",
+          "slides": [
+            {
+              "heading": "Communication Tools",
+              "bullets": ["Gmail and Outlook", "Slack and Microsoft Teams", "Zoom and Google Meet"],
+              "narration": "Communication is the backbone of remote work. As a VA you must be comfortable with Gmail and Outlook for professional email, Slack and Microsoft Teams for team messaging, and Zoom or Google Meet for video calls and meetings with your clients."
+            },
+            {
+              "heading": "Best Practices for Client Communication",
+              "bullets": ["Respond within your agreed hours", "Use clear subject lines", "Confirm tasks and deadlines in writing"],
+              "narration": "It is not enough to know how to use these tools, you must also use them professionally. Respond to messages within your agreed working hours, use clear and specific email subject lines, and always confirm tasks and deadlines in writing so there is no confusion later on."
+            },
+            {
+              "heading": "Etiquette Tips",
+              "bullets": ["Keep messages concise and polite", "Avoid all caps and excessive emojis", "Always proofread before sending"],
+              "narration": "Good digital etiquette sets you apart. Keep your messages concise and polite, avoid typing in all capital letters or using too many emojis in professional chats, and always proofread your messages before hitting send to catch typos or unclear phrasing."
+            },
+            {
+              "heading": "Key Takeaways",
+              "bullets": ["Master Gmail, Slack, and Zoom", "Communicate clearly and promptly", "Professional etiquette builds trust"],
+              "narration": "In this lesson you learned the core communication tools every VA needs, Gmail, Slack, and Zoom, along with the etiquette that makes you look professional: prompt responses, clear writing, and careful proofreading."
+            }
+          ]
+        },
+        {
+          "id": "m2-l2",
+          "title": "Productivity and Project Management Tools",
+          "slides": [
+            {
+              "heading": "Google Workspace",
+              "bullets": ["Google Docs, Sheets, Slides", "Google Drive for file storage", "Google Calendar for scheduling"],
+              "narration": "Google Workspace is one of the most widely used toolsets among VAs and their clients. You should be comfortable creating and editing documents in Google Docs, building spreadsheets in Google Sheets, making presentations in Google Slides, storing files in Google Drive, and managing schedules in Google Calendar."
+            },
+            {
+              "heading": "Project Management Platforms",
+              "bullets": ["Trello for simple task boards", "Asana for team projects", "ClickUp and Monday.com for advanced workflows"],
+              "narration": "Clients also use project management platforms to track work. Trello is great for simple visual task boards, Asana is popular for team projects with deadlines, and ClickUp or Monday dot com are used for more advanced workflows. Learning the basics of at least one of these will make you job-ready."
+            },
+            {
+              "heading": "Getting Comfortable Fast",
+              "bullets": ["Create a free account and explore", "Watch short tutorials on YouTube", "Practice with a personal project first"],
+              "narration": "You do not need to master every tool before applying for a job. Create free accounts, explore the interface, watch a few short tutorials, and practice by organizing a personal project, like planning an event, so you build confidence before using these tools with a real client."
+            },
+            {
+              "heading": "Key Takeaways",
+              "bullets": ["Know Google Workspace well", "Learn at least one PM tool", "Practice before your first client job"],
+              "narration": "To summarize, becoming skilled in Google Workspace and at least one project management tool like Trello or Asana will prepare you for the vast majority of VA jobs available today."
+            }
+          ]
+        },
+        {
+          "id": "m2-l3",
+          "title": "Design and Content Creation Tools",
+          "slides": [
+            {
+              "heading": "Canva for Everyday Design",
+              "bullets": ["Social media graphics", "Presentations and flyers", "Free templates for beginners"],
+              "narration": "Canva has become an essential tool for VAs, especially those doing social media or marketing support. It lets you create social media graphics, presentations, and flyers using free, easy-to-edit templates, even if you have no design background."
+            },
+            {
+              "heading": "Video and Content Tools",
+              "bullets": ["CapCut for simple video editing", "Grammarly for polished writing", "ChatGPT for drafting and brainstorming"],
+              "narration": "Beyond graphics, many VAs use CapCut for simple video editing, especially for short social media clips, Grammarly to polish written content and catch grammar mistakes, and AI writing assistants like ChatGPT to help brainstorm ideas and draft content faster, always reviewing the output before sending it to a client."
+            },
+            {
+              "heading": "Building a Design Habit",
+              "bullets": ["Recreate designs you admire for practice", "Save a swipe file of good examples", "Keep templates organized by client"],
+              "narration": "To get comfortable with design tools, practice by recreating posts or graphics you admire. Keep a swipe file of designs that inspire you, and once you start working with clients, keep their templates and brand colors organized in separate folders so you can work quickly and consistently."
+            },
+            {
+              "heading": "Key Takeaways",
+              "bullets": ["Canva covers most design needs", "Use AI tools to speed up, not replace, your work", "Practice builds real design confidence"],
+              "narration": "In summary, Canva will cover most of your day-to-day design needs, tools like CapCut and Grammarly add extra polish, and AI writing tools can speed up your work as long as you always review and personalize the final output."
+            }
+          ]
+        },
+        {
+          "id": "m2-l4",
+          "title": "File Storage and Time Tracking Tools",
+          "slides": [
+            {
+              "heading": "Cloud File Storage",
+              "bullets": ["Google Drive and Dropbox", "Organized folder structures", "Sharing permissions and security"],
+              "narration": "Clients expect their files to be organized and secure. Learn to use Google Drive and Dropbox to store and share files, build clean folder structures by project or client, and understand sharing permissions so sensitive documents are only visible to the right people."
+            },
+            {
+              "heading": "Time Tracking Tools",
+              "bullets": ["Toggl Track for simple time logs", "Hubstaff for hourly client work", "Clockify as a free alternative"],
+              "narration": "Many clients pay VAs by the hour, which means accurate time tracking is essential. Toggl Track is simple and popular, Hubstaff is common for hourly freelance platforms and includes screenshots for transparency, and Clockify is a solid free alternative if you are just starting out."
+            },
+            {
+              "heading": "Why Accurate Tracking Matters",
+              "bullets": ["Builds trust with clients", "Protects you from underpayment", "Helps you improve your own efficiency"],
+              "narration": "Accurate time tracking protects both you and your client. It builds trust because your client can see exactly what you worked on, it protects you from being underpaid for your time, and reviewing your own tracked hours helps you notice where you can become more efficient."
+            },
+            {
+              "heading": "Key Takeaways",
+              "bullets": ["Keep client files organized and secure", "Track your hours honestly and consistently", "These habits build long-term client trust"],
+              "narration": "To close this module: keep client files organized in Drive or Dropbox, track your hours honestly using a tool like Toggl or Hubstaff, and remember that these small habits are what build long-term trust with the clients who will keep hiring you."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m3",
+      "title": "Module 3: Core VA Skills Training",
+      "lessons": [
+        {
+          "id": "m3-l1",
+          "title": "Email and Calendar Management",
+          "slides": [
+            {
+              "heading": "Managing an Inbox Like a Pro",
+              "bullets": ["Sort using labels and folders", "Use templates for common replies", "Flag urgent items for follow-up"],
+              "narration": "One of the most requested VA tasks is inbox management. Learn to sort emails using labels and folders, prepare templates for common replies to save time, and flag urgent messages so nothing important is missed while still handling routine emails efficiently."
+            },
+            {
+              "heading": "The Inbox Zero Approach",
+              "bullets": ["Archive what does not need action", "Reply, delegate, or schedule the rest", "Do a daily or twice-daily inbox sweep"],
+              "narration": "A popular method is called Inbox Zero. Archive emails that need no action, and for everything else, either reply immediately if it is quick, delegate it back to the client with a question, or schedule time to handle it later. Doing this once or twice a day keeps the inbox under control."
+            },
+            {
+              "heading": "Calendar Management Basics",
+              "bullets": ["Block time for deep work and meetings", "Avoid double bookings across time zones", "Send reminders before appointments"],
+              "narration": "Calendar management goes hand in hand with email. Block time on your client's calendar for focused work and meetings, always double-check time zones to avoid double bookings, and send reminders before important appointments so your client is never caught off guard."
+            },
+            {
+              "heading": "Key Takeaways",
+              "bullets": ["Organize, don't just read, every email", "Apply Inbox Zero daily", "Manage calendars with time zones in mind"],
+              "narration": "Remember: good inbox management is about organizing and acting on emails, not just reading them. Apply the Inbox Zero approach daily, and always manage calendars carefully with time zone differences in mind."
+            }
+          ]
+        },
+        {
+          "id": "m3-l2",
+          "title": "Social Media Management Basics",
+          "slides": [
+            {
+              "heading": "Understanding the Role",
+              "bullets": ["Plan and schedule content", "Engage with comments and messages", "Track basic performance metrics"],
+              "narration": "A Social Media VA plans and schedules content across platforms, engages with followers by replying to comments and messages, and tracks basic performance metrics like reach and engagement to report back to the client."
+            },
+            {
+              "heading": "Content Planning and Scheduling",
+              "bullets": ["Build a simple content calendar", "Use Canva for consistent visuals", "Schedule posts with Meta Business Suite or Buffer"],
+              "narration": "Start by building a simple content calendar in a spreadsheet or Trello board, design consistent visuals using Canva templates matched to the brand, and schedule posts ahead of time using free tools like Meta Business Suite for Facebook and Instagram, or Buffer for multiple platforms."
+            },
+            {
+              "heading": "Engagement and Reporting",
+              "bullets": ["Respond to comments within 24 hours", "Flag negative comments to the client", "Send a simple weekly performance summary"],
+              "narration": "Respond to comments and messages within twenty four hours to keep the audience engaged, immediately flag any negative comments or complaints to your client rather than handling them alone, and send a simple weekly summary showing follower growth, top posts, and engagement."
+            },
+            {
+              "heading": "Key Takeaways",
+              "bullets": ["Plan content ahead of time", "Engage consistently and quickly", "Report results clearly to your client"],
+              "narration": "In summary, effective social media management means planning content in advance, engaging with the audience consistently, and reporting results back to your client in a clear, simple way they can understand at a glance."
+            }
+          ]
+        },
+        {
+          "id": "m3-l3",
+          "title": "Customer Service and Chat Support",
+          "slides": [
+            {
+              "heading": "The Role of a Support VA",
+              "bullets": ["Answer customer questions by chat or email", "Resolve simple complaints", "Escalate complex issues properly"],
+              "narration": "As a Customer Service VA, you will answer customer questions through chat or email, resolve simple complaints using approved responses or refund policies, and know when to escalate a complex issue to your client instead of guessing at a solution."
+            },
+            {
+              "heading": "Communication Skills for Support",
+              "bullets": ["Stay calm and empathetic", "Use positive, solution-focused language", "Confirm the issue before responding"],
+              "narration": "Great customer support depends on staying calm and empathetic, even with frustrated customers. Use positive, solution-focused language instead of just saying no, and always confirm you understand the issue correctly before offering a resolution."
+            },
+            {
+              "heading": "Using Helpdesk Tools",
+              "bullets": ["Familiarize yourself with Zendesk or Freshdesk", "Use canned responses for speed", "Tag and categorize tickets accurately"],
+              "narration": "Many companies use helpdesk software like Zendesk or Freshdesk to manage support tickets. Learn to use canned, or pre-written, responses to answer common questions faster, and always tag and categorize tickets accurately so patterns in customer issues can be tracked over time."
+            },
+            {
+              "heading": "Key Takeaways",
+              "bullets": ["Stay calm, empathetic, and solution-focused", "Know when to escalate", "Get comfortable with helpdesk software"],
+              "narration": "To sum up: great customer support VAs stay calm and solution-focused, know their limits and escalate when needed, and are comfortable using helpdesk tools like Zendesk to manage tickets efficiently."
+            }
+          ]
+        },
+        {
+          "id": "m3-l4",
+          "title": "Basic Bookkeeping, Data Entry, and Research",
+          "slides": [
+            {
+              "heading": "Basic Bookkeeping for VAs",
+              "bullets": ["Recording income and expenses", "Basic spreadsheets or QuickBooks", "Never mix client and personal funds"],
+              "narration": "Bookkeeping VAs help record income and expenses using spreadsheets or software like QuickBooks. This is detail-heavy work, so accuracy matters a lot, and it should go without saying that you must never mix a client's funds or financial data with anyone else's."
+            },
+            {
+              "heading": "Data Entry Best Practices",
+              "bullets": ["Double-check every entry", "Use consistent formatting", "Back up data regularly"],
+              "narration": "For data entry tasks, double-check every entry against the source document, use consistent formatting for dates, currency, and names, and back up your work regularly so nothing is lost if a file becomes corrupted."
+            },
+            {
+              "heading": "Research and Content Writing Basics",
+              "bullets": ["Use credible, up-to-date sources", "Summarize findings clearly", "Write in the client's preferred tone"],
+              "narration": "Research and content tasks require you to use credible and up-to-date sources, summarize findings in a clear and organized way, and adapt your writing tone to match what the client prefers, whether that is formal, friendly, or highly technical."
+            },
+            {
+              "heading": "Key Takeaways",
+              "bullets": ["Accuracy is everything in bookkeeping and data entry", "Keep client finances strictly separate", "Research clearly and write in the client's voice"],
+              "narration": "The key lesson here is that accuracy and consistency are everything in bookkeeping and data entry, client funds must always stay separate and secure, and research or writing tasks should always be clear and matched to the client's preferred voice."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m4",
+      "title": "Module 4: Building Your Portfolio",
+      "lessons": [
+        {
+          "id": "m4-l1",
+          "title": "What Makes a Strong VA Portfolio",
+          "slides": [
+            {
+              "heading": "Why You Need a Portfolio",
+              "bullets": ["Proof of skill, even without experience", "Builds instant credibility", "Sets you apart from other applicants"],
+              "narration": "A portfolio is proof of what you can do, even if you have never had a paid VA job before. It builds instant credibility with potential clients and helps you stand out in a sea of applicants who only submit a plain resume."
+            },
+            {
+              "heading": "What to Include",
+              "bullets": ["Sample projects relevant to your niche", "Before-and-after examples where possible", "Short descriptions of the problem you solved"],
+              "narration": "A strong portfolio includes sample projects relevant to the VA niche you want to work in, before-and-after examples whenever possible, such as a messy inbox turned organized, and a short description for each sample explaining the problem you solved and the result you achieved."
+            },
+            {
+              "heading": "Quality Over Quantity",
+              "bullets": ["Three to five strong samples beat ten weak ones", "Keep it clean and easy to navigate", "Update it as you gain real client work"],
+              "narration": "You do not need dozens of samples. Three to five strong, relevant pieces make a much better impression than ten rushed ones. Keep your portfolio clean and easy to navigate, and update it regularly as you complete real client projects."
+            },
+            {
+              "heading": "Key Takeaways",
+              "bullets": ["A portfolio proves your skill without needing job history", "Focus on relevant, high-quality samples", "Keep it updated over time"],
+              "narration": "To summarize, your portfolio is your proof of skill when you don't yet have job history to show. Focus on quality, relevant samples, and keep it growing as your experience grows."
+            }
+          ]
+        },
+        {
+          "id": "m4-l2",
+          "title": "Creating Sample Work (Mock Projects)",
+          "slides": [
+            {
+              "heading": "The Mock Project Strategy",
+              "bullets": ["Pick a real business as inspiration", "Create work as if you were hired", "Treat it with the same care as paid work"],
+              "narration": "If you have no paid experience yet, create mock projects. Pick a real business you admire, imagine you were hired as their VA, and create sample work, such as an organized content calendar or a cleaned-up spreadsheet, with the same care you would give a paying client."
+            },
+            {
+              "heading": "Mock Project Ideas by Niche",
+              "bullets": ["Admin: a sample inbox and calendar system", "Social Media: a one-month content calendar with graphics", "Bookkeeping: a sample monthly expense tracker"],
+              "narration": "For an Admin VA, create a sample inbox organization system or calendar workflow. For Social Media, design a full one-month content calendar with sample graphics. For Bookkeeping, build a sample monthly expense tracker spreadsheet with clear formulas and categories."
+            },
+            {
+              "heading": "Presenting Mock Projects Honestly",
+              "bullets": ["Label them clearly as sample or mock projects", "Explain your thought process", "Never claim mock work as real client results"],
+              "narration": "Always be transparent. Label mock projects clearly as samples, explain the thinking behind your choices, and never present mock work as if it came from a real paying client. Honesty builds far more trust than exaggeration."
+            },
+            {
+              "heading": "Key Takeaways",
+              "bullets": ["Mock projects solve the no-experience problem", "Base them on real business scenarios", "Always label them honestly"],
+              "narration": "In short, mock projects are the perfect solution when you have no paid experience yet. Base them on real business scenarios, put in genuine effort, and always label them honestly as samples."
+            }
+          ]
+        },
+        {
+          "id": "m4-l3",
+          "title": "Building Your Portfolio Website or Profile",
+          "slides": [
+            {
+              "heading": "Simple Portfolio Options",
+              "bullets": ["A free Canva or Google Sites page", "A Carrd one-page website", "A well-organized Google Drive folder"],
+              "narration": "You do not need to hire a developer to have a portfolio. You can build a simple one-page site for free using Canva or Google Sites, use Carrd for a clean one-page portfolio, or simply organize samples clearly in a shared Google Drive folder with a short intro document."
+            },
+            {
+              "heading": "What Every Portfolio Page Needs",
+              "bullets": ["A short professional introduction", "Clear categories or sections for samples", "Your contact information and availability"],
+              "narration": "Whatever format you choose, include a short professional introduction about who you are and what you offer, clear sections that organize your samples by type, and your contact information along with your current availability for new clients."
+            },
+            {
+              "heading": "Making It Easy to Share",
+              "bullets": ["Use one clean, shareable link", "Keep file sizes and load times small", "Test the link on mobile before sharing"],
+              "narration": "Make sure your entire portfolio can be shared with one clean link. Keep file sizes reasonable so it loads quickly, and always test that link on a mobile phone before sending it to a potential client, since many clients will open it on their phones first."
+            },
+            {
+              "heading": "Key Takeaways",
+              "bullets": ["Free tools are enough to build a great portfolio", "Include an intro, samples, and contact info", "One clean, mobile-friendly link is ideal"],
+              "narration": "To wrap up this module: free tools like Canva, Google Sites, or Carrd are more than enough to build an impressive portfolio. Make sure it includes an introduction, organized samples, and your contact details, all accessible through one clean, mobile-friendly link."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m5",
+      "title": "Module 5: Resume and Job Application Mastery",
+      "lessons": [
+        {
+          "id": "m5-l1",
+          "title": "Writing a VA Resume That Gets Noticed",
+          "slides": [
+            {
+              "heading": "Resume Structure for VAs",
+              "bullets": ["A short professional summary at the top", "Skills section tailored to VA work", "Experience described in results, not just duties"],
+              "narration": "Your VA resume should open with a short professional summary highlighting who you are and what you offer, followed by a skills section tailored specifically to VA work, and an experience section that describes results and outcomes, not just a list of duties."
+            },
+            {
+              "heading": "Writing Strong Bullet Points",
+              "bullets": ["Start with action verbs", "Include numbers whenever possible", "Focus on the value you delivered"],
+              "narration": "Write your bullet points starting with strong action verbs like managed, organized, or increased. Include numbers whenever possible, such as managed a calendar for a team of ten, and focus each bullet on the value you delivered rather than just the task itself."
+            },
+            {
+              "heading": "Common Resume Mistakes to Avoid",
+              "bullets": ["Generic, one-size-fits-all resumes", "Spelling and grammar errors", "Resumes longer than one to two pages"],
+              "narration": "Avoid sending the exact same generic resume to every job posting, always proofread carefully since spelling and grammar mistakes hurt your credibility immediately, and keep your resume to one or, at most, two pages, especially early in your career."
+            },
+            {
+              "heading": "Key Takeaways",
+              "bullets": ["Lead with a clear, tailored summary", "Use action verbs and real numbers", "Proofread and keep it concise"],
+              "narration": "Remember: a great VA resume leads with a clear, tailored summary, uses strong action verbs backed by real numbers, and is always proofread and kept concise."
+            }
+          ]
+        },
+        {
+          "id": "m5-l2",
+          "title": "Creating a Winning Freelance Profile",
+          "slides": [
+            {
+              "heading": "Where to Build Your Profile",
+              "bullets": ["Upwork and OnlineJobs.ph", "Fiverr for service-based gigs", "LinkedIn for professional networking"],
+              "narration": "Beyond your resume, you need strong profiles on the platforms where clients actually search for VAs. The most popular for Filipino VAs are Upwork and OnlineJobs dot ph, Fiverr for offering specific service packages, and LinkedIn for professional networking and visibility."
+            },
+            {
+              "heading": "Profile Photo and Headline",
+              "bullets": ["Use a clear, friendly, professional photo", "Write a specific, benefit-driven headline", "Avoid vague titles like 'Hardworking VA'"],
+              "narration": "Use a clear, friendly, and professional-looking photo, not a group photo or heavily filtered image. Write a specific headline that states the value you offer, such as Social Media VA helping small businesses grow their Instagram, rather than a vague title like Hardworking VA."
+            },
+            {
+              "heading": "Writing Your Profile Summary",
+              "bullets": ["Speak directly to your ideal client", "Highlight specific skills and tools", "End with a clear call to action"],
+              "narration": "Write your profile summary speaking directly to your ideal client and their pain points, highlight the specific skills and tools you have mastered from this course, and end with a clear call to action inviting them to message you or check your portfolio."
+            },
+            {
+              "heading": "Key Takeaways",
+              "bullets": ["Be visible on the right platforms", "Use a professional photo and specific headline", "Speak to your ideal client's needs"],
+              "narration": "In short, build visibility on platforms like Upwork and OnlineJobs dot ph, use a professional photo with a specific headline, and write your summary to speak directly to the needs of your ideal client."
+            }
+          ]
+        },
+        {
+          "id": "m5-l3",
+          "title": "Cover Letters and Proposals That Win Clients",
+          "slides": [
+            {
+              "heading": "The Purpose of a Proposal",
+              "bullets": ["Show you read the job post carefully", "Connect your skills to their specific needs", "Stand out from copy-paste applications"],
+              "narration": "A great proposal or cover letter shows the client you actually read their job post carefully, connects your specific skills to their specific needs, and helps you stand out from the dozens of copy-paste applications clients typically receive."
+            },
+            {
+              "heading": "A Simple Proposal Structure",
+              "bullets": ["Open by referencing their specific need", "Briefly show relevant experience or samples", "Close with a clear, low-pressure next step"],
+              "narration": "Structure your proposal in three short parts: open by referencing something specific from their job post, briefly highlight relevant experience or link to a portfolio sample, and close with a clear, low-pressure next step, like offering a short call to discuss further."
+            },
+            {
+              "heading": "Proposal Writing Tips",
+              "bullets": ["Keep it short, three to five short paragraphs", "Avoid sounding like a template", "Always double-check the client's name and details"],
+              "narration": "Keep your proposal short, around three to five short paragraphs, avoid language that sounds like an obvious copy-paste template, and always double-check that you have the client's correct name and project details before sending."
+            },
+            {
+              "heading": "Key Takeaways",
+              "bullets": ["Personalize every proposal", "Keep it short and specific", "End with a clear next step"],
+              "narration": "To summarize, always personalize your proposals to the specific job post, keep them short and specific rather than generic, and end every proposal with a clear next step for the client to take."
+            }
+          ]
+        },
+        {
+          "id": "m5-l4",
+          "title": "Acing the Client Interview",
+          "slides": [
+            {
+              "heading": "Before the Interview",
+              "bullets": ["Research the client or company", "Prepare examples that show your skills", "Test your internet, camera, and audio early"],
+              "narration": "Before any client interview, research the business or client so you can ask informed questions, prepare specific examples from your portfolio or training that demonstrate your skills, and test your internet connection, camera, and microphone well ahead of time."
+            },
+            {
+              "heading": "During the Interview",
+              "bullets": ["Dress and present yourself professionally", "Answer with specific examples, not just yes or no", "Ask thoughtful questions about the role"],
+              "narration": "During the interview, dress and present yourself professionally even though it is remote, answer questions with specific examples rather than short yes or no answers, and ask thoughtful questions about the role, expectations, and how success will be measured."
+            },
+            {
+              "heading": "After the Interview",
+              "bullets": ["Send a short thank-you message", "Reiterate your interest and key strengths", "Follow up politely if you don't hear back"],
+              "narration": "After the interview, send a short and genuine thank-you message within a day, briefly reiterate your interest and one or two key strengths, and if you do not hear back within the timeline they mentioned, send one polite follow-up message rather than several."
+            },
+            {
+              "heading": "Key Takeaways",
+              "bullets": ["Preparation builds interview confidence", "Answer with real, specific examples", "Always follow up professionally"],
+              "narration": "In summary, thorough preparation builds real interview confidence, answering with specific examples proves your skills far better than general statements, and a polite follow-up afterward keeps you top of mind with the client."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m6",
+      "title": "Module 6: Landing Your First Client and Beyond",
+      "lessons": [
+        {
+          "id": "m6-l1",
+          "title": "Where to Find VA Jobs",
+          "slides": [
+            {
+              "heading": "Top Platforms for Filipino VAs",
+              "bullets": ["OnlineJobs.ph for Philippine-focused clients", "Upwork for global freelance projects", "Facebook groups and referrals"],
+              "narration": "The most popular platforms for Filipino VAs include OnlineJobs dot ph, which is heavily used by clients specifically looking to hire Filipinos, Upwork for a wide range of global freelance projects, and niche Facebook groups where clients post job openings directly, along with referrals from other VAs."
+            },
+            {
+              "heading": "How to Search Effectively",
+              "bullets": ["Use specific keywords for your niche", "Apply early to new postings", "Track applications in a simple spreadsheet"],
+              "narration": "Search using specific keywords related to your chosen niche, such as social media VA or bookkeeping assistant, apply as early as possible to new job postings since early applicants often get noticed first, and track every application you send in a simple spreadsheet with dates and status."
+            },
+            {
+              "heading": "Avoiding Job Scams",
+              "bullets": ["Never pay to apply for a job", "Be cautious of vague, too-good-to-be-true offers", "Verify the client or company before signing anything"],
+              "narration": "Unfortunately, scams exist in this industry. Never pay money to apply for a job, be cautious of postings that are vague or promise unusually high pay for very little work, and always try to verify the client or company is real before signing any agreement or sharing sensitive information."
+            },
+            {
+              "heading": "Key Takeaways",
+              "bullets": ["Use both dedicated VA platforms and general freelance sites", "Search smart and apply early", "Protect yourself from scams"],
+              "narration": "In summary, combine dedicated platforms like OnlineJobs dot ph with general freelance sites like Upwork, search smart and apply early, and always stay alert to protect yourself from scams."
+            }
+          ]
+        },
+        {
+          "id": "m6-l2",
+          "title": "Pricing Your Services",
+          "slides": [
+            {
+              "heading": "Common Pricing Models",
+              "bullets": ["Hourly rate", "Fixed price per project", "Monthly retainer for ongoing work"],
+              "narration": "There are three common ways to price your VA services: an hourly rate for ongoing or unpredictable work, a fixed price for a clearly defined project, and a monthly retainer for clients who need consistent, ongoing support each month."
+            },
+            {
+              "heading": "How to Set Your Starting Rate",
+              "bullets": ["Research rates for your niche and experience level", "Factor in your skills, tools, and time", "Start reasonable, then raise rates with experience"],
+              "narration": "Research typical rates for your specific niche and experience level on platforms like Upwork or OnlineJobs dot ph, factor in the skills, tools, and time each task requires, and start with a reasonable rate you are confident delivering, then raise it as you gain more experience and testimonials."
+            },
+            {
+              "heading": "Communicating Your Rate Confidently",
+              "bullets": ["State your rate clearly and confidently", "Explain the value behind your pricing", "Avoid apologizing for your rate"],
+              "narration": "When discussing pricing with a client, state your rate clearly and confidently, briefly explain the value and results behind that price, and avoid apologizing for your rate. Confidence in your pricing reflects confidence in your skills."
+            },
+            {
+              "heading": "Key Takeaways",
+              "bullets": ["Choose the pricing model that fits the work", "Base your rate on research and real value", "Communicate pricing with confidence"],
+              "narration": "To sum up, choose the pricing model, hourly, fixed, or retainer, that best fits the type of work, base your rate on solid research and the real value you provide, and always communicate your pricing with confidence."
+            }
+          ]
+        },
+        {
+          "id": "m6-l3",
+          "title": "Onboarding Your First Client and Staying Professional",
+          "slides": [
+            {
+              "heading": "The Onboarding Conversation",
+              "bullets": ["Clarify tasks, tools, and expectations", "Agree on working hours and communication channels", "Put agreements in writing"],
+              "narration": "Once you land your first client, have a clear onboarding conversation. Clarify exactly what tasks, tools, and expectations are involved, agree on working hours and preferred communication channels, and always put these agreements in writing, even a simple email summary works well."
+            },
+            {
+              "heading": "Your First Weeks on the Job",
+              "bullets": ["Ask clarifying questions early", "Deliver small wins quickly", "Ask for feedback proactively"],
+              "narration": "In your first weeks, do not be afraid to ask clarifying questions rather than guessing. Try to deliver a few small, visible wins quickly to build trust, and proactively ask your client for feedback so you can adjust and improve early in the relationship."
+            },
+            {
+              "heading": "Building a Long-Term Career",
+              "bullets": ["Ask for testimonials after good work", "Keep learning new tools and skills", "Consider raising rates or adding clients over time"],
+              "narration": "To build a long-term VA career, ask satisfied clients for testimonials you can add to your portfolio, keep learning new tools and skills to stay competitive, and over time, consider gradually raising your rates or taking on additional clients as your confidence and reputation grow."
+            },
+            {
+              "heading": "Congratulations!",
+              "bullets": ["You've completed the VA Foundations course", "Take the final quiz for your certificate", "Your VA career starts now"],
+              "narration": "Congratulations on completing the Virtual Assistant Foundations course! You now understand what a VA does, the essential tools of the trade, core service skills, how to build a portfolio, how to write a winning resume and proposal, and how to land and keep your first client. Take the final quiz to earn your Certificate of Completion, and go start your VA career with confidence."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
