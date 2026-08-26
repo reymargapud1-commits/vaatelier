@@ -54,22 +54,22 @@ export async function GET(req: Request, { params }: { params: { courseId: string
   const sans = await pdfDoc.embedFont(StandardFonts.Helvetica);
   const sansBold = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
 
-  const navy = rgb(0.09, 0.13, 0.24);
-  const gold = rgb(0.72, 0.56, 0.15);
-  const goldLight = rgb(0.93, 0.85, 0.62);
-  const gray = rgb(0.42, 0.45, 0.5);
-  const cream = rgb(0.99, 0.98, 0.95);
+  const wine = rgb(0.169, 0.086, 0.125);
+  const gold = rgb(0.78, 0.643, 0.392);
+  const goldLight = rgb(0.914, 0.827, 0.639);
+  const gray = rgb(0.42, 0.38, 0.4);
+  const cream = rgb(0.98, 0.965, 0.945);
 
   // Background
   page.drawRectangle({ x: 0, y: 0, width, height, color: cream });
 
-  // Outer navy border + inner gold border, with a bit of breathing room
+  // Outer wine border + inner gold border, with a bit of breathing room
   page.drawRectangle({
     x: 18,
     y: 18,
     width: width - 36,
     height: height - 36,
-    borderColor: navy,
+    borderColor: wine,
     borderWidth: 6,
   });
   page.drawRectangle({
@@ -98,13 +98,13 @@ export async function GET(req: Request, { params }: { params: { courseId: string
     page.drawCircle({ x: cx + dx * 6, y: cy + dy * 6, size: 2.2, color: gold });
   }
 
-  const centerText = (text: string, y: number, font = sans, size = 16, color = navy) => {
+  const centerText = (text: string, y: number, font = sans, size = 16, color = wine) => {
     const textWidth = font.widthOfTextAtSize(text, size);
     page.drawText(text, { x: (width - textWidth) / 2, y, size, font, color });
   };
 
   // Small eyebrow brand
-  centerText("VA FOUNDATIONS TRAINING PROGRAM", height - 88, sansBold, 12, gold);
+  centerText("THE VA ATELIER", height - 88, sansBold, 13, gold);
 
   // Decorative rule under eyebrow
   page.drawLine({
@@ -114,12 +114,12 @@ export async function GET(req: Request, { params }: { params: { courseId: string
     color: goldLight,
   });
 
-  centerText("Certificate of Completion", height - 145, serif, 34, navy);
+  centerText("Certificate of Completion", height - 145, serif, 34, wine);
 
   centerText("This certificate is proudly presented to".toUpperCase(), height - 205, sansBold, 11, gray);
 
   // Student name - the hero element
-  centerText(user.name, height - 255, serif, 36, navy);
+  centerText(user.name, height - 255, serif, 36, wine);
   page.drawLine({
     start: { x: width / 2 - 160, y: height - 268 },
     end: { x: width / 2 + 160, y: height - 268 },
@@ -134,7 +134,7 @@ export async function GET(req: Request, { params }: { params: { courseId: string
     12.5,
     gray
   );
-  centerText(course.title, height - 330, sansBold, 17, navy);
+  centerText(course.title, height - 330, sansBold, 17, wine);
 
   const issuedDate = certificate.issuedAt.toLocaleDateString("en-PH", {
     year: "numeric",
@@ -147,21 +147,18 @@ export async function GET(req: Request, { params }: { params: { courseId: string
   const sealX = width - 150;
   const sealY = 130;
   page.drawCircle({ x: sealX, y: sealY, size: 42, color: gold });
-  page.drawCircle({ x: sealX, y: sealY, size: 34, color: navy });
+  page.drawCircle({ x: sealX, y: sealY, size: 34, color: wine });
   page.drawCircle({ x: sealX, y: sealY, size: 28, borderColor: goldLight, borderWidth: 1 });
-  const sealFont = sansBold;
-  const sealText = "VA";
-  const sealTextWidth = sealFont.widthOfTextAtSize(sealText, 20);
-  page.drawText(sealText, {
-    x: sealX - sealTextWidth / 2,
-    y: sealY - 8,
-    size: 20,
-    font: sealFont,
-    color: goldLight,
+  // Monogram mark (the same V/A ligature used across the brand)
+  page.drawSvgPath("M28 60 L28 28 L44 52 L60 28 L60 60", {
+    x: sealX - 44,
+    y: sealY + 44,
+    borderColor: goldLight,
+    borderWidth: 2.6,
   });
   // Ribbon tails
   page.drawLine({ start: { x: sealX - 16, y: sealY - 38 }, end: { x: sealX - 26, y: sealY - 74 }, thickness: 14, color: gold });
-  page.drawLine({ start: { x: sealX + 16, y: sealY - 38 }, end: { x: sealX + 26, y: sealY - 74 }, thickness: 14, color: navy });
+  page.drawLine({ start: { x: sealX + 16, y: sealY - 38 }, end: { x: sealX + 26, y: sealY - 74 }, thickness: 14, color: wine });
 
   // Signature block (left side, near bottom)
   const sigX = 130;
@@ -171,7 +168,7 @@ export async function GET(req: Request, { params }: { params: { courseId: string
     y: sigBaseY,
     size: 26,
     font: serifItalic,
-    color: navy,
+    color: wine,
   });
   page.drawLine({
     start: { x: sigX - 10, y: sigBaseY - 10 },
@@ -179,7 +176,7 @@ export async function GET(req: Request, { params }: { params: { courseId: string
     thickness: 1,
     color: gray,
   });
-  page.drawText(coachName, { x: sigX, y: sigBaseY - 28, size: 11, font: sansBold, color: navy });
+  page.drawText(coachName, { x: sigX, y: sigBaseY - 28, size: 11, font: sansBold, color: wine });
   page.drawText(coachTitle, { x: sigX, y: sigBaseY - 43, size: 10, font: sans, color: gray });
 
   centerText(`Certificate ID: ${certificate.id}`, 40, sans, 8, gray);
@@ -189,7 +186,7 @@ export async function GET(req: Request, { params }: { params: { courseId: string
   return new NextResponse(Buffer.from(pdfBytes), {
     headers: {
       "Content-Type": "application/pdf",
-      "Content-Disposition": `inline; filename="VA-Foundations-Certificate-${user.name.replace(/\s+/g, "-")}.pdf"`,
+      "Content-Disposition": `inline; filename="The-VA-Atelier-Certificate-${user.name.replace(/\s+/g, "-")}.pdf"`,
     },
   });
 }

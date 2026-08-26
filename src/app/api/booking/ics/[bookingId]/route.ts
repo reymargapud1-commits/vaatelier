@@ -34,7 +34,7 @@ export async function GET(_req: Request, { params }: { params: { bookingId: stri
     coachName,
     scheduledAt: booking.scheduledAt,
     note: booking.studentNote,
-    courseTitle: course?.title || "VA Foundations Training Program",
+    courseTitle: course?.title || "The VA Atelier Training Program",
   });
 
   return new NextResponse(ics, {

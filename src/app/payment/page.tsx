@@ -62,7 +62,7 @@ export default function PaymentPage() {
           </p>
 
           <div className="mb-6 rounded-lg bg-brand-50 p-5">
-            <p className="text-sm font-medium text-brand-700">VA Foundations Training Program</p>
+            <p className="text-sm font-medium text-brand-700">The VA Atelier Training Program</p>
             <p className="mt-1 text-4xl font-extrabold text-gray-900">₱2,999</p>
             <p className="mt-1 text-sm text-gray-600">One-time payment · Lifetime access</p>
           </div>

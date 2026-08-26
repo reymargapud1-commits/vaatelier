@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import { LogoMark } from "@/components/Logo";
 import curriculum from "../../content/curriculum.json";
 
 const COACH_NAME = process.env.COACH_NAME || "Reymar Gapud";
@@ -26,13 +27,11 @@ export default function LandingPage() {
         />
         <div className="relative mx-auto max-w-5xl px-4 py-20 text-center sm:px-6 sm:py-28">
           <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-brand-200 bg-white px-4 py-1.5 text-sm font-medium text-brand-700 shadow-sm">
-            🇵🇭 Built for aspiring Filipino Virtual Assistants
+            🇵🇭 A boutique training studio for aspiring Filipino Virtual Assistants
           </span>
-          <h1 className="mx-auto max-w-3xl text-4xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-6xl">
+          <h1 className="mx-auto max-w-3xl font-serif text-5xl font-semibold leading-[1.1] tracking-tight text-brand-900 sm:text-6xl">
             Become a Job-Ready{" "}
-            <span className="bg-gradient-to-r from-brand-600 to-brand-400 bg-clip-text text-transparent">
-              Virtual Assistant
-            </span>{" "}
+            <span className="italic text-brand-600">Virtual Assistant</span>{" "}
             — From Zero to Your First Client
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600">
@@ -132,7 +131,7 @@ export default function LandingPage() {
       <section className="py-20">
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
           <h2 className="mb-12 text-center text-3xl font-bold text-gray-900 sm:text-4xl">
-            Why Train With VA Foundations
+            Why Train With The VA Atelier
           </h2>
           <div className="grid gap-6 sm:grid-cols-3">
             <Feature
@@ -176,7 +175,7 @@ export default function LandingPage() {
         </h2>
         <p className="mb-8 text-gray-600">{curriculum.priceNote}</p>
         <div className="card mx-auto max-w-sm border-2 border-brand-100 shadow-lg">
-          <p className="text-sm font-medium text-brand-700">VA Foundations Training Program</p>
+          <p className="text-sm font-medium text-brand-700">The VA Atelier Training Program</p>
           <p className="mt-2 text-5xl font-extrabold text-gray-900">{PRICE_DISPLAY}</p>
           <p className="mt-1 text-sm text-gray-500">One-time payment</p>
           <Link href="/register" className="btn-primary mt-6 w-full text-lg">
@@ -188,8 +187,13 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <footer className="border-t border-gray-100 py-8 text-center text-sm text-gray-400">
-        © {new Date().getFullYear()} VA Foundations Training Program. All rights reserved.
+      <footer className="border-t border-gray-100 py-10 text-center">
+        <div className="mb-3 flex justify-center text-brand-300">
+          <LogoMark className="h-7 w-7" ring={false} />
+        </div>
+        <p className="text-sm text-gray-400">
+          © {new Date().getFullYear()} The VA Atelier. All rights reserved.
+        </p>
       </footer>
     </>
   );

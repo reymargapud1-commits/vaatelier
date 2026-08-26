@@ -51,7 +51,7 @@ export default function RegisterPage() {
         <div className="card">
           <h1 className="mb-1 text-2xl font-bold text-gray-900">Create your account</h1>
           <p className="mb-6 text-sm text-gray-600">
-            Sign up para simulan ang VA Foundations training program.
+            Sign up para simulan ang The VA Atelier training program.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-4">

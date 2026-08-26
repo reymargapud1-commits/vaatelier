@@ -1,4 +1,4 @@
-# VA Foundations — Virtual Assistant Training Portal
+# The VA Atelier — Virtual Assistant Training Portal
 
 A complete, paid online training portal for aspiring Virtual Assistants. Students pay first
 (GCash, Maya, or card via PayMongo) before they can access any content, then work through video
@@ -67,6 +67,11 @@ npm run db:push   # creates dev.db with the schema
 npm run seed       # loads content/curriculum.json + content/quizzes.json, creates your admin account
 ```
 
+> **Note:** this manual step is only for local development. In production, `npm start` (see
+> `scripts/bootstrap.ts`) automatically applies database migrations and seeds the curriculum the
+> first time it boots — a fresh deployment (Railway, Render, etc.) needs zero manual database
+> commands. See the deployment guide link I sent you for the full walkthrough.
+
 Run `npm run seed` again any time after editing `content/curriculum.json` or
 `content/quizzes.json` — it's safe to re-run (it updates existing rows instead of duplicating
 them).
@@ -133,6 +138,9 @@ Videos are intentionally stored outside of `/public` and are only ever served th
 seeking/range requests) — this is what actually enforces the paywall for video content.
 
 ## Deploying
+
+**For a full click-by-click walkthrough (GitHub → Railway → PayMongo, no coding), see the
+"Going Live Guide" link I sent alongside this project.** The short version:
 
 This app needs a persistent filesystem for the SQLite database and the video files, so it's
 simplest to deploy to a regular server/VPS or a platform like Railway or Render (`npm run build`

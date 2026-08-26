@@ -45,11 +45,11 @@ export function buildBookingICS(info: BookingCalendarInfo): string {
   const lines = [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
-    "PRODID:-//VA Foundations Training Program//Live Session//EN",
+    "PRODID:-//The VA Atelier//Live Session//EN",
     "CALSCALE:GREGORIAN",
     "METHOD:PUBLISH",
     "BEGIN:VEVENT",
-    `UID:${info.bookingId}@va-foundations`,
+    `UID:${info.bookingId}@va-atelier`,
     `DTSTAMP:${toICSDate(now)}`,
     `DTSTART:${toICSDate(start)}`,
     `DTEND:${toICSDate(end)}`,
@@ -107,7 +107,7 @@ export async function notifyCoachOfBooking(info: BookingCalendarInfo) {
 
   try {
     await transport.sendMail({
-      from: `"VA Foundations Training" <${process.env.SMTP_USER}>`,
+      from: `"The VA Atelier" <${process.env.SMTP_USER}>`,
       to: coachEmail,
       subject: `New live session booked by ${info.studentName}`,
       text: `${info.studentName} (${info.studentEmail}) booked their required live training session for ${when} (Asia/Manila).\n\nNote from student: ${

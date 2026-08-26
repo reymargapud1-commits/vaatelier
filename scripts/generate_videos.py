@@ -37,11 +37,12 @@ AUDIO_DIR = MEDIA_DIR / "audio"
 SLIDE_DIR = MEDIA_DIR / "slides"
 
 WIDTH, HEIGHT = 1280, 720
-BRAND_BLUE = (26, 109, 245)
-BRAND_DARK = (17, 24, 39)
-BG_WHITE = (255, 255, 255)
-LIGHT_GRAY = (243, 246, 251)
-TEXT_GRAY = (55, 65, 81)
+BRAND_WINE = (43, 22, 32)
+BRAND_GOLD = (199, 164, 100)
+BRAND_DARK = (43, 22, 32)
+BG_WHITE = (250, 246, 241)
+LIGHT_GRAY = (245, 237, 228)
+TEXT_GRAY = (91, 74, 82)
 
 FONT_DIR = "/usr/share/fonts/truetype/dejavu"
 FONT_BOLD = f"{FONT_DIR}/DejaVuSans-Bold.ttf"
@@ -77,12 +78,12 @@ def render_slide(course_title, module_title, lesson_title, slide, slide_index, t
     draw = ImageDraw.Draw(img)
 
     # Top brand bar
-    draw.rectangle([0, 0, WIDTH, 96], fill=BRAND_BLUE)
+    draw.rectangle([0, 0, WIDTH, 96], fill=BRAND_WINE)
     font_brand = ImageFont.truetype(FONT_BOLD, 30)
     font_small = ImageFont.truetype(FONT_REGULAR, 20)
-    draw.text((48, 22), "VA Foundations", font=font_brand, fill=BG_WHITE)
+    draw.text((48, 20), "The VA Atelier", font=font_brand, fill=BRAND_GOLD)
     progress_text = f"{module_title}  ·  Slide {slide_index + 1}/{total_slides}"
-    draw.text((48, 62), progress_text, font=font_small, fill=(219, 234, 254))
+    draw.text((48, 62), progress_text, font=font_small, fill=(224, 205, 178))
 
     # Lesson title band
     font_lesson = ImageFont.truetype(FONT_REGULAR, 22)
@@ -103,7 +104,7 @@ def render_slide(course_title, module_title, lesson_title, slide, slide_index, t
     bx = 72
     for bullet in slide.get("bullets", []):
         # bullet dot
-        draw.ellipse([bx - 24, y + 12, bx - 12, y + 24], fill=BRAND_BLUE)
+        draw.ellipse([bx - 24, y + 12, bx - 12, y + 24], fill=BRAND_GOLD)
         lines = wrap_text(bullet, font_bullet, draw, WIDTH - bx - 96)
         for i, line in enumerate(lines):
             draw.text((bx, y + i * 40), line, font=font_bullet, fill=TEXT_GRAY)
@@ -112,7 +113,7 @@ def render_slide(course_title, module_title, lesson_title, slide, slide_index, t
     # Footer
     font_footer = ImageFont.truetype(FONT_REGULAR, 18)
     draw.rectangle([0, HEIGHT - 44, WIDTH, HEIGHT], fill=BRAND_DARK)
-    draw.text((48, HEIGHT - 34), course_title, font=font_footer, fill=(156, 175, 219))
+    draw.text((48, HEIGHT - 34), course_title, font=font_footer, fill=(196, 170, 138))
 
     img.save(out_path, "PNG")
 
