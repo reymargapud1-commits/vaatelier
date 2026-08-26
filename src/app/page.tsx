@@ -51,6 +51,24 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Trailer */}
+      <section className="bg-brand-900 py-14">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
+          <div className="overflow-hidden rounded-2xl shadow-2xl shadow-black/40 ring-1 ring-white/10">
+            <video
+              className="aspect-video w-full bg-black"
+              src="/trailer.mp4"
+              controls
+              playsInline
+              preload="metadata"
+            />
+          </div>
+          <p className="mt-4 text-center text-sm text-gray-400">
+            30 seconds. This is the life you're training for.
+          </p>
+        </div>
+      </section>
+
       {/* Stats */}
       <section className="border-y border-gray-100 bg-white py-10">
         <div className="mx-auto grid max-w-4xl grid-cols-2 gap-6 px-4 text-center sm:grid-cols-4">
@@ -117,7 +135,23 @@ export default function LandingPage() {
               <p className="text-xl font-bold text-gray-900">{COACH_NAME}</p>
               <p className="text-brand-600">{COACH_TITLE}</p>
             </div>
-            <p className="text-gray-600">
+            <p className="text-left text-gray-600">
+              I didn't start out as a VA. For years I worked the day shift at a manufacturing
+              company — up early, home late, squeezing in my studies in between. Then I got my
+              first real shot as a freelance agent for a US-based client. I worked hard, kept
+              learning, and was eventually promoted to Team Manager, a role I still hold today,
+              leading a team that supports clients on the other side of the world — night shifts,
+              holiday duty, and all.
+            </p>
+            <p className="mt-3 text-left text-gray-600">
+              Along the way I built a home office I'm proud of, sat through more training
+              sessions and final interviews than I can count, and learned firsthand that this
+              career can travel with you — I've logged into team meetings from a beach in
+              Dingalan and from a coffee shop when my home internet gave out. I built The VA
+              Atelier to hand you everything I wish someone had handed me on day one, so your
+              path to your first client is faster and a lot less confusing than mine was.
+            </p>
+            <p className="mt-3 text-gray-600">
               Every student who completes this program gets direct access to a live 1-on-1
               coaching session with me before earning their certificate — so you leave not just
               with knowledge, but with real feedback and a clear next step toward your first

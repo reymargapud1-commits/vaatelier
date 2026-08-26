@@ -114,6 +114,20 @@ def render_slide(course_title, module_title, lesson_title, slide, slide_index, t
     draw.rectangle([0, 96, WIDTH, 142], fill=LIGHT_GRAY)
     draw.text((48, 108), lesson_title, font=font_lesson, fill=TEXT_GRAY)
 
+    # Footer (drawn first so the image-frame layout below can safely go right up to it)
+    font_footer = ImageFont.truetype(FONT_REGULAR, 18)
+    draw.rectangle([0, HEIGHT - 44, WIDTH, HEIGHT], fill=BRAND_DARK)
+    draw.text((48, HEIGHT - 34), course_title, font=font_footer, fill=(196, 170, 138))
+
+    if slide.get("image"):
+        render_figure_slide(img, draw, slide)
+    else:
+        render_bullet_slide(img, draw, slide)
+
+    img.save(out_path, "PNG")
+
+
+def render_bullet_slide(img, draw, slide):
     # Heading
     font_heading = ImageFont.truetype(FONT_BOLD, 46)
     heading_lines = wrap_text(slide["heading"], font_heading, draw, WIDTH - 96)
@@ -134,12 +148,62 @@ def render_slide(course_title, module_title, lesson_title, slide, slide_index, t
             draw.text((bx, y + i * 40), line, font=font_bullet, fill=TEXT_GRAY)
         y += 40 * len(lines) + 22
 
-    # Footer
-    font_footer = ImageFont.truetype(FONT_REGULAR, 18)
-    draw.rectangle([0, HEIGHT - 44, WIDTH, HEIGHT], fill=BRAND_DARK)
-    draw.text((48, HEIGHT - 34), course_title, font=font_footer, fill=(196, 170, 138))
 
-    img.save(out_path, "PNG")
+def render_figure_slide(img, draw, slide):
+    """Renders a slide that shows a real screenshot ('figure') instead of bullets,
+    e.g. an actual Upwork sign-up screen or Google Calendar view. `slide["image"]`
+    is a path relative to the project root (see ROOT below); `slide.get("caption")`
+    is an optional one-line label drawn under the screenshot."""
+    # Smaller heading so there's more room for the screenshot itself.
+    font_heading = ImageFont.truetype(FONT_BOLD, 36)
+    heading_lines = wrap_text(slide["heading"], font_heading, draw, WIDTH - 96)
+    y = 168
+    for line in heading_lines:
+        draw.text((48, y), line, font=font_heading, fill=BRAND_DARK)
+        y += 44
+
+    content_top = y + 16
+    caption = slide.get("caption", "")
+    caption_h = 36 if caption else 0
+    content_bottom = HEIGHT - 44 - 16 - caption_h
+    box_left, box_right = 64, WIDTH - 64
+    box_w = box_right - box_left
+    box_h = content_bottom - content_top
+
+    image_path = ROOT / slide["image"]
+    if not image_path.exists():
+        # Fail loudly at build time rather than silently shipping a blank slide -
+        # much easier to catch a typo'd path here than by watching every video.
+        raise FileNotFoundError(f"Figure image not found: {image_path}")
+
+    fig = Image.open(image_path).convert("RGBA")
+    scale = min(box_w / fig.width, box_h / fig.height)
+    new_w, new_h = int(fig.width * scale), int(fig.height * scale)
+    fig = fig.resize((new_w, new_h), Image.LANCZOS)
+
+    fx = box_left + (box_w - new_w) // 2
+    fy = content_top + (box_h - new_h) // 2
+
+    # A simple browser-window style frame behind the screenshot so it reads as
+    # "a real screenshot" rather than a floating image.
+    frame_pad = 10
+    draw.rectangle(
+        [fx - frame_pad, fy - frame_pad, fx + new_w + frame_pad, fy + new_h + frame_pad],
+        fill=(255, 255, 255),
+        outline=BRAND_GOLD,
+        width=3,
+    )
+    img.paste(fig, (fx, fy), fig)
+
+    if caption:
+        font_caption = ImageFont.truetype(FONT_REGULAR, 22)
+        cap_w = draw.textlength(caption, font=font_caption)
+        draw.text(
+            ((WIDTH - cap_w) / 2, content_bottom + 8),
+            caption,
+            font=font_caption,
+            fill=TEXT_GRAY,
+        )
 
 
 def synthesize_audio(text, out_wav):

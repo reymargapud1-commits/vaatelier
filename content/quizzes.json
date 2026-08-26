@@ -23,7 +23,9 @@
         { "id": "m2-q2", "text": "What is Canva primarily used for?", "choices": ["Bookkeeping", "Design and graphics", "Time tracking", "Email hosting"], "correctIndex": 1 },
         { "id": "m2-q3", "text": "Which tool is commonly used to track hourly work for clients?", "choices": ["Toggl Track", "Grammarly", "Google Slides", "CapCut"], "correctIndex": 0 },
         { "id": "m2-q4", "text": "Which platform is part of Google Workspace?", "choices": ["Slack", "Google Docs", "Zendesk", "Hubstaff"], "correctIndex": 1 },
-        { "id": "m2-q5", "text": "Why should client files be organized in Drive or Dropbox?", "choices": ["It looks nice but has no real benefit", "For security, easy access, and professionalism", "It is required by every government", "To make files harder to find"], "correctIndex": 1 }
+        { "id": "m2-q5", "text": "Why should client files be organized in Drive or Dropbox?", "choices": ["It looks nice but has no real benefit", "For security, easy access, and professionalism", "It is required by every government", "To make files harder to find"], "correctIndex": 1 },
+        { "id": "m2-q6", "text": "A Trello board with custom fields can be used as a simple:", "choices": ["Video editor", "CRM (client/lead tracker)", "Time tracking app", "Email client"], "correctIndex": 1 },
+        { "id": "m2-q7", "text": "What does Hubstaff do besides tracking time?", "choices": ["Nothing else", "It can also handle payroll payments to VAs", "It replaces your email", "It designs graphics"], "correctIndex": 1 }
       ]
     },
     {
@@ -72,10 +74,12 @@
       "passingScore": 70,
       "questions": [
         { "id": "m6-q1", "text": "What should you NEVER do when applying for VA jobs?", "choices": ["Apply early to new postings", "Pay money to apply for a job", "Track your applications", "Use specific keywords"], "correctIndex": 1 },
-        { "id": "m6-q2", "text": "Which is a common VA pricing model?", "choices": ["Monthly retainer", "Random guessing", "Refusing to state a price", "Charging only in a foreign currency you don't understand"], "correctIndex": 0 },
-        { "id": "m6-q3", "text": "How should you communicate your rate to a client?", "choices": ["Apologetically and unsure", "Clearly and confidently, with the value explained", "Never mention your rate at all", "Only through a third party"], "correctIndex": 1 },
-        { "id": "m6-q4", "text": "What is a good first step when onboarding a new client?", "choices": ["Guess what they want without asking", "Clarify tasks, tools, and expectations, then put it in writing", "Immediately increase your rate", "Avoid all communication in week one"], "correctIndex": 1 },
-        { "id": "m6-q5", "text": "What helps build a long-term VA career?", "choices": ["Refusing to learn new tools", "Asking for testimonials and continuously learning", "Never asking for client feedback", "Avoiding all specialization"], "correctIndex": 1 }
+        { "id": "m6-q2", "text": "When signing up on Upwork, what should you choose?", "choices": ["Join as a Client", "Join as a Freelancer", "Skip registration entirely", "Register as a company"], "correctIndex": 1 },
+        { "id": "m6-q3", "text": "On OnlineJobs.ph, which option should a VA choose when registering?", "choices": ["Employer", "Jobseeker / worker", "Advertiser", "Administrator"], "correctIndex": 1 },
+        { "id": "m6-q4", "text": "Which is a common VA pricing model?", "choices": ["Monthly retainer", "Random guessing", "Refusing to state a price", "Charging only in a foreign currency you don't understand"], "correctIndex": 0 },
+        { "id": "m6-q5", "text": "How should you communicate your rate to a client?", "choices": ["Apologetically and unsure", "Clearly and confidently, with the value explained", "Never mention your rate at all", "Only through a third party"], "correctIndex": 1 },
+        { "id": "m6-q6", "text": "What is a good first step when onboarding a new client?", "choices": ["Guess what they want without asking", "Clarify tasks, tools, and expectations, then put it in writing", "Immediately increase your rate", "Avoid all communication in week one"], "correctIndex": 1 },
+        { "id": "m6-q7", "text": "What helps build a long-term VA career?", "choices": ["Refusing to learn new tools", "Asking for testimonials and continuously learning", "Never asking for client feedback", "Avoiding all specialization"], "correctIndex": 1 }
       ]
     }
   ]
