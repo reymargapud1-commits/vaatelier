@@ -118,16 +118,23 @@ Edit `content/curriculum.json` (lessons/slides/narration) and `content/quizzes.j
 
 The 22 lessons in `media/videos/*.mp4` are narrated slide videos, generated automatically by
 `scripts/generate_videos.py`: it renders each slide as a branded PNG, synthesizes narration with
-`espeak-ng` (an offline text-to-speech engine — no video-hosting or paid TTS account needed), and
-stitches everything together with `ffmpeg`. The voice is clear but noticeably robotic, not a human
-voiceover — this was the practical option in an environment with no access to commercial TTS.
+[Piper](https://github.com/OHF-voice/piper1-gpl) (a free, offline neural text-to-speech engine —
+no video-hosting or paid TTS account needed, and it sounds like a natural voice rather than a
+robotic one), and stitches everything together with `ffmpeg`.
 
-To improve this, you have two options:
+To improve this further, you have two options:
 
-1. **Regenerate with a better voice.** If you have access to a commercial TTS API (ElevenLabs,
-   Google Cloud TTS, Azure, etc.) or a different offline voice, adapt the `synthesize_audio()`
-   function in `scripts/generate_videos.py` to call it, then delete the old files in
-   `media/videos/` and re-run `python3 scripts/generate_videos.py`.
+1. **Regenerate with a different voice.** Piper has many free voices to choose from. Download
+   another voice's `.onnx` + `.onnx.json` pair (browse them at
+   [github.com/rhasspy/piper/releases](https://github.com/rhasspy/piper/releases) or
+   [huggingface.co/rhasspy/piper-voices](https://huggingface.co/rhasspy/piper-voices)), then run:
+   ```bash
+   pip install piper-tts --break-system-packages
+   VA_TTS_MODEL=/path/to/your-voice.onnx python3 scripts/generate_videos.py
+   ```
+   (delete the old files in `media/videos/` first so they get rebuilt rather than skipped). If you
+   have access to a commercial TTS API (ElevenLabs, Google Cloud TTS, Azure, etc.) instead, adapt
+   the `synthesize_audio()` function in `scripts/generate_videos.py` to call it.
 2. **Replace individual lessons with your own recordings.** Just drop a file named
    `<lessonId>.mp4` (e.g. `m1-l1.mp4`) into `media/videos/`, overwriting the generated one — the
    app doesn't care how the file was made, only that the filename matches the lesson ID from

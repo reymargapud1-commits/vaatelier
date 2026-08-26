@@ -4,19 +4,24 @@ Generates narrated slide-video lessons for the VA Training Portal.
 
 For every lesson in content/curriculum.json, this script:
   1. Renders each slide (heading + bullets) as a branded 1280x720 PNG.
-  2. Synthesizes narration audio for each slide with espeak-ng (offline TTS).
+  2. Synthesizes narration audio for each slide with Piper (offline neural TTS).
   3. Builds a per-slide MP4 (still image + narration audio) with ffmpeg.
   4. Concatenates all slide clips into one final lesson video.
 
 Output: media/videos/<lessonId>.mp4  (one file per lesson)
 
-Note on voice quality: this environment has no network access to
-commercial/neural TTS services (Google TTS, ElevenLabs, etc.), so narration
-uses espeak-ng, a lightweight offline synthesizer. It is clear and fully
-functional for training purposes, but sounds robotic/computerized rather
-than human. Swap in a real voiceover (or a paid TTS API) later by dropping
-replacement audio files into media/audio/<lessonId>/<slideIndex>.wav and
-re-running only the ffmpeg assembly step.
+Note on voice quality: narration uses Piper (https://github.com/OHF-voice/piper1-gpl),
+a free offline neural text-to-speech engine - it sounds like a natural human voice,
+not robotic, and needs no paid API or account. It does need a one-time voice model
+download (see VA_TTS_MODEL below); after that, generation is fully offline.
+
+To use a different voice, download another .onnx + .onnx.json model pair
+(browse voices at https://github.com/rhasspy/piper/releases or
+https://huggingface.co/rhasspy/piper-voices) and point VA_TTS_MODEL at it, e.g.:
+    VA_TTS_MODEL=/path/to/en-us-ryan-high.onnx python3 scripts/generate_videos.py
+
+You can also always replace individual lessons with your own recordings - see the
+README's "About the video lessons" section.
 """
 
 import json
@@ -25,9 +30,11 @@ import shutil
 import subprocess
 import sys
 import textwrap
+import wave
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
+from piper import PiperVoice
 
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT_DIR = ROOT / "content"
@@ -48,8 +55,25 @@ FONT_DIR = "/usr/share/fonts/truetype/dejavu"
 FONT_BOLD = f"{FONT_DIR}/DejaVuSans-Bold.ttf"
 FONT_REGULAR = f"{FONT_DIR}/DejaVuSans.ttf"
 
-VOICE = os.environ.get("VA_TTS_VOICE", "en+f3")
-SPEED = os.environ.get("VA_TTS_SPEED", "165")
+# Path to a Piper voice model (.onnx). Defaults to a natural-sounding US
+# English voice downloaded into /tmp/piper-voice - see the module docstring
+# above for how to point this at a different voice.
+MODEL_PATH = os.environ.get("VA_TTS_MODEL", "/tmp/piper-voice/en-us-lessac-medium.onnx")
+
+_voice = None
+
+
+def get_voice():
+    global _voice
+    if _voice is None:
+        if not Path(MODEL_PATH).exists():
+            raise SystemExit(
+                f"Piper voice model not found at {MODEL_PATH}.\n"
+                "Download one (see the module docstring) or set VA_TTS_MODEL "
+                "to point at an existing .onnx voice file."
+            )
+        _voice = PiperVoice.load(MODEL_PATH)
+    return _voice
 
 
 def load_curriculum():
@@ -119,20 +143,9 @@ def render_slide(course_title, module_title, lesson_title, slide, slide_index, t
 
 
 def synthesize_audio(text, out_wav):
-    subprocess.run(
-        [
-            "espeak-ng",
-            "-v", VOICE,
-            "-s", SPEED,
-            "-p", "45",
-            "-g", "6",
-            "-w", str(out_wav),
-            text,
-        ],
-        check=True,
-        stdout=subprocess.DEVNULL,
-        stderr=subprocess.DEVNULL,
-    )
+    voice = get_voice()
+    with wave.open(str(out_wav), "wb") as wav_file:
+        voice.synthesize_wav(text, wav_file)
 
 
 def get_duration(path):
