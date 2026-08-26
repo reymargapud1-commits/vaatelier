@@ -5,15 +5,10 @@ import curriculum from "../../content/curriculum.json";
 
 const COACH_NAME = process.env.COACH_NAME || "Reymar Gapud";
 const COACH_TITLE = process.env.COACH_TITLE || "VA Coach & Trainer";
-const PRICE_DISPLAY = "₱2,999";
+const PRICE_DISPLAY = "₱499";
 
 export default function LandingPage() {
   const totalLessons = curriculum.modules.reduce((sum, m) => sum + m.lessons.length, 0);
-  const initials = COACH_NAME.split(" ")
-    .map((p) => p[0])
-    .join("")
-    .slice(0, 2)
-    .toUpperCase();
 
   return (
     <>
@@ -75,7 +70,7 @@ export default function LandingPage() {
           <Stat icon="🎥" label="Video Lessons" value={`${totalLessons}`} />
           <Stat icon="📚" label="Modules" value={`${curriculum.modules.length}`} />
           <Stat icon="📝" label="Quizzes" value={`${curriculum.modules.length}`} />
-          <Stat icon="🎓" label="Certificate" value="1" />
+          <Stat icon="🎓" label="Certificates" value="4" />
         </div>
       </section>
 
@@ -114,10 +109,10 @@ export default function LandingPage() {
 
           <div className="card flex flex-col items-center justify-center border-2 border-dashed border-brand-200 bg-brand-50/50 text-center">
             <div className="mb-2 text-3xl">🎙️</div>
-            <h3 className="font-bold text-gray-900">Bonus: Live 1-on-1 Coaching Session</h3>
+            <h3 className="font-bold text-gray-900">Optional: 1-on-1 Coaching Session</h3>
             <p className="mt-1 text-sm text-gray-600">
-              Before you finish, schedule a live session with your coach for personalized
-              feedback and questions.
+              Get personal feedback from Coach Reymar anytime — ₱300 for a 2-hour session. Not
+              required to finish the course or earn your certificates.
             </p>
           </div>
         </div>
@@ -125,38 +120,128 @@ export default function LandingPage() {
 
       {/* Meet your trainer */}
       <section className="bg-gray-50 py-20">
-        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
-          <h2 className="mb-10 text-3xl font-bold text-gray-900 sm:text-4xl">Meet Your Trainer</h2>
-          <div className="card mx-auto flex max-w-xl flex-col items-center gap-4 p-8">
-            <div className="flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 text-3xl font-bold text-white shadow-md">
-              {initials}
+        <div className="mx-auto max-w-5xl px-4 sm:px-6">
+          <h2 className="mb-10 text-center text-3xl font-bold text-gray-900 sm:text-4xl">
+            Meet Your Trainer
+          </h2>
+          <div className="grid items-start gap-10 lg:grid-cols-[340px_1fr]">
+            <div className="mx-auto grid w-full max-w-sm grid-cols-2 gap-3">
+              <img
+                src="/images/trainer/coach-headshot-1.jpg"
+                alt={`${COACH_NAME}, ${COACH_TITLE}`}
+                className="col-span-2 aspect-[4/5] w-full rounded-2xl object-cover shadow-lg ring-1 ring-black/5"
+              />
+              <img
+                src="/images/trainer/coach-portrait-crossed-arms-1.jpg"
+                alt={`${COACH_NAME} at a client training summit`}
+                className="aspect-square w-full rounded-xl object-cover shadow-md ring-1 ring-black/5"
+              />
+              <img
+                src="/images/trainer/coach-video-call-thumbsup.jpg"
+                alt={`${COACH_NAME} on a live team call`}
+                className="aspect-square w-full rounded-xl object-cover shadow-md ring-1 ring-black/5"
+              />
             </div>
-            <div>
+
+            <div className="card p-8">
               <p className="text-xl font-bold text-gray-900">{COACH_NAME}</p>
-              <p className="text-brand-600">{COACH_TITLE}</p>
+              <p className="mb-4 text-brand-600">{COACH_TITLE}</p>
+              <p className="text-left text-gray-600">
+                I didn't start out as a VA. For years I worked the day shift at a manufacturing
+                company — up early, home late, squeezing in my studies in between. Then I got my
+                first real shot as a freelance agent for a US-based client. I worked hard, kept
+                learning, and was eventually promoted to Team Manager, a role I still hold today,
+                leading a team that supports clients on the other side of the world — night
+                shifts, holiday duty, and all.
+              </p>
+              <p className="mt-3 text-left text-gray-600">
+                Along the way I built a home office I'm proud of, sat through more training
+                sessions and final interviews than I can count, and learned firsthand that this
+                career can travel with you — I've logged into team meetings from a beach in
+                Dingalan and from a coffee shop when my home internet gave out. I built The VA
+                Atelier to hand you everything I wish someone had handed me on day one, so your
+                path to your first client is faster and a lot less confusing than mine was.
+              </p>
+              <p className="mt-3 text-left text-gray-600">
+                Every student gets all 4 certificates just by finishing the lessons and quizzes —
+                no strings attached. But if you want my eyes on your resume, your portfolio, or
+                your interview answers before you apply, book an optional 1-on-1 session with me.
+                It's the fastest way to turn "I finished the course" into "I landed my first
+                client."
+              </p>
             </div>
-            <p className="text-left text-gray-600">
-              I didn't start out as a VA. For years I worked the day shift at a manufacturing
-              company — up early, home late, squeezing in my studies in between. Then I got my
-              first real shot as a freelance agent for a US-based client. I worked hard, kept
-              learning, and was eventually promoted to Team Manager, a role I still hold today,
-              leading a team that supports clients on the other side of the world — night shifts,
-              holiday duty, and all.
-            </p>
-            <p className="mt-3 text-left text-gray-600">
-              Along the way I built a home office I'm proud of, sat through more training
-              sessions and final interviews than I can count, and learned firsthand that this
-              career can travel with you — I've logged into team meetings from a beach in
-              Dingalan and from a coffee shop when my home internet gave out. I built The VA
-              Atelier to hand you everything I wish someone had handed me on day one, so your
-              path to your first client is faster and a lot less confusing than mine was.
-            </p>
-            <p className="mt-3 text-gray-600">
-              Every student who completes this program gets direct access to a live 1-on-1
-              coaching session with me before earning their certificate — so you leave not just
-              with knowledge, but with real feedback and a clear next step toward your first
-              client.
-            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Optional coaching upsell */}
+      <section className="py-20">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6">
+          <div className="grid items-center gap-10 rounded-2xl border-2 border-brand-100 bg-gradient-to-br from-brand-50 to-white p-8 shadow-sm sm:p-10 lg:grid-cols-2">
+            <div>
+              <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-brand-600 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
+                Optional Add-On
+              </span>
+              <h2 className="mb-3 text-2xl font-bold text-gray-900 sm:text-3xl">
+                Book a 1-on-1 Session With Coach Reymar
+              </h2>
+              <p className="mb-5 text-gray-600">
+                Hindi ito required — makukuha mo pa rin lahat ng 4 certificates kahit hindi ka
+                mag-book. Pero kung gusto mong mapabilis ang landing ng first client mo, sulit ang
+                dalawang oras na ito:
+              </p>
+              <ul className="mb-6 space-y-2 text-sm text-gray-700">
+                <li className="flex items-start gap-2">
+                  <span className="mt-0.5 text-brand-500">✓</span>
+                  Personal feedback sa resume, portfolio, at proposals — hindi generic advice
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-0.5 text-brand-500">✓</span>
+                  Mock interview practice para handa ka sa totoong client interview
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-0.5 text-brand-500">✓</span>
+                  Direktang tanungin ang mga totoong tanong mo kay Coach Reymar mismo
+                </li>
+              </ul>
+              <div className="flex items-baseline gap-2">
+                <span className="text-3xl font-extrabold text-gray-900">₱300</span>
+                <span className="text-sm text-gray-500">per session · 2 hours</span>
+              </div>
+            </div>
+            <img
+              src="/images/trainer/coach-video-call-pointing.jpg"
+              alt="Coach Reymar during a live coaching call"
+              className="aspect-[4/3] w-full rounded-2xl object-cover shadow-lg ring-1 ring-black/5"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* VA Document Store teaser */}
+      <section className="bg-gray-50 py-20">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6">
+          <h2 className="mb-2 text-center text-3xl font-bold text-gray-900 sm:text-4xl">
+            VA Document Store
+          </h2>
+          <p className="mx-auto mb-12 max-w-xl text-center text-gray-600">
+            Skip the guesswork. Order done-for-you application materials, unlocked once you
+            enroll.
+          </p>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+            {[
+              { icon: "📄", label: "Curriculum Vitae", price: "₱250" },
+              { icon: "🗂️", label: "Portfolio", price: "₱1,500" },
+              { icon: "✉️", label: "Cover Letter", price: "₱150" },
+              { icon: "🧾", label: "VA Invoice Format", price: "₱250" },
+              { icon: "🎬", label: "Intro Presentation", price: "₱500" },
+            ].map((item) => (
+              <div key={item.label} className="card text-center">
+                <div className="mb-2 text-2xl">{item.icon}</div>
+                <p className="text-sm font-semibold text-gray-900">{item.label}</p>
+                <p className="mt-1 text-brand-600">{item.price}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -180,8 +265,8 @@ export default function LandingPage() {
             />
             <Feature
               icon="🎓"
-              title="Certificate of Completion"
-              text="A shareable certificate, personally signed, to add to your resume and LinkedIn."
+              title="4 Certificates, Not Just One"
+              text="Earn a personally-signed certificate for every stage you complete — foundations, core skills, portfolio, and client acquisition."
             />
             <Feature
               icon="🧰"
@@ -217,6 +302,10 @@ export default function LandingPage() {
           </Link>
           <p className="mt-3 text-xs text-gray-400">
             Secure payment via GCash, Maya, or Card — powered by PayMongo
+          </p>
+          <p className="mt-4 text-xs text-gray-400">
+            Optional add-ons: 1-on-1 coaching (₱300/session) and the VA Document Store — never
+            required to finish the course or earn your certificates.
           </p>
         </div>
       </section>

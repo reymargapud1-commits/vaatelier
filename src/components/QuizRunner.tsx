@@ -17,6 +17,7 @@ interface SubmitResult {
   passingScore: number;
   results: { questionId: string; correct: boolean; correctIndex: number }[];
   certificateIssued: boolean;
+  certificatesIssued: string[];
 }
 
 export default function QuizRunner({ quizId }: { quizId: string }) {
@@ -73,14 +74,18 @@ export default function QuizRunner({ quizId }: { quizId: string }) {
 
         {result.certificateIssued && (
           <p className="mb-4 rounded-lg bg-emerald-50 p-3 text-sm font-medium text-emerald-700">
-            🎓 Congratulations, you have completed the entire course! Your certificate is ready.
+            🎓 Congratulations, you've earned{" "}
+            {result.certificatesIssued.length > 1
+              ? `${result.certificatesIssued.length} new certificates`
+              : "a new certificate"}
+            !
           </p>
         )}
 
         <div className="flex flex-wrap justify-center gap-3">
           {result.certificateIssued ? (
-            <Link href="/dashboard/certificate" className="btn-primary">
-              View Certificate
+            <Link href="/dashboard/certificates" className="btn-primary">
+              View Certificates
             </Link>
           ) : (
             <Link href="/dashboard" className="btn-primary">

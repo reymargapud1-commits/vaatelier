@@ -8,13 +8,19 @@ import { eq, and } from "drizzle-orm";
 import { authOptions } from "@/lib/auth";
 import { db } from "@/db";
 import { users, certificates, courses } from "@/db/schema";
+import { getTrackById } from "@/lib/certificate-tracks";
 
 const FONTS_DIR = path.join(process.cwd(), "assets", "fonts");
 
-export async function GET(req: Request, { params }: { params: { courseId: string } }) {
+export async function GET(req: Request, { params }: { params: { courseId: string; track: string } }) {
   const session = await getServerSession(authOptions);
   if (!session?.user) {
     return new NextResponse("Unauthorized", { status: 401 });
+  }
+
+  const trackDef = getTrackById(params.track);
+  if (!trackDef) {
+    return new NextResponse("Unknown certificate track", { status: 404 });
   }
 
   const userId = (session.user as any).id;
@@ -26,11 +32,17 @@ export async function GET(req: Request, { params }: { params: { courseId: string
   const [certificate] = await db
     .select()
     .from(certificates)
-    .where(and(eq(certificates.userId, userId), eq(certificates.courseId, params.courseId)))
+    .where(
+      and(
+        eq(certificates.userId, userId),
+        eq(certificates.courseId, params.courseId),
+        eq(certificates.track, params.track)
+      )
+    )
     .limit(1);
   if (!certificate) {
     return new NextResponse(
-      "Certificate not yet earned. Complete all lessons, pass every module quiz, and book your live training session first.",
+      "Certificate not yet earned. Complete every lesson and pass every quiz in this certificate's modules first.",
       { status: 403 }
     );
   }
@@ -40,6 +52,7 @@ export async function GET(req: Request, { params }: { params: { courseId: string
 
   const coachName = course.coachName || process.env.COACH_NAME || "Reymar Gapud";
   const coachTitle = course.coachTitle || process.env.COACH_TITLE || "VA Coach & Trainer";
+  const certTitle = trackDef.label.replace(/^Certificate [IV]+:\s*/, "");
 
   const pdfDoc = await PDFDocument.create();
   pdfDoc.registerFontkit(fontkit);
@@ -115,33 +128,35 @@ export async function GET(req: Request, { params }: { params: { courseId: string
   });
 
   centerText("Certificate of Completion", height - 145, serif, 34, wine);
+  centerText(trackDef.label.split(":")[0].toUpperCase(), height - 172, sansBold, 11, gold);
 
-  centerText("This certificate is proudly presented to".toUpperCase(), height - 205, sansBold, 11, gray);
+  centerText("This certificate is proudly presented to".toUpperCase(), height - 210, sansBold, 11, gray);
 
   // Student name - the hero element
-  centerText(user.name, height - 255, serif, 36, wine);
+  centerText(user.name, height - 260, serif, 36, wine);
   page.drawLine({
-    start: { x: width / 2 - 160, y: height - 268 },
-    end: { x: width / 2 + 160, y: height - 268 },
+    start: { x: width / 2 - 160, y: height - 273 },
+    end: { x: width / 2 + 160, y: height - 273 },
     thickness: 0.75,
     color: goldLight,
   });
 
   centerText(
-    "for successfully completing every module, video lesson, and quiz of",
-    height - 305,
+    "for successfully completing every video lesson and quiz of",
+    height - 310,
     sans,
     12.5,
     gray
   );
-  centerText(course.title, height - 330, sansBold, 17, wine);
+  centerText(certTitle, height - 335, sansBold, 17, wine);
+  centerText(`(${trackDef.subtitle} of ${course.title})`, height - 355, sans, 10.5, gray);
 
   const issuedDate = certificate.issuedAt.toLocaleDateString("en-PH", {
     year: "numeric",
     month: "long",
     day: "numeric",
   });
-  centerText(`Awarded on ${issuedDate}`, height - 358, sans, 11.5, gray);
+  centerText(`Awarded on ${issuedDate}`, height - 378, sans, 11.5, gray);
 
   // Seal (drawn, not an image): concentric circles + a simple ribbon
   const sealX = width - 150;
@@ -186,7 +201,7 @@ export async function GET(req: Request, { params }: { params: { courseId: string
   return new NextResponse(Buffer.from(pdfBytes), {
     headers: {
       "Content-Type": "application/pdf",
-      "Content-Disposition": `inline; filename="The-VA-Atelier-Certificate-${user.name.replace(/\s+/g, "-")}.pdf"`,
+      "Content-Disposition": `inline; filename="The-VA-Atelier-Certificate-${trackDef.id}-${user.name.replace(/\s+/g, "-")}.pdf"`,
     },
   });
 }

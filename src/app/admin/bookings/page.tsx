@@ -18,6 +18,8 @@ export default async function AdminBookingsPage() {
       scheduledAt: liveSessionBookings.scheduledAt,
       studentNote: liveSessionBookings.studentNote,
       status: liveSessionBookings.status,
+      paymentStatus: liveSessionBookings.paymentStatus,
+      amountCentavos: liveSessionBookings.amountCentavos,
       createdAt: liveSessionBookings.createdAt,
       studentName: users.name,
       studentEmail: users.email,
@@ -42,6 +44,7 @@ export default async function AdminBookingsPage() {
                   <th className="px-4 py-3 font-medium">Student</th>
                   <th className="px-4 py-3 font-medium">Scheduled (Manila)</th>
                   <th className="px-4 py-3 font-medium">Note</th>
+                  <th className="px-4 py-3 font-medium">Payment</th>
                   <th className="px-4 py-3 font-medium">Status</th>
                   <th className="px-4 py-3 font-medium">Calendar</th>
                 </tr>
@@ -61,6 +64,23 @@ export default async function AdminBookingsPage() {
                       })}
                     </td>
                     <td className="max-w-xs px-4 py-3 text-gray-600">{b.studentNote || "—"}</td>
+                    <td className="px-4 py-3">
+                      <span
+                        className={`rounded-full px-2.5 py-1 text-xs font-medium ${
+                          b.paymentStatus === "paid"
+                            ? "bg-emerald-50 text-emerald-700"
+                            : b.paymentStatus === "pending"
+                              ? "bg-amber-50 text-amber-700"
+                              : "bg-gray-100 text-gray-600"
+                        }`}
+                      >
+                        {b.paymentStatus === "paid"
+                          ? `Paid ₱${(b.amountCentavos / 100).toLocaleString("en-PH", { minimumFractionDigits: 2 })}`
+                          : b.paymentStatus === "pending"
+                            ? "Pending"
+                            : "Unpaid"}
+                      </span>
+                    </td>
                     <td className="px-4 py-3">
                       <BookingStatusControl bookingId={b.id} currentStatus={b.status} />
                     </td>

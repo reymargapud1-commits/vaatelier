@@ -63,14 +63,15 @@ export default function PaymentPage() {
 
           <div className="mb-6 rounded-lg bg-brand-50 p-5">
             <p className="text-sm font-medium text-brand-700">The VA Atelier Training Program</p>
-            <p className="mt-1 text-4xl font-extrabold text-gray-900">₱2,999</p>
+            <p className="mt-1 text-4xl font-extrabold text-gray-900">₱499</p>
             <p className="mt-1 text-sm text-gray-600">One-time payment · Lifetime access</p>
           </div>
 
           <ul className="mb-8 space-y-2 text-left text-sm text-gray-700">
-            <li>✅ 22 video lessons across 6 modules</li>
+            <li>✅ 25 video lessons across 6 modules</li>
             <li>✅ Quizzes after every module</li>
-            <li>✅ Official Certificate of Completion</li>
+            <li>✅ 4 official Certificates of Completion</li>
+            <li>✅ Access to the optional 1-on-1 coaching add-on and VA Document Store</li>
             <li>✅ Pay securely via GCash, Maya, or Card</li>
           </ul>
 

@@ -18,6 +18,10 @@ export interface CreateCheckoutParams {
   userId: string;
   successUrl: string;
   cancelUrl: string;
+  /** Extra metadata merged alongside userId - used to tag what a checkout is
+   * for (purpose, referenceId) so the webhook can route it correctly even
+   * as a fallback if the payments row lookup somehow misses. */
+  metadata?: Record<string, string>;
 }
 
 /**
@@ -49,6 +53,7 @@ export async function createCheckoutSession(params: CreateCheckoutParams) {
         show_description: true,
         metadata: {
           userId: params.userId,
+          ...params.metadata,
         },
       },
     },

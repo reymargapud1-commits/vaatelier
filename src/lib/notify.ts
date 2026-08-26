@@ -109,8 +109,8 @@ export async function notifyCoachOfBooking(info: BookingCalendarInfo) {
     await transport.sendMail({
       from: `"The VA Atelier" <${process.env.SMTP_USER}>`,
       to: coachEmail,
-      subject: `New live session booked by ${info.studentName}`,
-      text: `${info.studentName} (${info.studentEmail}) booked their required live training session for ${when} (Asia/Manila).\n\nNote from student: ${
+      subject: `Paid live session booked by ${info.studentName}`,
+      text: `${info.studentName} (${info.studentEmail}) paid for and booked a 1-on-1 live coaching session for ${when} (Asia/Manila).\n\nNote from student: ${
         info.note || "(none)"
       }\n\nA calendar invite is attached.`,
       icalEvent: {
@@ -122,6 +122,47 @@ export async function notifyCoachOfBooking(info: BookingCalendarInfo) {
     return { sent: true };
   } catch (err) {
     console.error("Failed to send booking notification email:", err);
+    return { sent: false, error: err };
+  }
+}
+
+/**
+ * Emails the coach whenever a student places (and pays for) a custom VA
+ * document order. Silently no-ops if SMTP isn't configured - the order is
+ * still saved and visible on /admin/store-orders.
+ */
+export async function notifyCoachOfOrder(info: {
+  orderId: string;
+  studentName: string;
+  studentEmail: string;
+  itemLabel: string;
+  amountCentavos: number;
+  note?: string | null;
+}) {
+  const coachEmail = process.env.COACH_NOTIFY_EMAIL;
+  const transport = getTransport();
+  if (!transport || !coachEmail) {
+    console.log(
+      "[notify] SMTP or COACH_NOTIFY_EMAIL not configured - skipping email. " +
+        "Order is still saved and visible on /admin/store-orders."
+    );
+    return { sent: false };
+  }
+
+  try {
+    await transport.sendMail({
+      from: `"The VA Atelier" <${process.env.SMTP_USER}>`,
+      to: coachEmail,
+      subject: `New paid store order: ${info.itemLabel} (${info.studentName})`,
+      text: `${info.studentName} (${info.studentEmail}) paid ₱${(info.amountCentavos / 100).toFixed(
+        2
+      )} for: ${info.itemLabel}.\n\nNote from student: ${
+        info.note || "(none)"
+      }\n\nOrder ID: ${info.orderId}\nManage it at /admin/store-orders.`,
+    });
+    return { sent: true };
+  } catch (err) {
+    console.error("Failed to send order notification email:", err);
     return { sent: false, error: err };
   }
 }

@@ -1,26 +1,33 @@
 # The VA Atelier — Virtual Assistant Training Portal
 
-A complete, paid online training portal for aspiring Virtual Assistants. Students pay first
-(GCash, Maya, or card via PayMongo) before they can access any content, then work through video
-lessons and quizzes, book a required live 1-on-1 session with you, and earn a certificate you've
-personally signed.
+A complete, paid online training portal for aspiring Virtual Assistants. Students pay once
+(GCash, Maya, or card via PayMongo) to unlock all content, then work through video lessons and
+quizzes to earn 4 separate certificates. A 1-on-1 live coaching session with you and a storefront
+for done-for-you VA application documents are both optional paid add-ons on top of enrollment.
 
 ## What's included
 
-- **Landing page** marketing the program, with a "Meet Your Trainer" section.
+- **Landing page** marketing the program, with a "Meet Your Trainer" section and real trainer
+  photos.
 - **Paywall**: registration is free, but every lesson, quiz, and the video streaming endpoint
   itself re-checks payment status server-side on every request. Nothing leaks before payment.
-- **22 narrated video lessons** across 6 modules — VA fundamentals, must-know tools, core service
+- **25 narrated video lessons** across 6 modules — VA fundamentals, must-know tools, core service
   skills, portfolio building, resume/proposal writing, and landing your first client. These are
   auto-generated slide videos (see "About the video lessons" below) so you can regenerate or
   replace them any time.
 - **A quiz after every module**, graded server-side, with a passing score.
-- **A required live training session booking** near the end of the course — the student picks a
-  date/time, it's saved, you're emailed a calendar invite (if you configure email), and it always
-  shows up on your `/admin/bookings` page either way.
-- **A certificate of completion**, generated as a real PDF, signed with your name and title, only
-  unlocked once a student finishes every lesson, passes every quiz, and books their live session.
-- **PayMongo checkout** (GCash, Maya, card) with webhook + fallback verification.
+- **4 separate certificates** (`src/lib/certificate-tracks.ts`), each covering a group of
+  modules, unlocked as soon as a student finishes every lesson and passes every quiz in that
+  group — no live session required.
+- **An OPTIONAL, paid 1-on-1 live coaching session** (₱300/2hrs by default, see
+  `COACHING_PRICE_CENTAVOS`) — the student picks a date/time and pays via PayMongo; once paid,
+  you're emailed a calendar invite (if you configure email), and it always shows up on your
+  `/admin/bookings` page either way.
+- **An OPTIONAL VA Document Store** (`/dashboard/store`, `src/lib/store-items.ts`) — students can
+  order done-for-you CV, portfolio, cover letter, invoice format, or intro presentation, paid via
+  PayMongo; orders and their fulfillment status show up on `/admin/store-orders`.
+- **PayMongo checkout** (GCash, Maya, card) with webhook + fallback verification, shared across
+  enrollment, coaching bookings, and store orders (see `payments.purpose`).
 
 ## Tech stack
 
@@ -53,7 +60,9 @@ cp .env.example .env
   [PayMongo dashboard](https://dashboard.paymongo.com/developers). Use `sk_test_...` /
   `pk_test_...` while developing.
 - `PAYMONGO_WEBHOOK_SECRET` — created in step 4 below.
-- `TRAINING_PRICE_CENTAVOS` — the price in centavos (₱2,999.00 = `299900`).
+- `TRAINING_PRICE_CENTAVOS` — the enrollment price in centavos (₱499.00 = `49900`).
+- `COACHING_PRICE_CENTAVOS` — the optional 1-on-1 coaching session price in centavos (₱300.00 =
+  `30000`).
 - `COACH_NAME` / `COACH_TITLE` — your name and title. Shown on the landing page and printed as the
   signature on every certificate.
 - `COACH_NOTIFY_EMAIL` + `SMTP_*` — optional, see "Live session booking notifications" below.

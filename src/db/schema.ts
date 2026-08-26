@@ -73,13 +73,21 @@ export const quizAttempts = sqliteTable("quiz_attempts", {
   createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
 });
 
+// A student earns one certificate per "track" (a group of modules) once
+// they finish every lesson + pass every quiz in that track - see
+// certificate-eligibility.ts and lib/certificate-tracks.ts for the 4 tracks.
 export const certificates = sqliteTable("certificates", {
   id: text("id").primaryKey(),
   userId: text("user_id").notNull().references(() => users.id),
   courseId: text("course_id").notNull().references(() => courses.id),
+  track: text("track").notNull().default("legacy"),
   issuedAt: integer("issued_at", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
 });
 
+// purpose discriminates what a payment is for; referenceId points at the
+// row it pays for (a liveSessionBookings.id for "coaching", a
+// storeOrders.id for "store_order", null for "enrollment" since that just
+// flips users.isPaid). See api/payment/webhook/route.ts for how each is handled.
 export const payments = sqliteTable("payments", {
   id: text("id").primaryKey(),
   userId: text("user_id").notNull().references(() => users.id),
@@ -88,13 +96,15 @@ export const payments = sqliteTable("payments", {
   paymentIntentId: text("payment_intent_id"),
   status: text("status").notNull().default("pending"), // "pending" | "paid" | "failed"
   amountCentavos: integer("amount_centavos").notNull(),
+  purpose: text("purpose").notNull().default("enrollment"), // "enrollment" | "coaching" | "store_order"
+  referenceId: text("reference_id"),
   createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
   updatedAt: integer("updated_at", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
 });
 
-// A student books a required live training session with the coach near the
-// end of the program. Booking (not attendance, which can't be verified
-// automatically) is what unlocks the certificate - see certificate-eligibility.ts.
+// A student may OPTIONALLY book & pay for a 1-on-1 live coaching session
+// with the coach. It is no longer required for the certificate - see
+// certificate-eligibility.ts, which no longer checks this table at all.
 export const liveSessionBookings = sqliteTable("live_session_bookings", {
   id: text("id").primaryKey(),
   userId: text("user_id").notNull().references(() => users.id),
@@ -102,5 +112,23 @@ export const liveSessionBookings = sqliteTable("live_session_bookings", {
   scheduledAt: integer("scheduled_at", { mode: "timestamp" }).notNull(),
   studentNote: text("student_note"),
   status: text("status").notNull().default("requested"), // "requested" | "confirmed" | "completed" | "cancelled"
+  amountCentavos: integer("amount_centavos").notNull().default(30000), // ₱300.00
+  paymentStatus: text("payment_status").notNull().default("unpaid"), // "unpaid" | "pending" | "paid"
+  checkoutSessionId: text("checkout_session_id").unique(),
   createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
+});
+
+// Custom orders for VA job-application materials (CV, portfolio, cover
+// letter, invoice format, intro presentation) - see lib/store-items.ts.
+export const storeOrders = sqliteTable("store_orders", {
+  id: text("id").primaryKey(),
+  userId: text("user_id").notNull().references(() => users.id),
+  itemKey: text("item_key").notNull(),
+  itemLabel: text("item_label").notNull(),
+  amountCentavos: integer("amount_centavos").notNull(),
+  customerNote: text("customer_note"),
+  status: text("status").notNull().default("pending_payment"), // "pending_payment" | "paid" | "in_progress" | "delivered" | "cancelled"
+  checkoutSessionId: text("checkout_session_id").unique(),
+  createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
+  updatedAt: integer("updated_at", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
 });

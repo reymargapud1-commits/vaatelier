@@ -7,7 +7,10 @@ interface Booking {
   scheduledAt: string;
   studentNote: string | null;
   status: string;
+  paymentStatus: string;
 }
+
+const PRICE_DISPLAY = "₱300";
 
 export default function BookingForm() {
   const [booking, setBooking] = useState<Booking | null | undefined>(undefined);
@@ -16,7 +19,6 @@ export default function BookingForm() {
   const [note, setNote] = useState("");
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
-  const [success, setSuccess] = useState(false);
 
   useEffect(() => {
     fetch("/api/booking")
@@ -33,29 +35,31 @@ export default function BookingForm() {
     }
     const scheduledAt = new Date(`${date}T${time}:00`);
     setSaving(true);
-    const res = await fetch("/api/booking", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ scheduledAt: scheduledAt.toISOString(), note }),
-    });
-    const data = await res.json();
-    setSaving(false);
-
-    if (!res.ok) {
-      setError(data.error || "Something went wrong. Please try again.");
-      return;
+    try {
+      const res = await fetch("/api/payment/create-booking-checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ scheduledAt: scheduledAt.toISOString(), note }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setError(data.error || "Something went wrong. Please try again.");
+        setSaving(false);
+        return;
+      }
+      window.location.href = data.checkoutUrl;
+    } catch {
+      setError("Network error. Please try again.");
+      setSaving(false);
     }
-    setSuccess(true);
-    setBooking({ id: data.bookingId, scheduledAt: scheduledAt.toISOString(), studentNote: note, status: "requested" });
   }
 
   if (booking === undefined) {
     return <p className="text-gray-500">Loading...</p>;
   }
 
-  if (booking || success) {
-    const b = booking!;
-    const scheduled = new Date(b.scheduledAt);
+  if (booking && booking.paymentStatus === "paid") {
+    const scheduled = new Date(booking.scheduledAt);
     return (
       <div className="card text-center">
         <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-emerald-100 text-2xl">
@@ -73,11 +77,12 @@ export default function BookingForm() {
         <p className="mb-6 text-sm text-gray-500">
           Your coach has been notified. Add it to your own calendar so you don't forget:
         </p>
-        <a href={`/api/booking/ics/${b.id}`} className="btn-primary w-full">
+        <a href={`/api/booking/ics/${booking.id}`} className="btn-primary w-full">
           Add to My Calendar (.ics)
         </a>
         <p className="mt-4 text-xs text-gray-400">
-          Need to reschedule? Just submit the form again below with a new date and time.
+          Need to reschedule? Just submit the form again below with a new date and time — no
+          need to pay twice for the same booking.
         </p>
 
         <details className="mt-6 text-left">
@@ -102,24 +107,83 @@ export default function BookingForm() {
     );
   }
 
+  if (booking && booking.paymentStatus === "pending") {
+    return (
+      <div className="card text-center">
+        <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-amber-100 text-2xl">
+          ⏳
+        </div>
+        <h2 className="mb-2 text-xl font-bold text-gray-900">Finishing Your Booking</h2>
+        <p className="mb-6 text-sm text-gray-600">
+          Sandali lang — kina-confirm pa ang bayad mo sa PayMongo. Kung na-redirect ka dito
+          pabalik, i-refresh lang ang page na ito.
+        </p>
+        <button onClick={() => window.location.reload()} className="btn-secondary w-full">
+          Refresh
+        </button>
+      </div>
+    );
+  }
+
   return (
-    <div className="card">
-      <h2 className="mb-1 text-xl font-bold text-gray-900">Schedule Your Live Training Session</h2>
-      <p className="mb-6 text-sm text-gray-600">
-        Bago matapos ang training, kailangan mo munang mag-schedule ng live session with your
-        coach. Ito ang huling hakbang bago i-unlock ang iyong Certificate of Completion.
-      </p>
-      <BookingInnerForm
-        date={date}
-        time={time}
-        note={note}
-        setDate={setDate}
-        setTime={setTime}
-        setNote={setNote}
-        onSubmit={handleSubmit}
-        saving={saving}
-        error={error}
-      />
+    <div className="space-y-6">
+      <div className="card border-2 border-brand-100 bg-gradient-to-br from-brand-50 to-white">
+        <div className="mb-4 flex items-center gap-2">
+          <span className="rounded-full bg-brand-600 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
+            Optional Add-On
+          </span>
+        </div>
+        <h2 className="mb-2 text-xl font-bold text-gray-900">
+          1-on-1 Live Coaching Session with Coach Reymar
+        </h2>
+        <p className="mb-4 text-sm text-gray-600">
+          Hindi na ito required para makakuha ng certificate — kaya mo nang tapusin ang training
+          at makuha ang lahat ng certificates mo kahit hindi ka mag-book nito. Pero kung gusto
+          mong mapabilis ang paglapad ng career mo bilang VA, sulit ang isang session na ito:
+        </p>
+        <ul className="mb-5 space-y-2 text-sm text-gray-700">
+          <li className="flex items-start gap-2">
+            <span className="mt-0.5 text-brand-500">✓</span>
+            Personal na feedback sa resume, portfolio, at proposals mo — hindi generic advice
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="mt-0.5 text-brand-500">✓</span>
+            Mock interview practice para hindi ka ma-panic sa totoong client interview
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="mt-0.5 text-brand-500">✓</span>
+            Direktang tanungin ang mga totoong tanong mo — walang generic FAQ, ikaw at si Coach
+            Reymar lang
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="mt-0.5 text-brand-500">✓</span>
+            2 full hours, sa oras na bagay sa schedule mo
+          </li>
+        </ul>
+        <div className="flex items-baseline gap-2 rounded-lg bg-white p-4 shadow-sm">
+          <span className="text-3xl font-extrabold text-gray-900">{PRICE_DISPLAY}</span>
+          <span className="text-sm text-gray-500">per session · 2 hours</span>
+        </div>
+      </div>
+
+      <div className="card">
+        <h3 className="mb-1 text-lg font-bold text-gray-900">Book & Pay for Your Session</h3>
+        <p className="mb-6 text-sm text-gray-600">
+          Pumili ng date at time, ma-redirect ka sa secure PayMongo checkout. Kapag na-confirm na
+          ang bayad, ma-notify na si Coach Reymar at i-schedule na ang session mo.
+        </p>
+        <BookingInnerForm
+          date={date}
+          time={time}
+          note={note}
+          setDate={setDate}
+          setTime={setTime}
+          setNote={setNote}
+          onSubmit={handleSubmit}
+          saving={saving}
+          error={error}
+        />
+      </div>
     </div>
   );
 }
@@ -185,7 +249,7 @@ function BookingInnerForm({
       </div>
       {error && <p className="text-sm text-red-600">{error}</p>}
       <button type="submit" disabled={saving} className="btn-primary w-full">
-        {saving ? "Scheduling..." : "Schedule My Live Session"}
+        {saving ? "Preparing secure checkout..." : `Book & Pay ${PRICE_DISPLAY} via GCash / Maya / Card`}
       </button>
     </form>
   );

@@ -4,18 +4,9 @@ import Link from "next/link";
 import { and, eq, inArray } from "drizzle-orm";
 import { authOptions } from "@/lib/auth";
 import { db } from "@/db";
-import {
-  users,
-  courses,
-  modules,
-  lessons,
-  quizzes,
-  lessonProgress,
-  quizAttempts,
-  certificates,
-  liveSessionBookings,
-} from "@/db/schema";
+import { users, courses, modules, lessons, quizzes, lessonProgress, quizAttempts } from "@/db/schema";
 import Navbar from "@/components/Navbar";
+import { getTrackProgress } from "@/lib/certificate-eligibility";
 
 export default async function DashboardPage() {
   const session = await getServerSession(authOptions);
@@ -91,23 +82,12 @@ export default async function DashboardPage() {
     : [];
   const passedQuizIds = new Set(attempts.map((a) => a.quizId));
 
-  const [certificate] = await db
-    .select()
-    .from(certificates)
-    .where(and(eq(certificates.userId, userId), eq(certificates.courseId, course.id)))
-    .limit(1);
-
-  const [booking] = await db
-    .select()
-    .from(liveSessionBookings)
-    .where(and(eq(liveSessionBookings.userId, userId), eq(liveSessionBookings.courseId, course.id)))
-    .limit(1);
-
   const totalLessons = allLessonIds.length;
   const completedCount = completedLessonIds.size;
   const percent = totalLessons ? Math.round((completedCount / totalLessons) * 100) : 0;
-  const allQuizzesPassed = quizIds.length > 0 && quizIds.every((id) => passedQuizIds.has(id));
-  const readyForLiveSession = percent === 100 && allQuizzesPassed;
+
+  const trackProgress = await getTrackProgress(userId, course.id);
+  const certificatesEarned = trackProgress.filter((t) => t.issued).length;
 
   return (
     <>
@@ -130,21 +110,39 @@ export default async function DashboardPage() {
             </div>
           </div>
 
-          {certificate ? (
-            <Link
-              href="/dashboard/certificate"
-              className="mt-5 inline-flex items-center gap-2 rounded-lg bg-white px-5 py-3 font-semibold text-brand-700 shadow transition hover:bg-brand-50"
-            >
-              🎓 View / Download Your Certificate
+          <Link
+            href="/dashboard/certificates"
+            className="mt-5 inline-flex items-center gap-2 rounded-lg bg-white px-5 py-3 font-semibold text-brand-700 shadow transition hover:bg-brand-50"
+          >
+            🎓 {certificatesEarned > 0 ? `View Your Certificates (${certificatesEarned}/4 earned)` : "View Your 4 Certificates"}
+          </Link>
+        </div>
+
+        <div className="mb-6 grid gap-4 sm:grid-cols-2">
+          <div className="card flex items-center justify-between gap-4 border-2 border-dashed border-brand-200 bg-brand-50/40">
+            <div>
+              <h2 className="font-bold text-gray-900">🎙️ 1-on-1 Live Coaching</h2>
+              <p className="mt-1 text-sm text-gray-600">
+                Optional — ₱300/session. Personal feedback, mock interviews, and direct access to
+                Coach Reymar.
+              </p>
+            </div>
+            <Link href="/dashboard/booking" className="btn-secondary whitespace-nowrap !px-3 !py-2 text-sm">
+              Book
             </Link>
-          ) : readyForLiveSession ? (
-            <Link
-              href="/dashboard/booking"
-              className="mt-5 inline-flex items-center gap-2 rounded-lg bg-white px-5 py-3 font-semibold text-brand-700 shadow transition hover:bg-brand-50"
-            >
-              📅 {booking ? "View Your Scheduled Live Session" : "Final Step: Schedule Your Live Session"}
+          </div>
+          <div className="card flex items-center justify-between gap-4 border-2 border-dashed border-gold-300 bg-gold-50/40">
+            <div>
+              <h2 className="font-bold text-gray-900">🛍️ VA Document Store</h2>
+              <p className="mt-1 text-sm text-gray-600">
+                Order a done-for-you CV, portfolio, cover letter, invoice format, or intro
+                presentation.
+              </p>
+            </div>
+            <Link href="/dashboard/store" className="btn-secondary whitespace-nowrap !px-3 !py-2 text-sm">
+              Shop
             </Link>
-          ) : null}
+          </div>
         </div>
 
         <div className="space-y-6">
@@ -199,26 +197,6 @@ export default async function DashboardPage() {
               </div>
             );
           })}
-
-          <div className={`card border-2 ${readyForLiveSession ? "border-brand-200" : "border-dashed border-gray-200 opacity-70"}`}>
-            <div className="flex items-center justify-between gap-4">
-              <div>
-                <h2 className="text-lg font-bold text-gray-900">
-                  🎙️ Final Step: Live Training Session
-                </h2>
-                <p className="mt-1 text-sm text-gray-600">
-                  {booking
-                    ? `Scheduled for ${booking.scheduledAt.toLocaleString("en-PH", { dateStyle: "medium", timeStyle: "short", timeZone: "Asia/Manila" })}.`
-                    : "Complete all lessons and quizzes to unlock scheduling your required 1-on-1 live session with your coach."}
-                </p>
-              </div>
-              {readyForLiveSession && (
-                <Link href="/dashboard/booking" className="btn-primary whitespace-nowrap">
-                  {booking ? "View / Reschedule" : "Schedule Now"}
-                </Link>
-              )}
-            </div>
-          </div>
         </div>
       </main>
     </>

@@ -20,10 +20,18 @@ export default function Navbar() {
               <Link href="/dashboard" className="text-gray-700 hover:text-brand-700">
                 Dashboard
               </Link>
+              <Link href="/dashboard/store" className="text-gray-700 hover:text-brand-700">
+                Store
+              </Link>
               {(session.user as any).role === "admin" && (
-                <Link href="/admin/bookings" className="text-gray-700 hover:text-brand-700">
-                  Admin
-                </Link>
+                <>
+                  <Link href="/admin/bookings" className="text-gray-700 hover:text-brand-700">
+                    Bookings
+                  </Link>
+                  <Link href="/admin/store-orders" className="text-gray-700 hover:text-brand-700">
+                    Orders
+                  </Link>
+                </>
               )}
               <span className="hidden text-gray-400 sm:inline">|</span>
               <span className="hidden text-gray-600 sm:inline">

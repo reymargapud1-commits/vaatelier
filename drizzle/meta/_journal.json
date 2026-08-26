@@ -8,6 +8,13 @@
       "when": 1787706692974,
       "tag": "0000_thick_sister_grimm",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1787739760035,
+      "tag": "0001_parched_johnny_storm",
+      "breakpoints": true
     }
   ]
 }

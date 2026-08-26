@@ -20,14 +20,18 @@ export async function seedDatabase() {
 
   const coachName = process.env.COACH_NAME || "Reymar Gapud";
   const coachTitle = process.env.COACH_TITLE || "VA Coach & Trainer";
-  const priceCentavos = Number(process.env.TRAINING_PRICE_CENTAVOS || 299900);
+  const priceCentavos = Number(process.env.TRAINING_PRICE_CENTAVOS || 49900);
 
   if (existingCourse) {
+    // priceCentavos IS included here (unlike an earlier version of this
+    // function) so that changing TRAINING_PRICE_CENTAVOS and redeploying
+    // actually updates the price of an already-seeded course.
     await db
       .update(courses)
       .set({
         title: curriculum.courseTitle,
         description: curriculum.courseDescription,
+        priceCentavos,
         coachName,
         coachTitle,
       })
