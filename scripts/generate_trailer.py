@@ -291,9 +291,6 @@ def photo_background_split(photo_path, side="left", split_frac=0.46, feather=170
     alpha_mask = horizontal_gradient_L(photo_w, H, stops)
     photo.putalpha(alpha_mask)
     bg.alpha_composite(photo, dest=(dest_x, 0))
-
-    d = ImageDraw.Draw(bg)
-    d.line([(seam_x, 0), (seam_x, H)], fill=(*BRAND_GOLD, 90), width=2)
     return bg
 
 
