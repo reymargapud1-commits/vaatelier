@@ -107,7 +107,10 @@ export default function LandingPage() {
             </div>
           ))}
 
-          <div className="card flex flex-col items-center justify-center border-2 border-dashed border-brand-200 bg-brand-50/50 text-center">
+          <Link
+            href="/dashboard/booking"
+            className="card flex flex-col items-center justify-center border-2 border-dashed border-brand-200 bg-brand-50/50 text-center transition hover:-translate-y-0.5 hover:border-brand-400 hover:shadow-md"
+          >
             <div className="mb-2 text-3xl">🎙️</div>
             <h3 className="font-bold text-gray-900">Optional: 1-on-1 Coaching Session</h3>
             <p className="mt-1 text-sm text-gray-600">
@@ -115,7 +118,8 @@ export default function LandingPage() {
               your first session once you enroll. Never required to finish the course or earn
               your certificates, and open to anyone even if you never enroll at all.
             </p>
-          </div>
+            <span className="mt-3 text-sm font-semibold text-brand-700">Book Now →</span>
+          </Link>
         </div>
       </section>
 
@@ -213,6 +217,9 @@ export default function LandingPage() {
               <p className="mt-2 text-xs text-gray-500">
                 Free for your first session if you're an enrolled student.
               </p>
+              <Link href="/dashboard/booking" className="btn-primary mt-6 inline-block">
+                Book Your Session
+              </Link>
             </div>
             <img
               src="/images/trainer/coach-video-call-pointing.jpg"
@@ -241,12 +248,22 @@ export default function LandingPage() {
               { icon: "🧾", label: "VA Invoice Format", price: "₱250" },
               { icon: "🎬", label: "Intro Presentation", price: "₱500" },
             ].map((item) => (
-              <div key={item.label} className="card text-center">
+              <Link
+                key={item.label}
+                href="/dashboard/store"
+                className="card text-center transition hover:-translate-y-0.5 hover:shadow-md"
+              >
                 <div className="mb-2 text-2xl">{item.icon}</div>
                 <p className="text-sm font-semibold text-gray-900">{item.label}</p>
                 <p className="mt-1 text-brand-600">{item.price}</p>
-              </div>
+                <p className="mt-2 text-xs font-semibold text-brand-700">Order →</p>
+              </Link>
             ))}
+          </div>
+          <div className="mt-8 text-center">
+            <Link href="/dashboard/store" className="btn-primary">
+              Browse Full Store
+            </Link>
           </div>
         </div>
       </section>
