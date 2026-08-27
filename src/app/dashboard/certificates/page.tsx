@@ -6,6 +6,7 @@ import { authOptions } from "@/lib/auth";
 import { db } from "@/db";
 import { users, courses } from "@/db/schema";
 import Navbar from "@/components/Navbar";
+import FeedbackReloadCard from "@/components/FeedbackReloadCard";
 import { getTrackProgress, checkAndIssueAllCertificates } from "@/lib/certificate-eligibility";
 
 export default async function CertificatesPage() {
@@ -47,7 +48,7 @@ export default async function CertificatesPage() {
         </div>
 
         <div className="grid gap-5 sm:grid-cols-2">
-          {progress.map(({ track, percent, allQuizzesPassed, eligible, issued }) => (
+          {progress.map(({ track, percent, eligible, issued, awaitingFeedback }) => (
             <div
               key={track.id}
               className={`card border-2 ${issued ? "border-emerald-200" : eligible ? "border-brand-200" : "border-dashed border-gray-200"}`}
@@ -59,7 +60,7 @@ export default async function CertificatesPage() {
 
               {issued ? (
                 <>
-                  <p className="mb-4 text-sm text-emerald-700">✓ Earned — ready to download.</p>
+                  <p className="mb-4 text-sm text-emerald-700">Earned. Ready to download.</p>
                   <a
                     href={`/api/certificate/${course.id}/${track.id}`}
                     target="_blank"
@@ -69,6 +70,8 @@ export default async function CertificatesPage() {
                     View / Download PDF
                   </a>
                 </>
+              ) : awaitingFeedback ? (
+                <FeedbackReloadCard track={track.id} trackLabel={track.label} />
               ) : (
                 <>
                   <div className="mb-1 flex justify-between text-xs text-gray-500">
@@ -84,9 +87,7 @@ export default async function CertificatesPage() {
                   <p className="mb-4 text-sm text-gray-600">
                     {percent < 100
                       ? "Complete all lessons in this section to unlock the quiz requirement."
-                      : allQuizzesPassed
-                        ? "All requirements met — refresh this page."
-                        : "Pass this section's quiz to earn your certificate."}
+                      : "Pass this section's quiz to earn your certificate."}
                   </p>
                   <Link href="/dashboard" className="btn-secondary w-full">
                     Continue This Section

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import TrackFeedbackForm from "@/components/TrackFeedbackForm";
 
 interface QuizData {
   id: string;
@@ -11,6 +12,12 @@ interface QuizData {
   questions: { id: string; text: string; choices: string[] }[];
 }
 
+interface AwaitingTrack {
+  id: string;
+  label: string;
+  subtitle: string;
+}
+
 interface SubmitResult {
   score: number;
   passed: boolean;
@@ -18,12 +25,15 @@ interface SubmitResult {
   results: { questionId: string; correct: boolean; correctIndex: number }[];
   certificateIssued: boolean;
   certificatesIssued: string[];
+  tracksAwaitingFeedback: AwaitingTrack[];
 }
 
 export default function QuizRunner({ quizId }: { quizId: string }) {
   const [quiz, setQuiz] = useState<QuizData | null>(null);
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [result, setResult] = useState<SubmitResult | null>(null);
+  const [pendingFeedbackTracks, setPendingFeedbackTracks] = useState<AwaitingTrack[]>([]);
+  const [feedbackJustCompleted, setFeedbackJustCompleted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
 
@@ -52,10 +62,40 @@ export default function QuizRunner({ quizId }: { quizId: string }) {
     });
     const data = await res.json();
     setResult(data);
+    setPendingFeedbackTracks(data.tracksAwaitingFeedback || []);
     setSubmitting(false);
   }
 
   if (result) {
+    const hadAwaitingTracks = (result.tracksAwaitingFeedback?.length ?? 0) > 0;
+
+    // Still one or more tracks left to rate before certificates unlock -
+    // show the Congratulations greeting + a 5-star feedback form.
+    if (pendingFeedbackTracks.length > 0) {
+      const current = pendingFeedbackTracks[0];
+      return (
+        <div className="card text-center">
+          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-emerald-100 text-2xl">
+            🎉
+          </div>
+          <h2 className="mb-2 text-xl font-bold text-gray-900">Congratulations!</h2>
+          <p className="mb-1 text-gray-700">
+            You've completed every lesson and quiz for <strong>{current.label}</strong>.
+          </p>
+          <p className="mb-6 text-sm text-gray-600">
+            One last step before we issue your certificate: tell us how the training was.
+          </p>
+          <TrackFeedbackForm
+            track={current.id}
+            onDone={() => {
+              setPendingFeedbackTracks((prev) => prev.slice(1));
+              setFeedbackJustCompleted(true);
+            }}
+          />
+        </div>
+      );
+    }
+
     return (
       <div className="card text-center">
         <div
@@ -72,18 +112,14 @@ export default function QuizRunner({ quizId }: { quizId: string }) {
           You scored {result.score}% (passing score is {result.passingScore}%).
         </p>
 
-        {result.certificateIssued && (
+        {(result.certificateIssued || feedbackJustCompleted) && (
           <p className="mb-4 rounded-lg bg-emerald-50 p-3 text-sm font-medium text-emerald-700">
-            🎓 Congratulations, you've earned{" "}
-            {result.certificatesIssued.length > 1
-              ? `${result.certificatesIssued.length} new certificates`
-              : "a new certificate"}
-            !
+            🎓 Thanks for your feedback, your certificate is ready to download!
           </p>
         )}
 
         <div className="flex flex-wrap justify-center gap-3">
-          {result.certificateIssued ? (
+          {result.certificateIssued || hadAwaitingTracks ? (
             <Link href="/dashboard/certificates" className="btn-primary">
               View Certificates
             </Link>

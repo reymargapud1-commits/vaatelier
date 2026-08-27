@@ -148,23 +148,23 @@ export default function LandingPage() {
               <p className="mb-4 text-brand-600">{COACH_TITLE}</p>
               <p className="text-left text-gray-600">
                 I didn't start out as a VA. For years I worked the day shift at a manufacturing
-                company — up early, home late, squeezing in my studies in between. Then I got my
+                company. Up early, home late, squeezing in my studies in between. Then I got my
                 first real shot as a freelance agent for a US-based client. I worked hard, kept
                 learning, and was eventually promoted to Team Manager, a role I still hold today,
-                leading a team that supports clients on the other side of the world — night
+                leading a team that supports clients on the other side of the world. Night
                 shifts, holiday duty, and all.
               </p>
               <p className="mt-3 text-left text-gray-600">
                 Along the way I built a home office I'm proud of, sat through more training
                 sessions and final interviews than I can count, and learned firsthand that this
-                career can travel with you — I've logged into team meetings from a beach in
+                career can travel with you. I've logged into team meetings from a beach in
                 Dingalan and from a coffee shop when my home internet gave out. I built The VA
                 Atelier to hand you everything I wish someone had handed me on day one, so your
                 path to your first client is faster and a lot less confusing than mine was.
               </p>
               <p className="mt-3 text-left text-gray-600">
-                Every student gets all 4 certificates just by finishing the lessons and quizzes —
-                no strings attached. But if you want my eyes on your resume, your portfolio, or
+                Every student gets all 4 certificates just by finishing the lessons and quizzes.
+                No strings attached. But if you want my eyes on your resume, your portfolio, or
                 your interview answers before you apply, book an optional 1-on-1 session with me.
                 It's the fastest way to turn "I finished the course" into "I landed my first
                 client."

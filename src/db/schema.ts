@@ -1,4 +1,4 @@
-import { sqliteTable, text, integer } from "drizzle-orm/sqlite-core";
+import { sqliteTable, text, integer, uniqueIndex } from "drizzle-orm/sqlite-core";
 
 // -----------------------------------------------------------------------
 // This schema targets the SQLite dialect (via drizzle-orm/sqlite-core), and
@@ -117,6 +117,31 @@ export const liveSessionBookings = sqliteTable("live_session_bookings", {
   checkoutSessionId: text("checkout_session_id").unique(),
   createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
 });
+
+// A student rates a track (1-5 stars, plus an optional comment) once they
+// finish every lesson and pass every quiz in it. The certificate for that
+// track is only issued after this feedback is submitted - see
+// checkAndIssueCertificate in certificate-eligibility.ts. One row per
+// user + course + track (a resubmission updates it instead of duplicating).
+export const trackFeedback = sqliteTable(
+  "track_feedback",
+  {
+    id: text("id").primaryKey(),
+    userId: text("user_id").notNull().references(() => users.id),
+    courseId: text("course_id").notNull().references(() => courses.id),
+    track: text("track").notNull(),
+    rating: integer("rating").notNull(), // 1-5
+    comment: text("comment"),
+    createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
+  },
+  (table) => ({
+    userCourseTrackUnique: uniqueIndex("track_feedback_user_course_track_unique").on(
+      table.userId,
+      table.courseId,
+      table.track
+    ),
+  })
+);
 
 // Custom orders for VA job-application materials (CV, portfolio, cover
 // letter, invoice format, intro presentation) - see lib/store-items.ts.

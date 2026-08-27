@@ -17,8 +17,11 @@ for done-for-you VA application documents are both optional paid add-ons on top 
   replace them any time.
 - **A quiz after every module**, graded server-side, with a passing score.
 - **4 separate certificates** (`src/lib/certificate-tracks.ts`), each covering a group of
-  modules, unlocked as soon as a student finishes every lesson and passes every quiz in that
-  group — no live session required.
+  modules. A student unlocks a track's certificate once they finish every lesson, pass every
+  quiz in that group, AND rate the training (1-5 stars, `src/lib/certificate-eligibility.ts`,
+  `track_feedback` table) — a "Congratulations" screen with the star-rating form greets them
+  right after their qualifying quiz (`src/components/QuizRunner.tsx`), and the same prompt is
+  always available on `/dashboard/certificates` if they skip it there. No live session required.
 - **An OPTIONAL, paid 1-on-1 live coaching session** (₱300/2hrs by default, see
   `COACHING_PRICE_CENTAVOS`) — the student picks a date/time and pays via PayMongo; once paid,
   you're emailed a calendar invite (if you configure email), and it always shows up on your

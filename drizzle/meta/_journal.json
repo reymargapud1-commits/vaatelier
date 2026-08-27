@@ -15,6 +15,13 @@
       "when": 1787739760035,
       "tag": "0001_parched_johnny_storm",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1787788328882,
+      "tag": "0002_peaceful_robin_chapel",
+      "breakpoints": true
     }
   ]
 }

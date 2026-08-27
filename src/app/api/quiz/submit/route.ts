@@ -6,7 +6,7 @@ import { authOptions } from "@/lib/auth";
 import { db } from "@/db";
 import { users, quizzes, questions, modules } from "@/db/schema";
 import { quizAttempts } from "@/db/schema";
-import { checkAndIssueAllCertificates } from "@/lib/certificate-eligibility";
+import { checkAndIssueAllCertificates, getTracksAwaitingFeedback } from "@/lib/certificate-eligibility";
 
 export async function POST(req: Request) {
   const session = await getServerSession(authOptions);
@@ -46,9 +46,12 @@ export async function POST(req: Request) {
   await db.insert(quizAttempts).values({ id: randomUUID(), userId, quizId, score, passed });
 
   let certificatesIssued: string[] = [];
+  let tracksAwaitingFeedback: { id: string; label: string; subtitle: string }[] = [];
   if (passed && mod) {
     const issued = await checkAndIssueAllCertificates(userId, mod.courseId);
     certificatesIssued = issued.map((c) => c.track);
+    const pending = await getTracksAwaitingFeedback(userId, mod.courseId);
+    tracksAwaitingFeedback = pending.map((t) => ({ id: t.id, label: t.label, subtitle: t.subtitle }));
   }
 
   return NextResponse.json({
@@ -58,5 +61,6 @@ export async function POST(req: Request) {
     results,
     certificateIssued: certificatesIssued.length > 0,
     certificatesIssued,
+    tracksAwaitingFeedback,
   });
 }
