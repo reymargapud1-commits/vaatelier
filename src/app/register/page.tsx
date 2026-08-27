@@ -40,7 +40,7 @@ export default function RegisterPage() {
       return;
     }
 
-    router.push("/payment");
+    router.push("/dashboard");
     router.refresh();
   }
 

@@ -6,15 +6,19 @@ import { authOptions } from "@/lib/auth";
 import { db } from "@/db";
 import { users, courses, payments, liveSessionBookings } from "@/db/schema";
 import { createCheckoutSession } from "@/lib/paymongo";
+import { notifyCoachOfBooking } from "@/lib/notify";
 
 const COACHING_PRICE_CENTAVOS = Number(process.env.COACHING_PRICE_CENTAVOS || 30000); // ₱300.00
 
 /**
- * Starts checkout for the OPTIONAL 1-on-1 live coaching add-on (₱300, 2
- * hours). Unlike enrollment, this is never required for a certificate -
- * see lib/certificate-eligibility.ts. Creates/updates the student's
- * liveSessionBookings row as "pending" payment, then redirects to PayMongo.
- * The coach is only notified once the webhook confirms payment.
+ * Starts a booking for the 1-on-1 live coaching add-on (₱300, 2 hours).
+ * Open to EVERYONE, whether or not they're enrolled in the training - see
+ * README. Enrolled (isPaid) students get their first-ever session free
+ * (users.freeCoachingSessionUsed), confirmed immediately with no PayMongo
+ * checkout. Every booking after that, and every booking from a
+ * not-yet-enrolled student, goes through the normal paid checkout. The
+ * coach is notified immediately for a free session, or once the webhook
+ * confirms payment for a paid one.
  */
 export async function POST(req: Request) {
   const session = await getServerSession(authOptions);
@@ -24,8 +28,8 @@ export async function POST(req: Request) {
 
   const userId = (session.user as any).id;
   const [user] = await db.select().from(users).where(eq(users.id, userId)).limit(1);
-  if (!user?.isPaid) {
-    return NextResponse.json({ error: "Enroll in the training program first." }, { status: 402 });
+  if (!user) {
+    return NextResponse.json({ error: "Please log in first." }, { status: 401 });
   }
 
   const { scheduledAt, note } = (await req.json()) as { scheduledAt: string; note?: string };
@@ -40,13 +44,40 @@ export async function POST(req: Request) {
   const [course] = await db.select().from(courses).limit(1);
   if (!course) return NextResponse.json({ error: "Course not configured" }, { status: 500 });
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  const coachName = course.coachName || process.env.COACH_NAME || "Reymar Gapud";
+
   const [existing] = await db
     .select()
     .from(liveSessionBookings)
     .where(and(eq(liveSessionBookings.userId, userId), eq(liveSessionBookings.courseId, course.id)))
     .limit(1);
 
+  // Rescheduling an already-confirmed session (paid or free) doesn't cost
+  // anything extra - just move the date and re-notify the coach.
+  if (existing && existing.paymentStatus === "paid") {
+    await db
+      .update(liveSessionBookings)
+      .set({ scheduledAt: date, studentNote: note || null, status: "requested" })
+      .where(eq(liveSessionBookings.id, existing.id));
+
+    await notifyCoachOfBooking({
+      bookingId: existing.id,
+      studentName: user.name,
+      studentEmail: user.email,
+      coachName,
+      scheduledAt: date,
+      note: note || null,
+      courseTitle: course.title,
+    });
+
+    return NextResponse.json({ checkoutUrl: `${siteUrl}/dashboard/booking/success` });
+  }
+
+  const isFreeSession = user.isPaid && !user.freeCoachingSessionUsed;
+  const amount = isFreeSession ? 0 : COACHING_PRICE_CENTAVOS;
   const bookingId = existing?.id || randomUUID();
+
   if (existing) {
     await db
       .update(liveSessionBookings)
@@ -54,8 +85,8 @@ export async function POST(req: Request) {
         scheduledAt: date,
         studentNote: note || null,
         status: "requested",
-        paymentStatus: "pending",
-        amountCentavos: COACHING_PRICE_CENTAVOS,
+        paymentStatus: isFreeSession ? "paid" : "pending",
+        amountCentavos: amount,
       })
       .where(eq(liveSessionBookings.id, existing.id));
   } else {
@@ -65,16 +96,30 @@ export async function POST(req: Request) {
       courseId: course.id,
       scheduledAt: date,
       studentNote: note || null,
-      paymentStatus: "pending",
-      amountCentavos: COACHING_PRICE_CENTAVOS,
+      paymentStatus: isFreeSession ? "paid" : "pending",
+      amountCentavos: amount,
     });
   }
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  if (isFreeSession) {
+    await db.update(users).set({ freeCoachingSessionUsed: true }).where(eq(users.id, userId));
+
+    await notifyCoachOfBooking({
+      bookingId,
+      studentName: user.name,
+      studentEmail: user.email,
+      coachName,
+      scheduledAt: date,
+      note: note || null,
+      courseTitle: course.title,
+    });
+
+    return NextResponse.json({ checkoutUrl: `${siteUrl}/dashboard/booking/success` });
+  }
 
   try {
     const checkout = await createCheckoutSession({
-      amountCentavos: COACHING_PRICE_CENTAVOS,
+      amountCentavos: amount,
       description: "1-on-1 Live Coaching Session with Coach Reymar (2 hrs)",
       userEmail: user.email,
       userName: user.name,
@@ -95,7 +140,7 @@ export async function POST(req: Request) {
       checkoutSessionId: checkout.id,
       paymentIntentId: checkout.attributes.payment_intent?.id,
       status: "pending",
-      amountCentavos: COACHING_PRICE_CENTAVOS,
+      amountCentavos: amount,
       purpose: "coaching",
       referenceId: bookingId,
     });

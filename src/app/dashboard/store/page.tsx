@@ -32,7 +32,6 @@ export default async function StorePage() {
   const userId = (session.user as any).id;
   const [user] = await db.select().from(users).where(eq(users.id, userId)).limit(1);
   if (!user) redirect("/login");
-  if (!user.isPaid) redirect("/payment");
 
   const myOrders = await db
     .select()

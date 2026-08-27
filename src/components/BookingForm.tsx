@@ -8,11 +8,12 @@ interface Booking {
   studentNote: string | null;
   status: string;
   paymentStatus: string;
+  amountCentavos?: number;
 }
 
 const PRICE_DISPLAY = "₱300";
 
-export default function BookingForm() {
+export default function BookingForm({ freeSessionAvailable }: { freeSessionAvailable: boolean }) {
   const [booking, setBooking] = useState<Booking | null | undefined>(undefined);
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
@@ -60,12 +61,18 @@ export default function BookingForm() {
 
   if (booking && booking.paymentStatus === "paid") {
     const scheduled = new Date(booking.scheduledAt);
+    const wasFree = booking.amountCentavos === 0;
     return (
       <div className="card text-center">
         <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-emerald-100 text-2xl">
           📅
         </div>
         <h2 className="mb-2 text-xl font-bold text-gray-900">Live Session Scheduled!</h2>
+        {wasFree && (
+          <p className="mb-2 inline-block rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700">
+            Booked with your free session
+          </p>
+        )}
         <p className="mb-1 text-gray-700">
           {scheduled.toLocaleString("en-PH", {
             dateStyle: "full",
@@ -100,6 +107,7 @@ export default function BookingForm() {
               onSubmit={handleSubmit}
               saving={saving}
               error={error}
+              freeSessionAvailable={false}
             />
           </div>
         </details>
@@ -130,16 +138,16 @@ export default function BookingForm() {
       <div className="card border-2 border-brand-100 bg-gradient-to-br from-brand-50 to-white">
         <div className="mb-4 flex items-center gap-2">
           <span className="rounded-full bg-brand-600 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
-            Optional Add-On
+            {freeSessionAvailable ? "Free For Enrolled Students" : "Open to Everyone"}
           </span>
         </div>
         <h2 className="mb-2 text-xl font-bold text-gray-900">
           1-on-1 Live Coaching Session with Coach Reymar
         </h2>
         <p className="mb-4 text-sm text-gray-600">
-          This is no longer required to earn your certificate — you can finish the training and
-          get all your certificates without ever booking this. But if you want to speed up your
-          growth as a VA, this session is worth it:
+          {freeSessionAvailable
+            ? "You're enrolled, so your first session is on the house. No strings attached, and it never gates your certificates."
+            : "Open to anyone, whether or not you're enrolled in the full training. If you already trained elsewhere and just want personal feedback, this is for you."}
         </p>
         <ul className="mb-5 space-y-2 text-sm text-gray-700">
           <li className="flex items-start gap-2">
@@ -160,16 +168,27 @@ export default function BookingForm() {
           </li>
         </ul>
         <div className="flex items-baseline gap-2 rounded-lg bg-white p-4 shadow-sm">
-          <span className="text-3xl font-extrabold text-gray-900">{PRICE_DISPLAY}</span>
-          <span className="text-sm text-gray-500">per session · 2 hours</span>
+          {freeSessionAvailable ? (
+            <>
+              <span className="text-3xl font-extrabold text-emerald-600">FREE</span>
+              <span className="text-sm text-gray-500">your first session · 2 hours</span>
+            </>
+          ) : (
+            <>
+              <span className="text-3xl font-extrabold text-gray-900">{PRICE_DISPLAY}</span>
+              <span className="text-sm text-gray-500">per session · 2 hours</span>
+            </>
+          )}
         </div>
       </div>
 
       <div className="card">
         <h3 className="mb-1 text-lg font-bold text-gray-900">Book & Pay for Your Session</h3>
         <p className="mb-6 text-sm text-gray-600">
-          Pick a date and time, then you'll be redirected to secure PayMongo checkout. Once your
-          payment is confirmed, Coach Reymar is notified and your session is scheduled.
+          Pick a date and time
+          {freeSessionAvailable
+            ? ", and we'll lock it in right away — no payment needed for your first session."
+            : ", then you'll be redirected to secure PayMongo checkout. Once your payment is confirmed, Coach Reymar is notified and your session is scheduled."}
         </p>
         <BookingInnerForm
           date={date}
@@ -181,6 +200,7 @@ export default function BookingForm() {
           onSubmit={handleSubmit}
           saving={saving}
           error={error}
+          freeSessionAvailable={freeSessionAvailable}
         />
       </div>
     </div>
@@ -197,6 +217,7 @@ function BookingInnerForm({
   onSubmit,
   saving,
   error,
+  freeSessionAvailable,
 }: {
   date: string;
   time: string;
@@ -207,6 +228,7 @@ function BookingInnerForm({
   onSubmit: (e: React.FormEvent) => void;
   saving: boolean;
   error: string;
+  freeSessionAvailable: boolean;
 }) {
   const today = new Date().toISOString().split("T")[0];
   return (
@@ -248,7 +270,11 @@ function BookingInnerForm({
       </div>
       {error && <p className="text-sm text-red-600">{error}</p>}
       <button type="submit" disabled={saving} className="btn-primary w-full">
-        {saving ? "Preparing secure checkout..." : `Book & Pay ${PRICE_DISPLAY} via GCash / Maya / Card`}
+        {saving
+          ? "Saving..."
+          : freeSessionAvailable
+            ? "Book My Free Session"
+            : `Book & Pay ${PRICE_DISPLAY} via GCash / Maya / Card`}
       </button>
     </form>
   );

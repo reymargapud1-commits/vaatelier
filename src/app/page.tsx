@@ -111,8 +111,9 @@ export default function LandingPage() {
             <div className="mb-2 text-3xl">🎙️</div>
             <h3 className="font-bold text-gray-900">Optional: 1-on-1 Coaching Session</h3>
             <p className="mt-1 text-sm text-gray-600">
-              Get personal feedback from Coach Reymar anytime — ₱300 for a 2-hour session. Not
-              required to finish the course or earn your certificates.
+              Get personal feedback from Coach Reymar anytime, ₱300 for a 2-hour session, free for
+              your first session once you enroll. Never required to finish the course or earn
+              your certificates, and open to anyone even if you never enroll at all.
             </p>
           </div>
         </div>
@@ -180,15 +181,16 @@ export default function LandingPage() {
           <div className="grid items-center gap-10 rounded-2xl border-2 border-brand-100 bg-gradient-to-br from-brand-50 to-white p-8 shadow-sm sm:p-10 lg:grid-cols-2">
             <div>
               <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-brand-600 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
-                Optional Add-On
+                Open to Everyone
               </span>
               <h2 className="mb-3 text-2xl font-bold text-gray-900 sm:text-3xl">
                 Book a 1-on-1 Session With Coach Reymar
               </h2>
               <p className="mb-5 text-gray-600">
-                It's not required — you'll still earn all 4 certificates even if you never book a
-                session. But if you want to fast-track landing your first client, these two hours
-                are worth it:
+                Already trained elsewhere and just want expert feedback? Book a session anytime,
+                no enrollment required. Enrolled students get their first session free, and it's
+                never required to earn your 4 certificates. If you want to fast-track landing your
+                first client, these two hours are worth it:
               </p>
               <ul className="mb-6 space-y-2 text-sm text-gray-700">
                 <li className="flex items-start gap-2">
@@ -208,6 +210,9 @@ export default function LandingPage() {
                 <span className="text-3xl font-extrabold text-gray-900">₱300</span>
                 <span className="text-sm text-gray-500">per session · 2 hours</span>
               </div>
+              <p className="mt-2 text-xs text-gray-500">
+                Free for your first session if you're an enrolled student.
+              </p>
             </div>
             <img
               src="/images/trainer/coach-video-call-pointing.jpg"
@@ -225,8 +230,8 @@ export default function LandingPage() {
             VA Document Store
           </h2>
           <p className="mx-auto mb-12 max-w-xl text-center text-gray-600">
-            Skip the guesswork. Order done-for-you application materials, unlocked once you
-            enroll.
+            Skip the guesswork. Order done-for-you application materials, no enrollment required.
+            Already trained elsewhere and just need the paperwork? This is for you too.
           </p>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {[
@@ -304,8 +309,9 @@ export default function LandingPage() {
             Secure payment via GCash, Maya, or Card — powered by PayMongo
           </p>
           <p className="mt-4 text-xs text-gray-400">
-            Optional add-ons: 1-on-1 coaching (₱300/session) and the VA Document Store — never
-            required to finish the course or earn your certificates.
+            Optional add-ons: 1-on-1 coaching (₱300/session, free first session once enrolled) and
+            the VA Document Store — never required to finish the course or earn your certificates,
+            and both are open to you even before you enroll.
           </p>
         </div>
       </section>

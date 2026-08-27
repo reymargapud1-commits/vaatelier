@@ -1,9 +1,12 @@
 # The VA Atelier — Virtual Assistant Training Portal
 
 A complete, paid online training portal for aspiring Virtual Assistants. Students pay once
-(GCash, Maya, or card via PayMongo) to unlock all content, then work through video lessons and
-quizzes to earn 4 separate certificates. A 1-on-1 live coaching session with you and a storefront
-for done-for-you VA application documents are both optional paid add-ons on top of enrollment.
+(GCash, Maya, or card via PayMongo) to unlock all training content, then work through video
+lessons and quizzes to earn 4 separate certificates. A 1-on-1 live coaching session with you and a
+storefront for done-for-you VA application documents are BOTH open to anyone with a free account,
+whether or not they ever enroll in the training - registration alone is enough to book a session
+or place an order. Only the training content itself (lessons, quizzes, certificates) is behind the
+enrollment paywall.
 
 ## What's included
 
@@ -22,13 +25,20 @@ for done-for-you VA application documents are both optional paid add-ons on top 
   `track_feedback` table) — a "Congratulations" screen with the star-rating form greets them
   right after their qualifying quiz (`src/components/QuizRunner.tsx`), and the same prompt is
   always available on `/dashboard/certificates` if they skip it there. No live session required.
-- **An OPTIONAL, paid 1-on-1 live coaching session** (₱300/2hrs by default, see
-  `COACHING_PRICE_CENTAVOS`) — the student picks a date/time and pays via PayMongo; once paid,
-  you're emailed a calendar invite (if you configure email), and it always shows up on your
-  `/admin/bookings` page either way.
-- **An OPTIONAL VA Document Store** (`/dashboard/store`, `src/lib/store-items.ts`) — students can
-  order done-for-you CV, portfolio, cover letter, invoice format, or intro presentation, paid via
-  PayMongo; orders and their fulfillment status show up on `/admin/store-orders`.
+- **An OPTIONAL 1-on-1 live coaching session** (₱300/2hrs by default, see
+  `COACHING_PRICE_CENTAVOS`), open to ANY logged-in student, enrolled or not. An enrolled
+  (`isPaid`) student gets their first-ever session completely free
+  (`users.freeCoachingSessionUsed`, `api/payment/create-booking-checkout/route.ts`) - confirmed
+  immediately with no PayMongo checkout at all. Every booking after that, and every booking from a
+  not-yet-enrolled student, goes through the normal ₱300 PayMongo checkout. Rescheduling an
+  already-confirmed session (free or paid) never charges again. Once confirmed, you're emailed a
+  calendar invite (if you configure email), and it always shows up on your `/admin/bookings` page
+  either way (free sessions show as "Free Session" there).
+- **An OPTIONAL VA Document Store** (`/dashboard/store`, `src/lib/store-items.ts`), also open to
+  ANY logged-in student, enrolled or not — a lot of students already trained elsewhere and just
+  need the paperwork. Students order done-for-you CV, portfolio, cover letter, invoice format, or
+  intro presentation, paid via PayMongo; orders and their fulfillment status show up on
+  `/admin/store-orders`.
 - **PayMongo checkout** (GCash, Maya, card) with webhook + fallback verification, shared across
   enrollment, coaching bookings, and store orders (see `payments.purpose`).
 

@@ -22,6 +22,13 @@
       "when": 1787788328882,
       "tag": "0002_peaceful_robin_chapel",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1787789614018,
+      "tag": "0003_strong_war_machine",
+      "breakpoints": true
     }
   ]
 }

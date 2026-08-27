@@ -14,7 +14,9 @@ export default async function BookingPage() {
 
   const [user] = await db.select().from(users).where(eq(users.id, (session.user as any).id)).limit(1);
   if (!user) redirect("/login");
-  if (!user.isPaid) redirect("/payment");
+
+  // Coaching is open to everyone, enrolled or not - only login is required.
+  const freeSessionAvailable = user.isPaid && !user.freeCoachingSessionUsed;
 
   return (
     <>
@@ -23,7 +25,7 @@ export default async function BookingPage() {
         <Link href="/dashboard" className="mb-4 inline-block text-sm text-brand-700 hover:underline">
           ← Back to Dashboard
         </Link>
-        <BookingForm />
+        <BookingForm freeSessionAvailable={freeSessionAvailable} />
       </main>
     </>
   );

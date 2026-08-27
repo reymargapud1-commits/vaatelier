@@ -15,7 +15,58 @@ export default async function DashboardPage() {
   const userId = (session.user as any).id;
   const [user] = await db.select().from(users).where(eq(users.id, userId)).limit(1);
   if (!user) redirect("/login");
-  if (!user.isPaid) redirect("/payment");
+
+  // Coaching and the VA Document Store don't require enrollment - a
+  // registered-but-not-yet-enrolled student gets a menu of all 3 instead
+  // of being forced straight to the enrollment payment page.
+  if (!user.isPaid) {
+    return (
+      <>
+        <Navbar />
+        <main className="mx-auto max-w-3xl px-4 py-16 text-center">
+          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-brand-50 text-3xl">
+            👋
+          </div>
+          <h1 className="mb-2 text-2xl font-bold text-gray-900">Welcome, {user.name.split(" ")[0]}!</h1>
+          <p className="mx-auto mb-10 max-w-lg text-gray-600">
+            You're registered, but haven't enrolled in the full training yet. Here's what you can
+            do right now:
+          </p>
+          <div className="grid gap-5 text-left sm:grid-cols-3">
+            <div className="card flex flex-col">
+              <h2 className="mb-1 font-bold text-gray-900">🎓 Full Training</h2>
+              <p className="mb-4 flex-1 text-sm text-gray-600">
+                The complete beginner-to-job-ready program. All 4 certificates, plus 1 free
+                coaching session.
+              </p>
+              <Link href="/payment" className="btn-primary w-full">
+                Enroll — ₱499
+              </Link>
+            </div>
+            <div className="card flex flex-col">
+              <h2 className="mb-1 font-bold text-gray-900">🎙️ 1-on-1 Coaching</h2>
+              <p className="mb-4 flex-1 text-sm text-gray-600">
+                Personal feedback, mock interviews, and direct access to Coach Reymar. No
+                enrollment needed.
+              </p>
+              <Link href="/dashboard/booking" className="btn-secondary w-full">
+                Book — ₱300
+              </Link>
+            </div>
+            <div className="card flex flex-col">
+              <h2 className="mb-1 font-bold text-gray-900">🛍️ VA Document Store</h2>
+              <p className="mb-4 flex-1 text-sm text-gray-600">
+                Done-for-you CV, portfolio, cover letter, and more. No enrollment needed.
+              </p>
+              <Link href="/dashboard/store" className="btn-secondary w-full">
+                Browse Store
+              </Link>
+            </div>
+          </div>
+        </main>
+      </>
+    );
+  }
 
   const [course] = await db.select().from(courses).limit(1);
 
@@ -123,8 +174,9 @@ export default async function DashboardPage() {
             <div>
               <h2 className="font-bold text-gray-900">🎙️ 1-on-1 Live Coaching</h2>
               <p className="mt-1 text-sm text-gray-600">
-                Optional — ₱300/session. Personal feedback, mock interviews, and direct access to
-                Coach Reymar.
+                {user.freeCoachingSessionUsed
+                  ? "Optional — ₱300/session. Personal feedback, mock interviews, and direct access to Coach Reymar."
+                  : "Your first session is FREE. Personal feedback, mock interviews, and direct access to Coach Reymar."}
               </p>
             </div>
             <Link href="/dashboard/booking" className="btn-secondary whitespace-nowrap !px-3 !py-2 text-sm">

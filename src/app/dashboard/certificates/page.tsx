@@ -101,8 +101,9 @@ export default async function CertificatesPage() {
         <div className="mt-10 card border-2 border-dashed border-brand-200 bg-brand-50/40 text-center">
           <h3 className="mb-1 font-bold text-gray-900">🎙️ Want faster progress?</h3>
           <p className="mb-4 text-sm text-gray-600">
-            Book an optional 1-on-1 live coaching session with Coach Reymar for personal feedback
-            on your resume, portfolio, and interview skills — ₱300, 2 hours.
+            {user.freeCoachingSessionUsed
+              ? "Book an optional 1-on-1 live coaching session with Coach Reymar for personal feedback on your resume, portfolio, and interview skills — ₱300, 2 hours."
+              : "Your first 1-on-1 live coaching session with Coach Reymar is FREE. Personal feedback on your resume, portfolio, and interview skills — 2 hours, no charge."}
           </p>
           <Link href="/dashboard/booking" className="btn-primary">
             Learn More & Book

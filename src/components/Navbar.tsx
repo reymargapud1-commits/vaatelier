@@ -20,6 +20,9 @@ export default function Navbar() {
               <Link href="/dashboard" className="text-gray-700 hover:text-brand-700">
                 Dashboard
               </Link>
+              <Link href="/dashboard/booking" className="text-gray-700 hover:text-brand-700">
+                Coaching
+              </Link>
               <Link href="/dashboard/store" className="text-gray-700 hover:text-brand-700">
                 Store
               </Link>

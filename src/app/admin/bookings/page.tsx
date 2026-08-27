@@ -75,7 +75,9 @@ export default async function AdminBookingsPage() {
                         }`}
                       >
                         {b.paymentStatus === "paid"
-                          ? `Paid ₱${(b.amountCentavos / 100).toLocaleString("en-PH", { minimumFractionDigits: 2 })}`
+                          ? b.amountCentavos === 0
+                            ? "Free Session"
+                            : `Paid ₱${(b.amountCentavos / 100).toLocaleString("en-PH", { minimumFractionDigits: 2 })}`
                           : b.paymentStatus === "pending"
                             ? "Pending"
                             : "Unpaid"}

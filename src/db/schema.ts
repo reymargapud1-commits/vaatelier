@@ -15,6 +15,11 @@ export const users = sqliteTable("users", {
   role: text("role").notNull().default("student"), // "student" | "admin"
   isPaid: integer("is_paid", { mode: "boolean" }).notNull().default(false),
   paidAt: integer("paid_at", { mode: "timestamp" }),
+  // Every enrolled (isPaid) student gets exactly ONE free 1-on-1 coaching
+  // session. Flips to true the first time they use it - see
+  // api/payment/create-booking-checkout/route.ts. Coaching itself is
+  // bookable by anyone (enrolled or not) at the regular ₱300 price.
+  freeCoachingSessionUsed: integer("free_coaching_session_used", { mode: "boolean" }).notNull().default(false),
   createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
 });
 

@@ -11,8 +11,10 @@ import { getStoreItem } from "@/lib/store-items";
 /**
  * Starts checkout for a custom VA document order (CV, portfolio, cover
  * letter, invoice format, intro presentation) - see lib/store-items.ts.
- * Creates a storeOrders row as "pending_payment" first, then redirects to
- * PayMongo; the webhook flips it to "paid" once payment is confirmed.
+ * Open to EVERYONE, whether or not they're enrolled in the training - a
+ * lot of students already trained elsewhere and just need these
+ * documents. Creates a storeOrders row as "pending_payment" first, then
+ * redirects to PayMongo; the webhook flips it to "paid" once confirmed.
  */
 export async function POST(req: Request) {
   const session = await getServerSession(authOptions);
@@ -22,8 +24,8 @@ export async function POST(req: Request) {
 
   const userId = (session.user as any).id;
   const [user] = await db.select().from(users).where(eq(users.id, userId)).limit(1);
-  if (!user?.isPaid) {
-    return NextResponse.json({ error: "Enroll in the training program first." }, { status: 402 });
+  if (!user) {
+    return NextResponse.json({ error: "Please log in first." }, { status: 401 });
   }
 
   const { itemKey, note } = (await req.json()) as { itemKey: string; note?: string };
