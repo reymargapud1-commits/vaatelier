@@ -14,6 +14,7 @@ import {
   certificates,
 } from "@/db/schema";
 import Navbar from "@/components/Navbar";
+import WelcomeBannerGenerator from "@/components/WelcomeBannerGenerator";
 
 /**
  * Coach-facing roster of every enrolled (paid) student: their overall
@@ -232,6 +233,7 @@ export default async function AdminStudentsPage() {
                   <th className="px-4 py-3 font-medium">Currently On</th>
                   <th className="px-4 py-3 font-medium">Certificates</th>
                   <th className="px-4 py-3 font-medium">Last Activity</th>
+                  <th className="px-4 py-3 font-medium">Actions</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
@@ -275,6 +277,9 @@ export default async function AdminStudentsPage() {
                             timeZone: "Asia/Manila",
                           })
                         : "Not started"}
+                    </td>
+                    <td className="px-4 py-3 align-top">
+                      <WelcomeBannerGenerator studentId={s.id} studentName={s.name} />
                     </td>
                   </tr>
                 ))}

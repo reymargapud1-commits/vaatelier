@@ -41,6 +41,17 @@ enrollment paywall.
   `/admin/store-orders`.
 - **PayMongo checkout** (GCash, Maya, card) with webhook + fallback verification, shared across
   enrollment, coaching bookings, and store orders (see `payments.purpose`).
+- **Enrolled Students roster** (`/admin/students`) — every paying student, their overall progress
+  percentage, exactly which lesson they're currently on, certificates earned, and last activity
+  date, sorted by most recently active.
+- **Automatic welcome email**: the moment a student's enrollment payment is confirmed (instant
+  PayMongo checkout or a manually-approved GCash payment), they're automatically emailed a
+  welcome/congratulations message. Requires the same `SMTP_*` variables as the other notification
+  emails below — no extra setup.
+- **Welcome Banner generator**: from `/admin/students`, generate a branded, Facebook-postable
+  "Welcome to the family" graphic for any enrolled student, with an optional photo (composited into
+  a circular gold-ring frame), and download it as a PNG — everything happens live on the site, no
+  design tool needed.
 
 ## Tech stack
 
@@ -157,6 +168,29 @@ SendGrid SMTP, etc. all work). Leave them blank and everything still works — y
 Because there's no reliable way to auto-verify someone actually *attended* a live call, the gate
 is on **booking** the session, not attendance — that's the part fully in the student's control.
 
+## Enrolled students, welcome emails & welcome banners
+
+`/admin/students` (log in with your admin account, click "Students" in the nav) lists everyone
+who's paid for the training, with a progress bar, exactly which lesson they're currently on, how
+many of the 4 certificates they've earned, and when they were last active — sorted so your most
+recently active students float to the top.
+
+Two things happen automatically the moment a student's enrollment is confirmed (whether that's an
+instant PayMongo checkout or you approving a manual GCash payment on `/admin/manual-payments`):
+
+- **A welcome email** goes out to the student — a short, warm congratulations message with a link
+  to log in and get started. This uses the same `SMTP_*` variables as the booking/order
+  notification emails above; leave them blank and enrollment still works exactly the same, the
+  student just won't get an email.
+- Nothing else changes automatically — the **Welcome Banner** (below) is something you generate and
+  post yourself, on your own timing.
+
+To make a Facebook-postable graphic celebrating a new student: on `/admin/students`, click
+"Welcome Banner" next to their name, optionally attach a photo of them (it's cropped into a circle
+with a gold ring border), click Generate, then Download. Nothing is saved on the server — it's
+rendered fresh every time you click Generate, so re-generating with a different photo is just
+clicking it again.
+
 ## Customizing the curriculum
 
 Edit `content/curriculum.json` (lessons/slides/narration) and `content/quizzes.json`
@@ -227,13 +261,16 @@ content/curriculum.json     Lesson & slide content (source for both the DB seed 
 content/quizzes.json        Quiz questions per module
 scripts/generate_videos.py  Generates media/videos/*.mp4 from curriculum.json
 media/videos/*.mp4          The actual lesson video files (served only via /api/stream)
-assets/fonts/               Fonts embedded in the certificate PDF (Lora, SIL OFL licensed)
+assets/fonts/               Fonts embedded in the certificate PDF and Welcome Banner (Lora, SIL OFL licensed)
+assets/signature/           Coach's scanned signature, embedded in the certificate PDF
 src/db/schema.ts            Drizzle ORM schema (SQLite)
 src/db/seed.ts              Loads content/*.json into the database
 src/lib/paymongo.ts         PayMongo checkout + webhook signature verification
 src/lib/payment-fulfillment.ts  Shared "mark payment paid/rejected" logic (webhook + manual admin approval)
 src/lib/payment-proof-storage.ts  Where manual-GCash proof screenshots are stored on disk
-src/lib/notify.ts           Booking notification email + .ics calendar file generation
+src/lib/notify.ts           Booking/order/welcome notification emails + .ics calendar file generation
+src/lib/welcome-banner.ts   Renders the Facebook-postable "Welcome to the family" banner PNG
+src/app/admin/students/     Enrolled Students roster (progress, certificates, welcome banner button)
 src/app/admin/manual-payments/  Admin review screen for manual GCash payments
 src/app/                    Next.js App Router pages and API routes
 ```

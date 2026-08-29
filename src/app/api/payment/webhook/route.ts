@@ -1,9 +1,10 @@
 import { NextResponse } from "next/server";
 import { eq } from "drizzle-orm";
 import { db } from "@/db";
-import { users, payments, liveSessionBookings, storeOrders } from "@/db/schema";
+import { users, payments, liveSessionBookings, storeOrders, courses } from "@/db/schema";
 import { verifyPaymongoWebhookSignature } from "@/lib/paymongo";
 import { markPaymentPaid } from "@/lib/payment-fulfillment";
+import { sendWelcomeEmail } from "@/lib/notify";
 
 export async function POST(req: Request) {
   const rawBody = await req.text();
@@ -64,6 +65,16 @@ export async function POST(req: Request) {
         // No payments row found (shouldn't normally happen) - fall back to
         // the metadata PayMongo echoes back, same as the pre-refactor logic.
         await db.update(users).set({ isPaid: true, paidAt: new Date() }).where(eq(users.id, userIdFromMetadata));
+
+        const [student] = await db.select().from(users).where(eq(users.id, userIdFromMetadata)).limit(1);
+        const [course] = await db.select().from(courses).limit(1);
+        if (student) {
+          await sendWelcomeEmail({
+            studentName: student.name,
+            studentEmail: student.email,
+            courseTitle: course?.title || "The VA Atelier Training Program",
+          });
+        }
       }
     }
   }

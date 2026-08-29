@@ -1,7 +1,7 @@
 import { eq } from "drizzle-orm";
 import { db } from "@/db";
 import { users, payments, liveSessionBookings, storeOrders, courses } from "@/db/schema";
-import { notifyCoachOfBooking, notifyCoachOfOrder } from "@/lib/notify";
+import { notifyCoachOfBooking, notifyCoachOfOrder, sendWelcomeEmail } from "@/lib/notify";
 
 /**
  * Applies the side effect of a payment being confirmed paid - shared by
@@ -67,6 +67,20 @@ export async function markPaymentPaid(paymentId: string) {
   } else {
     // Default / legacy path: course enrollment.
     await db.update(users).set({ isPaid: true, paidAt: new Date() }).where(eq(users.id, payment.userId));
+
+    // Send the student a welcome/congratulations email now that they're
+    // enrolled. Only reached once per payment (the "already paid" check at
+    // the top of this function returns early on retries/double-approvals),
+    // so this never double-sends. Silently no-ops if SMTP isn't configured.
+    const [student] = await db.select().from(users).where(eq(users.id, payment.userId)).limit(1);
+    const [course] = await db.select().from(courses).limit(1);
+    if (student) {
+      await sendWelcomeEmail({
+        studentName: student.name,
+        studentEmail: student.email,
+        courseTitle: course?.title || "The VA Atelier Training Program",
+      });
+    }
   }
 
   return { ok: true, alreadyPaid: false, purpose: payment.purpose };
