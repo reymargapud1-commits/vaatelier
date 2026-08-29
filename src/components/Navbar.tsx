@@ -31,6 +31,9 @@ export default function Navbar() {
                   <Link href="/admin/students" className="text-gray-700 hover:text-brand-700">
                     Students
                   </Link>
+                  <Link href="/admin/feedback" className="text-gray-700 hover:text-brand-700">
+                    Feedback
+                  </Link>
                   <Link href="/admin/bookings" className="text-gray-700 hover:text-brand-700">
                     Bookings
                   </Link>

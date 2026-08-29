@@ -44,6 +44,10 @@ enrollment paywall.
 - **Enrolled Students roster** (`/admin/students`) — every paying student, their overall progress
   percentage, exactly which lesson they're currently on, certificates earned, and last activity
   date, sorted by most recently active.
+- **Review & Feedback page** (`/admin/feedback`) — every star rating and comment students leave
+  when unlocking a certificate, in one place, most recent first, with a one-click "Copy" button on
+  each entry so you can quickly reuse a piece of feedback elsewhere (a post, a slide, a chat)
+  without retyping it.
 - **Automatic welcome email**: the moment a student's enrollment payment is confirmed (instant
   PayMongo checkout or a manually-approved GCash payment), they're automatically emailed a
   welcome/congratulations message. Requires the same `SMTP_*` variables as the other notification
@@ -271,6 +275,7 @@ src/lib/payment-proof-storage.ts  Where manual-GCash proof screenshots are store
 src/lib/notify.ts           Booking/order/welcome notification emails + .ics calendar file generation
 src/lib/welcome-banner.ts   Renders the Facebook-postable "Welcome to the family" banner PNG
 src/app/admin/students/     Enrolled Students roster (progress, certificates, welcome banner button)
+src/app/admin/feedback/     Review & Feedback page (every star rating/comment, copy-to-share)
 src/app/admin/manual-payments/  Admin review screen for manual GCash payments
 src/app/                    Next.js App Router pages and API routes
 ```
