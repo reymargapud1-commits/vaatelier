@@ -1,0 +1,7 @@
+# @napi-rs/canvas (used by the Welcome Banner generator, src/lib/welcome-banner.ts)
+# needs the system fontconfig/freetype shared libraries to actually rasterize
+# text - without them, shapes and images still draw fine but all text comes
+# out invisible. Railway's default Node image doesn't include these, so they're
+# installed explicitly here.
+[phases.setup]
+aptPkgs = ["fontconfig", "libfreetype6"]

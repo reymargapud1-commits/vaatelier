@@ -9,8 +9,31 @@ const FONTS_DIR = path.join(process.cwd(), "assets", "fonts");
 let fontsRegistered = false;
 function ensureFontsRegistered() {
   if (fontsRegistered) return;
-  GlobalFonts.registerFromPath(path.join(FONTS_DIR, "Lora-Variable.ttf"), "Lora");
-  GlobalFonts.registerFromPath(path.join(FONTS_DIR, "Lora-Italic-Variable.ttf"), "Lora Italic");
+
+  const regularOk = GlobalFonts.registerFromPath(
+    path.join(FONTS_DIR, "Lora-Variable.ttf"),
+    "Lora"
+  );
+  const italicOk = GlobalFonts.registerFromPath(
+    path.join(FONTS_DIR, "Lora-Italic-Variable.ttf"),
+    "Lora Italic"
+  );
+
+  // @napi-rs/canvas's text rendering depends on the system having
+  // fontconfig/freetype shared libraries available (see nixpacks.toml) -
+  // on a host missing them, registerFromPath can silently report success
+  // while glyph rendering still fails, so double-check the family is
+  // actually usable rather than trusting the boolean alone. Logged (not
+  // thrown) so a background/log-in-Railway check can confirm this without
+  // breaking the whole feature if some other environment doesn't need it.
+  console.log(
+    "[welcome-banner] Font registration: Lora=%s Lora Italic=%s, GlobalFonts.has('Lora')=%s, families=%o",
+    regularOk,
+    italicOk,
+    GlobalFonts.has("Lora"),
+    GlobalFonts.families.map((f: any) => f.family)
+  );
+
   fontsRegistered = true;
 }
 
