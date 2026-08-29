@@ -34,6 +34,12 @@ export default function Navbar() {
                   <Link href="/admin/store-orders" className="text-gray-700 hover:text-brand-700">
                     Orders
                   </Link>
+                  <Link
+                    href="/admin/manual-payments"
+                    className="text-gray-700 hover:text-brand-700"
+                  >
+                    Manual Payments
+                  </Link>
                 </>
               )}
               <span className="hidden text-gray-400 sm:inline">|</span>

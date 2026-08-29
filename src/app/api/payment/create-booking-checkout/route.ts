@@ -32,7 +32,11 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Please log in first." }, { status: 401 });
   }
 
-  const { scheduledAt, note } = (await req.json()) as { scheduledAt: string; note?: string };
+  const { scheduledAt, note, method } = (await req.json()) as {
+    scheduledAt: string;
+    note?: string;
+    method?: "online" | "manual";
+  };
   const date = new Date(scheduledAt);
   if (isNaN(date.getTime()) || date.getTime() < Date.now() + 60 * 60 * 1000) {
     return NextResponse.json(
@@ -115,6 +119,25 @@ export async function POST(req: Request) {
     });
 
     return NextResponse.json({ checkoutUrl: `${siteUrl}/dashboard/booking/success` });
+  }
+
+  // Manual GCash path - same booking row as the online path, but no
+  // PayMongo checkout: a payments row is created "awaiting_proof" instead,
+  // and the student uploads a screenshot next (upload-proof route). An
+  // admin then approves it on /admin/manual-payments, which is what
+  // actually confirms the booking and notifies the coach.
+  if (method === "manual") {
+    const paymentId = randomUUID();
+    await db.insert(payments).values({
+      id: paymentId,
+      userId: user.id,
+      provider: "manual_gcash",
+      status: "awaiting_proof",
+      amountCentavos: amount,
+      purpose: "coaching",
+      referenceId: bookingId,
+    });
+    return NextResponse.json({ manual: true, paymentId, amountCentavos: amount });
   }
 
   try {

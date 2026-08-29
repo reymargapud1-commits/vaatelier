@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import ManualPaymentPanel from "./ManualPaymentPanel";
 
 interface Booking {
   id: string;
@@ -123,8 +124,9 @@ export default function BookingForm({ freeSessionAvailable }: { freeSessionAvail
         </div>
         <h2 className="mb-2 text-xl font-bold text-gray-900">Finishing Your Booking</h2>
         <p className="mb-6 text-sm text-gray-600">
-          Just a moment — we're confirming your payment with PayMongo. If you were redirected
-          back here, just refresh this page.
+          Just a moment — we're confirming your payment. If you paid online and were redirected
+          back here, just refresh this page. If you submitted a GCash screenshot for manual
+          review, this can take a few hours to confirm.
         </p>
         <button onClick={() => window.location.reload()} className="btn-secondary w-full">
           Refresh
@@ -202,6 +204,30 @@ export default function BookingForm({ freeSessionAvailable }: { freeSessionAvail
           error={error}
           freeSessionAvailable={freeSessionAvailable}
         />
+
+        {!freeSessionAvailable && (
+          <div className="mt-6">
+            <div className="mb-4 flex items-center gap-3 text-xs text-gray-400">
+              <div className="h-px flex-1 bg-gray-200" />
+              OR
+              <div className="h-px flex-1 bg-gray-200" />
+            </div>
+            {date && time ? (
+              <ManualPaymentPanel
+                createEndpoint="/api/payment/create-booking-checkout"
+                createBody={{
+                  scheduledAt: new Date(`${date}T${time}:00`).toISOString(),
+                  note,
+                }}
+                onSubmitted={() => window.location.reload()}
+              />
+            ) : (
+              <p className="rounded-lg border border-dashed border-gray-200 p-4 text-center text-sm text-gray-500">
+                Choose a date and time above first, then you can pay via GCash (Manual) here.
+              </p>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );

@@ -28,7 +28,11 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Please log in first." }, { status: 401 });
   }
 
-  const { itemKey, note } = (await req.json()) as { itemKey: string; note?: string };
+  const { itemKey, note, method } = (await req.json()) as {
+    itemKey: string;
+    note?: string;
+    method?: "online" | "manual";
+  };
   const item = getStoreItem(itemKey);
   if (!item) {
     return NextResponse.json({ error: "Unknown item." }, { status: 400 });
@@ -43,6 +47,23 @@ export async function POST(req: Request) {
     amountCentavos: item.amountCentavos,
     customerNote: note || null,
   });
+
+  // Manual GCash path - the order row is already created above ("pending
+  // payment" either way); instead of a PayMongo checkout, record a payments
+  // row "awaiting_proof" for the student to attach a screenshot to next.
+  if (method === "manual") {
+    const paymentId = randomUUID();
+    await db.insert(payments).values({
+      id: paymentId,
+      userId: user.id,
+      provider: "manual_gcash",
+      status: "awaiting_proof",
+      amountCentavos: item.amountCentavos,
+      purpose: "store_order",
+      referenceId: orderId,
+    });
+    return NextResponse.json({ manual: true, paymentId, amountCentavos: item.amountCentavos });
+  }
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 

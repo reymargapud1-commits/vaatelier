@@ -4,7 +4,7 @@ import Link from "next/link";
 import { and, eq, inArray } from "drizzle-orm";
 import { authOptions } from "@/lib/auth";
 import { db } from "@/db";
-import { users, courses, modules, lessons, quizzes, lessonProgress, quizAttempts } from "@/db/schema";
+import { users, courses, modules, lessons, quizzes, lessonProgress, quizAttempts, payments } from "@/db/schema";
 import Navbar from "@/components/Navbar";
 import { getTrackProgress } from "@/lib/certificate-eligibility";
 
@@ -20,6 +20,19 @@ export default async function DashboardPage() {
   // registered-but-not-yet-enrolled student gets a menu of all 3 instead
   // of being forced straight to the enrollment payment page.
   if (!user.isPaid) {
+    const [pendingManualPayment] = await db
+      .select({ id: payments.id, status: payments.status })
+      .from(payments)
+      .where(
+        and(
+          eq(payments.userId, userId),
+          eq(payments.provider, "manual_gcash"),
+          eq(payments.purpose, "enrollment"),
+          inArray(payments.status, ["awaiting_proof", "pending_review"])
+        )
+      )
+      .limit(1);
+
     return (
       <>
         <Navbar />
@@ -32,6 +45,17 @@ export default async function DashboardPage() {
             You're registered, but haven't enrolled in the full training yet. Here's what you can
             do right now:
           </p>
+
+          {pendingManualPayment && pendingManualPayment.status === "pending_review" && (
+            <div className="mx-auto mb-8 max-w-lg rounded-lg border border-amber-200 bg-amber-50 p-4 text-left">
+              <p className="font-semibold text-amber-800">⏳ Verifying your enrollment payment</p>
+              <p className="mt-1 text-sm text-amber-700">
+                We received your GCash payment screenshot and it's being reviewed. This usually
+                takes a few hours — your full access will unlock automatically once it's approved.
+              </p>
+            </div>
+          )}
+
           <div className="grid gap-5 text-left sm:grid-cols-3">
             <div className="card flex flex-col">
               <h2 className="mb-1 font-bold text-gray-900">🎓 Full Training</h2>

@@ -1,1 +1,0 @@
-ALTER TABLE `users` ADD `free_coaching_session_used` integer DEFAULT false NOT NULL;

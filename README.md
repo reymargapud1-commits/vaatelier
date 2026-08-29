@@ -117,6 +117,33 @@ webhook pointed at `https://<your-ngrok-domain>/api/payment/webhook`, subscribed
 redirect back correctly. Even without this set up, `/payment/success` also double-checks payment
 status directly against the PayMongo API as a fallback, so test payments still unlock access.
 
+## Manual GCash payments (no PayMongo account required)
+
+PayMongo (and every other licensed PH payment gateway) requires a DTI Certificate of Business
+Name Registration and a BIR Certificate of Registration (Form 2303) before it will activate
+GCash/Maya/Card for a sole proprietor — that's a Philippine BSP/AMLA regulatory requirement, not
+something this app can work around. Until you have those, students can still pay you directly:
+
+- On the enrollment, coaching-booking, or store-order payment screen, they can choose
+  **"Pay via GCash (Manual)"** instead of the PayMongo button.
+- It shows your GCash name and number (set `NEXT_PUBLIC_GCASH_NAME` / `NEXT_PUBLIC_GCASH_NUMBER`
+  in `.env`) and asks them to send payment directly to you, person-to-person — no gateway or
+  merchant registration involved at all.
+- They upload a screenshot of their GCash confirmation as proof.
+- You review it at `/admin/manual-payments` (also linked from the admin nav) and click
+  **Approve** or **Reject**. Approving unlocks their enrollment/booking/order exactly the same way
+  an automatic PayMongo payment does.
+
+Optionally drop a QR code image at `public/images/payment/gcash-qr.png` and it will automatically
+appear on the manual payment screen above your name and number — if that file isn't there, it
+just doesn't show, nothing else to configure. Proof screenshots are private (only the student who
+uploaded one and admins can view it) and are stored next to your database file so they survive
+redeploys, the same way the database itself does.
+
+This path works completely independently of your PayMongo setup — you can turn it on today, and
+switch students over to instant PayMongo checkout later once your DTI/BIR verification is done,
+with zero code changes on either side.
+
 ## Live training session booking + notifications
 
 Screen near the bottom of the dashboard, and required before the certificate unlocks: the student
@@ -204,7 +231,10 @@ assets/fonts/               Fonts embedded in the certificate PDF (Lora, SIL OFL
 src/db/schema.ts            Drizzle ORM schema (SQLite)
 src/db/seed.ts              Loads content/*.json into the database
 src/lib/paymongo.ts         PayMongo checkout + webhook signature verification
+src/lib/payment-fulfillment.ts  Shared "mark payment paid/rejected" logic (webhook + manual admin approval)
+src/lib/payment-proof-storage.ts  Where manual-GCash proof screenshots are stored on disk
 src/lib/notify.ts           Booking notification email + .ics calendar file generation
+src/app/admin/manual-payments/  Admin review screen for manual GCash payments
 src/app/                    Next.js App Router pages and API routes
 ```
 
@@ -215,3 +245,8 @@ src/app/                    Next.js App Router pages and API routes
   payment event — never disable this check.
 - Every content-serving route (lessons, quizzes, streaming, certificate) re-checks the logged-in
   user's `isPaid` flag from the database on every request; it never trusts client-side state.
+- Manual-GCash proof screenshots are served only through `/api/payment-proof/[paymentId]`, which
+  re-checks on every request that the requester is either the student who uploaded it or an admin
+  — the files themselves are never placed under `public/`.
+- Approving or rejecting a manual GCash payment is admin-only (`session.user.role === "admin"`),
+  and approval is idempotent — re-approving an already-paid payment is a safe no-op.

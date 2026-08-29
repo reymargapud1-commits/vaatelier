@@ -93,16 +93,31 @@ export const certificates = sqliteTable("certificates", {
 // row it pays for (a liveSessionBookings.id for "coaching", a
 // storeOrders.id for "store_order", null for "enrollment" since that just
 // flips users.isPaid). See api/payment/webhook/route.ts for how each is handled.
+//
+// provider "manual_gcash" is the no-KYB-required fallback: the student
+// sends payment directly to the coach's personal GCash and uploads a
+// screenshot as proof (proofImagePath - see lib/payment-proof-storage.ts;
+// stored next to the SQLite DB file, NOT in public/, both because it's a
+// private receipt image and because only the DB's directory is guaranteed
+// to survive a Railway redeploy), then an admin reviews it on
+// /admin/manual-payments. Status for that path goes
+// "awaiting_proof" -> "pending_review" -> "paid" | "rejected". See
+// lib/payment-fulfillment.ts for the shared "mark paid" logic used by both
+// the PayMongo webhook and the manual-payment admin approval action.
 export const payments = sqliteTable("payments", {
   id: text("id").primaryKey(),
   userId: text("user_id").notNull().references(() => users.id),
-  provider: text("provider").notNull().default("paymongo"),
+  provider: text("provider").notNull().default("paymongo"), // "paymongo" | "manual_gcash"
   checkoutSessionId: text("checkout_session_id").unique(),
   paymentIntentId: text("payment_intent_id"),
-  status: text("status").notNull().default("pending"), // "pending" | "paid" | "failed"
+  status: text("status").notNull().default("pending"),
+  // "pending" | "paid" | "failed" (paymongo)
+  // "awaiting_proof" | "pending_review" | "paid" | "rejected" (manual_gcash)
   amountCentavos: integer("amount_centavos").notNull(),
   purpose: text("purpose").notNull().default("enrollment"), // "enrollment" | "coaching" | "store_order"
   referenceId: text("reference_id"),
+  proofImagePath: text("proof_image_path"), // manual_gcash only - filename, see lib/payment-proof-storage.ts
+  note: text("note"), // manual_gcash only - optional student message / GCash reference number
   createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
   updatedAt: integer("updated_at", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
 });

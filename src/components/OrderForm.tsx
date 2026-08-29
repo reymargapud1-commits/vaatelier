@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { StoreItem } from "@/lib/store-items";
+import ManualPaymentPanel from "./ManualPaymentPanel";
 
 export default function OrderForm({ item }: { item: StoreItem }) {
   const [open, setOpen] = useState(false);
@@ -76,6 +77,18 @@ export default function OrderForm({ item }: { item: StoreItem }) {
               {saving ? "Preparing..." : "Place Order"}
             </button>
           </div>
+
+          <div className="flex items-center gap-3 text-xs text-gray-400">
+            <div className="h-px flex-1 bg-gray-200" />
+            OR
+            <div className="h-px flex-1 bg-gray-200" />
+          </div>
+
+          <ManualPaymentPanel
+            createEndpoint="/api/payment/create-order-checkout"
+            createBody={{ itemKey: item.key, note }}
+            onSubmitted={() => window.location.reload()}
+          />
         </div>
       )}
     </div>

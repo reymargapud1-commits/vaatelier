@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Navbar from "@/components/Navbar";
+import ManualPaymentPanel from "@/components/ManualPaymentPanel";
 
 export default function PaymentPage() {
   const { data: session, status } = useSession();
@@ -80,10 +81,21 @@ export default function PaymentPage() {
           <button onClick={handlePay} disabled={loading} className="btn-primary w-full text-lg">
             {loading ? "Preparing secure checkout..." : "Pay Now via GCash / Maya / Card"}
           </button>
-          <p className="mt-3 text-xs text-gray-400">
+          <p className="mb-6 mt-3 text-xs text-gray-400">
             Powered by PayMongo. Your payment details are handled securely by PayMongo, never
             stored on this site.
           </p>
+
+          <div className="mb-4 flex items-center gap-3 text-xs text-gray-400">
+            <div className="h-px flex-1 bg-gray-200" />
+            OR
+            <div className="h-px flex-1 bg-gray-200" />
+          </div>
+
+          <ManualPaymentPanel
+            createEndpoint="/api/payment/create-checkout"
+            onSubmitted={() => router.push("/dashboard")}
+          />
         </div>
       </main>
     </>
