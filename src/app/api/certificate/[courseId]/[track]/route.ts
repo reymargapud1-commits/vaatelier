@@ -143,7 +143,7 @@ export async function GET(req: Request, { params }: { params: { courseId: string
   });
 
   centerText(
-    "for successfully completing every video lesson and quiz of",
+    "for successfully completing the full training in",
     height - 310,
     sans,
     12.5,
@@ -185,13 +185,13 @@ export async function GET(req: Request, { params }: { params: { courseId: string
   if (fs.existsSync(SIGNATURE_PATH)) {
     const signatureBytes = fs.readFileSync(SIGNATURE_PATH);
     const signatureImage = await pdfDoc.embedPng(signatureBytes);
-    const targetHeight = 65;
+    const targetHeight = 55;
     const scale = targetHeight / signatureImage.height;
     const drawWidth = signatureImage.width * scale;
     const slotWidth = 200;
     page.drawImage(signatureImage, {
       x: sigX + (slotWidth - drawWidth) / 2,
-      y: sigBaseY,
+      y: sigBaseY - 10,
       width: drawWidth,
       height: targetHeight,
     });
