@@ -6,6 +6,7 @@ import { authOptions } from "@/lib/auth";
 import { db } from "@/db";
 import { lessons, modules, courses } from "@/db/schema";
 import Navbar from "@/components/Navbar";
+import VideoWithDiagnostic from "@/components/VideoWithDiagnostic";
 import niches from "../../../../../../content/niches.json";
 
 const nicheByCourseId = new Map(niches.niches.map((n) => [n.courseId, n]));
@@ -47,13 +48,7 @@ export default async function AdminLessonPreviewPage({ params }: { params: { les
         <h1 className="mb-4 text-2xl font-bold text-gray-900">{lesson.title}</h1>
 
         <div className="overflow-hidden rounded-xl bg-black shadow-lg">
-          {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
-          <video
-            controls
-            controlsList="nodownload"
-            className="aspect-video w-full"
-            src={`/api/stream/${lesson.id}`}
-          />
+          <VideoWithDiagnostic src={`/api/stream/${lesson.id}`} />
         </div>
 
         <p className="mt-4 text-sm text-gray-500">

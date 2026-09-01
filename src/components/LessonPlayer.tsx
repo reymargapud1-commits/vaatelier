@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import VideoWithDiagnostic from "./VideoWithDiagnostic";
 
 export default function LessonPlayer({
   lessonId,
@@ -31,12 +32,8 @@ export default function LessonPlayer({
   return (
     <div>
       <div className="overflow-hidden rounded-xl bg-black shadow-lg">
-        {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
-        <video
-          key={lessonId}
-          controls
-          controlsList="nodownload"
-          className="aspect-video w-full"
+        <VideoWithDiagnostic
+          lessonKey={lessonId}
           onEnded={markComplete}
           src={`/api/stream/${lessonId}`}
         />
