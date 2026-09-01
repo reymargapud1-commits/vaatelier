@@ -7,6 +7,9 @@ import { trackFeedback, users } from "@/db/schema";
 import { getTrackById } from "@/lib/certificate-tracks";
 import Navbar from "@/components/Navbar";
 import FeedbackTable, { type FeedbackRow } from "@/components/FeedbackTable";
+import niches from "../../../../content/niches.json";
+
+const nicheTitleByCourseId = new Map(niches.niches.map((n) => [n.courseId, n.title]));
 
 /**
  * Coach-facing feedback review page (/admin/feedback): every star rating +
@@ -31,12 +34,14 @@ export default async function AdminFeedbackPage() {
 
   const rows: FeedbackRow[] = feedbackRows.map((f) => {
     const student = studentById.get(f.userId);
-    const trackDef = getTrackById(f.track);
+    const trackDef = getTrackById(f.courseId, f.track);
+    const nicheTitle = nicheTitleByCourseId.get(f.courseId) || f.courseId;
+    const trackName = trackDef ? trackDef.label.replace(/^Certificate [IV]+:\s*/, "") : f.track;
     return {
       id: f.id,
       studentName: student?.name || "Unknown student",
       studentEmail: student?.email || "",
-      trackLabel: trackDef ? trackDef.label.replace(/^Certificate [IV]+:\s*/, "") : f.track,
+      trackLabel: `${nicheTitle} — ${trackName}`,
       rating: f.rating,
       comment: f.comment,
       createdAt: f.createdAt.toISOString(),

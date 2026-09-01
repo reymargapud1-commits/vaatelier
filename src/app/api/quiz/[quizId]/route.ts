@@ -26,6 +26,9 @@ export async function GET(_req: Request, { params }: { params: { quizId: string 
   }
 
   const [mod] = await db.select().from(modules).where(eq(modules.id, quiz.moduleId)).limit(1);
+  if (!mod || mod.courseId !== user.courseId) {
+    return NextResponse.json({ error: "Quiz not found" }, { status: 404 });
+  }
   const quizQuestions = await db.select().from(questions).where(eq(questions.quizId, quiz.id));
 
   // Never send correctIndex to the client before grading.

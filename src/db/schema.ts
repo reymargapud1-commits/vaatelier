@@ -20,6 +20,14 @@ export const users = sqliteTable("users", {
   // api/payment/create-booking-checkout/route.ts. Coaching itself is
   // bookable by anyone (enrolled or not) at the regular ₱300 price.
   freeCoachingSessionUsed: integer("free_coaching_session_used", { mode: "boolean" }).notNull().default(false),
+  // Which training niche (courses row) this student is taking - see
+  // "Training niches" in the README. Null until they pick one, which
+  // happens right after enrollment (isPaid flips true) but before they can
+  // see any lesson - /dashboard redirects to /dashboard/choose-niche until
+  // this is set. Existing students from before niches existed were
+  // backfilled to the original course in the migration that added this
+  // column, so they were never interrupted with a picker screen.
+  courseId: text("course_id").references(() => courses.id),
   createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
 });
 
@@ -30,6 +38,12 @@ export const courses = sqliteTable("courses", {
   priceCentavos: integer("price_centavos").notNull(),
   coachName: text("coach_name"),
   coachTitle: text("coach_title"),
+  // A "course" row IS a training niche - see content/niches.json, which is
+  // what actually drives what shows up on the /dashboard/choose-niche
+  // picker (only isPublished rows) and how it's presented there.
+  shortDescription: text("short_description").notNull().default(""),
+  icon: text("icon").notNull().default("💼"),
+  isPublished: integer("is_published", { mode: "boolean" }).notNull().default(true),
 });
 
 export const modules = sqliteTable("modules", {

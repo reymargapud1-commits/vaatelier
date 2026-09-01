@@ -72,13 +72,15 @@ export async function markPaymentPaid(paymentId: string) {
     // enrolled. Only reached once per payment (the "already paid" check at
     // the top of this function returns early on retries/double-approvals),
     // so this never double-sends. Silently no-ops if SMTP isn't configured.
+    // Niche isn't chosen yet at enrollment time (that happens right after,
+    // on /dashboard/choose-niche - see users.courseId), so this always uses
+    // the generic program name rather than any one niche's course title.
     const [student] = await db.select().from(users).where(eq(users.id, payment.userId)).limit(1);
-    const [course] = await db.select().from(courses).limit(1);
     if (student) {
       await sendWelcomeEmail({
         studentName: student.name,
         studentEmail: student.email,
-        courseTitle: course?.title || "The VA Atelier Training Program",
+        courseTitle: "The VA Atelier Training Program",
       });
     }
   }

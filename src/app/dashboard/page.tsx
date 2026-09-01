@@ -92,7 +92,15 @@ export default async function DashboardPage() {
     );
   }
 
-  const [course] = await db.select().from(courses).limit(1);
+  // Every enrolled student picks a training niche right after paying, before
+  // they can see any lesson - see /dashboard/choose-niche. Students who
+  // enrolled before niches existed were auto-backfilled to "General & Admin
+  // VA" in the migration that added courseId, so they never hit this.
+  if (!user.courseId) {
+    redirect("/dashboard/choose-niche");
+  }
+
+  const [course] = await db.select().from(courses).where(eq(courses.id, user.courseId)).limit(1);
 
   if (!course) {
     return (

@@ -4,6 +4,7 @@ import { eq, and } from "drizzle-orm";
 import { authOptions } from "@/lib/auth";
 import { db } from "@/db";
 import { courses, liveSessionBookings } from "@/db/schema";
+import { ANCHOR_COURSE_ID } from "@/lib/anchor-course";
 
 // Booking creation now happens via /api/payment/create-booking-checkout
 // (the 1-on-1 coaching add-on is paid, ₱300/2hrs). This route is
@@ -16,7 +17,7 @@ export async function GET() {
   }
   const userId = (session.user as any).id;
 
-  const [course] = await db.select().from(courses).limit(1);
+  const [course] = await db.select().from(courses).where(eq(courses.id, ANCHOR_COURSE_ID)).limit(1);
   if (!course) return NextResponse.json({ booking: null });
 
   const [booking] = await db

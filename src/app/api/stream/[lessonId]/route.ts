@@ -5,7 +5,7 @@ import path from "path";
 import { eq } from "drizzle-orm";
 import { authOptions } from "@/lib/auth";
 import { db } from "@/db";
-import { users, lessons } from "@/db/schema";
+import { users, lessons, modules } from "@/db/schema";
 
 // Videos live outside of /public on purpose: this route is the ONLY way to
 // reach a lesson video, and it re-checks login + payment status on every
@@ -31,6 +31,13 @@ export async function GET(req: Request, { params }: { params: { lessonId: string
   const lessonId = params.lessonId.replace(/[^a-zA-Z0-9-]/g, "");
   const [lesson] = await db.select().from(lessons).where(eq(lessons.id, lessonId)).limit(1);
   if (!lesson) {
+    return new NextResponse("Not found", { status: 404 });
+  }
+
+  // A lesson belongs to exactly one niche (via its module's courseId) - make
+  // sure a student can only stream their own niche's videos.
+  const [lessonModule] = await db.select().from(modules).where(eq(modules.id, lesson.moduleId)).limit(1);
+  if (!lessonModule || lessonModule.courseId !== user.courseId) {
     return new NextResponse("Not found", { status: 404 });
   }
 

@@ -4,7 +4,7 @@ import { getServerSession } from "next-auth";
 import { and, eq } from "drizzle-orm";
 import { authOptions } from "@/lib/auth";
 import { db } from "@/db";
-import { users, lessons, lessonProgress } from "@/db/schema";
+import { users, lessons, lessonProgress, modules } from "@/db/schema";
 
 export async function POST(req: Request) {
   const session = await getServerSession(authOptions);
@@ -21,6 +21,13 @@ export async function POST(req: Request) {
   const { lessonId } = await req.json();
   const [lesson] = await db.select().from(lessons).where(eq(lessons.id, lessonId)).limit(1);
   if (!lesson) {
+    return NextResponse.json({ error: "Lesson not found" }, { status: 404 });
+  }
+
+  // A lesson belongs to exactly one niche (via its module's courseId) - make
+  // sure a student can only mark progress on their own niche's lessons.
+  const [lessonModule] = await db.select().from(modules).where(eq(modules.id, lesson.moduleId)).limit(1);
+  if (!lessonModule || lessonModule.courseId !== user.courseId) {
     return NextResponse.json({ error: "Lesson not found" }, { status: 404 });
   }
 

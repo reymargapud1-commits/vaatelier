@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import { LogoMark } from "@/components/Logo";
-import curriculum from "../../content/curriculum.json";
+import curriculum from "../../content/curriculum/va-foundations.json";
+import niches from "../../content/niches.json";
 
 const COACH_NAME = process.env.COACH_NAME || "Reymar Gapud";
 const COACH_TITLE = process.env.COACH_TITLE || "VA Coach & Trainer";
@@ -74,13 +75,51 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Choose your specialty */}
+      <section className="bg-brand-50/60 py-20">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6">
+          <h2 className="mb-2 text-center text-3xl font-bold text-gray-900 sm:text-4xl">
+            Choose Your Specialty
+          </h2>
+          <p className="mx-auto mb-12 max-w-2xl text-center text-gray-600">
+            Right after you enroll, you'll pick the training track that fits the VA career you
+            want. Each track is a complete, self-contained course with its own modules, video
+            lessons, quizzes, and certificate.
+          </p>
+          <div className="grid gap-5 sm:grid-cols-2">
+            {niches.niches
+              .filter((n) => n.isPublished)
+              .map((n) => (
+                <div
+                  key={n.courseId}
+                  className="card transition hover:-translate-y-0.5 hover:shadow-md"
+                >
+                  <div className="mb-3 flex items-center gap-3">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-600 text-lg">
+                      {n.icon}
+                    </span>
+                    <h3 className="font-bold text-gray-900">{n.title}</h3>
+                  </div>
+                  <p className="text-sm text-gray-600">{n.shortDescription}</p>
+                </div>
+              ))}
+          </div>
+          <p className="mx-auto mt-8 max-w-xl text-center text-sm text-gray-500">
+            Not sure yet? General &amp; Admin VA is a great default, and it's exactly what's
+            previewed below.
+          </p>
+        </div>
+      </section>
+
       {/* What you'll learn */}
       <section id="curriculum" className="mx-auto max-w-5xl px-4 py-20 sm:px-6">
         <h2 className="mb-2 text-center text-3xl font-bold text-gray-900 sm:text-4xl">
           What You'll Learn
         </h2>
         <p className="mx-auto mb-12 max-w-xl text-center text-gray-600">
-          A complete, structured path from total beginner to landing your first paying VA client.
+          A preview of the General &amp; Admin VA track — a complete, structured path from total
+          beginner to landing your first paying VA client. Every specialty track above follows
+          this same proven structure.
         </p>
         <div className="grid gap-5 sm:grid-cols-2">
           {curriculum.modules.map((mod, i) => (

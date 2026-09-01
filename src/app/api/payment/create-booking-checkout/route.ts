@@ -7,6 +7,7 @@ import { db } from "@/db";
 import { users, courses, payments, liveSessionBookings } from "@/db/schema";
 import { createCheckoutSession } from "@/lib/paymongo";
 import { notifyCoachOfBooking } from "@/lib/notify";
+import { ANCHOR_COURSE_ID } from "@/lib/anchor-course";
 
 const COACHING_PRICE_CENTAVOS = Number(process.env.COACHING_PRICE_CENTAVOS || 30000); // ₱300.00
 
@@ -45,7 +46,7 @@ export async function POST(req: Request) {
     );
   }
 
-  const [course] = await db.select().from(courses).limit(1);
+  const [course] = await db.select().from(courses).where(eq(courses.id, ANCHOR_COURSE_ID)).limit(1);
   if (!course) return NextResponse.json({ error: "Course not configured" }, { status: 500 });
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";

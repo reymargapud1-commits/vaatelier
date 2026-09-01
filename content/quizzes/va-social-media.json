@@ -1,0 +1,84 @@
+{
+  "quizzes": [
+    {
+      "id": "sm-quiz-m1",
+      "moduleId": "sm-m1",
+      "title": "Module 1 Quiz: Starting Out as a Social Media VA",
+      "passingScore": 70,
+      "questions": [
+        { "id": "sm-m1-q1", "text": "What does a Social Media Management VA primarily do?", "choices": ["Plans, creates, schedules, and monitors a business's social content", "Handles a company's payroll", "Repairs computer hardware", "Manages warehouse inventory"], "correctIndex": 0 },
+        { "id": "sm-m1-q2", "text": "Why do most small business owners hire a Social Media VA?", "choices": ["They are legally required to", "They lack the time or platform know-how to post consistently", "It is cheaper than hiring no one", "Social media accounts require a license"], "correctIndex": 1 },
+        { "id": "sm-m1-q3", "text": "Which trait do clients value most in a Social Media VA?", "choices": ["Posting anything at any time without a plan", "Reliability and matching the brand's voice", "Ignoring the content calendar", "Avoiding all client communication"], "correctIndex": 1 },
+        { "id": "sm-m1-q4", "text": "Before creating content, why is it important to understand a client's brand voice?", "choices": ["It isn't important", "So every post sounds consistent with how the business talks to its audience", "Because clients prefer generic, unbranded posts", "It only matters for large corporations"], "correctIndex": 1 },
+        { "id": "sm-m1-q5", "text": "What is a key part of setting up a productive home workspace for social media work?", "choices": ["A reliable internet connection and a distraction-free area", "Working only from a phone with no backup plan", "Avoiding all scheduling tools", "Sharing your client login with friends"], "correctIndex": 0 }
+      ]
+    },
+    {
+      "id": "sm-quiz-m2",
+      "moduleId": "sm-m2",
+      "title": "Module 2 Quiz: Essential Tools",
+      "passingScore": 70,
+      "questions": [
+        { "id": "sm-m2-q1", "text": "What is the main purpose of a content scheduling tool like Meta Business Suite or Later?", "choices": ["To queue up posts in advance so they publish automatically", "To edit spreadsheets", "To process client payments", "To design company logos only"], "correctIndex": 0 },
+        { "id": "sm-m2-q2", "text": "What is Canva primarily used for in this role?", "choices": ["Bookkeeping", "Designing graphics and social media visuals", "Tracking billable hours", "Hosting email"], "correctIndex": 1 },
+        { "id": "sm-m2-q3", "text": "What can Meta Business Suite manage together?", "choices": ["Only email newsletters", "Both a business's Facebook and Instagram accounts", "Only TikTok analytics", "Only paid ad billing"], "correctIndex": 1 },
+        { "id": "sm-m2-q4", "text": "Which content style tends to perform best for businesses on TikTok?", "choices": ["Overly polished, ad-style videos only", "Short, authentic, trend-aware videos", "Text-only posts", "Posts with no sound"], "correctIndex": 1 },
+        { "id": "sm-m2-q5", "text": "Why should a Social Media VA regularly check analytics?", "choices": ["To see which content is working and adjust the strategy", "Analytics have no real use", "Only to fill out a report no one reads", "To decide the client's personal opinions"], "correctIndex": 0 },
+        { "id": "sm-m2-q6", "text": "What is one benefit of using a dedicated scheduling tool instead of posting manually every day?", "choices": ["It removes the need to ever check the account again", "It saves time and keeps posting consistent even on busy days", "It guarantees viral posts", "It replaces the need for a content calendar"], "correctIndex": 1 },
+        { "id": "sm-m2-q7", "text": "Which of these is a reporting/analytics tool mentioned for tracking performance?", "choices": ["Meta Business Suite Insights", "QuickBooks", "Zendesk", "Trello"], "correctIndex": 0 }
+      ]
+    },
+    {
+      "id": "sm-quiz-m3",
+      "moduleId": "sm-m3",
+      "title": "Module 3 Quiz: Core Management Skills",
+      "passingScore": 70,
+      "questions": [
+        { "id": "sm-m3-q1", "text": "What is the purpose of a content calendar?", "choices": ["To randomly decide what to post each day", "To plan posts in advance around themes, dates, and goals", "To replace the need for captions", "To track client payments"], "correctIndex": 1 },
+        { "id": "sm-m3-q2", "text": "What makes a caption 'engaging'?", "choices": ["It is as long and generic as possible", "It hooks the reader and invites a response, matching the brand's voice", "It only contains hashtags", "It never mentions the audience"], "correctIndex": 1 },
+        { "id": "sm-m3-q3", "text": "How should a Social Media VA handle a negative comment on a client's post?", "choices": ["Delete the client's account", "Respond professionally and flag it to the client if needed", "Ignore it completely", "Argue publicly with the commenter"], "correctIndex": 1 },
+        { "id": "sm-m3-q4", "text": "What is a good hashtag strategy?", "choices": ["Using only one extremely popular hashtag every time", "Mixing broad, niche, and branded hashtags relevant to the post", "Avoiding hashtags entirely", "Copying a competitor's hashtags word for word without checking relevance"], "correctIndex": 1 },
+        { "id": "sm-m3-q5", "text": "Why is community management (replying to comments/messages) important?", "choices": ["It has no effect on engagement", "It builds trust and keeps followers engaged with the brand", "It should be skipped to save time", "It is only needed once a year"], "correctIndex": 1 }
+      ]
+    },
+    {
+      "id": "sm-quiz-m4",
+      "moduleId": "sm-m4",
+      "title": "Module 4 Quiz: Building Your Portfolio",
+      "passingScore": 70,
+      "questions": [
+        { "id": "sm-m4-q1", "text": "What is a 'mock campaign' used for in a portfolio?", "choices": ["A real paid client project", "A sample campaign created to demonstrate your skills", "A type of scam", "A required legal document"], "correctIndex": 1 },
+        { "id": "sm-m4-q2", "text": "How should mock projects be labeled in a portfolio?", "choices": ["As real client results with no disclaimer", "Clearly and honestly as sample or practice work", "They should never be shown", "As guaranteed outcomes for future clients"], "correctIndex": 1 },
+        { "id": "sm-m4-q3", "text": "What is a good way to showcase results in a portfolio?", "choices": ["Vague claims with no specifics", "Clear before/after examples with real or realistic metrics", "Only screenshots of your own social media", "Avoiding results entirely"], "correctIndex": 1 },
+        { "id": "sm-m4-q4", "text": "Which free tools work well for building a simple portfolio page?", "choices": ["Canva, Google Sites, or Carrd", "Only expensive custom-built websites", "None exist for free", "Only printed paper portfolios"], "correctIndex": 0 },
+        { "id": "sm-m4-q5", "text": "Why is a portfolio valuable even without paid social media client experience?", "choices": ["It has no real value", "It proves your skills with content calendars, captions, and design", "It replaces the need for any actual skills", "Clients never look at portfolios"], "correctIndex": 1 }
+      ]
+    },
+    {
+      "id": "sm-quiz-m5",
+      "moduleId": "sm-m5",
+      "title": "Module 5 Quiz: Resume and Applications",
+      "passingScore": 70,
+      "questions": [
+        { "id": "sm-m5-q1", "text": "What should a Social Media VA resume bullet point focus on?", "choices": ["Vague statements with no detail", "Specific results, like engagement or follower growth, with numbers when possible", "Only job titles", "Personal hobbies unrelated to the role"], "correctIndex": 1 },
+        { "id": "sm-m5-q2", "text": "What makes a strong proposal for a social media job posting?", "choices": ["A generic copy-paste message sent to everyone", "Personalization that references the specific brand and its goals", "Extremely long, unfocused paragraphs", "No mention of relevant tools or skills"], "correctIndex": 1 },
+        { "id": "sm-m5-q3", "text": "Which platforms are commonly used to find Social Media VA clients?", "choices": ["OnlineJobs.ph and Upwork", "Only local newspapers", "Random unrelated apps", "None, clients cannot be found online"], "correctIndex": 0 },
+        { "id": "sm-m5-q4", "text": "What is a good goal during a discovery call with a potential client?", "choices": ["Avoid asking any questions", "Understand the client's goals, current challenges, and expectations", "Immediately demand payment before speaking", "Refuse to discuss the client's brand"], "correctIndex": 1 },
+        { "id": "sm-m5-q5", "text": "A good freelance profile headline for a Social Media VA should be:", "choices": ["Vague, like 'Hardworking VA'", "Specific and benefit-driven, naming the platforms and value you offer", "Left blank", "Written only in technical jargon"], "correctIndex": 1 }
+      ]
+    },
+    {
+      "id": "sm-quiz-m6",
+      "moduleId": "sm-m6",
+      "title": "Module 6 Quiz: Landing Your First Client and Beyond",
+      "passingScore": 70,
+      "questions": [
+        { "id": "sm-m6-q1", "text": "What is a good first step when onboarding a new social media client?", "choices": ["Guess what they want without asking", "Clarify goals, brand voice, login access, and posting schedule in writing", "Immediately increase your rate", "Avoid all communication in week one"], "correctIndex": 1 },
+        { "id": "sm-m6-q2", "text": "Which is a common pricing model for Social Media VA services?", "choices": ["Monthly retainer", "Random guessing", "Refusing to state a price", "Charging only in a currency you don't understand"], "correctIndex": 0 },
+        { "id": "sm-m6-q3", "text": "What is a practical way to manage multiple client accounts without mixing them up?", "choices": ["Use one shared login for every client", "Use separate scheduling calendars and clearly labeled folders per client", "Post the same content to every client's page", "Avoid using any organizational tools"], "correctIndex": 1 },
+        { "id": "sm-m6-q4", "text": "How should a Social Media VA respond to difficult client feedback?", "choices": ["Take it personally and stop responding", "Listen professionally, clarify the concern, and revise where reasonable", "Argue that the client is always wrong", "Ignore the feedback completely"], "correctIndex": 1 },
+        { "id": "sm-m6-q5", "text": "What helps build a long-term Social Media VA career?", "choices": ["Refusing to learn new platforms or tools", "Asking for testimonials and continuously learning new platform features", "Never asking for client feedback", "Avoiding all specialization"], "correctIndex": 1 }
+      ]
+    }
+  ]
+}

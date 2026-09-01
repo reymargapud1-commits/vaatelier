@@ -19,7 +19,7 @@ export async function GET(req: Request, { params }: { params: { courseId: string
     return new NextResponse("Unauthorized", { status: 401 });
   }
 
-  const trackDef = getTrackById(params.track);
+  const trackDef = getTrackById(params.courseId, params.track);
   if (!trackDef) {
     return new NextResponse("Unknown certificate track", { status: 404 });
   }

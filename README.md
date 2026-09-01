@@ -10,16 +10,19 @@ enrollment paywall.
 
 ## What's included
 
-- **Landing page** marketing the program, with a "Meet Your Trainer" section and real trainer
-  photos.
+- **Landing page** marketing the program, with a "Choose Your Specialty" niche showcase and a
+  "Meet Your Trainer" section with real trainer photos.
+- **Training niches** (see "Training niches" below): right after enrolling, a student picks the
+  VA specialty they want to train for — currently General & Admin VA or Social Media Management
+  VA, with more niches easy to add. Each niche is a fully separate course.
 - **Paywall**: registration is free, but every lesson, quiz, and the video streaming endpoint
   itself re-checks payment status server-side on every request. Nothing leaks before payment.
-- **25 narrated video lessons** across 6 modules — VA fundamentals, must-know tools, core service
-  skills, portfolio building, resume/proposal writing, and landing your first client. These are
-  auto-generated slide videos (see "About the video lessons" below) so you can regenerate or
-  replace them any time.
+- **25 narrated video lessons per niche** across 6 modules — e.g. for General & Admin VA: VA
+  fundamentals, must-know tools, core service skills, portfolio building, resume/proposal
+  writing, and landing your first client. These are auto-generated slide videos (see "About the
+  video lessons" below) so you can regenerate or replace them any time.
 - **A quiz after every module**, graded server-side, with a passing score.
-- **4 separate certificates** (`src/lib/certificate-tracks.ts`), each covering a group of
+- **4 separate certificates per niche** (`src/lib/certificate-tracks.ts`), each covering a group of
   modules. A student unlocks a track's certificate once they finish every lesson, pass every
   quiz in that group, AND rate the training (1-5 stars, `src/lib/certificate-eligibility.ts`,
   `track_feedback` table) — a "Congratulations" screen with the star-rating form greets them
@@ -41,9 +44,9 @@ enrollment paywall.
   `/admin/store-orders`.
 - **PayMongo checkout** (GCash, Maya, card) with webhook + fallback verification, shared across
   enrollment, coaching bookings, and store orders (see `payments.purpose`).
-- **Enrolled Students roster** (`/admin/students`) — every paying student, their overall progress
-  percentage, exactly which lesson they're currently on, certificates earned, and last activity
-  date, sorted by most recently active.
+- **Enrolled Students roster** (`/admin/students`) — every paying student, which niche they
+  chose (or "Not chosen yet"), their overall progress percentage, exactly which lesson they're
+  currently on, certificates earned, and last activity date, sorted by most recently active.
 - **Review & Feedback page** (`/admin/feedback`) — every star rating and comment students leave
   when unlocking a certificate, in one place, most recent first, with a one-click "Copy" button on
   each entry so you can quickly reuse a piece of feedback elsewhere (a post, a slide, a chat)
@@ -195,19 +198,82 @@ with a gold ring border), click Generate, then Download. Nothing is saved on the
 rendered fresh every time you click Generate, so re-generating with a different photo is just
 clicking it again.
 
+## Training niches
+
+Right after a student enrolls (pays), and before they can see any lesson, they land on a
+one-time "Choose Your Specialty" screen (`/dashboard/choose-niche`) and pick the VA specialty
+they want to train for. Each niche is a fully separate, self-contained course — its own 6
+modules, ~25 narrated video lessons, 6 quizzes, and 4 certificates — not a shared curriculum
+with niche-flavored electives bolted on. Once picked, a niche can't be changed from the app
+itself (see the comment in `src/app/api/dashboard/choose-niche/route.ts` for why).
+
+Currently live:
+
+- **General & Admin VA** (`va-foundations`) — the original course: broad administrative
+  support, email, calendar, data entry, scheduling, client communication.
+- **Social Media Management VA** (`va-social-media`) — content calendars, scheduling,
+  community management, and analytics for Facebook, Instagram, and TikTok.
+
+Everyone who enrolled before this system existed was automatically kept on General & Admin VA
+by a one-time database migration — they were never interrupted with the picker screen.
+
+**How it fits together:**
+
+- `content/niches.json` — the manifest. One entry per niche (courseId, title,
+  shortDescription, icon, isPublished, and which curriculum/quizzes file it uses). This drives
+  the picker screen, the landing page's niche showcase, and what `npm run seed` loads into the
+  database.
+- `content/curriculum/<courseId>.json` — that niche's lessons/slides/narration (same JSON
+  shape used before niches existed).
+- `content/quizzes/<courseId>.json` — that niche's quiz questions.
+- `src/lib/certificate-tracks.ts` — each niche's 4 certificate tracks (which modules make up
+  Certificate I/II/III/IV).
+- `media/videos/<lessonId>.mp4` — narrated lesson videos. Lesson IDs must be globally unique
+  across every niche (there's no per-niche subfolder), which is why this project's IDs are
+  prefixed per niche (`m1-l1` for General & Admin VA, `sm-m1-l1` for Social Media Management
+  VA) — keep that convention for any niche you add.
+
+**Adding another niche:**
+
+1. Write `content/curriculum/<new-course-id>.json` and `content/quizzes/<new-course-id>.json` —
+   copy an existing pair as a starting template (same JSON shape), giving every module/lesson/
+   quiz ID a prefix unique to this niche so it never collides with another niche's IDs.
+2. Add one entry for it to `content/niches.json`.
+3. Add a matching 4-track entry for its courseId in `src/lib/certificate-tracks.ts` (4 tracks
+   that together cover every module in the new curriculum).
+4. Generate its videos:
+   ```bash
+   VA_CURRICULUM_FILE=content/curriculum/<new-course-id>.json python3 scripts/generate_videos.py
+   ```
+5. Redeploy. `npm start` re-seeds automatically on every boot (see `scripts/bootstrap.ts`), so
+   the new niche appears on the picker and the landing page the moment it's live with
+   `"isPublished": true`.
+
+Set `"isPublished": false` on a niche in `content/niches.json` to build it out ahead of time
+without showing it to students yet — unpublished niches are hidden from the picker and the
+landing page.
+
 ## Customizing the curriculum
 
-Edit `content/curriculum.json` (lessons/slides/narration) and `content/quizzes.json`
-(questions/choices/correct answers), then run `npm run seed` again. Lesson and quiz IDs
-(`m1-l1`, `quiz-m1`, etc.) must stay unique — the seed script upserts by ID.
+Edit a niche's own `content/curriculum/<courseId>.json` (lessons/slides/narration) and
+`content/quizzes/<courseId>.json` (questions/choices/correct answers), then run `npm run seed`
+again. Lesson and quiz IDs (`m1-l1`, `quiz-m1`, etc.) must stay unique across every niche — the
+seed script upserts by ID.
 
 ## About the video lessons
 
-The 22 lessons in `media/videos/*.mp4` are narrated slide videos, generated automatically by
-`scripts/generate_videos.py`: it renders each slide as a branded PNG, synthesizes narration with
-[Piper](https://github.com/OHF-voice/piper1-gpl) (a free, offline neural text-to-speech engine —
-no video-hosting or paid TTS account needed, and it sounds like a natural voice rather than a
-robotic one), and stitches everything together with `ffmpeg`.
+The 50 lessons across both niches in `media/videos/*.mp4` are narrated slide videos, generated
+automatically by `scripts/generate_videos.py`: it renders each slide as a branded PNG,
+synthesizes narration with [Piper](https://github.com/OHF-voice/piper1-gpl) (a free, offline
+neural text-to-speech engine — no video-hosting or paid TTS account needed, and it sounds like
+a natural voice rather than a robotic one), and stitches everything together with `ffmpeg`.
+
+By default it builds `content/curriculum/va-foundations.json` — point it at a different niche
+with `VA_CURRICULUM_FILE` (see "Training niches" above), e.g.:
+
+```bash
+VA_CURRICULUM_FILE=content/curriculum/va-social-media.json python3 scripts/generate_videos.py
+```
 
 To improve this further, you have two options:
 
@@ -225,11 +291,12 @@ To improve this further, you have two options:
 2. **Replace individual lessons with your own recordings.** Just drop a file named
    `<lessonId>.mp4` (e.g. `m1-l1.mp4`) into `media/videos/`, overwriting the generated one — the
    app doesn't care how the file was made, only that the filename matches the lesson ID from
-   `content/curriculum.json`.
+   that niche's curriculum file.
 
 Videos are intentionally stored outside of `/public` and are only ever served through
-`/api/stream/[lessonId]`, which re-checks login + payment on every request (including video
-seeking/range requests) — this is what actually enforces the paywall for video content.
+`/api/stream/[lessonId]`, which re-checks login + payment + that the lesson belongs to the
+student's own niche on every request (including video seeking/range requests) — this is what
+actually enforces the paywall for video content.
 
 ## Deploying
 
@@ -261,20 +328,23 @@ Either way, remember to:
 ## Project structure
 
 ```
-content/curriculum.json     Lesson & slide content (source for both the DB seed and the videos)
-content/quizzes.json        Quiz questions per module
-scripts/generate_videos.py  Generates media/videos/*.mp4 from curriculum.json
+content/niches.json         Training niche manifest - one entry per niche, see "Training niches"
+content/curriculum/<id>.json  One niche's lesson & slide content (source for both the DB seed and the videos)
+content/quizzes/<id>.json   One niche's quiz questions per module
+scripts/generate_videos.py  Generates media/videos/*.mp4 from a niche's curriculum JSON
 media/videos/*.mp4          The actual lesson video files (served only via /api/stream)
 assets/fonts/               Fonts embedded in the certificate PDF and Welcome Banner (Lora, SIL OFL licensed)
 assets/signature/           Coach's scanned signature, embedded in the certificate PDF
 src/db/schema.ts            Drizzle ORM schema (SQLite)
-src/db/seed.ts              Loads content/*.json into the database
+src/db/seed-logic.ts        Loads every niche in content/niches.json into the database
+src/lib/certificate-tracks.ts  Each niche's 4 certificate tracks (which modules make up Certificate I-IV)
 src/lib/paymongo.ts         PayMongo checkout + webhook signature verification
 src/lib/payment-fulfillment.ts  Shared "mark payment paid/rejected" logic (webhook + manual admin approval)
 src/lib/payment-proof-storage.ts  Where manual-GCash proof screenshots are stored on disk
 src/lib/notify.ts           Booking/order/welcome notification emails + .ics calendar file generation
 src/lib/welcome-banner.ts   Renders the Facebook-postable "Welcome to the family" banner PNG
-src/app/admin/students/     Enrolled Students roster (progress, certificates, welcome banner button)
+src/app/dashboard/choose-niche/  One-time "Choose Your Specialty" screen, right after enrollment
+src/app/admin/students/     Enrolled Students roster (progress, niche, certificates, welcome banner button)
 src/app/admin/feedback/     Review & Feedback page (every star rating/comment, copy-to-share)
 src/app/admin/manual-payments/  Admin review screen for manual GCash payments
 src/app/                    Next.js App Router pages and API routes

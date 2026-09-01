@@ -15,6 +15,7 @@ export default async function QuizPage({ params }: { params: { quizId: string } 
   const [user] = await db.select().from(users).where(eq(users.id, (session.user as any).id)).limit(1);
   if (!user) redirect("/login");
   if (!user.isPaid) redirect("/payment");
+  if (!user.courseId) redirect("/dashboard/choose-niche");
 
   return (
     <>

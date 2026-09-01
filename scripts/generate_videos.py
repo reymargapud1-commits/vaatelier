@@ -77,7 +77,14 @@ def get_voice():
 
 
 def load_curriculum():
-    with open(CONTENT_DIR / "curriculum.json") as f:
+    # Defaults to the original niche for backwards compatibility, but every
+    # niche has its own curriculum file now (see content/niches.json) - point
+    # this at another one with VA_CURRICULUM_FILE, e.g.:
+    #   VA_CURRICULUM_FILE=content/curriculum/va-social-media.json python3 scripts/generate_videos.py
+    curriculum_path = ROOT / os.environ.get(
+        "VA_CURRICULUM_FILE", "content/curriculum/va-foundations.json"
+    )
+    with open(curriculum_path) as f:
         return json.load(f)
 
 

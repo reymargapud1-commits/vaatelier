@@ -4,7 +4,7 @@ import { getServerSession } from "next-auth";
 import { and, eq } from "drizzle-orm";
 import { authOptions } from "@/lib/auth";
 import { db } from "@/db";
-import { users, courses, trackFeedback } from "@/db/schema";
+import { users, trackFeedback } from "@/db/schema";
 import { getTrackById } from "@/lib/certificate-tracks";
 import { checkAndIssueCertificate } from "@/lib/certificate-eligibility";
 
@@ -33,7 +33,12 @@ export async function POST(req: Request) {
     comment?: string;
   };
 
-  const trackDef = getTrackById(track);
+  if (!user.courseId) {
+    return NextResponse.json({ error: "Choose your training niche first" }, { status: 400 });
+  }
+  const courseId = user.courseId;
+
+  const trackDef = getTrackById(courseId, track);
   if (!trackDef) {
     return NextResponse.json({ error: "Unknown track" }, { status: 400 });
   }
@@ -42,18 +47,13 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Please choose a rating from 1 to 5 stars." }, { status: 400 });
   }
 
-  const [course] = await db.select().from(courses).limit(1);
-  if (!course) {
-    return NextResponse.json({ error: "Course not found" }, { status: 404 });
-  }
-
   const [existing] = await db
     .select()
     .from(trackFeedback)
     .where(
       and(
         eq(trackFeedback.userId, userId),
-        eq(trackFeedback.courseId, course.id),
+        eq(trackFeedback.courseId, courseId),
         eq(trackFeedback.track, track)
       )
     )
@@ -68,14 +68,14 @@ export async function POST(req: Request) {
     await db.insert(trackFeedback).values({
       id: randomUUID(),
       userId,
-      courseId: course.id,
+      courseId,
       track,
       rating: ratingNum,
       comment: comment || null,
     });
   }
 
-  const issued = await checkAndIssueCertificate(userId, course.id, track);
+  const issued = await checkAndIssueCertificate(userId, courseId, track);
 
   return NextResponse.json({ saved: true, certificateIssued: !!issued, track });
 }

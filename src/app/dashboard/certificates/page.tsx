@@ -17,8 +17,9 @@ export default async function CertificatesPage() {
   const [user] = await db.select().from(users).where(eq(users.id, userId)).limit(1);
   if (!user) redirect("/login");
   if (!user.isPaid) redirect("/payment");
+  if (!user.courseId) redirect("/dashboard/choose-niche");
 
-  const [course] = await db.select().from(courses).limit(1);
+  const [course] = await db.select().from(courses).where(eq(courses.id, user.courseId)).limit(1);
   if (!course) redirect("/dashboard");
 
   // Catch up any track that qualifies but hasn't been issued yet (e.g. if

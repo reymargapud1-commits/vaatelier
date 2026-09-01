@@ -27,6 +27,9 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Quiz not found" }, { status: 404 });
   }
   const [mod] = await db.select().from(modules).where(eq(modules.id, quiz.moduleId)).limit(1);
+  if (!mod || mod.courseId !== user.courseId) {
+    return NextResponse.json({ error: "Quiz not found" }, { status: 404 });
+  }
   const quizQuestions = await db.select().from(questions).where(eq(questions.quizId, quiz.id));
 
   let correct = 0;

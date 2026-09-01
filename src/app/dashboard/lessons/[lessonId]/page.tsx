@@ -16,12 +16,13 @@ export default async function LessonPage({ params }: { params: { lessonId: strin
   const [user] = await db.select().from(users).where(eq(users.id, userId)).limit(1);
   if (!user) redirect("/login");
   if (!user.isPaid) redirect("/payment");
+  if (!user.courseId) redirect("/dashboard/choose-niche");
 
   const [lesson] = await db.select().from(lessons).where(eq(lessons.id, params.lessonId)).limit(1);
   if (!lesson) notFound();
 
   const [mod] = await db.select().from(modules).where(eq(modules.id, lesson.moduleId)).limit(1);
-  if (!mod) notFound();
+  if (!mod || mod.courseId !== user.courseId) notFound();
 
   const siblingLessons = await db
     .select()

@@ -6,6 +6,7 @@ import { authOptions } from "@/lib/auth";
 import { db } from "@/db";
 import { users, courses, payments } from "@/db/schema";
 import { createCheckoutSession } from "@/lib/paymongo";
+import { ANCHOR_COURSE_ID } from "@/lib/anchor-course";
 
 export async function POST(req: Request) {
   const session = await getServerSession(authOptions);
@@ -22,7 +23,12 @@ export async function POST(req: Request) {
     return NextResponse.json({ alreadyPaid: true });
   }
 
-  const [course] = await db.select().from(courses).limit(1);
+  // Enrollment happens BEFORE a student picks a niche (see
+  // /dashboard/choose-niche), so there's no "their" course yet to read a
+  // price/title from - every niche's course row carries the same
+  // enrollment price anyway, so this just anchors to one fixed, always-
+  // present course id rather than an arbitrary/unordered one.
+  const [course] = await db.select().from(courses).where(eq(courses.id, ANCHOR_COURSE_ID)).limit(1);
   if (!course) {
     return NextResponse.json({ error: "Course not configured yet." }, { status: 500 });
   }
@@ -52,7 +58,7 @@ export async function POST(req: Request) {
   try {
     const checkout = await createCheckoutSession({
       amountCentavos: course.priceCentavos,
-      description: `${course.title} - Full Access`,
+      description: "The VA Atelier Training Program - Full Access",
       userEmail: user.email,
       userName: user.name,
       userId: user.id,

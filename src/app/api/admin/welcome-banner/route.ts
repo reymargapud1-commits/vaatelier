@@ -42,8 +42,14 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "This student isn't enrolled yet." }, { status: 400 });
   }
 
-  const [course] = await db.select().from(courses).limit(1);
-  const courseTitle = course?.title || "The VA Atelier Training Program";
+  // The student's own niche if they've picked one yet (right after
+  // enrolling, before the /dashboard/choose-niche picker, courseId is still
+  // null) - falls back to a generic program name in that case.
+  let courseTitle = "The VA Atelier Training Program";
+  if (student.courseId) {
+    const [course] = await db.select().from(courses).where(eq(courses.id, student.courseId)).limit(1);
+    if (course) courseTitle = course.title;
+  }
 
   let photoBuffer: Buffer | null = null;
   if (photo instanceof File && photo.size > 0) {

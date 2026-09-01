@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { eq } from "drizzle-orm";
 import { db } from "@/db";
-import { users, payments, liveSessionBookings, storeOrders, courses } from "@/db/schema";
+import { users, payments, liveSessionBookings, storeOrders } from "@/db/schema";
 import { verifyPaymongoWebhookSignature } from "@/lib/paymongo";
 import { markPaymentPaid } from "@/lib/payment-fulfillment";
 import { sendWelcomeEmail } from "@/lib/notify";
@@ -66,13 +66,16 @@ export async function POST(req: Request) {
         // the metadata PayMongo echoes back, same as the pre-refactor logic.
         await db.update(users).set({ isPaid: true, paidAt: new Date() }).where(eq(users.id, userIdFromMetadata));
 
+        // Niche isn't chosen yet at enrollment time (that happens right
+        // after, on /dashboard/choose-niche - see users.courseId), so this
+        // always uses the generic program name rather than any one niche's
+        // course title.
         const [student] = await db.select().from(users).where(eq(users.id, userIdFromMetadata)).limit(1);
-        const [course] = await db.select().from(courses).limit(1);
         if (student) {
           await sendWelcomeEmail({
             studentName: student.name,
             studentEmail: student.email,
-            courseTitle: course?.title || "The VA Atelier Training Program",
+            courseTitle: "The VA Atelier Training Program",
           });
         }
       }

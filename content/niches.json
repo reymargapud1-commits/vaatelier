@@ -1,0 +1,22 @@
+{
+  "niches": [
+    {
+      "courseId": "va-foundations",
+      "title": "General & Admin VA",
+      "shortDescription": "Broad administrative support - email, calendar, data entry, scheduling, and client communication. The best starting point if you're not sure yet which specialty you want.",
+      "icon": "🗂️",
+      "isPublished": true,
+      "curriculumFile": "curriculum/va-foundations.json",
+      "quizzesFile": "quizzes/va-foundations.json"
+    },
+    {
+      "courseId": "va-social-media",
+      "title": "Social Media Management VA",
+      "shortDescription": "Content calendars, scheduling, community engagement, and analytics for Facebook, Instagram, and TikTok - built for VAs who want to run a business's social presence.",
+      "icon": "📱",
+      "isPublished": true,
+      "curriculumFile": "curriculum/va-social-media.json",
+      "quizzesFile": "quizzes/va-social-media.json"
+    }
+  ]
+}

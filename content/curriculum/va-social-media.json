@@ -1,0 +1,1094 @@
+{
+  "courseId": "va-social-media",
+  "courseTitle": "Social Media Management VA: From Zero to First Client",
+  "courseDescription": "A complete beginner-to-job-ready training program for aspiring Social Media Management Virtual Assistants. Covers the tools, daily skills, portfolio-building, resume and proposal writing, and how to land and manage your first social media client.",
+  "priceNote": "One-time payment unlocks lifetime access to all modules, video lessons, quizzes, and your Certificate of Completion.",
+  "modules": [
+    {
+      "id": "sm-m1",
+      "title": "Module 1: Starting Out as a Social Media VA",
+      "lessons": [
+        {
+          "id": "sm-m1-l1",
+          "title": "What Is a Social Media Management VA?",
+          "slides": [
+            {
+              "heading": "What Is a Social Media Management VA?",
+              "bullets": [
+                "Welcome to your Social Media VA journey",
+                "Manages a brand's social presence remotely",
+                "Works with businesses of every size"
+              ],
+              "narration": "Welcome to Module 1 of your Social Media Management VA training. A Social Media Management VA is a remote professional who plans, creates, schedules, and monitors content on a business's social media accounts - typically Facebook, Instagram, and TikTok - so the business owner doesn't have to do it themselves."
+            },
+            {
+              "heading": "What a Social Media VA Actually Does Day to Day",
+              "bullets": [
+                "Plans and schedules posts",
+                "Responds to comments and messages",
+                "Tracks what's working with analytics"
+              ],
+              "narration": "On a typical day, a Social Media VA builds out a content calendar, designs or sources graphics, writes captions, schedules everything with a tool like Meta Business Suite or Later, replies to comments and DMs, and checks analytics to see which posts are performing well."
+            },
+            {
+              "heading": "Why Businesses Hire a Social Media VA",
+              "bullets": [
+                "Consistent posting without the owner's time",
+                "Access to someone who knows the platforms",
+                "Frees the owner to run their business"
+              ],
+              "narration": "Most small business owners know they should be posting regularly, but don't have the time or the platform know-how to do it well. Hiring a Social Media VA means their pages stay active and professional, while they focus on serving their own customers."
+            },
+            {
+              "heading": "Is This Niche Right for You?",
+              "bullets": [
+                "You enjoy being creative and organized",
+                "You're comfortable learning new apps",
+                "You like seeing engagement and results"
+              ],
+              "narration": "This niche is a great fit if you enjoy writing, design, and staying organized with a content calendar, and if you find it satisfying to watch a page's likes, comments, and followers grow because of work you did."
+            }
+          ]
+        },
+        {
+          "id": "sm-m1-l2",
+          "title": "Skills and Traits of a Great Social Media VA",
+          "slides": [
+            {
+              "heading": "Core Skills You'll Build",
+              "bullets": [
+                "Content planning and calendars",
+                "Basic graphic design",
+                "Writing engaging captions"
+              ],
+              "narration": "Over this training, you'll build four core skills: planning content ahead of time with a calendar, designing simple graphics in Canva, writing captions that get people to stop scrolling, and reading analytics to know what to do more of."
+            },
+            {
+              "heading": "Traits Clients Look For",
+              "bullets": [
+                "Reliability - posts go out on schedule",
+                "Brand awareness - matching each client's voice",
+                "Good judgment - knowing what NOT to post"
+              ],
+              "narration": "Clients trust Social Media VAs who are reliable about hitting the posting schedule, who take the time to match the brand's voice and style, and who use good judgment - for example, knowing to pause a scheduled post during a sensitive news event."
+            },
+            {
+              "heading": "A Day in the Life",
+              "bullets": [
+                "Morning: check comments and messages",
+                "Midday: draft or schedule new content",
+                "End of day: quick performance check"
+              ],
+              "narration": "A typical day might start by clearing overnight comments and messages, move into drafting or scheduling the next batch of posts, and end with a quick look at how yesterday's posts performed - all of which can usually be done in a focused hour or two per client."
+            },
+            {
+              "heading": "Where Growth Leads",
+              "bullets": [
+                "Handle more platforms over time",
+                "Take on content strategy, not just posting",
+                "Manage several client accounts at once"
+              ],
+              "narration": "As you gain experience, you can grow from just scheduling posts into helping plan a client's whole content strategy, and eventually manage several clients' accounts at the same time for a full-time income."
+            }
+          ]
+        },
+        {
+          "id": "sm-m1-l3",
+          "title": "Understanding Client Goals and Brand Voice",
+          "slides": [
+            {
+              "heading": "Why Brand Voice Matters",
+              "bullets": [
+                "Every business sounds different on purpose",
+                "Consistency builds trust with followers",
+                "Your job is to sound like THEM, not you"
+              ],
+              "narration": "Brand voice is how a business 'talks' to its audience - playful, professional, warm, or bold. Your job as their Social Media VA is to write and post in that voice consistently, not to inject your own personal style."
+            },
+            {
+              "heading": "Questions to Ask a New Client",
+              "bullets": [
+                "Who is your ideal customer?",
+                "What tone do you want - fun, formal, warm?",
+                "What results matter most - sales, awareness, bookings?"
+              ],
+              "narration": "Before writing a single post, ask your client who their ideal customer is, what tone they want their brand to have, and what result actually matters to them - more sales, more brand awareness, or more bookings, for example."
+            },
+            {
+              "heading": "Building a Simple Brand Voice Guide",
+              "bullets": [
+                "Write down 3-5 words that describe the tone",
+                "List words/phrases they use (and avoid)",
+                "Keep examples of posts they loved"
+              ],
+              "narration": "A simple brand voice guide can be just half a page: three to five words describing the tone, a few phrases the brand likes to use or avoid, and one or two example posts the client already loved. Keep this on hand for every piece of content you create."
+            },
+            {
+              "heading": "Staying Aligned Over Time",
+              "bullets": [
+                "Check in regularly, don't assume",
+                "Ask for feedback on the first few posts",
+                "Update the guide as the brand evolves"
+              ],
+              "narration": "Brand voice can shift over time, so check in with your client regularly, especially in the first few weeks, and don't be afraid to ask directly whether a post landed the way they wanted."
+            }
+          ]
+        },
+        {
+          "id": "sm-m1-l4",
+          "title": "Setting Up Your Home Workspace for Social Media Work",
+          "slides": [
+            {
+              "heading": "What You Actually Need to Get Started",
+              "bullets": [
+                "A laptop or desktop with a stable browser",
+                "Decent internet for uploading images/video",
+                "A quiet space for the occasional client call"
+              ],
+              "narration": "You don't need expensive equipment to start - a reliable laptop, decent internet for uploading images and short videos, and a reasonably quiet space for client calls is enough to get going."
+            },
+            {
+              "heading": "Organizing Client Files",
+              "bullets": [
+                "One folder per client",
+                "Subfolders for photos, videos, and captions",
+                "A shared drive so clients can drop in assets"
+              ],
+              "narration": "Keep every client's assets organized in their own folder, with subfolders for photos, videos, and caption drafts. A shared Google Drive or Dropbox folder also makes it easy for clients to drop in new photos whenever they have them."
+            },
+            {
+              "heading": "Building a Simple Content Calendar Template",
+              "bullets": [
+                "Date, platform, caption, and image columns",
+                "A status column - draft, approved, scheduled, posted",
+                "One tab per client keeps things simple"
+              ],
+              "narration": "A basic spreadsheet with columns for date, platform, caption, image, and status - draft, approved, scheduled, or posted - is often all you need to stay organized, and it's something you'll build for real in Module 4."
+            },
+            {
+              "heading": "Ready for Module 2",
+              "bullets": [
+                "You know what the role involves",
+                "You understand brand voice",
+                "Next: the tools you'll actually use daily"
+              ],
+              "narration": "You now understand what a Social Media Management VA does and why brand voice matters. In Module 2, we'll get hands-on with the actual tools you'll use every day on the job."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sm-m2",
+      "title": "Module 2: Essential Tools Every Social Media VA Must Know",
+      "lessons": [
+        {
+          "id": "sm-m2-l1",
+          "title": "Content Planning & Scheduling Tools",
+          "slides": [
+            {
+              "heading": "Why Scheduling Tools Matter",
+              "bullets": [
+                "Plan a whole week or month in advance",
+                "Post at the best times automatically",
+                "Manage multiple clients from one dashboard"
+              ],
+              "narration": "Scheduling tools let you plan and queue up content ahead of time instead of manually posting every single day, and they let you manage several clients' accounts from a single dashboard."
+            },
+            {
+              "heading": "Meta Business Suite",
+              "bullets": [
+                "Free tool for Facebook and Instagram",
+                "Schedule posts, check inbox, see insights",
+                "Great starting tool - most clients already have it"
+              ],
+              "narration": "Meta Business Suite is Meta's own free tool for managing Facebook and Instagram together - you can schedule posts, check messages and comments from both platforms in one inbox, and view basic performance insights."
+            },
+            {
+              "heading": "Later and Buffer",
+              "bullets": [
+                "Popular third-party scheduling tools",
+                "Visual calendar view of upcoming posts",
+                "Support more platforms, including TikTok"
+              ],
+              "narration": "Later and Buffer are popular paid scheduling tools that show your content on a visual calendar and support more platforms than Meta Business Suite alone, including TikTok - useful once you're managing several clients."
+            },
+            {
+              "heading": "Choosing the Right Tool per Client",
+              "bullets": [
+                "Small client on a budget: Meta Business Suite",
+                "Client on multiple platforms: Later or Buffer",
+                "Always confirm who's paying for the tool"
+              ],
+              "narration": "For a client who's only active on Facebook and Instagram, Meta Business Suite is usually enough and free. For a client active on more platforms, a paid tool like Later may be worth it - just confirm upfront whether you or the client covers that cost."
+            }
+          ]
+        },
+        {
+          "id": "sm-m2-l2",
+          "title": "Canva for Social Media Graphics",
+          "slides": [
+            {
+              "heading": "Why Canva Is a Social Media VA's Best Friend",
+              "bullets": [
+                "Free, browser-based design tool",
+                "Thousands of ready-made social media templates",
+                "No design degree required"
+              ],
+              "narration": "Canva is a free, browser-based design tool with thousands of ready-made templates sized specifically for Instagram posts, Stories, Facebook covers, and more - you don't need any design background to create professional-looking graphics."
+            },
+            {
+              "heading": "Working With Brand Kits",
+              "bullets": [
+                "Save a client's logo, fonts, and colors once",
+                "Apply them to any template in one click",
+                "Keeps every post looking consistently on-brand"
+              ],
+              "narration": "Canva's Brand Kit feature lets you save a client's logo, brand colors, and fonts once, then apply them to any template with a click - this is how you keep every single post looking consistently on-brand without redoing work each time."
+            },
+            {
+              "heading": "Resizing for Every Platform",
+              "bullets": [
+                "One design, multiple platform sizes",
+                "Canva's Magic Resize handles most of it",
+                "Always double-check text doesn't get cut off"
+              ],
+              "narration": "Canva can automatically resize one design into the different dimensions each platform needs - a square Instagram post, a vertical Story, a Facebook cover photo - though it's good practice to double-check that text and logos aren't cropped after resizing."
+            },
+            {
+              "heading": "Building a Simple Template Library",
+              "bullets": [
+                "Save your best-performing designs as templates",
+                "Duplicate and swap text/photos for new posts",
+                "Saves hours once you have a library built"
+              ],
+              "narration": "As you work with a client, save your best-performing post designs as reusable templates. For future posts, you just duplicate and swap the text and photo - this can turn a 20-minute design task into a 3-minute one."
+            }
+          ]
+        },
+        {
+          "id": "sm-m2-l3",
+          "title": "Meta Business Suite & Facebook/Instagram Basics",
+          "slides": [
+            {
+              "heading": "Connecting Facebook and Instagram Accounts",
+              "bullets": [
+                "Link both accounts under one Meta Business Suite",
+                "Client stays the account owner, you get access as admin",
+                "Never ask for a client's personal password"
+              ],
+              "narration": "You'll typically be added as an admin or editor on a client's Facebook Page and connected Instagram account through Meta Business Suite - the client always stays the actual owner, and you should never need their personal login password."
+            },
+            {
+              "heading": "Understanding Facebook Pages vs Personal Profiles",
+              "bullets": [
+                "Businesses should use a Page, not a personal profile",
+                "Pages allow multiple admins and ads",
+                "Personal profiles can't be safely shared with a VA"
+              ],
+              "narration": "A Facebook Page (not a personal profile) is what businesses should be using - it supports multiple admins, allows running ads, and is the only safe way to give a VA access without sharing a personal account."
+            },
+            {
+              "heading": "Instagram Basics for VAs",
+              "bullets": [
+                "Feed posts, Stories, and Reels are different formats",
+                "Reels currently get the most reach for most brands",
+                "Hashtags and captions still matter for discovery"
+              ],
+              "narration": "Instagram gives you three main formats to work with: feed posts, 24-hour Stories, and short-form Reels - Reels currently tend to get the most reach for most business accounts, so many clients will want a steady mix that includes them."
+            },
+            {
+              "heading": "Reading the Meta Business Suite Inbox",
+              "bullets": [
+                "Comments and DMs from both platforms in one place",
+                "Respond promptly - speed matters for engagement",
+                "Flag anything sensitive for the client to handle"
+              ],
+              "narration": "The Meta Business Suite inbox brings Facebook and Instagram comments and messages into one place, which makes it much easier to respond quickly - and speed matters, since fast replies boost a post's visibility. Always flag sensitive complaints for your client rather than responding on your own."
+            }
+          ]
+        },
+        {
+          "id": "sm-m2-l4",
+          "title": "TikTok for Business Basics",
+          "slides": [
+            {
+              "heading": "Why TikTok Is Different",
+              "bullets": [
+                "Short-form video, not photos or long captions",
+                "Discovery-driven - strangers see your content constantly",
+                "Trends and sounds matter a lot"
+              ],
+              "narration": "TikTok is built entirely around short-form video and works very differently from Facebook or Instagram - its algorithm shows your content to strangers constantly based on interest, not just to existing followers, and using trending sounds or formats really does help."
+            },
+            {
+              "heading": "Setting Up a TikTok Business Account",
+              "bullets": [
+                "Switch to a Business account for analytics",
+                "Add a link and contact info to the bio",
+                "Business accounts unlock the commercial sound library"
+              ],
+              "narration": "A TikTok Business account (free to switch to) unlocks analytics, lets you add a website link and contact button to the bio, and gives access to a commercial sound library that's safe to use for business content."
+            },
+            {
+              "heading": "Simple Content Ideas That Work",
+              "bullets": [
+                "Behind-the-scenes clips of the business",
+                "Quick tips related to the client's industry",
+                "Trending sounds paired with the client's product"
+              ],
+              "narration": "You don't need a professional camera crew - behind-the-scenes clips, quick tips related to the client's industry, and trending sounds paired with everyday footage of the client's product or service are simple, effective starting points."
+            },
+            {
+              "heading": "Repurposing Content Across Platforms",
+              "bullets": [
+                "One video can become a TikTok, Reel, and Story",
+                "Saves time versus creating separate content per platform",
+                "Always adjust captions to fit each platform's tone"
+              ],
+              "narration": "A single short video can usually be posted as a TikTok, an Instagram Reel, and a Facebook Story with only minor changes - this repurposing is one of the biggest time-savers for a Social Media VA managing multiple platforms."
+            }
+          ]
+        },
+        {
+          "id": "sm-m2-l5",
+          "title": "Analytics & Reporting Tools",
+          "slides": [
+            {
+              "heading": "Why Analytics Matter to Your Clients",
+              "bullets": [
+                "Proves the value of your work",
+                "Shows what content to make more of",
+                "Justifies your rate at renewal time"
+              ],
+              "narration": "Analytics aren't just numbers - they prove to your client that your work is paying off, show you exactly what type of content to make more of, and give you real evidence to justify your rate when a contract renews."
+            },
+            {
+              "heading": "Key Metrics to Track",
+              "bullets": [
+                "Reach - how many people saw the post",
+                "Engagement - likes, comments, shares, saves",
+                "Follower growth over time"
+              ],
+              "narration": "The three metrics worth tracking for almost any client are reach, which is how many people saw a post; engagement, meaning likes, comments, shares, and saves; and overall follower growth over time."
+            },
+            {
+              "heading": "Where to Find the Numbers",
+              "bullets": [
+                "Meta Business Suite Insights tab",
+                "Instagram's built-in Insights (for Business accounts)",
+                "TikTok Analytics under Business account settings"
+              ],
+              "narration": "Meta Business Suite has a built-in Insights tab covering Facebook and Instagram together, Instagram's own app has Insights for Business accounts, and TikTok Analytics is available once you've switched to a Business account."
+            },
+            {
+              "heading": "Building a Simple Monthly Report",
+              "bullets": [
+                "One page: top 3 posts, key numbers, next month's plan",
+                "Use screenshots - clients rarely want raw spreadsheets",
+                "Send it on the same date every month"
+              ],
+              "narration": "A simple one-page monthly report - your top 3 performing posts, the key numbers, and a short plan for next month - is usually all a client wants. Screenshots of the actual analytics dashboards are often more convincing than a spreadsheet, and sending it on the same date each month builds trust."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sm-m3",
+      "title": "Module 3: Core Social Media Management Skills",
+      "lessons": [
+        {
+          "id": "sm-m3-l1",
+          "title": "Building a Content Calendar",
+          "slides": [
+            {
+              "heading": "What a Content Calendar Actually Is",
+              "bullets": [
+                "A plan of what posts when, on which platform",
+                "Usually built one to four weeks ahead",
+                "Prevents last-minute scrambling for ideas"
+              ],
+              "narration": "A content calendar is simply a plan of what gets posted, when, and on which platform - usually mapped out one to four weeks in advance, so you're never scrambling for an idea the morning a post is due."
+            },
+            {
+              "heading": "A Simple Weekly Structure",
+              "bullets": [
+                "Mix of content types - not just promotions",
+                "Educational, behind-the-scenes, promotional, engagement",
+                "A rough ratio like 40/30/20/10 works well"
+              ],
+              "narration": "A healthy weekly mix might be about 40% educational or helpful content, 30% behind-the-scenes, 20% direct promotion, and 10% pure engagement posts like questions or polls - constant selling alone tends to lose followers over time."
+            },
+            {
+              "heading": "Sourcing Content Ideas",
+              "bullets": [
+                "Client's FAQs make great educational posts",
+                "Repurpose blog posts, testimonials, and reviews",
+                "Keep a running idea list, don't start from zero"
+              ],
+              "narration": "Some of the best content ideas come straight from a client's frequently asked questions, existing blog posts, or customer testimonials and reviews - keep a running list of ideas so you're never starting from a blank page."
+            },
+            {
+              "heading": "Getting Client Approval Efficiently",
+              "bullets": [
+                "Share the calendar a week or two ahead",
+                "One clear approval step, not endless back-and-forth",
+                "Batch small edits instead of one-by-one"
+              ],
+              "narration": "Share the upcoming calendar with your client a week or two in advance, and set a clear single approval step rather than an endless back-and-forth - batching any small edit requests together saves everyone time."
+            }
+          ]
+        },
+        {
+          "id": "sm-m3-l2",
+          "title": "Writing Captions That Engage",
+          "slides": [
+            {
+              "heading": "The Anatomy of a Strong Caption",
+              "bullets": [
+                "A hook in the first line",
+                "The message or value in the middle",
+                "A clear call-to-action at the end"
+              ],
+              "narration": "A strong caption usually has three parts: a hook in the very first line that stops the scroll, the actual message or value in the middle, and a clear call-to-action at the end telling the reader exactly what to do next."
+            },
+            {
+              "heading": "Writing Hooks That Stop the Scroll",
+              "bullets": [
+                "Ask a relatable question",
+                "Make a bold or surprising statement",
+                "Call out the exact audience you want"
+              ],
+              "narration": "Strong hooks often ask a relatable question, make a bold or surprising statement, or call out the exact audience the post is for - for example, starting with 'If you're a busy mom juggling errands...' immediately tells the right people this post is for them."
+            },
+            {
+              "heading": "Matching Caption Length to the Platform",
+              "bullets": [
+                "Instagram/Facebook: short-to-medium works well",
+                "TikTok: keep it very short, video does the talking",
+                "Longer isn't always better - clarity wins"
+              ],
+              "narration": "Instagram and Facebook captions can be short to medium length depending on the topic, but TikTok captions should stay very short since the video itself is doing most of the talking - in every case, clarity beats length."
+            },
+            {
+              "heading": "Calls-to-Action That Actually Work",
+              "bullets": [
+                "Comment your answer below",
+                "Send us a message to book",
+                "Tag a friend who needs this"
+              ],
+              "narration": "Effective calls-to-action are specific and easy to do right there in the app - 'Comment your answer below,' 'Send us a message to book your spot,' or 'Tag a friend who needs to see this' all give a clear, simple next step."
+            }
+          ]
+        },
+        {
+          "id": "sm-m3-l3",
+          "title": "Community Management & Responding to Comments/Messages",
+          "slides": [
+            {
+              "heading": "Why Fast Responses Matter",
+              "bullets": [
+                "Platforms reward posts with quick engagement",
+                "Customers expect a same-day reply",
+                "Silence can look like the business doesn't care"
+              ],
+              "narration": "Platforms tend to show a post to more people when it gets quick engagement, and customers today generally expect a reply within the same day - leaving comments and messages unanswered can make a business look like it doesn't care."
+            },
+            {
+              "heading": "Responding to Positive Comments",
+              "bullets": [
+                "Reply with genuine warmth, not a generic 'thanks!'",
+                "Use the commenter's name when possible",
+                "Encourage further engagement when it fits"
+              ],
+              "narration": "Positive comments deserve more than a generic 'thanks!' - replying with genuine warmth, using the person's name when you can, and occasionally asking a friendly follow-up question keeps the conversation going and builds real community."
+            },
+            {
+              "heading": "Handling Negative Comments Professionally",
+              "bullets": [
+                "Stay calm and professional, never defensive",
+                "Move detailed complaints to DM or email",
+                "Always loop in your client for anything serious"
+              ],
+              "narration": "Negative comments should be handled calmly and professionally - acknowledge the concern publicly, then move detailed back-and-forth to a private message or email, and always loop your client in on anything that looks serious, like a threat of a bad review."
+            },
+            {
+              "heading": "Setting Response Time Expectations With Clients",
+              "bullets": [
+                "Agree on a response-time target upfront",
+                "Clarify which messages you can answer vs escalate",
+                "Document common Q&A answers for consistency"
+              ],
+              "narration": "Agree with your client upfront on a realistic response-time target, and clarify which types of questions you're expected to answer directly versus escalate to them - a simple shared document of common questions and approved answers keeps your replies consistent."
+            }
+          ]
+        },
+        {
+          "id": "sm-m3-l4",
+          "title": "Hashtag Strategy & Growth Tactics",
+          "slides": [
+            {
+              "heading": "What Hashtags Actually Do",
+              "bullets": [
+                "Help new people discover a post",
+                "Group content by topic or community",
+                "Work differently on each platform"
+              ],
+              "narration": "Hashtags help a post get discovered by people who don't already follow the account, by grouping it with other content on the same topic - though how much they matter, and how many to use, varies by platform."
+            },
+            {
+              "heading": "Choosing the Right Hashtags",
+              "bullets": [
+                "Mix broad, niche, and local hashtags",
+                "Research what similar accounts actually use",
+                "Avoid banned or overused generic tags"
+              ],
+              "narration": "A good hashtag set usually mixes a few broad, high-volume tags with more specific niche tags and, for local businesses, location-based tags - it helps to research what similar, successful accounts are actually using rather than guessing."
+            },
+            {
+              "heading": "Organic Growth Tactics Beyond Hashtags",
+              "bullets": [
+                "Collaborate or get tagged by other accounts",
+                "Engage genuinely on other relevant accounts",
+                "Post consistently - algorithms reward consistency"
+              ],
+              "narration": "Beyond hashtags, real growth comes from collaborating with or getting tagged by other accounts, genuinely engaging on other relevant pages (not just your own), and simply posting consistently, since most platforms reward accounts that show up reliably."
+            },
+            {
+              "heading": "Setting Realistic Growth Expectations With Clients",
+              "bullets": [
+                "Growth is usually gradual, not overnight",
+                "Set monthly, not daily, growth goals",
+                "Educate clients so they don't expect instant virality"
+              ],
+              "narration": "It's part of your job to set realistic expectations - most accounts grow gradually over months, not overnight, so agreeing on monthly rather than daily goals, and gently educating clients that going viral isn't guaranteed, protects the relationship."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sm-m4",
+      "title": "Module 4: Building Your Social Media Portfolio",
+      "lessons": [
+        {
+          "id": "sm-m4-l1",
+          "title": "Creating Sample Content Calendars and Mock Campaigns",
+          "slides": [
+            {
+              "heading": "Why You Need Samples Before Your First Client",
+              "bullets": [
+                "Clients want to see proof, not just a resume",
+                "A mock project shows your actual thinking",
+                "You control the quality - no client pressure yet"
+              ],
+              "narration": "Since you may not have a paying client yet, building a mock content calendar and campaign for a fictional or real local business lets you show proof of your skills, not just claim them on a resume - and you control the quality with no deadline pressure."
+            },
+            {
+              "heading": "Picking a Practice Business",
+              "bullets": [
+                "Choose an industry you understand well",
+                "A real local shop works great (with permission)",
+                "Or invent a believable fictional brand"
+              ],
+              "narration": "Pick an industry you already understand - maybe a coffee shop, a boutique, or a local gym. You can build a sample around a real business you admire (with their knowledge) or a believable fictional brand you invent yourself."
+            },
+            {
+              "heading": "Building a One-Month Mock Calendar",
+              "bullets": [
+                "Plan roughly 12-16 posts across a month",
+                "Mix content types using the 40/30/20/10 idea",
+                "Write full captions, not just topic ideas"
+              ],
+              "narration": "Build out a full month - about 12 to 16 posts - using the content-type mix you learned in Module 3, and write COMPLETE captions for each post rather than just rough topic ideas, since finished work is what impresses a future client."
+            },
+            {
+              "heading": "Designing the Actual Graphics",
+              "bullets": [
+                "Use Canva to design each post visually",
+                "Keep a consistent look across the whole set",
+                "Export everything neatly into one shared folder"
+              ],
+              "narration": "Design the actual graphics in Canva for at least several of your mock posts, keeping a consistent visual style throughout, then export and organize everything into one clean, shareable folder."
+            }
+          ]
+        },
+        {
+          "id": "sm-m4-l2",
+          "title": "Building a Social Media Management Portfolio",
+          "slides": [
+            {
+              "heading": "What a Social Media Portfolio Needs",
+              "bullets": [
+                "A short intro about you and your specialty",
+                "2-3 sample projects with visuals",
+                "Your process, not just the pretty pictures"
+              ],
+              "narration": "A strong portfolio has a short introduction about who you are and what you specialize in, two or three sample projects with real visuals, and a brief explanation of your process - clients want to understand HOW you think, not just see finished graphics."
+            },
+            {
+              "heading": "Where to Host Your Portfolio",
+              "bullets": [
+                "A simple free website (Canva, Carrd, or similar)",
+                "A well-organized Google Drive folder works too",
+                "Keep the link short and easy to share"
+              ],
+              "narration": "You don't need a paid website - a simple site built for free in Canva or Carrd, or even a neatly organized, view-only Google Drive folder, works perfectly well as long as the link is short and easy to share in a proposal or DM."
+            },
+            {
+              "heading": "Presenting Before/After or Results",
+              "bullets": [
+                "Show growth numbers if you have any (even mock)",
+                "Use simple before/after screenshots",
+                "Be honest - don't fabricate real client results"
+              ],
+              "narration": "If you have any real results, even small ones, show them with simple before-and-after screenshots or numbers. For mock projects, be upfront that they're sample work rather than real client results - honesty builds more trust than an impressive but fake number."
+            },
+            {
+              "heading": "Keeping Your Portfolio Updated",
+              "bullets": [
+                "Swap in real client work as soon as you have it",
+                "Remove your weakest samples over time",
+                "Revisit it every few months"
+              ],
+              "narration": "As soon as you land real client work (with their permission to showcase it), swap it in for your mock samples, and keep quietly removing your weakest pieces over time so your portfolio only ever shows your current best work."
+            }
+          ]
+        },
+        {
+          "id": "sm-m4-l3",
+          "title": "Showcasing Before/After Results",
+          "slides": [
+            {
+              "heading": "Why Results Convert Better Than Promises",
+              "bullets": [
+                "Numbers build trust faster than claims",
+                "Clients hire outcomes, not just tasks",
+                "Even small wins are worth showing"
+              ],
+              "narration": "A specific number - even a modest one, like '30% more comments in 6 weeks' - builds trust faster than a vague promise, because it shows you deliver outcomes, not just busywork."
+            },
+            {
+              "heading": "What to Track From Day One With a New Client",
+              "bullets": [
+                "Screenshot starting follower count and engagement",
+                "Note the date you started managing the account",
+                "Repeat the same screenshot monthly"
+              ],
+              "narration": "From the very first day with a new client, screenshot their starting follower count and recent engagement numbers, note the exact date you began, and repeat that same screenshot every month - this makes an honest before/after comparison easy to produce later."
+            },
+            {
+              "heading": "Turning Numbers Into a Simple Case Study",
+              "bullets": [
+                "One paragraph: the challenge",
+                "One paragraph: what you did",
+                "One paragraph: the result, with a number"
+              ],
+              "narration": "A simple case study is just three short paragraphs: what challenge the client had, what you actually did about it, and what result followed - ideally with a real number attached to that last part."
+            },
+            {
+              "heading": "Getting Permission to Share Results Publicly",
+              "bullets": [
+                "Always ask before using a client's name or numbers",
+                "Some clients prefer to stay anonymous - that's fine",
+                "A quick written 'yes' protects you both"
+              ],
+              "narration": "Always ask a client's permission before sharing their name, page, or specific numbers publicly - some are happy to be named, others prefer anonymity, and either way a quick written yes over email or chat protects you both."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sm-m5",
+      "title": "Module 5: Resume and Job Application Mastery for Social Media VAs",
+      "lessons": [
+        {
+          "id": "sm-m5-l1",
+          "title": "Writing a Social Media VA Resume",
+          "slides": [
+            {
+              "heading": "What Belongs on a Social Media VA Resume",
+              "bullets": [
+                "A clear headline naming your specialty",
+                "Tools you know - Canva, Meta Business Suite, etc.",
+                "A link to your portfolio, front and center"
+              ],
+              "narration": "Your resume should open with a clear headline naming your specialty - 'Social Media Management VA' - list the specific tools you know like Canva and Meta Business Suite, and put your portfolio link somewhere it can't be missed."
+            },
+            {
+              "heading": "Describing Experience Without a Job History",
+              "bullets": [
+                "Frame your training and mock projects as real work",
+                "Use action verbs - planned, designed, scheduled",
+                "Quantify wherever you can, even mock numbers"
+              ],
+              "narration": "If you don't have paid experience yet, describe your training and mock campaigns using strong action verbs - planned, designed, scheduled, analyzed - and quantify what you can, like 'planned a 16-post monthly content calendar.'"
+            },
+            {
+              "heading": "Formatting for Readability",
+              "bullets": [
+                "Keep it to one page",
+                "Use short bullet points, not paragraphs",
+                "Consistent, clean font and spacing"
+              ],
+              "narration": "Keep your resume to a single page with short, scannable bullet points rather than dense paragraphs, using a clean, consistent font - a client reviewing dozens of applicants will spend only seconds per resume."
+            },
+            {
+              "heading": "Common Resume Mistakes to Avoid",
+              "bullets": [
+                "Vague phrases like 'social media expert'",
+                "No portfolio link at all",
+                "Typos - always proofread out loud"
+              ],
+              "narration": "Avoid vague self-descriptions like 'social media expert' with nothing to back it up, never submit a resume without your portfolio link, and always proofread out loud before sending - typos undercut your credibility instantly in this field."
+            }
+          ]
+        },
+        {
+          "id": "sm-m5-l2",
+          "title": "Crafting Winning Proposals for Social Media Clients",
+          "slides": [
+            {
+              "heading": "What a Good Proposal Includes",
+              "bullets": [
+                "A quick summary of their current social presence",
+                "Your specific plan for improving it",
+                "Clear pricing and next steps"
+              ],
+              "narration": "A strong proposal briefly summarizes what you noticed about their current social media, lays out your specific plan for improving it, and ends with clear pricing and an easy next step, like a short call."
+            },
+            {
+              "heading": "Personalizing Every Proposal",
+              "bullets": [
+                "Reference their actual page and recent posts",
+                "Never send an obviously copy-pasted pitch",
+                "Mention one specific opportunity you spotted"
+              ],
+              "narration": "Every proposal should reference the client's actual page and something specific you noticed - an inconsistent posting schedule, an untapped platform, or an opportunity you spotted - a generic copy-pasted pitch is easy to spot and easy to ignore."
+            },
+            {
+              "heading": "Structuring Your Pricing",
+              "bullets": [
+                "Package by deliverables - posts, stories, engagement",
+                "Offer 2-3 clear tiers, not endless options",
+                "Be upfront about what's NOT included"
+              ],
+              "narration": "Package your pricing around clear deliverables - for example, a certain number of posts and stories per week, plus daily engagement - and offer two or three simple tiers rather than overwhelming a client with options. Be upfront about what falls outside the package too."
+            },
+            {
+              "heading": "Following Up Without Being Pushy",
+              "bullets": [
+                "One polite follow-up after about a week",
+                "Add new value, don't just 'check in'",
+                "Know when to move on gracefully"
+              ],
+              "narration": "If you don't hear back, one polite follow-up after about a week is reasonable - ideally adding something new, like a quick content idea for their page, rather than just 'checking in.' If there's still no response after that, it's fine to move on gracefully."
+            }
+          ]
+        },
+        {
+          "id": "sm-m5-l3",
+          "title": "Where to Find Social Media VA Clients",
+          "slides": [
+            {
+              "heading": "Freelance Platforms",
+              "bullets": [
+                "Upwork, Onlinejobs.ph, and similar sites",
+                "Filter for social media / content roles",
+                "A strong profile and portfolio link matter most"
+              ],
+              "narration": "Freelance platforms like Upwork and Onlinejobs.ph list social media and content roles regularly - filter specifically for those, and make sure your profile headline and portfolio link are strong, since clients often decide in seconds."
+            },
+            {
+              "heading": "Local Small Businesses",
+              "bullets": [
+                "Coffee shops, salons, gyms, boutiques nearby",
+                "Many have inactive or outdated pages",
+                "A polite, specific outreach message works well"
+              ],
+              "narration": "Local small businesses - coffee shops, salons, gyms, boutiques - are often sitting on inactive or outdated social pages simply because the owner is busy running the business. A polite, specific outreach message pointing out one thing you could improve for them works well."
+            },
+            {
+              "heading": "Referrals and Word of Mouth",
+              "bullets": [
+                "Your first client is your best source of the next",
+                "Ask happy clients if they know anyone else",
+                "A short testimonial makes referrals even easier"
+              ],
+              "narration": "Once you land one happy client, ask directly whether they know any other business owners who could use similar help - referrals convert far more easily than cold outreach, especially if you have a short testimonial to share."
+            },
+            {
+              "heading": "Facebook Groups and Communities",
+              "bullets": [
+                "Local business groups often post 'looking for help'",
+                "VA and freelancer communities share leads too",
+                "Be an active, helpful member, not just a lurker"
+              ],
+              "narration": "Local business Facebook groups often have owners posting that they need social media help, and dedicated VA or freelancer communities frequently share leads too - being an active, genuinely helpful member of these groups (not just posting your own ads) tends to bring in the best opportunities."
+            }
+          ]
+        },
+        {
+          "id": "sm-m5-l4",
+          "title": "Nailing the Client Interview/Discovery Call",
+          "slides": [
+            {
+              "heading": "What Clients Are Actually Evaluating",
+              "bullets": [
+                "Can you understand their brand quickly?",
+                "Do you ask smart, specific questions?",
+                "Will you be easy and pleasant to work with?"
+              ],
+              "narration": "In a discovery call, clients aren't just checking your skills on paper - they're watching whether you can understand their brand quickly, whether you ask smart and specific questions, and whether you seem easy and pleasant to work with."
+            },
+            {
+              "heading": "Questions You Should Ask Them",
+              "bullets": [
+                "What does success look like to you?",
+                "What's frustrated you about social media so far?",
+                "Who else is involved in approving content?"
+              ],
+              "narration": "Come prepared with your own questions: what does success actually look like to them, what's frustrated them about social media so far, and who else needs to approve content - this shows you're thinking like a real partner, not just an order-taker."
+            },
+            {
+              "heading": "Talking About Pricing Confidently",
+              "bullets": [
+                "Know your rate before the call, don't improvise",
+                "Explain what's included, not just the number",
+                "It's okay to say you'll follow up in writing"
+              ],
+              "narration": "Decide your rate before the call so you're never improvising under pressure, explain clearly what's included for that price, and it's completely fine to say you'll send the full proposal in writing afterward rather than negotiating on the spot."
+            },
+            {
+              "heading": "Following Up After the Call",
+              "bullets": [
+                "Send a written summary within 24 hours",
+                "Restate what you understood about their needs",
+                "Attach your proposal or next steps clearly"
+              ],
+              "narration": "Within 24 hours of the call, send a short written summary restating what you understood about their needs, attached to your proposal or a clear next step - this reinforces that you listened closely and keeps momentum going."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sm-m6",
+      "title": "Module 6: Landing Your First Social Media Client and Beyond",
+      "lessons": [
+        {
+          "id": "sm-m6-l1",
+          "title": "Onboarding a New Social Media Client",
+          "slides": [
+            {
+              "heading": "What Onboarding Actually Covers",
+              "bullets": [
+                "Getting access to their accounts safely",
+                "Gathering brand assets and guidelines",
+                "Agreeing on the first month's plan"
+              ],
+              "narration": "Onboarding is the process of getting properly set up with a new client: gaining safe access to their accounts, collecting their logo and brand assets, and agreeing together on what the first month will actually look like."
+            },
+            {
+              "heading": "Getting Account Access the Right Way",
+              "bullets": [
+                "Ask to be added as admin/editor on Business Suite",
+                "Never ask for personal account passwords",
+                "Confirm who owns the account long-term"
+              ],
+              "narration": "Always ask to be added as an admin or editor through Meta Business Suite rather than requesting a personal password - this is safer for both of you, and it makes clear that the client remains the true, permanent owner of the account."
+            },
+            {
+              "heading": "Collecting Brand Assets",
+              "bullets": [
+                "Logo files, brand colors, and fonts",
+                "Existing photos or product images",
+                "Any brand guidelines document, if one exists"
+              ],
+              "narration": "Request the client's logo files, brand colors and fonts, any existing product or team photos, and a brand guidelines document if they have one - having these upfront saves a lot of back-and-forth later."
+            },
+            {
+              "heading": "Setting the First 30 Days' Plan",
+              "bullets": [
+                "Agree on posting frequency and platforms",
+                "Set your first check-in date",
+                "Clarify how and when you'll be paid"
+              ],
+              "narration": "Before posting anything, agree on how often you'll post and on which platforms, set a date for your first check-in call, and make sure payment terms - amount, method, and schedule - are clearly agreed on both sides."
+            }
+          ]
+        },
+        {
+          "id": "sm-m6-l2",
+          "title": "Setting Expectations and Pricing Your Services",
+          "slides": [
+            {
+              "heading": "Why Clear Expectations Prevent Problems",
+              "bullets": [
+                "Most client conflicts come from unspoken assumptions",
+                "A short written agreement protects you both",
+                "Revisit and adjust as the relationship grows"
+              ],
+              "narration": "Most conflicts between a VA and a client come from things that were never actually agreed on out loud - a short written agreement covering scope, pricing, and response times protects you both and can always be revisited as things grow."
+            },
+            {
+              "heading": "Common Pricing Models",
+              "bullets": [
+                "Monthly retainer - most common for ongoing work",
+                "Per-project - for one-off campaigns",
+                "Hourly - less common, harder to scale"
+              ],
+              "narration": "A monthly retainer is the most common model for ongoing social media management, a per-project rate suits one-off campaigns like a product launch, and hourly pricing is less common in this niche since it's harder to scale as you take on more clients."
+            },
+            {
+              "heading": "What to Include in Your Scope of Work",
+              "bullets": [
+                "Number of posts/platforms included",
+                "What counts as a 'revision' vs a new request",
+                "What's explicitly NOT included (e.g. paid ads)"
+              ],
+              "narration": "Your scope of work should spell out exactly how many posts and which platforms are included, what counts as a normal revision versus a brand-new request, and what's explicitly NOT included, like running paid ad campaigns, unless you charge separately for that."
+            },
+            {
+              "heading": "Raising Your Rates Over Time",
+              "bullets": [
+                "Review rates as your skill and results grow",
+                "Give existing clients advance notice",
+                "New clients can start at your current rate"
+              ],
+              "narration": "As your skills and track record grow, it's normal and healthy to raise your rates - give existing clients advance notice (30-60 days is common), while any brand-new client simply starts at your current, updated rate."
+            }
+          ]
+        },
+        {
+          "id": "sm-m6-l3",
+          "title": "Managing Multiple Client Accounts",
+          "slides": [
+            {
+              "heading": "Staying Organized Across Clients",
+              "bullets": [
+                "One shared calendar tool, separate client views",
+                "Color-code or label content by client",
+                "A weekly planning block prevents last-minute chaos"
+              ],
+              "narration": "Managing several clients well usually comes down to using one scheduling tool for everyone (most support multiple client accounts), color-coding or labeling content clearly by client, and setting aside a dedicated weekly block to plan ahead rather than reacting day to day."
+            },
+            {
+              "heading": "Avoiding Mix-Ups Between Clients",
+              "bullets": [
+                "Double-check the account before every post",
+                "Never reuse a caption meant for another client",
+                "Build a simple pre-post checklist"
+              ],
+              "narration": "Posting to the wrong account is a real and embarrassing risk once you're juggling multiple clients - always double-check which account you're in before posting, never copy-paste a caption written for one client into another's queue, and consider a short pre-post checklist."
+            },
+            {
+              "heading": "Batching Work for Efficiency",
+              "bullets": [
+                "Design a week's graphics in one sitting",
+                "Write a batch of captions together",
+                "Batch client communications too"
+              ],
+              "narration": "Batching similar tasks - designing a whole week of graphics in one sitting, writing several captions back to back, or replying to all client messages at set times - is far more efficient than constantly switching between different types of work."
+            },
+            {
+              "heading": "Knowing When You've Reached Capacity",
+              "bullets": [
+                "Quality should never quietly slip as you add clients",
+                "Track your actual hours per client honestly",
+                "It's okay to pause new clients or raise rates instead"
+              ],
+              "narration": "Watch for signs that quality is slipping as you take on more clients - missed deadlines, rushed captions, slower replies. Track your real hours per client honestly, and remember it's completely fine to pause taking new clients, or raise your rates instead of stretching yourself too thin."
+            }
+          ]
+        },
+        {
+          "id": "sm-m6-l4",
+          "title": "Handling Difficult Feedback and Revisions",
+          "slides": [
+            {
+              "heading": "Receiving Feedback Without Getting Defensive",
+              "bullets": [
+                "Feedback is about the work, not you personally",
+                "Ask clarifying questions before revising",
+                "Thank the client for being specific"
+              ],
+              "narration": "It's easy to feel personally criticized when a client pushes back on a caption or design, but feedback is about the work, not you - ask clarifying questions if something's vague, and genuinely thank clients who give specific, actionable feedback."
+            },
+            {
+              "heading": "Handling Vague Feedback",
+              "bullets": [
+                "'I don't love it' needs more detail",
+                "Offer 2-3 specific directions to choose from",
+                "Show, don't just ask - options speed things up"
+              ],
+              "narration": "When feedback is vague, like 'I don't love it, try again,' ask what specifically isn't working, and consider offering two or three specific alternative directions rather than an open-ended redo - showing options is often faster than endless back-and-forth."
+            },
+            {
+              "heading": "Managing Scope Creep in Revisions",
+              "bullets": [
+                "Define how many revision rounds are included",
+                "A brand-new concept isn't a 'revision'",
+                "Politely price extra requests separately"
+              ],
+              "narration": "Define upfront how many rounds of revision are included per post - a request for a completely new concept, rather than a tweak to the current one, isn't really a 'revision,' and it's fair to politely price that as an additional request."
+            },
+            {
+              "heading": "Turning Difficult Clients Into Long-Term Ones",
+              "bullets": [
+                "Most 'difficult' clients just want to feel heard",
+                "Consistent, calm communication builds trust",
+                "Know when a client truly isn't the right fit"
+              ],
+              "narration": "Many clients who seem difficult at first just want to feel heard and kept in the loop - consistent, calm communication usually turns them into your most loyal clients over time. Occasionally, though, a client genuinely isn't the right fit, and it's okay to part ways professionally."
+            }
+          ]
+        },
+        {
+          "id": "sm-m6-l5",
+          "title": "Growing Your Social Media VA Career",
+          "slides": [
+            {
+              "heading": "Leveling Up Your Skill Set",
+              "bullets": [
+                "Learn basic paid ads (Meta Ads Manager)",
+                "Get comfortable with simple video editing",
+                "Study analytics more deeply over time"
+              ],
+              "narration": "As you grow, learning basic paid advertising through Meta Ads Manager, getting comfortable with simple video editing (even in free apps like CapCut), and studying analytics more deeply all let you charge more and take on bigger clients."
+            },
+            {
+              "heading": "Deciding Between More Clients or Higher Rates",
+              "bullets": [
+                "More clients means more income but more hours",
+                "Higher rates mean the same hours, more income",
+                "Most successful VAs eventually favor the second"
+              ],
+              "narration": "At some point you'll choose between taking on more clients at your current rate, or fewer clients at a higher rate - most experienced Social Media VAs eventually favor raising rates over endlessly adding more clients, since it protects both quality and your own time."
+            },
+            {
+              "heading": "Building Toward an Agency or Team",
+              "bullets": [
+                "Some VAs eventually hire their own subcontractors",
+                "Others stay solo and simply raise rates",
+                "Both paths are valid - choose what fits your goals"
+              ],
+              "narration": "Some experienced Social Media VAs eventually build a small team, subcontracting design or scheduling work to other freelancers and keeping strategy for themselves; others prefer staying solo and simply commanding premium rates. Neither path is more 'correct' - it depends on what kind of work-life you actually want."
+            },
+            {
+              "heading": "Congratulations on Finishing This Training",
+              "bullets": [
+                "You've covered the full Social Media VA skillset",
+                "You have a portfolio, resume, and pricing plan",
+                "Time to start applying with confidence"
+              ],
+              "narration": "Congratulations - you've now covered the full Social Media Management VA skillset, from the tools and daily skills to portfolio-building, client acquisition, and long-term growth. You're ready to start applying and pitching with real confidence."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

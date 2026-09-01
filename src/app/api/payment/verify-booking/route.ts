@@ -5,6 +5,7 @@ import { authOptions } from "@/lib/auth";
 import { db } from "@/db";
 import { courses, liveSessionBookings } from "@/db/schema";
 import { retrieveCheckoutSession } from "@/lib/paymongo";
+import { ANCHOR_COURSE_ID } from "@/lib/anchor-course";
 
 /**
  * Fallback verification for the optional coaching-session checkout, hit by
@@ -19,7 +20,7 @@ export async function POST() {
   }
   const userId = (session.user as any).id;
 
-  const [course] = await db.select().from(courses).limit(1);
+  const [course] = await db.select().from(courses).where(eq(courses.id, ANCHOR_COURSE_ID)).limit(1);
   if (!course) return NextResponse.json({ isPaid: false });
 
   const [booking] = await db

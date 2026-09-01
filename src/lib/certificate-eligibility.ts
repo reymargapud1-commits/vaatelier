@@ -11,7 +11,7 @@ import {
   certificates,
   trackFeedback,
 } from "@/db/schema";
-import { CERTIFICATE_TRACKS, getTrackById } from "@/lib/certificate-tracks";
+import { getCertificateTracks, getTrackById } from "@/lib/certificate-tracks";
 
 /**
  * True once a student has, for this track's modules only: marked every
@@ -20,7 +20,7 @@ import { CERTIFICATE_TRACKS, getTrackById } from "@/lib/certificate-tracks";
  * checkAndIssueCertificate for the full gate.
  */
 async function isTrackComplete(userId: string, courseId: string, trackId: string): Promise<boolean> {
-  const track = getTrackById(trackId);
+  const track = getTrackById(courseId, trackId);
   if (!track) return false;
 
   const trackModules = await db
@@ -95,7 +95,7 @@ export async function hasSubmittedFeedback(userId: string, courseId: string, tra
  * this track exists yet, one is created.
  */
 export async function checkAndIssueCertificate(userId: string, courseId: string, trackId: string) {
-  const track = getTrackById(trackId);
+  const track = getTrackById(courseId, trackId);
   if (!track) return null;
 
   const [existing] = await db
@@ -128,7 +128,7 @@ export async function checkAndIssueCertificate(userId: string, courseId: string,
  */
 export async function checkAndIssueAllCertificates(userId: string, courseId: string) {
   const results = [];
-  for (const track of CERTIFICATE_TRACKS) {
+  for (const track of getCertificateTracks(courseId)) {
     const cert = await checkAndIssueCertificate(userId, courseId, track.id);
     if (cert) results.push(cert);
   }
@@ -143,7 +143,7 @@ export async function checkAndIssueAllCertificates(userId: string, courseId: str
  */
 export async function getTracksAwaitingFeedback(userId: string, courseId: string) {
   const pending = [];
-  for (const track of CERTIFICATE_TRACKS) {
+  for (const track of getCertificateTracks(courseId)) {
     const [existing] = await db
       .select()
       .from(certificates)
@@ -228,7 +228,7 @@ export async function getTrackProgress(userId: string, courseId: string) {
     .where(and(eq(trackFeedback.userId, userId), eq(trackFeedback.courseId, courseId)));
   const ratedTrackIds = new Set(existingFeedback.map((f) => f.track));
 
-  return CERTIFICATE_TRACKS.map((track) => {
+  return getCertificateTracks(courseId).map((track) => {
     const trackLessons = allLessons.filter((l) => track.moduleIds.includes(l.moduleId));
     const trackQuizzes = allQuizzes.filter((q) => track.moduleIds.includes(q.moduleId));
     const totalLessons = trackLessons.length;

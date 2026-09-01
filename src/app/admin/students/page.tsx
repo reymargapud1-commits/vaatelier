@@ -15,23 +15,27 @@ import {
 } from "@/db/schema";
 import Navbar from "@/components/Navbar";
 import WelcomeBannerGenerator from "@/components/WelcomeBannerGenerator";
+import niches from "../../../../content/niches.json";
+
+const nicheTitleByCourseId = new Map(niches.niches.map((n) => [n.courseId, n.title]));
 
 /**
  * Coach-facing roster of every enrolled (paid) student: their overall
- * progress through the curriculum, exactly which lesson they're currently
- * on, how many certificates they've earned, and when they were last
- * active. Built as a handful of bulk queries (one per table, filtered to
- * just the enrolled students) rather than reusing getTrackProgress per
- * student one at a time, since this page needs to scale to the whole
- * student list at once, not just a single logged-in user.
+ * progress through THEIR OWN niche's curriculum (see users.courseId - each
+ * student can be in a different niche/course), exactly which lesson
+ * they're currently on, how many certificates they've earned, and when
+ * they were last active. Built as a handful of bulk queries across every
+ * niche at once (grouped per-course in memory) rather than reusing
+ * getTrackProgress per student one at a time, since this page needs to
+ * scale to the whole student list, not just a single logged-in user.
  */
 export default async function AdminStudentsPage() {
   const session = await getServerSession(authOptions);
   if (!session?.user) redirect("/login");
   if ((session.user as any).role !== "admin") redirect("/dashboard");
 
-  const [course] = await db.select().from(courses).limit(1);
-  if (!course) {
+  const allCourses = await db.select().from(courses);
+  if (allCourses.length === 0) {
     return (
       <>
         <Navbar />
@@ -53,35 +57,52 @@ export default async function AdminStudentsPage() {
     .where(and(eq(users.isPaid, true), eq(users.role, "student")))
     .orderBy(desc(users.paidAt));
 
-  const courseModules = await db
-    .select()
-    .from(modules)
-    .where(eq(modules.courseId, course.id))
-    .orderBy(modules.order);
-  const moduleIds = courseModules.map((m) => m.id);
-  const moduleOrderById = new Map(courseModules.map((m) => [m.id, m.order]));
-  const moduleTitleById = new Map(courseModules.map((m) => [m.id, m.title]));
+  // Build each niche's own curriculum shape once (module order, lesson
+  // order, quizzes) - a student's progress is only ever computed against
+  // their own niche's copy of this.
+  const allModules = await db.select().from(modules);
+  const modulesByCourse = new Map<string, typeof allModules>();
+  for (const m of allModules) {
+    if (!modulesByCourse.has(m.courseId)) modulesByCourse.set(m.courseId, []);
+    modulesByCourse.get(m.courseId)!.push(m);
+  }
 
-  const allLessons = moduleIds.length
-    ? await db.select().from(lessons).where(inArray(lessons.moduleId, moduleIds))
-    : [];
-  // Global curriculum order (module order, then lesson order within it) -
-  // needed to find each student's next incomplete lesson, i.e. "where they
-  // currently are" in the training.
-  const orderedLessons = [...allLessons].sort((a, b) => {
-    const ma = moduleOrderById.get(a.moduleId) ?? 0;
-    const mb = moduleOrderById.get(b.moduleId) ?? 0;
-    if (ma !== mb) return ma - mb;
-    return a.order - b.order;
-  });
-  const totalLessons = orderedLessons.length;
+  const allLessons = await db.select().from(lessons);
+  const lessonsByModule = new Map<string, typeof allLessons>();
+  for (const l of allLessons) {
+    if (!lessonsByModule.has(l.moduleId)) lessonsByModule.set(l.moduleId, []);
+    lessonsByModule.get(l.moduleId)!.push(l);
+  }
 
-  const allQuizzes = moduleIds.length
-    ? await db.select().from(quizzes).where(inArray(quizzes.moduleId, moduleIds))
-    : [];
+  const allQuizzes = await db.select().from(quizzes);
+  const quizzesByModule = new Map(allQuizzes.map((q) => [q.moduleId, q]));
+
+  interface CourseShape {
+    orderedLessons: typeof allLessons;
+    totalLessons: number;
+    moduleTitleById: Map<string, string>;
+    quizIds: string[];
+  }
+  const courseShapeById = new Map<string, CourseShape>();
+  for (const course of allCourses) {
+    const courseModules = (modulesByCourse.get(course.id) || []).sort((a, b) => a.order - b.order);
+    const moduleTitleById = new Map(courseModules.map((m) => [m.id, m.title]));
+    const orderedLessons = courseModules.flatMap(
+      (m) => (lessonsByModule.get(m.id) || []).slice().sort((a, b) => a.order - b.order)
+    );
+    const quizIds = courseModules
+      .map((m) => quizzesByModule.get(m.id)?.id)
+      .filter((id): id is string => !!id);
+    courseShapeById.set(course.id, {
+      orderedLessons,
+      totalLessons: orderedLessons.length,
+      moduleTitleById,
+      quizIds,
+    });
+  }
 
   const studentIds = enrolledStudents.map((s) => s.id);
-  const allLessonIds = orderedLessons.map((l) => l.id);
+  const allLessonIds = allLessons.map((l) => l.id);
   const quizIds = allQuizzes.map((q) => q.id);
 
   const progressRows =
@@ -139,13 +160,37 @@ export default async function AdminStudentsPage() {
   }
 
   const studentRows = enrolledStudents.map((student) => {
+    // Hasn't chosen a niche yet (right after enrolling, before the picker) -
+    // there's no curriculum to measure progress against yet.
+    if (!student.courseId) {
+      return {
+        id: student.id,
+        name: student.name,
+        email: student.email,
+        paidAt: student.paidAt,
+        nicheTitle: null as string | null,
+        percent: 0,
+        completedCount: 0,
+        totalLessons: 0,
+        certificatesEarned: certCountByUser.get(student.id) || 0,
+        lastActivity: null as Date | null,
+        currentPosition: "Hasn't chosen a training niche yet",
+      };
+    }
+
+    const shape = courseShapeById.get(student.courseId);
     const completed = completedLessonsByUser.get(student.id) || new Set<string>();
-    const completedCount = completed.size;
+    const totalLessons = shape?.totalLessons || 0;
+    // Only count completions that belong to this student's own niche - a
+    // lesson id from a different niche never appears here anyway (ids are
+    // globally unique), but this keeps the math correct if that ever changes.
+    const ownLessonIds = new Set((shape?.orderedLessons || []).map((l) => l.id));
+    const completedCount = [...completed].filter((id) => ownLessonIds.has(id)).length;
     const percent = totalLessons ? Math.round((completedCount / totalLessons) * 100) : 0;
 
-    const nextLesson = orderedLessons.find((l) => !completed.has(l.id));
+    const nextLesson = shape?.orderedLessons.find((l) => !completed.has(l.id));
     const currentPosition = nextLesson
-      ? `${moduleTitleById.get(nextLesson.moduleId) || ""} — ${nextLesson.title}`
+      ? `${shape?.moduleTitleById.get(nextLesson.moduleId) || ""} — ${nextLesson.title}`
       : completedCount > 0
         ? "Finished all lessons"
         : "Hasn't started yet";
@@ -164,6 +209,7 @@ export default async function AdminStudentsPage() {
       name: student.name,
       email: student.email,
       paidAt: student.paidAt,
+      nicheTitle: nicheTitleByCourseId.get(student.courseId) || student.courseId,
       percent,
       completedCount,
       totalLessons,
@@ -228,6 +274,7 @@ export default async function AdminStudentsPage() {
               <thead className="bg-gray-50 text-gray-600">
                 <tr>
                   <th className="px-4 py-3 font-medium">Student</th>
+                  <th className="px-4 py-3 font-medium">Niche</th>
                   <th className="px-4 py-3 font-medium">Enrolled</th>
                   <th className="px-4 py-3 font-medium">Progress</th>
                   <th className="px-4 py-3 font-medium">Currently On</th>
@@ -242,6 +289,15 @@ export default async function AdminStudentsPage() {
                     <td className="px-4 py-3">
                       <div className="font-medium text-gray-900">{s.name}</div>
                       <div className="text-xs text-gray-500">{s.email}</div>
+                    </td>
+                    <td className="px-4 py-3 text-gray-600">
+                      {s.nicheTitle ? (
+                        s.nicheTitle
+                      ) : (
+                        <span className="rounded-full bg-amber-50 px-2 py-0.5 text-xs font-medium text-amber-700">
+                          Not chosen yet
+                        </span>
+                      )}
                     </td>
                     <td className="px-4 py-3 text-gray-600">
                       {s.paidAt
