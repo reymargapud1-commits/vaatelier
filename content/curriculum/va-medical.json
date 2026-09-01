@@ -1,0 +1,1094 @@
+{
+  "courseId": "va-medical",
+  "courseTitle": "Medical VA: From Zero to First Client",
+  "courseDescription": "A complete beginner-to-job-ready training program for aspiring Medical Virtual Assistants. A purely administrative, non-clinical role - covers scheduling, EHR data entry, insurance verification, and patient communication, plus portfolio-building, resume and proposal writing, and how to land your first client.",
+  "priceNote": "One-time payment unlocks lifetime access to all modules, video lessons, quizzes, and your Certificate of Completion.",
+  "modules": [
+    {
+      "id": "med-m1",
+      "title": "Module 1: Starting Out as a Medical VA",
+      "lessons": [
+        {
+          "id": "med-m1-l1",
+          "title": "What Is a Medical VA?",
+          "slides": [
+            {
+              "heading": "What Is a Medical VA?",
+              "bullets": [
+                "Welcome to your Medical VA journey",
+                "Remote administrative support for medical practices",
+                "Not a clinical role - ever"
+              ],
+              "narration": "Welcome to Module 1 of your Medical VA training. A Medical VA is a remote professional who handles the administrative side of a medical practice - scheduling, data entry, insurance paperwork, and patient communication. This is strictly an administrative role: you will never diagnose, treat, or give medical advice of any kind."
+            },
+            {
+              "heading": "What a Medical VA Actually Does Day to Day",
+              "bullets": [
+                "Manages provider calendars and appointments",
+                "Enters patient intake data into the EHR",
+                "Verifies insurance and handles billing paperwork"
+              ],
+              "narration": "On a typical day, a Medical VA checks the schedule for conflicts, enters new patient intake forms into the practice's EHR system, verifies insurance coverage before visits, sends appointment reminders, and processes routine billing paperwork - all administrative tasks that keep the front office running smoothly."
+            },
+            {
+              "heading": "Why Practices Hire a Medical VA",
+              "bullets": [
+                "Front desks get overwhelmed with paperwork",
+                "A VA reduces costs versus in-office staff",
+                "Keeps operations running without adding overhead"
+              ],
+              "narration": "Medical practices are often buried in scheduling requests, insurance calls, and intake paperwork. Hiring a remote Medical VA lets them keep operations organized and patients well-served, without the overhead of adding another in-office staff member - which makes this a genuinely useful, in-demand support role."
+            },
+            {
+              "heading": "Is This Niche Right for You?",
+              "bullets": [
+                "You're detail-oriented and organized",
+                "You're comfortable following strict procedures",
+                "You understand this is admin work, not clinical work"
+              ],
+              "narration": "This niche is a great fit if you're naturally detail-oriented, comfortable learning new software, and take confidentiality seriously. It's important to go in clear-eyed: you're supporting the business side of healthcare - scheduling, records, paperwork - never offering medical opinions, evaluating symptoms, or giving health advice."
+            }
+          ]
+        },
+        {
+          "id": "med-m1-l2",
+          "title": "Skills and Traits of a Great Medical VA",
+          "slides": [
+            {
+              "heading": "Core Skills You'll Build",
+              "bullets": [
+                "Accurate data entry into EHR systems",
+                "Calendar and appointment management",
+                "Clear, professional patient communication"
+              ],
+              "narration": "Over this training, you'll build four core skills: entering patient information accurately into EHR systems, managing busy provider calendars, communicating professionally with patients about scheduling and paperwork, and following insurance verification steps correctly - all without ever stepping into clinical territory."
+            },
+            {
+              "heading": "Traits Clients Look For",
+              "bullets": [
+                "Confidentiality - treating every record with care",
+                "Reliability - forms and schedules never slip",
+                "Calm professionalism, especially with anxious patients"
+              ],
+              "narration": "Practices trust Medical VAs who handle patient information with real confidentiality, who reliably keep schedules and paperwork on track, and who stay calm and professional even when a patient is anxious or frustrated - while always knowing to hand off anything clinical to licensed staff."
+            },
+            {
+              "heading": "A Day in the Life",
+              "bullets": [
+                "Morning: review the day's schedule and confirmations",
+                "Midday: process intake forms and insurance checks",
+                "End of day: follow up on pending paperwork"
+              ],
+              "narration": "A typical day might start with reviewing the schedule and confirming upcoming appointments, move into processing new patient intake forms and insurance verifications, and end with following up on any pending paperwork or prior authorizations - focused, administrative work you can often do in a few hours per client."
+            },
+            {
+              "heading": "Where Growth Leads",
+              "bullets": [
+                "Handle more complex billing workflows",
+                "Support multiple providers at once",
+                "Become a practice's go-to admin resource"
+              ],
+              "narration": "As you gain experience, you can grow from basic scheduling into handling more complex insurance and billing workflows, supporting several providers within one practice, and eventually becoming the trusted administrative backbone a growing medical practice relies on every single day."
+            }
+          ]
+        },
+        {
+          "id": "med-m1-l3",
+          "title": "Understanding HIPAA & Patient Privacy Basics",
+          "slides": [
+            {
+              "heading": "What HIPAA Awareness Means for a VA",
+              "bullets": [
+                "A US law protecting patient health information",
+                "General awareness only - not legal advice",
+                "Every practice will have its own specific policy"
+              ],
+              "narration": "HIPAA is a US law that protects the privacy of patient health information. As a Medical VA, you need basic working awareness of it - not a legal degree. This lesson covers general good habits only; always follow the specific privacy policy your client practice gives you, since rules can vary by role and state."
+            },
+            {
+              "heading": "Everyday Privacy Habits",
+              "bullets": [
+                "Only access records you actually need for the task",
+                "Never discuss patient details outside of work",
+                "Keep patient documents in approved, secure folders"
+              ],
+              "narration": "Good privacy habits are mostly common sense: only open the patient record you're actually working on, never mention patient names or details in casual conversation or on social media, and store any patient documents only in the secure system or folder your client has approved for that purpose."
+            },
+            {
+              "heading": "Common Mistakes to Avoid",
+              "bullets": [
+                "Emailing patient info through personal, unsecured email",
+                "Taking screenshots of patient records",
+                "Leaving a screen unlocked with records visible"
+              ],
+              "narration": "Common privacy mistakes include sending patient information through a personal, non-secure email account, taking screenshots of records for 'reference,' and stepping away from your computer with a patient's file still open on screen - small habits that create real risk for the practice and its patients."
+            },
+            {
+              "heading": "When You're Not Sure, Ask",
+              "bullets": [
+                "Never guess when handling sensitive data",
+                "Ask your client for their exact privacy procedure",
+                "This training is general awareness, not legal guidance"
+              ],
+              "narration": "If you're ever unsure whether something is okay to do with patient information, stop and ask your client rather than guessing. Every practice has its own official privacy procedures you're expected to follow, and this lesson is meant only as general awareness - not a substitute for their actual policy or professional legal advice."
+            }
+          ]
+        },
+        {
+          "id": "med-m1-l4",
+          "title": "Setting Up a Secure Home Workspace for Medical VA Work",
+          "slides": [
+            {
+              "heading": "What You Actually Need to Get Started",
+              "bullets": [
+                "A reliable computer and stable internet",
+                "A password manager for many client logins",
+                "A headset for calls and check-ins"
+              ],
+              "narration": "You don't need special equipment to start - a reliable computer, stable internet connection, a password manager to keep track of client logins securely, and a decent headset for calls with clients or patients is genuinely enough to begin working as a Medical VA."
+            },
+            {
+              "heading": "Protecting Physical Privacy at Home",
+              "bullets": [
+                "Work from a private room, not a shared space",
+                "Position your screen away from windows or doorways",
+                "Lock your screen the moment you step away"
+              ],
+              "narration": "Because you'll be viewing patient information, work from a private room rather than a shared or public space, position your monitor so it can't be seen by family members or visitors, and get in the habit of locking your screen every single time you step away, even briefly."
+            },
+            {
+              "heading": "Digital Security Basics",
+              "bullets": [
+                "Strong, unique passwords for every client system",
+                "Two-factor authentication wherever it's offered",
+                "Keep your computer's software and antivirus updated"
+              ],
+              "narration": "Use a strong, unique password for every client system you're given access to, turn on two-factor authentication wherever it's available, and keep your operating system, browser, and antivirus software updated - these basic habits meaningfully reduce the risk of a security breach on your end."
+            },
+            {
+              "heading": "Ready for Module 2",
+              "bullets": [
+                "You understand the role and its boundaries",
+                "You know the basics of privacy and security",
+                "Next: the tools you'll actually use daily"
+              ],
+              "narration": "You now understand what a Medical VA does, why this is strictly an administrative role, and how to protect patient privacy at a basic level. In Module 2, we'll get hands-on with the actual EHR, scheduling, and billing tools you'll use every day on the job."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "med-m2",
+      "title": "Module 2: Essential Tools Every Medical VA Must Know",
+      "lessons": [
+        {
+          "id": "med-m2-l1",
+          "title": "Electronic Health Record (EHR) Systems Overview",
+          "slides": [
+            {
+              "heading": "What EHR Systems Are",
+              "bullets": [
+                "Digital systems that store patient records",
+                "Used by nearly every modern medical practice",
+                "You'll work inside them, not build them"
+              ],
+              "narration": "An Electronic Health Record, or EHR, system is the digital platform a practice uses to store patient records, schedules, and billing information. As a Medical VA, you won't be setting these systems up - you'll be logging in daily to update administrative information the practice already relies on."
+            },
+            {
+              "heading": "Common EHR Systems You Might Encounter",
+              "bullets": [
+                "Epic and athenahealth - used by larger practices",
+                "SimplePractice and DrChrono - popular with smaller clinics",
+                "Each has its own login, layout, and quirks"
+              ],
+              "narration": "You'll likely encounter systems like Epic or athenahealth at larger practices, and SimplePractice or DrChrono at smaller clinics and private practices. Each platform looks and works a little differently, so part of your job is getting comfortable navigating whichever system a specific client already uses."
+            },
+            {
+              "heading": "What a Medical VA Actually Does Inside an EHR",
+              "bullets": [
+                "Updates patient contact and insurance details",
+                "Schedules and reschedules appointments",
+                "Uploads completed intake forms"
+              ],
+              "narration": "Inside an EHR, your work stays firmly administrative: updating a patient's contact or insurance information, scheduling and rescheduling appointments, and uploading completed intake forms into the right record. You are never entering clinical notes, diagnoses, or treatment plans - that stays with licensed medical staff."
+            },
+            {
+              "heading": "Learning a New EHR Quickly",
+              "bullets": [
+                "Ask for a screen-share walkthrough first",
+                "Use any training or sandbox mode available",
+                "Follow the client's written SOP document closely"
+              ],
+              "narration": "When starting with a new EHR, ask your client for a short screen-share walkthrough of the exact screens you'll use, practice in a training or sandbox mode if one's offered, and keep their written standard operating procedure document open until the workflow becomes second nature."
+            }
+          ]
+        },
+        {
+          "id": "med-m2-l2",
+          "title": "Appointment Scheduling Software",
+          "slides": [
+            {
+              "heading": "Why Scheduling Software Matters",
+              "bullets": [
+                "Keeps a provider's day organized and full",
+                "Reduces no-shows through automatic reminders",
+                "Prevents costly double-bookings"
+              ],
+              "narration": "Good scheduling software keeps a busy provider's calendar organized, sends automatic reminders that cut down on missed appointments, and prevents the double-bookings that frustrate both patients and staff - making it one of the most important tools a Medical VA works with daily."
+            },
+            {
+              "heading": "Common Scheduling Tools",
+              "bullets": [
+                "Built-in scheduling modules inside most EHRs",
+                "Standalone tools like Calendly for simple booking",
+                "Practice-specific booking portals"
+              ],
+              "narration": "Many EHR systems include their own scheduling module, but some smaller practices use standalone tools like Calendly for simpler booking needs, or a custom patient booking portal on their website. You'll usually work within whichever system the practice has already chosen."
+            },
+            {
+              "heading": "Best Practices for Booking Appointments",
+              "bullets": [
+                "Confirm patient name, date of birth, and reason for visit",
+                "Match appointment length to visit type",
+                "Leave buffer time for the provider between patients"
+              ],
+              "narration": "When booking, always confirm the patient's name, date of birth, and the general reason for the visit as the patient states it, match the appointment length to the type of visit, and leave a reasonable buffer between appointments so the provider's day doesn't run behind."
+            },
+            {
+              "heading": "Handling Cancellations and Reschedules",
+              "bullets": [
+                "Update the calendar immediately",
+                "Offer the freed slot to a waitlisted patient",
+                "Log the reason for the practice's records"
+              ],
+              "narration": "When a patient cancels or reschedules, update the calendar right away, check whether a waitlisted patient can take the newly open slot, and log the reason in the system - keeping this process tight helps the practice fill its schedule and reduces lost revenue from empty appointment slots."
+            }
+          ]
+        },
+        {
+          "id": "med-m2-l3",
+          "title": "Medical Billing & Insurance Verification Tools",
+          "slides": [
+            {
+              "heading": "What Insurance Verification Means",
+              "bullets": [
+                "Confirming a patient's coverage before their visit",
+                "Purely a paperwork and phone/portal task",
+                "Prevents billing surprises for patients and practices"
+              ],
+              "narration": "Insurance verification means confirming that a patient's insurance plan is active and covers the upcoming visit, usually before they arrive. It's entirely a paperwork and administrative task - checking a payer portal or making a call - that prevents billing surprises for both the patient and the practice."
+            },
+            {
+              "heading": "Common Billing and Verification Tools",
+              "bullets": [
+                "Availity and similar payer portals",
+                "Waystar and other clearinghouse tools",
+                "Insurance company websites and phone lines"
+              ],
+              "narration": "Tools like Availity and other payer portals let you check a patient's eligibility and benefits directly online, clearinghouse platforms like Waystar help manage claims in bulk, and sometimes a quick call to the insurance company's provider line is still the fastest way to confirm coverage details."
+            },
+            {
+              "heading": "Prior Authorization Paperwork Basics",
+              "bullets": [
+                "Gathering the forms a payer requires",
+                "Submitting the request and tracking its status",
+                "Following up until an approval or denial arrives"
+              ],
+              "narration": "Prior authorization is simply the paperwork process of getting a payer's approval before certain services are covered. Your role is administrative: gathering the required forms from the provider's office, submitting the request through the correct portal or fax, and following up until you have a clear approval or denial on file."
+            },
+            {
+              "heading": "Staying Organized With Claims and Follow-Ups",
+              "bullets": [
+                "Track every submission with a date and status",
+                "Set follow-up reminders for pending items",
+                "Flag denials for the billing team promptly"
+              ],
+              "narration": "Keep a simple tracker noting the date each verification or authorization was submitted and its current status, set follow-up reminders so nothing sits forgotten, and flag any denials to the practice's billing team right away so they can resolve it before it delays patient care."
+            }
+          ]
+        },
+        {
+          "id": "med-m2-l4",
+          "title": "Secure Communication & Document Tools",
+          "slides": [
+            {
+              "heading": "Why Secure Communication Tools Matter",
+              "bullets": [
+                "Patient information can't go through regular email",
+                "HIPAA-aware tools add encryption and access controls",
+                "Protects both the patient and the practice"
+              ],
+              "narration": "Because patient information is sensitive, practices use HIPAA-aware communication tools rather than regular personal email or messaging apps. These tools add encryption and access controls, which protects the patient's privacy and shields the practice from compliance problems - and it's a system your client will set you up on directly."
+            },
+            {
+              "heading": "Secure Messaging and Fax Platforms",
+              "bullets": [
+                "Encrypted email services for patient correspondence",
+                "Secure fax platforms like Updox or SRFax",
+                "Practice messaging portals patients log into directly"
+              ],
+              "narration": "You'll often work with encrypted email services for any patient correspondence, secure fax platforms like Updox or SRFax for sending records to other providers, and sometimes a patient portal where messages are exchanged directly inside a secure, logged-in system rather than open email."
+            },
+            {
+              "heading": "Document and E-Signature Tools",
+              "bullets": [
+                "Tools like DocuSign for signed intake forms",
+                "Uploading forms directly into the EHR",
+                "Always confirm a form was received correctly"
+              ],
+              "narration": "E-signature tools like DocuSign are commonly used to collect signed intake or consent forms from patients before their visit, and completed forms are then uploaded into the correct patient record in the EHR. Always double-check that an uploaded document is attached to the right patient and appointment."
+            },
+            {
+              "heading": "Best Practices for Sending Patient Documents",
+              "bullets": [
+                "Double-check the recipient before sending anything",
+                "Use only the approved secure channel every time",
+                "Never attach patient files to personal cloud storage"
+              ],
+              "narration": "Before sending any patient document, double-check the recipient is correct, always use the specific secure channel your client has approved rather than whatever's convenient, and never save or attach patient files to your own personal cloud storage or email - keep everything inside the client's approved systems."
+            }
+          ]
+        },
+        {
+          "id": "med-m2-l5",
+          "title": "Transcription & Documentation Tools",
+          "slides": [
+            {
+              "heading": "What Documentation Support Actually Means",
+              "bullets": [
+                "Typing up dictated administrative notes",
+                "Formatting visit summaries the provider has already written",
+                "Never interpreting or adding medical content yourself"
+              ],
+              "narration": "Documentation support means typing up notes a provider has already dictated, or formatting a visit summary they've already written into the practice's template - it's a typing and formatting task. You never interpret, summarize clinically, or add medical content of your own to what's dictated."
+            },
+            {
+              "heading": "Common Transcription Tools",
+              "bullets": [
+                "Dragon Medical for provider dictation",
+                "General transcription services like TranscribeMe",
+                "Templates provided by the practice itself"
+              ],
+              "narration": "Providers often dictate using tools like Dragon Medical, and a Medical VA may clean up and format that output, or work from audio using a general transcription service. Either way, you'll follow a specific template the practice gives you rather than deciding on formatting yourself."
+            },
+            {
+              "heading": "Accuracy Over Guessing",
+              "bullets": [
+                "Type exactly what was said or written",
+                "Flag unclear audio instead of guessing a word",
+                "Never fill a gap with your own assumption"
+              ],
+              "narration": "Accuracy matters enormously here: type exactly what the provider said or wrote, and if a word or phrase in an audio file is unclear, flag it clearly for the provider to confirm rather than guessing - a guessed word in a medical document can cause real problems."
+            },
+            {
+              "heading": "Knowing Your Boundaries",
+              "bullets": [
+                "You format and transcribe - you don't diagnose",
+                "Any clinical judgment call belongs to the provider",
+                "When in doubt, leave it blank and flag it"
+              ],
+              "narration": "Your role is to accurately transcribe and format what a licensed provider has already said or written - never to interpret symptoms, suggest a diagnosis, or fill in a clinical detail on your own. If anything is ambiguous, leave it blank and flag it for the provider rather than guessing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "med-m3",
+      "title": "Module 3: Core Medical VA Administrative Skills",
+      "lessons": [
+        {
+          "id": "med-m3-l1",
+          "title": "Scheduling & Calendar Management for Clinics",
+          "slides": [
+            {
+              "heading": "Managing Multiple Provider Calendars",
+              "bullets": [
+                "Each provider may have their own calendar/rules",
+                "Track availability, days off, and blocked time",
+                "Keep a master view for the whole practice"
+              ],
+              "narration": "In a busy clinic, you may be managing calendars for several providers at once, each with their own availability, days off, and blocked administrative time. Keeping a master overview of the whole practice's schedule helps you spot conflicts early and book new patients into the right provider's open slots."
+            },
+            {
+              "heading": "Understanding Appointment Types and Durations",
+              "bullets": [
+                "New patient visits usually need more time",
+                "Follow-ups are typically shorter",
+                "Always book according to the practice's set durations"
+              ],
+              "narration": "Different appointment types need different amounts of time - a new patient visit is usually booked longer than a routine follow-up. Your job is to follow the specific durations each practice has set for each visit type, not to estimate on your own, so the day stays on schedule."
+            },
+            {
+              "heading": "Reminders and Confirmations",
+              "bullets": [
+                "Automated reminders reduce no-shows significantly",
+                "Confirm appointments a day or two ahead",
+                "Log confirmed, unconfirmed, and cancelled statuses"
+              ],
+              "narration": "Sending appointment reminders one to two days ahead - by text, email, or phone - meaningfully reduces no-shows. Keep the schedule updated with a clear status for each appointment: confirmed, unconfirmed, or cancelled, so the front office always knows exactly who to expect that day."
+            },
+            {
+              "heading": "Handling Schedule Conflicts and Urgent Slots",
+              "bullets": [
+                "Some practices reserve same-day urgent slots",
+                "Reshuffle politely when double-bookings happen",
+                "Always check the practice's own conflict-resolution rules"
+              ],
+              "narration": "Many practices keep a few same-day slots open for urgent scheduling needs, decided by clinical staff, not by you. When a scheduling conflict comes up, reshuffle appointments politely and follow the specific rules your client has set for who gets priority - this is a scheduling decision, not a medical one."
+            }
+          ]
+        },
+        {
+          "id": "med-m3-l2",
+          "title": "Patient Intake & Data Entry",
+          "slides": [
+            {
+              "heading": "What Intake Forms Include",
+              "bullets": [
+                "Demographic details - name, address, date of birth",
+                "Insurance information and ID numbers",
+                "Emergency contact and consent signatures"
+              ],
+              "narration": "Patient intake forms typically collect demographic details like name, address, and date of birth, insurance plan and ID information, and emergency contact details along with signed consent forms. Your job as a Medical VA is entering this exact information accurately into the practice's system."
+            },
+            {
+              "heading": "Entering Data Accurately Into the EHR",
+              "bullets": [
+                "Double-check spelling of names and ID numbers",
+                "Match new entries against existing records first",
+                "Avoid creating duplicate patient profiles"
+              ],
+              "narration": "Accurate data entry means double-checking the spelling of names and every digit of an ID or policy number, checking whether a patient already has a record before creating a new one, and avoiding duplicate profiles that can cause real confusion for billing and scheduling later on."
+            },
+            {
+              "heading": "Handling Incomplete Intake Forms",
+              "bullets": [
+                "Never guess or fill in missing information",
+                "Contact the patient to request what's missing",
+                "Flag incomplete records for the front office"
+              ],
+              "narration": "If a patient's intake form is missing a field, never fill it in with a guess. Instead, reach out to the patient to request the missing information, or flag the incomplete record for the practice's front office to follow up on - accuracy always comes before speed here."
+            },
+            {
+              "heading": "Quality Control on Your Own Entries",
+              "bullets": [
+                "Proofread every entry before marking it complete",
+                "Spot-check a sample of your work regularly",
+                "Ask for feedback on your accuracy early on"
+              ],
+              "narration": "Build the habit of proofreading each entry before marking it done, and periodically spot-check a handful of your own past entries for errors. Especially in your first weeks with a new client, ask for feedback on your accuracy so you can catch and correct any patterns quickly."
+            }
+          ]
+        },
+        {
+          "id": "med-m3-l3",
+          "title": "Insurance Verification & Prior Authorization Basics",
+          "slides": [
+            {
+              "heading": "Steps to Verify Insurance Eligibility",
+              "bullets": [
+                "Check the payer portal or call the insurer",
+                "Confirm the plan is active for the visit date",
+                "Note copay, deductible, and coverage details"
+              ],
+              "narration": "To verify insurance, check the patient's plan through the payer's online portal or by phone, confirm the plan is active for the specific date of the visit, and record details like the copay amount, deductible status, and what services are covered - all before the patient's appointment."
+            },
+            {
+              "heading": "Documenting Verification Results",
+              "bullets": [
+                "Log results in the patient's file every time",
+                "Note the date and source of verification",
+                "Flag any coverage gaps for the billing team"
+              ],
+              "narration": "Every verification you complete should be logged directly in the patient's file, noting the date you checked and how - portal or phone call. If you find a coverage gap or an inactive plan, flag it clearly for the billing team so they can address it before the visit."
+            },
+            {
+              "heading": "Prior Authorization Paperwork Step by Step",
+              "bullets": [
+                "Collect required forms from the provider's office",
+                "Submit through the correct payer channel",
+                "Track the request until a decision arrives"
+              ],
+              "narration": "Prior authorization paperwork usually starts with collecting the required forms from the provider's office, submitting them through whatever channel the payer requires - a portal, fax, or online form - and then tracking the request closely until you receive a clear approval or denial from the insurer."
+            },
+            {
+              "heading": "Communicating Coverage Status to Patients",
+              "bullets": [
+                "Share only the factual coverage information you have",
+                "Never guess about what a plan will or won't cover",
+                "Direct clinical questions to the provider's staff"
+              ],
+              "narration": "When telling a patient about their coverage, stick strictly to the factual verification results you've documented - never guess about what a treatment might cost or whether something will be approved. If a patient asks a clinical question, professionally redirect them to the provider or nursing staff."
+            }
+          ]
+        },
+        {
+          "id": "med-m3-l4",
+          "title": "Professional Patient Communication",
+          "slides": [
+            {
+              "heading": "Types of Patient Communication You'll Handle",
+              "bullets": [
+                "Appointment reminders and confirmations",
+                "Rescheduling and cancellation messages",
+                "Requests for missing paperwork"
+              ],
+              "narration": "Most of your patient-facing communication will be administrative: sending appointment reminders and confirmations, helping patients reschedule or cancel, and following up when paperwork like an intake form or insurance card is still missing before their visit."
+            },
+            {
+              "heading": "Keeping a Professional, Warm Tone",
+              "bullets": [
+                "Clear, friendly, and respectful in every message",
+                "Use the patient's name when appropriate",
+                "Stay calm even if a patient seems frustrated"
+              ],
+              "narration": "Every message to a patient should be clear, friendly, and respectful - using their name where it fits naturally, and staying calm and patient even if they seem frustrated about a wait time or a scheduling mix-up. Your tone reflects directly on the practice."
+            },
+            {
+              "heading": "What a Medical VA Should Never Say",
+              "bullets": [
+                "Never answer clinical or symptom-related questions",
+                "Never suggest what a symptom might mean",
+                "Always redirect clinical questions to licensed staff"
+              ],
+              "narration": "If a patient asks a clinical question - about symptoms, medication, or what a result means - never attempt to answer it yourself, even if you think you know. Always respond professionally by letting them know a member of the clinical team will follow up with them directly."
+            },
+            {
+              "heading": "Simple Templates for Common Messages",
+              "bullets": [
+                "A reminder template with date, time, and provider",
+                "A reschedule template offering two new options",
+                "A missing-paperwork template with a clear deadline"
+              ],
+              "narration": "Having a few ready-made templates saves time and keeps your tone consistent - one for appointment reminders with the date, time, and provider name, one for offering new times after a cancellation, and one for politely requesting missing paperwork with a clear deadline."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "med-m4",
+      "title": "Module 4: Building Your Medical VA Portfolio",
+      "lessons": [
+        {
+          "id": "med-m4-l1",
+          "title": "Creating Sample Administrative Workflows",
+          "slides": [
+            {
+              "heading": "Why Sample Workflows Matter",
+              "bullets": [
+                "Clients want proof you can handle real processes",
+                "A workflow document shows you think in systems",
+                "No paying client needed to build one"
+              ],
+              "narration": "Before you land your first paying client, building sample administrative workflows shows real proof of your skills, not just a resume claim. It demonstrates you can think through a process step by step - exactly what a busy medical practice needs from a reliable VA."
+            },
+            {
+              "heading": "Building a Mock Patient Intake Workflow",
+              "bullets": [
+                "Map each step from form received to filed in EHR",
+                "Note who does what and in what order",
+                "Include a simple checklist for accuracy"
+              ],
+              "narration": "Create a mock intake workflow document mapping every step from a form being received to it being fully entered and filed in the EHR, noting who's responsible at each step, and including a short accuracy checklist - this is exactly the kind of document a real practice would value."
+            },
+            {
+              "heading": "Building a Mock Scheduling Workflow",
+              "bullets": [
+                "Outline steps for booking, confirming, and rescheduling",
+                "Include a simple appointment-type reference chart",
+                "Show how conflicts get resolved"
+              ],
+              "narration": "Build a second sample document outlining your scheduling workflow: how a new appointment gets booked and confirmed, a quick reference chart of appointment types and durations, and a clear process for handling conflicts or cancellations - practical, presentable proof of your organizational skills."
+            },
+            {
+              "heading": "Presenting Your Workflows Neatly",
+              "bullets": [
+                "Use clean formatting - headers, numbered steps",
+                "Export as a simple PDF or shareable doc",
+                "Keep it to one page per workflow"
+              ],
+              "narration": "Format your sample workflows cleanly with clear headers and numbered steps, export them as simple, shareable PDFs, and keep each one to about a single page - a neat, professional-looking document says as much about your organizational skills as the content itself does."
+            }
+          ]
+        },
+        {
+          "id": "med-m4-l2",
+          "title": "Building a Medical VA Portfolio",
+          "slides": [
+            {
+              "heading": "What a Medical VA Portfolio Needs",
+              "bullets": [
+                "A short intro naming your specialty",
+                "2-3 sample workflows or templates",
+                "A clear note on your privacy-first approach"
+              ],
+              "narration": "A strong portfolio includes a short introduction naming your specialty as a Medical VA, two or three sample workflows or templates you've built, and a clear statement about how seriously you take patient privacy and confidentiality - something every medical practice cares deeply about."
+            },
+            {
+              "heading": "Where to Host Your Portfolio",
+              "bullets": [
+                "A simple free website - Canva or Carrd",
+                "A well-organized Google Drive folder works too",
+                "Keep the link short and professional"
+              ],
+              "narration": "You don't need a paid website - a simple page built for free in Canva or Carrd, or a neatly organized, view-only Google Drive folder, works just as well as long as the link is short, professional, and easy to include in a proposal or application."
+            },
+            {
+              "heading": "Highlighting the Tools You Know",
+              "bullets": [
+                "List specific EHR and scheduling systems you've practiced",
+                "Mention insurance verification tools you understand",
+                "Specificity builds more confidence than a general claim"
+              ],
+              "narration": "List the specific tools you're comfortable with - a particular EHR system, a scheduling platform, an insurance verification portal - rather than a vague claim like 'tech-savvy.' Specific tool names build far more confidence with a practice manager reviewing your portfolio."
+            },
+            {
+              "heading": "Keeping Your Portfolio Updated",
+              "bullets": [
+                "Swap in real client work as soon as you have it",
+                "Remove your weakest samples over time",
+                "Revisit and refresh it every few months"
+              ],
+              "narration": "As soon as you land real client work, with their permission, swap it in for your mock samples, and keep quietly retiring your weakest early pieces. Revisiting your portfolio every few months keeps it looking current and lets it grow alongside your actual experience."
+            }
+          ]
+        },
+        {
+          "id": "med-m4-l3",
+          "title": "Showcasing Your Organizational & Compliance Skills",
+          "slides": [
+            {
+              "heading": "Why Compliance-Mindedness Matters to Clients",
+              "bullets": [
+                "Medical practices are especially risk-averse",
+                "A privacy-first mindset is a real selling point",
+                "Trust is earned before access is given"
+              ],
+              "narration": "Medical practices are far more risk-averse than most businesses, since a data mishandling incident can carry real consequences. Showing that you take privacy and compliance seriously - not as an afterthought, but as a habit - is genuinely one of your strongest selling points as a Medical VA."
+            },
+            {
+              "heading": "Documenting Your Privacy-First Habits",
+              "bullets": [
+                "Note your workspace security setup in your portfolio",
+                "Mention your understanding of basic HIPAA awareness",
+                "Reference any relevant training certificates"
+              ],
+              "narration": "Include a short section in your portfolio describing your secure home workspace setup, your general awareness of HIPAA-style privacy practices, and any relevant training or certificates you've completed - this reassures a practice that you'll handle their patients' information responsibly from day one."
+            },
+            {
+              "heading": "A Sample Checklist You Can Show",
+              "bullets": [
+                "A short data-handling checklist you follow",
+                "Shows structure without overstating your expertise",
+                "Keep it simple and honest, not legalistic"
+              ],
+              "narration": "Build a simple checklist of the data-handling habits you follow - locking your screen, using secure channels, verifying recipients - and include it in your portfolio. Keep it honest and practical rather than legal-sounding, since you're not offering legal advice, just showing a genuinely careful process."
+            },
+            {
+              "heading": "Communicating Trustworthiness in Your Pitch",
+              "bullets": [
+                "Mention your privacy habits early in outreach",
+                "Be specific rather than making broad promises",
+                "Let your sample workflows do some of the talking"
+              ],
+              "narration": "When pitching a medical practice, mention your careful approach to patient data early in your message, be specific rather than making broad promises like 'HIPAA compliant guaranteed,' and let your sample workflows and checklist speak for the genuine care you bring to the work."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "med-m5",
+      "title": "Module 5: Resume and Job Application Mastery for Medical VAs",
+      "lessons": [
+        {
+          "id": "med-m5-l1",
+          "title": "Writing a Medical VA Resume",
+          "slides": [
+            {
+              "heading": "What Belongs on a Medical VA Resume",
+              "bullets": [
+                "A clear headline naming your specialty",
+                "EHR and scheduling tools you know",
+                "A link to your portfolio, front and center"
+              ],
+              "narration": "Your resume should open with a clear headline like 'Medical Virtual Assistant,' list the specific EHR, scheduling, and billing tools you're familiar with, and place your portfolio link somewhere it can't be missed - practice managers scan resumes quickly, so clarity upfront matters most."
+            },
+            {
+              "heading": "Describing Experience Without a Job History",
+              "bullets": [
+                "Frame your training and mock workflows as real work",
+                "Use action verbs - scheduled, verified, entered, coordinated",
+                "Quantify wherever you can, even from practice work"
+              ],
+              "narration": "If you don't have paid experience yet, describe your training and mock workflows using strong action verbs like scheduled, verified, entered, and coordinated, and quantify what you can - for example, 'built a 12-step patient intake workflow' - to make your skills feel concrete and real."
+            },
+            {
+              "heading": "Formatting for Readability",
+              "bullets": [
+                "Keep it to one page",
+                "Use short bullet points, not paragraphs",
+                "Consistent, clean font and spacing"
+              ],
+              "narration": "Keep your resume to a single page with short, scannable bullet points rather than dense paragraphs, using a clean and consistent font throughout - a practice manager reviewing many applicants will often spend only a few seconds on each resume before deciding to look closer."
+            },
+            {
+              "heading": "Common Resume Mistakes to Avoid",
+              "bullets": [
+                "Vague phrases like 'healthcare expert'",
+                "No mention of privacy or confidentiality habits",
+                "Typos - always proofread out loud"
+              ],
+              "narration": "Avoid vague self-descriptions like 'healthcare expert' with nothing specific to back it up, be sure to mention your careful, privacy-conscious work habits somewhere, and always proofread out loud before sending - in a field built on trust and accuracy, a typo undercuts your credibility fast."
+            }
+          ]
+        },
+        {
+          "id": "med-m5-l2",
+          "title": "Crafting Winning Proposals for Medical Practices",
+          "slides": [
+            {
+              "heading": "What a Good Proposal Includes",
+              "bullets": [
+                "A quick summary of their administrative pain point",
+                "Your specific plan for helping with it",
+                "Clear pricing and a simple next step"
+              ],
+              "narration": "A strong proposal briefly names the administrative pain point you noticed or that the job posting mentioned - like scheduling gaps or slow insurance verification - lays out your specific plan for handling it, and ends with clear pricing and an easy next step like a short call."
+            },
+            {
+              "heading": "Personalizing Every Proposal",
+              "bullets": [
+                "Reference their actual practice type and needs",
+                "Never send an obviously copy-pasted pitch",
+                "Mention your privacy-conscious approach directly"
+              ],
+              "narration": "Every proposal should reference the specific practice - its specialty, size, or the exact administrative need in their posting - rather than a generic copy-paste message. Mentioning your privacy-conscious, detail-oriented approach directly also reassures a medical practice that you understand what's at stake."
+            },
+            {
+              "heading": "Structuring Your Pricing",
+              "bullets": [
+                "Package by deliverables - scheduling, intake, verification",
+                "Offer 2-3 clear tiers, not endless options",
+                "Be upfront about what's NOT included"
+              ],
+              "narration": "Package your pricing around clear deliverables - for example, daily scheduling support, intake processing, and insurance verification - and offer two or three simple tiers rather than overwhelming a practice with options. Be upfront about anything explicitly outside your scope, like clinical documentation."
+            },
+            {
+              "heading": "Following Up Without Being Pushy",
+              "bullets": [
+                "One polite follow-up after about a week",
+                "Add new value, don't just 'check in'",
+                "Know when to move on gracefully"
+              ],
+              "narration": "If you don't hear back, one polite follow-up after about a week is reasonable - ideally adding something useful, like a quick observation about their booking process, rather than just 'checking in.' If there's still no response after that, it's fine to move on gracefully."
+            }
+          ]
+        },
+        {
+          "id": "med-m5-l3",
+          "title": "Where to Find Medical VA Clients",
+          "slides": [
+            {
+              "heading": "Freelance Platforms",
+              "bullets": [
+                "Upwork, Onlinejobs.ph, and similar sites",
+                "Filter for medical admin / healthcare VA roles",
+                "A strong profile and portfolio link matter most"
+              ],
+              "narration": "Freelance platforms like Upwork and Onlinejobs.ph regularly list medical administrative and healthcare VA roles - filter specifically for those terms, and make sure your profile headline and portfolio link clearly signal your specialty, since practice managers often decide quickly who to shortlist."
+            },
+            {
+              "heading": "Local Medical Practices and Clinics",
+              "bullets": [
+                "Small clinics, dental offices, and specialists nearby",
+                "Many still rely on overworked front-desk staff",
+                "A polite, specific outreach message works well"
+              ],
+              "narration": "Small local clinics, dental offices, and specialist practices often rely on one overworked front-desk person handling everything. A polite, specific outreach message pointing out how remote administrative support could ease that load - scheduling, intake, or insurance follow-up - can open a real conversation."
+            },
+            {
+              "heading": "Referrals and Word of Mouth",
+              "bullets": [
+                "Your first client is your best source of the next",
+                "Ask happy clients if they know other practices",
+                "A short testimonial makes referrals even easier"
+              ],
+              "narration": "Once you land one satisfied practice as a client, ask directly whether they know any other providers who could use similar administrative help - referrals in the medical field convert especially well, since practices trust recommendations from colleagues far more than a cold application."
+            },
+            {
+              "heading": "VA and Healthcare Admin Communities",
+              "bullets": [
+                "Medical VA and healthcare admin Facebook groups",
+                "Freelancer communities often share healthcare leads",
+                "Be an active, helpful member, not just a lurker"
+              ],
+              "narration": "Facebook groups and online communities focused on medical VAs or healthcare administration often share job leads, and general freelancer communities occasionally post healthcare-specific opportunities too. Being an active, genuinely helpful member of these groups tends to surface the best opportunities before they're widely posted."
+            }
+          ]
+        },
+        {
+          "id": "med-m5-l4",
+          "title": "Nailing the Client Interview/Discovery Call",
+          "slides": [
+            {
+              "heading": "What Practices Are Actually Evaluating",
+              "bullets": [
+                "Can you follow detailed procedures precisely?",
+                "Do you understand the privacy stakes involved?",
+                "Will you be reliable and easy to work with?"
+              ],
+              "narration": "In a discovery call with a medical practice, they're evaluating whether you can follow detailed procedures precisely, whether you genuinely understand the privacy stakes of handling patient data, and whether you'll be a reliable, easy-to-work-with presence on their team from day one."
+            },
+            {
+              "heading": "Questions You Should Ask Them",
+              "bullets": [
+                "What EHR and scheduling systems do you use?",
+                "What's frustrated you about admin support so far?",
+                "Who approves prior authorizations and billing questions?"
+              ],
+              "narration": "Come prepared with your own questions: which EHR and scheduling systems does the practice use, what's frustrated them about administrative support in the past, and who on their team handles approvals for things like prior authorizations - this shows you're thinking like a real team member."
+            },
+            {
+              "heading": "Talking About Pricing Confidently",
+              "bullets": [
+                "Know your rate before the call, don't improvise",
+                "Explain what's included, not just the number",
+                "It's okay to say you'll follow up in writing"
+              ],
+              "narration": "Decide your rate before the call so you're never improvising under pressure, explain clearly what tasks are included at that price, and it's completely fine to say you'll send a full written proposal afterward rather than negotiating everything on the spot."
+            },
+            {
+              "heading": "Following Up After the Call",
+              "bullets": [
+                "Send a written summary within 24 hours",
+                "Restate what you understood about their workflow",
+                "Attach your proposal or next steps clearly"
+              ],
+              "narration": "Within 24 hours of the call, send a short written summary restating what you understood about their current workflow and needs, attached to your proposal or a clear next step - this reinforces that you listened closely and helps keep the process moving."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "med-m6",
+      "title": "Module 6: Landing Your First Medical Client and Beyond",
+      "lessons": [
+        {
+          "id": "med-m6-l1",
+          "title": "Onboarding a New Medical Practice Client",
+          "slides": [
+            {
+              "heading": "What Onboarding Actually Covers",
+              "bullets": [
+                "Getting access to their systems safely",
+                "Learning their specific SOPs and templates",
+                "Agreeing on the first month's plan"
+              ],
+              "narration": "Onboarding is the process of getting properly set up with a new practice: gaining safe, limited access to their EHR and scheduling systems, learning their specific procedures and document templates, and agreeing together on what your first month of work will actually cover."
+            },
+            {
+              "heading": "Getting System Access the Right Way",
+              "bullets": [
+                "Ask for your own limited-access login, never a shared one",
+                "Confirm exactly what you're permitted to view or edit",
+                "Ask about their specific privacy policy upfront"
+              ],
+              "narration": "Always ask for your own individual login with only the access level you actually need, rather than a shared or admin-level account. Confirm exactly what parts of the system you're permitted to view or edit, and ask directly about the practice's specific privacy policy before you begin."
+            },
+            {
+              "heading": "Learning Their SOPs and Templates",
+              "bullets": [
+                "Request any existing procedure documents",
+                "Ask for a short walkthrough of key workflows",
+                "Take detailed notes during your first week"
+              ],
+              "narration": "Request any existing standard operating procedure documents the practice already has, ask for a short walkthrough of the key workflows you'll be handling, and take detailed notes during your first week - this upfront effort saves a lot of back-and-forth once you're working independently."
+            },
+            {
+              "heading": "Setting the First 30 Days' Plan",
+              "bullets": [
+                "Agree on which tasks you'll own first",
+                "Set your first check-in date",
+                "Clarify how and when you'll be paid"
+              ],
+              "narration": "Before diving in, agree on which specific tasks you'll own in the first month - maybe just scheduling and intake at first - set a date for your first check-in call, and make sure payment terms - amount, method, and schedule - are clearly agreed on both sides."
+            }
+          ]
+        },
+        {
+          "id": "med-m6-l2",
+          "title": "Setting Expectations and Pricing Your Services",
+          "slides": [
+            {
+              "heading": "Why Clear Expectations Prevent Problems",
+              "bullets": [
+                "Most client conflicts come from unspoken assumptions",
+                "A short written agreement protects you both",
+                "Revisit and adjust as the relationship grows"
+              ],
+              "narration": "Most conflicts between a VA and a medical practice come from things never actually agreed on out loud. A short written agreement covering scope, pricing, and response times protects you both and can always be revisited and adjusted as your working relationship grows over time."
+            },
+            {
+              "heading": "Common Pricing Models",
+              "bullets": [
+                "Monthly retainer - most common for ongoing support",
+                "Per-project - for a one-time cleanup or migration",
+                "Hourly - useful for less predictable workloads"
+              ],
+              "narration": "A monthly retainer is the most common model for ongoing administrative support, a per-project rate suits a one-time task like cleaning up a backlog of records, and hourly pricing works well for practices with a less predictable, variable workload from week to week."
+            },
+            {
+              "heading": "What to Include in Your Scope of Work",
+              "bullets": [
+                "Which tasks are included - scheduling, intake, verification",
+                "What counts as a routine task vs a new request",
+                "What's explicitly NOT included (e.g. clinical documentation)"
+              ],
+              "narration": "Your scope of work should spell out exactly which administrative tasks are included, what counts as routine work versus a brand-new request that needs separate pricing, and what's explicitly outside your scope, like any clinical documentation, which always stays with licensed staff."
+            },
+            {
+              "heading": "Raising Your Rates Over Time",
+              "bullets": [
+                "Review rates as your skill and reliability grow",
+                "Give existing clients advance notice",
+                "New clients can start at your current rate"
+              ],
+              "narration": "As your skills, speed, and track record grow, it's normal and healthy to raise your rates. Give existing clients advance notice - thirty to sixty days is common - while any brand-new client simply starts at your current, updated rate from day one."
+            }
+          ]
+        },
+        {
+          "id": "med-m6-l3",
+          "title": "Managing Multiple Practice Accounts",
+          "slides": [
+            {
+              "heading": "Staying Organized Across Practices",
+              "bullets": [
+                "Separate, clearly labeled logins per practice",
+                "Color-code or label tasks by client",
+                "A weekly planning block prevents last-minute chaos"
+              ],
+              "narration": "Managing several medical practices well comes down to keeping strictly separate, clearly labeled logins for each one, color-coding or labeling tasks by client in your own task tracker, and setting aside a dedicated weekly planning block instead of reacting to each day as it comes."
+            },
+            {
+              "heading": "Avoiding Mix-Ups Between Practices",
+              "bullets": [
+                "Double-check which system you're in before any entry",
+                "Never reuse a template meant for another practice",
+                "Build a simple pre-task checklist"
+              ],
+              "narration": "Entering data into the wrong practice's system is a real and serious risk once you're juggling multiple clients - always confirm which system you're logged into before making any entry, never copy a template built for one practice directly into another's, and consider a short pre-task checklist."
+            },
+            {
+              "heading": "Batching Work for Efficiency",
+              "bullets": [
+                "Process a batch of intake forms in one sitting",
+                "Handle insurance verifications together, per practice",
+                "Batch patient communications too"
+              ],
+              "narration": "Batching similar tasks - processing a stack of intake forms in one sitting, running through insurance verifications together for one practice at a time, or replying to patient messages at set times each day - is far more efficient than constantly switching between clients and task types."
+            },
+            {
+              "heading": "Knowing When You've Reached Capacity",
+              "bullets": [
+                "Quality should never quietly slip as you add clients",
+                "Track your actual hours per practice honestly",
+                "It's okay to pause new clients or raise rates instead"
+              ],
+              "narration": "Watch for early signs that quality is slipping as you take on more practices - slower turnaround, small entry errors, missed follow-ups. Track your real hours per practice honestly, and remember it's completely fine to pause new clients or raise your rates instead of stretching yourself too thin."
+            }
+          ]
+        },
+        {
+          "id": "med-m6-l4",
+          "title": "Handling Difficult Feedback and Revisions",
+          "slides": [
+            {
+              "heading": "Receiving Feedback Without Getting Defensive",
+              "bullets": [
+                "Feedback is about the process, not you personally",
+                "Ask clarifying questions before making changes",
+                "Thank the client for being specific"
+              ],
+              "narration": "It's easy to feel personally criticized when a practice manager flags an error in your work, but feedback is about the process, not you - ask clarifying questions if something's unclear, and genuinely thank clients who give specific, actionable feedback rather than getting defensive."
+            },
+            {
+              "heading": "Handling Vague Feedback",
+              "bullets": [
+                "'This isn't quite right' needs more detail",
+                "Ask which specific step or field was the issue",
+                "Confirm the correct process going forward"
+              ],
+              "narration": "When feedback is vague, like 'this isn't quite right,' ask specifically which step, field, or document was the issue, then confirm together what the correct process should look like going forward - clarifying early prevents the same small mistake from repeating."
+            },
+            {
+              "heading": "Managing Scope Creep in Revisions",
+              "bullets": [
+                "Define which corrections are included as normal quality control",
+                "A request for an entirely new workflow isn't a 'revision'",
+                "Politely price extra requests separately"
+              ],
+              "narration": "Define upfront which kinds of corrections count as normal quality control that's simply part of doing the job well, versus a request for an entirely new workflow or added responsibility - which isn't really a 'revision,' and it's fair to politely price that as an additional request."
+            },
+            {
+              "heading": "Turning Difficult Clients Into Long-Term Ones",
+              "bullets": [
+                "Most 'difficult' clients just want reassurance things are handled",
+                "Consistent, calm communication builds trust",
+                "Know when a client truly isn't the right fit"
+              ],
+              "narration": "Many practice managers who seem difficult at first just want reassurance that their patients' information and schedule are being handled carefully - consistent, calm communication usually turns them into your most loyal clients over time. Occasionally, though, a client genuinely isn't the right fit, and it's okay to part ways professionally."
+            }
+          ]
+        },
+        {
+          "id": "med-m6-l5",
+          "title": "Growing Your Medical VA Career",
+          "slides": [
+            {
+              "heading": "Leveling Up Your Skill Set",
+              "bullets": [
+                "Learn additional EHR and billing systems",
+                "Get comfortable with more complex insurance workflows",
+                "Study medical office terminology (administrative, not clinical)"
+              ],
+              "narration": "As you grow, learning additional EHR and billing systems, getting comfortable with more complex insurance and prior authorization workflows, and picking up common administrative and billing terminology used in medical offices all let you charge more and take on bigger, more complex practices."
+            },
+            {
+              "heading": "Deciding Between More Clients or Higher Rates",
+              "bullets": [
+                "More clients means more income but more hours",
+                "Higher rates mean the same hours, more income",
+                "Most successful VAs eventually favor the second"
+              ],
+              "narration": "At some point you'll choose between taking on more practices at your current rate, or fewer practices at a higher rate. Most experienced Medical VAs eventually favor raising rates over endlessly adding clients, since it protects both accuracy and their own time - both matter enormously in this field."
+            },
+            {
+              "heading": "Building Toward an Agency or Specialization",
+              "bullets": [
+                "Some VAs eventually hire and train other Medical VAs",
+                "Others specialize deeply in one area, like billing",
+                "Both paths are valid - choose what fits your goals"
+              ],
+              "narration": "Some experienced Medical VAs eventually build a small team, training and subcontracting other administrative VAs while they focus on client relationships; others prefer to specialize deeply in one area, like insurance verification, and become the go-to expert. Neither path is more 'correct' than the other."
+            },
+            {
+              "heading": "Congratulations on Finishing This Training",
+              "bullets": [
+                "You've covered the full Medical VA administrative skillset",
+                "You have a portfolio, resume, and pricing plan",
+                "Time to start applying with confidence"
+              ],
+              "narration": "Congratulations - you've now covered the full Medical VA administrative skillset, from EHR systems and scheduling to portfolio-building, client acquisition, and long-term growth, all while staying firmly within an administrative, non-clinical role. You're ready to start applying and pitching with real confidence."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

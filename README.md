@@ -13,8 +13,9 @@ enrollment paywall.
 - **Landing page** marketing the program, with a "Choose Your Specialty" niche showcase and a
   "Meet Your Trainer" section with real trainer photos.
 - **Training niches** (see "Training niches" below): right after enrolling, a student picks the
-  VA specialty they want to train for — currently General & Admin VA or Social Media Management
-  VA, with more niches easy to add. Each niche is a fully separate course.
+  VA specialty they want to train for — 6 are currently live (General & Admin, Social Media
+  Management, E-commerce, Medical, Bookkeeping, Real Estate), with more easy to add. Each niche
+  is a fully separate course.
 - **Paywall**: registration is free, but every lesson, quiz, and the video streaming endpoint
   itself re-checks payment status server-side on every request. Nothing leaks before payment.
 - **25 narrated video lessons per niche** across 6 modules — e.g. for General & Admin VA: VA
@@ -207,12 +208,22 @@ modules, ~25 narrated video lessons, 6 quizzes, and 4 certificates — not a sha
 with niche-flavored electives bolted on. Once picked, a niche can't be changed from the app
 itself (see the comment in `src/app/api/dashboard/choose-niche/route.ts` for why).
 
-Currently live:
+Currently live (all 6):
 
 - **General & Admin VA** (`va-foundations`) — the original course: broad administrative
   support, email, calendar, data entry, scheduling, client communication.
 - **Social Media Management VA** (`va-social-media`) — content calendars, scheduling,
   community management, and analytics for Facebook, Instagram, and TikTok.
+- **E-commerce VA** (`va-ecommerce`) — product listings, order fulfillment, and customer
+  service for Shopify and Amazon stores.
+- **Medical VA** (`va-medical`) — purely administrative support for medical practices:
+  scheduling, EHR data entry, insurance verification, and non-clinical patient communication.
+  Never clinical — every lesson and quiz stays strictly on the administrative side, with
+  explicit reminders to redirect any clinical question to licensed staff.
+- **Bookkeeping VA** (`va-bookkeeping`) — transaction recording, reconciliation, invoicing,
+  and basic financial reports using QuickBooks and Xero.
+- **Real Estate VA** (`va-real-estate`) — listing coordination, lead follow-up, transaction
+  coordination, and marketing support for agents and teams.
 
 Everyone who enrolled before this system existed was automatically kept on General & Admin VA
 by a one-time database migration — they were never interrupted with the picker screen.
@@ -231,7 +242,8 @@ by a one-time database migration — they were never interrupted with the picker
 - `media/videos/<lessonId>.mp4` — narrated lesson videos. Lesson IDs must be globally unique
   across every niche (there's no per-niche subfolder), which is why this project's IDs are
   prefixed per niche (`m1-l1` for General & Admin VA, `sm-m1-l1` for Social Media Management
-  VA) — keep that convention for any niche you add.
+  VA, `ec-` for E-commerce, `med-` for Medical, `bk-` for Bookkeeping, `re-` for Real Estate) —
+  keep that convention for any niche you add.
 
 **Adding another niche:**
 
@@ -262,7 +274,7 @@ seed script upserts by ID.
 
 ## About the video lessons
 
-The 50 lessons across both niches in `media/videos/*.mp4` are narrated slide videos, generated
+The 150 lessons across all 6 niches in `media/videos/*.mp4` are narrated slide videos, generated
 automatically by `scripts/generate_videos.py`: it renders each slide as a branded PNG,
 synthesizes narration with [Piper](https://github.com/OHF-voice/piper1-gpl) (a free, offline
 neural text-to-speech engine — no video-hosting or paid TTS account needed, and it sounds like

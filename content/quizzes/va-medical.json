@@ -1,0 +1,426 @@
+{
+  "quizzes": [
+    {
+      "id": "med-quiz-m1",
+      "moduleId": "med-m1",
+      "title": "Module 1 Quiz: Starting Out as a Medical VA",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "med-m1-q1",
+          "text": "What is the primary role of a Medical VA?",
+          "choices": [
+            "Providing remote administrative support like scheduling and data entry",
+            "Diagnosing patient conditions remotely",
+            "Prescribing medication refills",
+            "Performing clinical exams over video"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "med-m1-q2",
+          "text": "Which of these is something a Medical VA should NEVER do?",
+          "choices": [
+            "Update a patient's contact information",
+            "Schedule a follow-up appointment",
+            "Give medical advice or a diagnosis",
+            "Verify insurance coverage"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "med-m1-q3",
+          "text": "Why do medical practices hire Medical VAs?",
+          "choices": [
+            "To replace all licensed clinical staff",
+            "To reduce administrative burden and cost without added office overhead",
+            "Because it's legally required",
+            "To handle prescriptions remotely"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "med-m1-q4",
+          "text": "Which trait matters most for someone considering this niche?",
+          "choices": [
+            "Comfort giving health advice to strangers",
+            "Detail-orientation and respect for confidentiality",
+            "Preference for loud, shared workspaces",
+            "Avoiding all software tools"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "med-m1-q5",
+          "text": "What should a Medical VA do if asked about HIPAA rules they're unsure of?",
+          "choices": [
+            "Guess based on common sense",
+            "Ask the client for their specific privacy policy rather than assume",
+            "Ignore the question",
+            "Look it up and present it as legal advice"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "med-quiz-m2",
+      "moduleId": "med-m2",
+      "title": "Module 2 Quiz: Essential Tools Every Medical VA Must Know",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "med-m2-q1",
+          "text": "What is an EHR system used for?",
+          "choices": [
+            "Storing and managing patient records digitally",
+            "Processing payroll for staff",
+            "Hosting a practice's website",
+            "Managing social media accounts"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "med-m2-q2",
+          "text": "Inside an EHR, what task is appropriate for a Medical VA?",
+          "choices": [
+            "Entering a clinical diagnosis",
+            "Updating a patient's contact and insurance details",
+            "Prescribing treatment",
+            "Interpreting lab results"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "med-m2-q3",
+          "text": "What is the purpose of appointment scheduling software?",
+          "choices": [
+            "To keep provider calendars organized and reduce no-shows",
+            "To store billing passwords",
+            "To replace patient consent forms",
+            "To send marketing emails only"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "med-m2-q4",
+          "text": "What does insurance verification confirm?",
+          "choices": [
+            "That a patient's coverage is active for a visit",
+            "A patient's medical diagnosis",
+            "The provider's malpractice insurance",
+            "A patient's clinical history"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "med-m2-q5",
+          "text": "What is prior authorization paperwork mainly about?",
+          "choices": [
+            "Getting a payer's approval before certain services are covered",
+            "Diagnosing why a treatment is needed",
+            "Writing a treatment plan",
+            "Approving a prescription dosage"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "med-m2-q6",
+          "text": "Why are secure messaging and fax tools used instead of regular email?",
+          "choices": [
+            "They add encryption and access controls to protect patient data",
+            "They are cheaper than email",
+            "They allow public sharing of patient files",
+            "They remove the need for passwords"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "med-m2-q7",
+          "text": "When transcribing a provider's dictation, what should a Medical VA do with an unclear word?",
+          "choices": [
+            "Guess the most likely word",
+            "Flag it for the provider to confirm rather than guessing",
+            "Leave the entire note blank",
+            "Delete the recording"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "med-quiz-m3",
+      "moduleId": "med-m3",
+      "title": "Module 3 Quiz: Core Medical VA Administrative Skills",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "med-m3-q1",
+          "text": "What should a Medical VA do when a patient intake form is missing information?",
+          "choices": [
+            "Fill in a reasonable guess",
+            "Contact the patient or flag it - never guess",
+            "Submit the form as-is",
+            "Delete the incomplete form"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "med-m3-q2",
+          "text": "What does accurate data entry into an EHR require?",
+          "choices": [
+            "Double-checking spelling and ID numbers, avoiding duplicates",
+            "Entering data as quickly as possible regardless of errors",
+            "Skipping verification steps to save time",
+            "Copying data from unrelated records"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "med-m3-q3",
+          "text": "If a patient asks a Medical VA a clinical question during a scheduling call, what's the correct response?",
+          "choices": [
+            "Answer based on personal research",
+            "Professionally redirect the question to licensed clinical staff",
+            "Guess an answer to be helpful",
+            "Ignore the patient's question entirely"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "med-m3-q4",
+          "text": "What is a Medical VA's role in prior authorization?",
+          "choices": [
+            "Deciding whether the treatment is medically necessary",
+            "Handling the administrative paperwork and tracking its status",
+            "Performing the authorized procedure",
+            "Writing the clinical justification"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "med-m3-q5",
+          "text": "What is the recommended way to communicate appointment reminders?",
+          "choices": [
+            "Using an approved secure channel with a clear, professional tone",
+            "Posting patient names publicly",
+            "Texting from a personal, unsecured phone number without practice approval",
+            "Skipping reminders to save time"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "med-quiz-m4",
+      "moduleId": "med-m4",
+      "title": "Module 4 Quiz: Building Your Medical VA Portfolio",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "med-m4-q1",
+          "text": "Why build sample administrative workflows before landing a paying client?",
+          "choices": [
+            "They prove your organizational skills with concrete examples",
+            "They are legally required",
+            "They replace the need for a resume",
+            "They guarantee a job offer"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "med-m4-q2",
+          "text": "What should a mock patient intake workflow document include?",
+          "choices": [
+            "Every step from form received to filed in the EHR, with an accuracy checklist",
+            "A patient's real diagnosis",
+            "A provider's personal phone number",
+            "A list of prescription medications"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "med-m4-q3",
+          "text": "Where can a beginner Medical VA host a portfolio for free?",
+          "choices": [
+            "Canva, Carrd, or a well-organized Google Drive folder",
+            "Only a paid custom website",
+            "Nowhere - portfolios require an office",
+            "A print-only brochure"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "med-m4-q4",
+          "text": "Why is showcasing a privacy-first approach valuable in a Medical VA portfolio?",
+          "choices": [
+            "Medical practices are especially risk-averse about data handling",
+            "It has no impact on hiring decisions",
+            "It replaces the need for any real skills",
+            "Privacy doesn't apply to administrative VAs"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "med-m4-q5",
+          "text": "What belongs in a Medical VA's sample data-handling checklist?",
+          "choices": [
+            "Practical habits like locking screens and using secure channels",
+            "Legal advice about HIPAA enforcement",
+            "A list of medications and dosages",
+            "Clinical diagnosis criteria"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "med-quiz-m5",
+      "moduleId": "med-m5",
+      "title": "Module 5 Quiz: Resume and Job Application Mastery",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "med-m5-q1",
+          "text": "What should a Medical VA resume headline communicate clearly?",
+          "choices": [
+            "A vague general label like 'hardworking professional'",
+            "A clear specialty, like 'Medical Virtual Assistant'",
+            "Personal hobbies unrelated to the role",
+            "Nothing - headlines aren't necessary"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "med-m5-q2",
+          "text": "What makes a strong proposal to a medical practice?",
+          "choices": [
+            "A generic message sent to every job posting",
+            "Personalization referencing the specific practice's administrative needs",
+            "Long paragraphs with no clear pricing",
+            "Avoiding any mention of privacy or confidentiality"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "med-m5-q3",
+          "text": "Where can a Medical VA look for clients?",
+          "choices": [
+            "Freelance platforms, local clinics, and referrals",
+            "Only walk-in applications to hospitals",
+            "Random unrelated job boards",
+            "Nowhere - clients only come through agencies"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "med-m5-q4",
+          "text": "During a discovery call, what is a smart question to ask a potential practice client?",
+          "choices": [
+            "What EHR and scheduling systems do you currently use?",
+            "What is the patient's diagnosis?",
+            "What medication should be prescribed?",
+            "How should I treat a specific symptom?"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "med-m5-q5",
+          "text": "What should a Medical VA do after a discovery call?",
+          "choices": [
+            "Send a written follow-up summarizing the discussion and next steps",
+            "Wait indefinitely for the client to reach out first",
+            "Immediately demand a signed contract with no summary",
+            "Avoid following up to seem less eager"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "med-quiz-m6",
+      "moduleId": "med-m6",
+      "title": "Module 6 Quiz: Landing Your First Medical Client and Beyond",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "med-m6-q1",
+          "text": "What is an important step when onboarding a new medical practice client?",
+          "choices": [
+            "Getting a shared login used by the whole team",
+            "Getting your own limited-access login and learning their SOPs",
+            "Skipping any discussion of privacy policy",
+            "Avoiding any onboarding conversation to start faster"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "med-m6-q2",
+          "text": "Which pricing model is most common for ongoing Medical VA support?",
+          "choices": [
+            "Monthly retainer",
+            "Refusing to state any price",
+            "Charging a random daily fee",
+            "Requiring payment in advance with no scope defined"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "med-m6-q3",
+          "text": "What should be explicitly excluded from a Medical VA's scope of work?",
+          "choices": [
+            "Clinical documentation and diagnosis-related tasks",
+            "Appointment scheduling",
+            "Insurance verification",
+            "Patient intake data entry"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "med-m6-q4",
+          "text": "How can a Medical VA avoid mixing up multiple practice accounts?",
+          "choices": [
+            "Use one shared login for every practice",
+            "Double-check which system is open before every entry and keep separate labeled logins",
+            "Copy templates between practices without changes",
+            "Avoid using any organizational tools"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "med-m6-q5",
+          "text": "How should a Medical VA respond to vague client feedback like 'this isn't quite right'?",
+          "choices": [
+            "Ignore it and move on",
+            "Ask specifically which step or field was the issue",
+            "Assume it means to redo everything from scratch",
+            "Argue that the feedback must be wrong"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "med-m6-q6",
+          "text": "What is a good sign that a Medical VA has reached full capacity?",
+          "choices": [
+            "Turnaround times slow down and small errors start appearing",
+            "Nothing - capacity doesn't matter",
+            "Clients stop giving any feedback",
+            "Income exceeds a certain number"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "med-m6-q7",
+          "text": "What is one way to grow a long-term Medical VA career?",
+          "choices": [
+            "Refusing to learn any new systems or tools",
+            "Learning additional EHR/billing systems and specializing over time",
+            "Avoiding all client feedback",
+            "Never raising rates regardless of experience"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    }
+  ]
+}

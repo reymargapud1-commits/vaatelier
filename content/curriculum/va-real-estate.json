@@ -1,0 +1,1094 @@
+{
+  "courseId": "va-real-estate",
+  "courseTitle": "Real Estate VA: From Zero to First Client",
+  "courseDescription": "A complete beginner-to-job-ready training program for aspiring Real Estate Virtual Assistants. Covers the tools, daily skills, portfolio-building, resume and proposal writing, and how to land and manage your first real estate client.",
+  "priceNote": "One-time payment unlocks lifetime access to all modules, video lessons, quizzes, and your Certificate of Completion.",
+  "modules": [
+    {
+      "id": "re-m1",
+      "title": "Module 1: Starting Out as a Real Estate VA",
+      "lessons": [
+        {
+          "id": "re-m1-l1",
+          "title": "What Is a Real Estate VA?",
+          "slides": [
+            {
+              "heading": "What Is a Real Estate VA?",
+              "bullets": [
+                "Welcome to your Real Estate VA journey",
+                "Supports agents, teams, and brokerages remotely",
+                "Handles coordination, data entry, and marketing"
+              ],
+              "narration": "Welcome to Module 1 of your Real Estate VA training. A Real Estate VA is a remote professional who supports real estate agents, teams, and brokerages with listing coordination, data entry, marketing, and administrative tasks - handling the busywork so agents can focus on showings, negotiations, and closing deals."
+            },
+            {
+              "heading": "What a Real Estate VA Actually Does Day to Day",
+              "bullets": [
+                "Enters and updates MLS listings",
+                "Follows up with leads and coordinates paperwork",
+                "Creates marketing materials for active listings"
+              ],
+              "narration": "On a typical day, a Real Estate VA might enter a new listing into the MLS, update photos and pricing, follow up with leads from the CRM, prepare a flyer for an open house, and track upcoming deadlines in an active transaction - all without ever needing a real estate license."
+            },
+            {
+              "heading": "Why Agents Hire a Real Estate VA",
+              "bullets": [
+                "Agents earn by selling, not doing paperwork",
+                "Keeps listings and leads organized and current",
+                "Frees the agent to meet with clients"
+              ],
+              "narration": "Real estate agents earn money by showing homes, negotiating, and closing deals - not by typing listing data or chasing paperwork. Hiring a Real Estate VA keeps their listings accurate, their leads followed up on, and their transactions on track, freeing the agent to spend more time face-to-face with clients."
+            },
+            {
+              "heading": "Is This Niche Right for You?",
+              "bullets": [
+                "You enjoy detail-oriented, organized work",
+                "You're comfortable with deadlines and documents",
+                "You like being part of closing real deals"
+              ],
+              "narration": "This niche is a great fit if you're naturally detail-oriented, comfortable juggling deadlines and paperwork, and motivated by being part of a process that ends in someone getting the keys to their first or next home."
+            }
+          ]
+        },
+        {
+          "id": "re-m1-l2",
+          "title": "Skills and Traits of a Great Real Estate VA",
+          "slides": [
+            {
+              "heading": "Core Skills You'll Build",
+              "bullets": [
+                "MLS data entry and listing management",
+                "Lead follow-up and CRM use",
+                "Transaction and deadline tracking"
+              ],
+              "narration": "Over this training, you'll build four core skills: entering and managing listings on the MLS, following up with leads inside a CRM, tracking transaction deadlines from listing to close, and creating simple marketing materials like flyers and social posts for active listings."
+            },
+            {
+              "heading": "Traits Clients Look For",
+              "bullets": [
+                "Accuracy - listing data must be error-free",
+                "Discretion - handling private client information",
+                "Deadline-driven - real estate runs on dates"
+              ],
+              "narration": "Agents trust Real Estate VAs who are extremely accurate, since a wrong price or address on the MLS can cause real problems, who handle sensitive client and financial information with discretion, and who treat every deadline - inspection periods, contingencies, closing dates - as non-negotiable."
+            },
+            {
+              "heading": "A Day in the Life",
+              "bullets": [
+                "Morning: check leads and messages",
+                "Midday: update listings and paperwork",
+                "End of day: confirm tomorrow's deadlines"
+              ],
+              "narration": "A typical day might start by checking overnight leads and client messages, move into updating MLS listings and organizing transaction documents, and end with a quick review of tomorrow's deadlines - inspection windows, document due dates, or an upcoming closing - so nothing slips through the cracks."
+            },
+            {
+              "heading": "Where Growth Leads",
+              "bullets": [
+                "Handle more of the transaction process",
+                "Support a whole team, not just one agent",
+                "Specialize in listings, coordination, or marketing"
+              ],
+              "narration": "As you gain experience, you can grow from basic data entry into handling fuller transaction coordination, supporting an entire team of agents instead of just one, and even specializing - some VAs focus on listing marketing, others on transaction deadlines and paperwork."
+            }
+          ]
+        },
+        {
+          "id": "re-m1-l3",
+          "title": "Understanding the Real Estate Transaction Process",
+          "slides": [
+            {
+              "heading": "The Real Estate Transaction, Start to Finish",
+              "bullets": [
+                "Listing - the home goes on the market",
+                "Under contract - offer accepted, moving through escrow",
+                "Closing - paperwork finalizes and keys transfer"
+              ],
+              "narration": "Every real estate transaction generally moves through three big phases: listing, when a home is prepared and marketed for sale; under contract, once an offer is accepted and the deal moves through inspections and financing; and closing, when final paperwork is signed and ownership officially transfers to the buyer."
+            },
+            {
+              "heading": "Where a VA Fits Into This Process",
+              "bullets": [
+                "Supports the listing phase with marketing and MLS updates",
+                "Keeps documents and deadlines organized once under contract",
+                "Never responsible for legal or licensed decisions"
+              ],
+              "narration": "As a VA, you support agents throughout this process - helping prepare and market a new listing, then keeping transaction documents and important dates organized once it's under contract. Your role is administrative support only; anything requiring a real estate license or legal judgment always stays with the agent."
+            },
+            {
+              "heading": "Common Milestones You'll Help Track",
+              "bullets": [
+                "Listing date and any price changes",
+                "Inspection and contingency windows",
+                "Closing date and final walkthrough"
+              ],
+              "narration": "Some key milestones you'll commonly help track include when a listing first goes live and any price adjustments, the inspection and other contingency deadlines during escrow, and the scheduled closing date along with the final walkthrough - all dates the agent relies on you to flag ahead of time."
+            },
+            {
+              "heading": "Why Understanding the Big Picture Helps You",
+              "bullets": [
+                "Helps you anticipate what's needed next",
+                "Makes you a more valuable team member",
+                "Builds client and agent confidence in you"
+              ],
+              "narration": "Understanding this overall flow - even without being a licensed agent - helps you anticipate what an agent will need next, whether that's a new flyer, an updated MLS listing, or a reminder about an upcoming deadline, which makes you a genuinely valuable part of their team."
+            }
+          ]
+        },
+        {
+          "id": "re-m1-l4",
+          "title": "Setting Up Your Home Workspace for Real Estate Work",
+          "slides": [
+            {
+              "heading": "What You Actually Need to Get Started",
+              "bullets": [
+                "A reliable laptop and stable internet",
+                "A quiet space for calls with agents and clients",
+                "Comfort with cloud tools and shared drives"
+              ],
+              "narration": "You don't need special equipment to start - a reliable laptop, stable internet for uploading listing photos and documents, and a reasonably quiet space for calls with agents is enough. You'll also want to be comfortable working inside cloud-based tools like Google Drive or Dropbox."
+            },
+            {
+              "heading": "Organizing Client and Listing Files",
+              "bullets": [
+                "One folder per agent or team",
+                "Subfolders for each active listing or transaction",
+                "A shared drive for documents and photos"
+              ],
+              "narration": "Keep every agent or team's files organized in their own folder, with subfolders for each active listing or transaction. A shared Google Drive or Dropbox folder also makes it easy for agents to drop in new photos, contracts, or disclosures whenever they have them."
+            },
+            {
+              "heading": "Building a Simple Transaction Tracker Template",
+              "bullets": [
+                "Columns for property, key dates, and status",
+                "A status column - listed, under contract, closed",
+                "One tab per agent or team keeps things simple"
+              ],
+              "narration": "A basic spreadsheet with columns for the property address, key dates like inspection and closing, and a status - listed, under contract, or closed - is often all you need to stay organized. You'll build one of these for real later in this training."
+            },
+            {
+              "heading": "Ready for Module 2",
+              "bullets": [
+                "You know what the role involves",
+                "You understand the transaction process",
+                "Next: the tools you'll actually use daily"
+              ],
+              "narration": "You now understand what a Real Estate VA does and how the transaction process flows from listing to close. In Module 2, we'll get hands-on with the actual software and tools you'll use every day working with real estate agents."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "re-m2",
+      "title": "Module 2: Essential Tools Every Real Estate VA Must Know",
+      "lessons": [
+        {
+          "id": "re-m2-l1",
+          "title": "MLS & Listing Platforms Basics",
+          "slides": [
+            {
+              "heading": "What Is the MLS?",
+              "bullets": [
+                "A shared database of homes for sale",
+                "Used by licensed agents and brokers",
+                "Accurate data here matters enormously"
+              ],
+              "narration": "The MLS, or Multiple Listing Service, is a regional database where licensed agents list homes for sale so other agents and the public can find them. Because so many websites pull directly from it, keeping MLS data accurate and up to date is one of the most important things a Real Estate VA does."
+            },
+            {
+              "heading": "How a VA Works Within the MLS",
+              "bullets": [
+                "Agents grant you access under their license",
+                "You enter and update listing details",
+                "The agent makes all licensed decisions"
+              ],
+              "narration": "You'll typically be given access to the MLS under the agent's own license and account - you're not licensed yourself, so you handle the data entry, photo uploads, and updates, while the agent remains fully responsible for any pricing or contract decisions."
+            },
+            {
+              "heading": "What Goes Into a Listing",
+              "bullets": [
+                "Address, price, and property details",
+                "Photos, descriptions, and features",
+                "Showing instructions and agent remarks"
+              ],
+              "narration": "A typical MLS listing includes the address, price, square footage, and property details, a set of photos with a compelling description highlighting key features, and showing instructions or private agent remarks that help other agents schedule visits smoothly."
+            },
+            {
+              "heading": "Popular Platforms Beyond the MLS",
+              "bullets": [
+                "Zillow, Realtor.com, and Redfin often sync from MLS",
+                "Some agents post directly to social or their own site",
+                "Always keep every source consistent"
+              ],
+              "narration": "Sites like Zillow, Realtor.com, and Redfin usually pull listing data automatically once it's on the MLS, but some agents also want it posted to their own website or social pages - part of your job is making sure the details stay consistent everywhere the listing appears."
+            }
+          ]
+        },
+        {
+          "id": "re-m2-l2",
+          "title": "Real Estate CRM Tools",
+          "slides": [
+            {
+              "heading": "Why Agents Rely on a CRM",
+              "bullets": [
+                "Tracks every lead and client in one place",
+                "Reminds agents when to follow up",
+                "Prevents leads from falling through the cracks"
+              ],
+              "narration": "A CRM, or customer relationship management tool, keeps every lead and past client organized in one place, with reminders for when to follow up next. Real estate agents work with so many contacts that without a CRM, promising leads easily get forgotten."
+            },
+            {
+              "heading": "Follow Up Boss",
+              "bullets": [
+                "A popular CRM built specifically for real estate",
+                "Organizes leads by source and stage",
+                "Lets you log calls, texts, and notes"
+              ],
+              "narration": "Follow Up Boss is a widely used real estate CRM that organizes leads by where they came from and what stage they're at - new, contacted, or under contract - and lets you log calls, texts, and notes so the whole team can see the full history with a lead."
+            },
+            {
+              "heading": "kvCORE and Other All-in-One Platforms",
+              "bullets": [
+                "Combines CRM, website, and marketing tools",
+                "Common at larger brokerages",
+                "More features means more to learn"
+              ],
+              "narration": "kvCORE is an all-in-one platform combining a CRM with a website builder and marketing automation, and is common at larger brokerages. It has more moving parts than a simple CRM, so expect a learning curve, but the core idea - organizing leads and follow-ups - stays the same."
+            },
+            {
+              "heading": "Your Role Managing a CRM",
+              "bullets": [
+                "Enter new leads promptly and accurately",
+                "Tag and organize by status or source",
+                "Set and complete follow-up reminders"
+              ],
+              "narration": "As the VA, you'll often be the one entering new leads promptly, tagging and organizing them by status or source, and making sure follow-up reminders actually get completed - a well-maintained CRM is one of the most valuable things you can offer a busy agent."
+            }
+          ]
+        },
+        {
+          "id": "re-m2-l3",
+          "title": "E-Signature & Document Tools",
+          "slides": [
+            {
+              "heading": "Why E-Signatures Matter in Real Estate",
+              "bullets": [
+                "Contracts move fast and often remotely",
+                "E-signatures are legally valid and widely used",
+                "Speeds up busy transaction timelines"
+              ],
+              "narration": "Real estate deals involve a lot of paperwork and tight deadlines, often with buyers, sellers, and agents in different locations. E-signature tools let everyone sign documents legally and quickly from a phone or computer, which keeps fast-moving transactions from getting stuck waiting on physical signatures."
+            },
+            {
+              "heading": "DocuSign Basics",
+              "bullets": [
+                "The most widely used e-signature platform",
+                "VAs often prepare and track documents",
+                "Shows real-time status - sent, viewed, signed"
+              ],
+              "narration": "DocuSign is the e-signature platform most real estate agents rely on. As a VA, you'll often prepare a document, add the correct signer fields, and send it out, then track its status - sent, viewed, or signed - so you can gently follow up if someone hasn't completed it yet."
+            },
+            {
+              "heading": "Preparing Documents for Signature",
+              "bullets": [
+                "Double-check names, dates, and property details",
+                "Place signature and date fields accurately",
+                "Always use the current version of a form"
+              ],
+              "narration": "Before sending anything for signature, double-check that names, dates, and property details are correct, place the signature and date fields in the right spots, and always confirm you're using the most current version of a form - agents rely on you to catch mistakes before they go out."
+            },
+            {
+              "heading": "Organizing Signed Documents",
+              "bullets": [
+                "Save completed documents in the transaction folder",
+                "Name files clearly and consistently",
+                "Keep a checklist of what's been signed"
+              ],
+              "narration": "Once a document is fully signed, save it into the correct transaction folder right away with a clear, consistent file name, and keep a simple checklist of what's been signed versus what's still outstanding - this organization becomes essential as a transaction gets closer to closing."
+            }
+          ]
+        },
+        {
+          "id": "re-m2-l4",
+          "title": "Social Media & Marketing Tools for Listings",
+          "slides": [
+            {
+              "heading": "Why Listings Need Marketing, Not Just an MLS Entry",
+              "bullets": [
+                "Buyers browse social media and portals daily",
+                "Strong visuals sell homes faster",
+                "Agents rely on VAs for this extra push"
+              ],
+              "narration": "An MLS entry alone isn't enough anymore - buyers scroll Instagram, Facebook, and listing portals daily, and a listing with strong photos, a well-designed flyer, and a bit of social promotion tends to attract more attention and sell faster than a bare-bones entry."
+            },
+            {
+              "heading": "Canva for Real Estate Marketing",
+              "bullets": [
+                "Free, browser-based design tool",
+                "Ready-made real estate flyer and social templates",
+                "Easy to keep an agent's branding consistent"
+              ],
+              "narration": "Canva is a free, browser-based design tool with ready-made templates for open house flyers, 'just listed' social graphics, and property brochures. Using a Brand Kit, you can save an agent's logo, headshot, and colors once and apply them consistently across every piece of marketing you create."
+            },
+            {
+              "heading": "Promoting a New Listing on Social Media",
+              "bullets": [
+                "'Just listed' and 'open house' posts",
+                "Short video walkthroughs perform well",
+                "Consistent posting keeps the agent visible"
+              ],
+              "narration": "New listings are commonly promoted with a 'just listed' graphic, an 'open house' announcement closer to the date, and a short video walkthrough if photos or footage are available - video content tends to get strong engagement and helps the agent stay visible in their local market."
+            },
+            {
+              "heading": "Basic Tools for Property Videos and Virtual Tours",
+              "bullets": [
+                "Simple phone-shot walkthrough videos work well",
+                "Tools like CapCut for quick editing",
+                "Some agents use professional 3D tour services"
+              ],
+              "narration": "You don't need professional equipment to help - a simple phone-shot walkthrough edited in a free app like CapCut can be effective, though some agents also invest in professional 3D virtual tour services for higher-end listings, which you may be asked to help schedule or upload."
+            }
+          ]
+        },
+        {
+          "id": "re-m2-l5",
+          "title": "Transaction Management Tools",
+          "slides": [
+            {
+              "heading": "Why Transaction Management Software Exists",
+              "bullets": [
+                "Keeps every document and deadline in one place",
+                "Gives everyone shared visibility",
+                "Replaces messy email chains"
+              ],
+              "narration": "Once a home is under contract, dozens of documents and deadlines need tracking - transaction management software gives everyone involved, from the agent to the buyer's lender, one shared place to see what's been signed and what's still due, instead of hunting through scattered email chains."
+            },
+            {
+              "heading": "Popular Transaction Management Platforms",
+              "bullets": [
+                "Examples include Dotloop and SkySlope",
+                "Checklist-style tracking of required documents",
+                "Built-in e-signature features in many of them"
+              ],
+              "narration": "Platforms like Dotloop and SkySlope are common in this space - they walk each transaction through a checklist of required documents, flag anything missing, and often include built-in e-signature tools so the whole process can happen inside one system."
+            },
+            {
+              "heading": "Your Role Inside a Transaction Management Tool",
+              "bullets": [
+                "Upload and organize documents by transaction",
+                "Monitor checklist items for completeness",
+                "Flag missing items to the agent early"
+              ],
+              "narration": "As a VA, you'll typically upload documents into the correct transaction, keep an eye on the checklist to see what's still missing, and flag any gaps to the agent well before a deadline - catching a missing signature early can prevent a real headache at closing."
+            },
+            {
+              "heading": "Keeping Multiple Transactions Straight",
+              "bullets": [
+                "One dashboard often tracks every active transaction",
+                "Use consistent naming across all files",
+                "A weekly review catches anything falling behind"
+              ],
+              "narration": "Most transaction management tools show every active deal on one dashboard, which helps when you're supporting an agent with several transactions at once. Keeping file names consistent and doing a quick weekly review of every open transaction helps make sure nothing quietly falls behind schedule."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "re-m3",
+      "title": "Module 3: Core Real Estate VA Skills",
+      "lessons": [
+        {
+          "id": "re-m3-l1",
+          "title": "Listing Coordination & MLS Data Entry",
+          "slides": [
+            {
+              "heading": "What Listing Coordination Involves",
+              "bullets": [
+                "Gathering all details before publishing a listing",
+                "Entering that data accurately into the MLS",
+                "Coordinating photos, sign, and disclosures"
+              ],
+              "narration": "Listing coordination means gathering everything needed before a home goes live - price, square footage, features, disclosures - and entering it accurately into the MLS, while also coordinating practical pieces like scheduling the photographer and making sure the yard sign gets ordered."
+            },
+            {
+              "heading": "A Pre-Listing Checklist",
+              "bullets": [
+                "Signed listing agreement on file",
+                "Professional photos scheduled and received",
+                "Required disclosures collected from the seller"
+              ],
+              "narration": "Before a listing goes live, a solid checklist covers confirming the signed listing agreement is on file, professional photos have been scheduled and received, and any required seller disclosures have been collected - missing any one of these can delay a listing or create problems later."
+            },
+            {
+              "heading": "Entering Accurate MLS Data",
+              "bullets": [
+                "Double-check every number - price, beds, baths, square footage",
+                "Write a clear, benefit-focused description",
+                "Upload photos in the right order"
+              ],
+              "narration": "When entering a listing, double-check every number since even a small error can mislead buyers or violate MLS rules, write a clear description that highlights the home's real selling points, and upload photos in a logical order, usually starting with the best exterior shot."
+            },
+            {
+              "heading": "Keeping a Live Listing Updated",
+              "bullets": [
+                "Update status promptly - active, pending, sold",
+                "Adjust price changes the same day they're decided",
+                "Refresh photos if anything changes"
+              ],
+              "narration": "A listing isn't 'set and forget' - status changes like pending or sold need to be updated promptly, any price change should be entered the same day the agent decides on it, and photos should be refreshed if something about the property changes, like new staging."
+            }
+          ]
+        },
+        {
+          "id": "re-m3-l2",
+          "title": "Lead Generation & Follow-Up",
+          "slides": [
+            {
+              "heading": "Where Real Estate Leads Come From",
+              "bullets": [
+                "Website inquiries and portal sign-ups",
+                "Referrals and past clients",
+                "Social media and open house sign-ins"
+              ],
+              "narration": "Real estate leads arrive from many places - inquiries through the agent's website or listing portals, referrals from past clients, social media messages, and sign-in sheets at open houses. Part of your job is making sure every single one of these gets captured, not just the obvious ones."
+            },
+            {
+              "heading": "The Cost of a Missed Follow-Up",
+              "bullets": [
+                "Leads go cold within hours",
+                "A competitor agent may respond first",
+                "Consistent follow-up often wins the client"
+              ],
+              "narration": "Real estate leads tend to go cold fast - often within hours - and if your agent doesn't respond quickly, another agent may reach that same buyer or seller first. Consistent, timely follow-up is one of the biggest ways a Real Estate VA directly helps an agent win business."
+            },
+            {
+              "heading": "Building a Simple Follow-Up Cadence",
+              "bullets": [
+                "Same-day first response to every new lead",
+                "A scheduled check-in a few days later",
+                "Longer-term nurture touches for leads not ready yet"
+              ],
+              "narration": "A simple, effective cadence starts with responding the same day a new lead comes in, following up again a few days later if there's no response, and adding leads who aren't ready to buy or sell yet into a longer-term nurture list so they aren't forgotten months down the road."
+            },
+            {
+              "heading": "Logging Everything in the CRM",
+              "bullets": [
+                "Record every call, text, and email",
+                "Tag leads by stage and interest",
+                "Note anything personal the agent should remember"
+              ],
+              "narration": "Every interaction should be logged in the CRM - a missed call, a quick text, an email reply - along with a tag for the lead's stage and interest level. Noting small personal details, like a client's moving timeline, helps the agent sound thoughtful and prepared on the next call."
+            }
+          ]
+        },
+        {
+          "id": "re-m3-l3",
+          "title": "Transaction Coordination Basics",
+          "slides": [
+            {
+              "heading": "What a Transaction Coordinator Does",
+              "bullets": [
+                "Tracks every deadline once a home is under contract",
+                "Keeps documents organized and complete",
+                "Communicates status updates to everyone involved"
+              ],
+              "narration": "Once an offer is accepted, transaction coordination takes over from listing work - tracking every deadline in the contract, keeping documents organized and complete, and making sure the agent, buyer, seller, and other parties all know where things stand at each stage."
+            },
+            {
+              "heading": "Key Dates You'll Help Track",
+              "bullets": [
+                "Inspection and contingency deadlines",
+                "Financing and appraisal timelines",
+                "The scheduled closing date"
+              ],
+              "narration": "Some of the most important dates in any transaction include inspection and other contingency deadlines, the buyer's financing and appraisal timeline, and the final closing date - missing any of these can delay or even jeopardize the deal, so tracking them closely is essential."
+            },
+            {
+              "heading": "Building a Transaction Checklist",
+              "bullets": [
+                "List every required document for that deal",
+                "Mark each item's due date and status",
+                "Review it regularly, not just once"
+              ],
+              "narration": "A transaction checklist lists every document and task required for that specific deal, with a due date and a status for each - pending, received, or complete. Reviewing it regularly rather than only at the start keeps small issues from turning into last-minute scrambles."
+            },
+            {
+              "heading": "Communicating Status Clearly",
+              "bullets": [
+                "Send simple, regular updates to the agent",
+                "Flag problems early rather than waiting",
+                "Keep language calm and factual"
+              ],
+              "narration": "Regular, simple status updates - 'inspection scheduled for Thursday,' 'still waiting on the appraisal' - keep everyone calm and informed. If something looks like it might slip, flag it to the agent early and factually rather than waiting until it becomes an emergency."
+            }
+          ]
+        },
+        {
+          "id": "re-m3-l4",
+          "title": "Creating Listing Marketing Materials",
+          "slides": [
+            {
+              "heading": "What Good Listing Marketing Includes",
+              "bullets": [
+                "A polished flyer with photos and key details",
+                "Social media graphics for the listing",
+                "Sometimes a short video or virtual tour"
+              ],
+              "narration": "Strong listing marketing usually includes a polished flyer with the best photos and key selling points, a set of social media graphics announcing the listing and any open house, and often a short video walkthrough or link to a virtual tour for buyers browsing online."
+            },
+            {
+              "heading": "Designing a Listing Flyer in Canva",
+              "bullets": [
+                "Lead with the strongest photo",
+                "Highlight 3-5 key features",
+                "Include price, agent contact, and a QR code or link"
+              ],
+              "narration": "A good listing flyer leads with the single strongest photo, highlights three to five standout features like an updated kitchen or a large backyard, and clearly includes the price, the agent's contact information, and often a QR code or link to the full online listing."
+            },
+            {
+              "heading": "Writing Compelling Listing Descriptions",
+              "bullets": [
+                "Lead with what makes the home unique",
+                "Describe the lifestyle, not just the specs",
+                "Keep it scannable with short sentences"
+              ],
+              "narration": "A compelling listing description leads with whatever makes the home genuinely stand out, describes the lifestyle a buyer would enjoy rather than just listing specs, and stays scannable with short, clear sentences - buyers skim quickly, so the best details need to come first."
+            },
+            {
+              "heading": "Building an Open House Marketing Set",
+              "bullets": [
+                "Yard signage and directional signs",
+                "A social media event post",
+                "A printed or digital sign-in sheet"
+              ],
+              "narration": "A complete open house marketing set typically includes yard and directional signage, a social media post announcing the date and time, and a sign-in sheet - digital or printed - which becomes a valuable source of fresh leads for the agent to follow up on afterward."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "re-m4",
+      "title": "Module 4: Building Your Real Estate VA Portfolio",
+      "lessons": [
+        {
+          "id": "re-m4-l1",
+          "title": "Creating Sample Listing Packages",
+          "slides": [
+            {
+              "heading": "Why You Need Samples Before Your First Client",
+              "bullets": [
+                "Agents want to see proof, not just a resume",
+                "A mock listing package shows your real skills",
+                "You control the quality with no deadline pressure"
+              ],
+              "narration": "Since you may not have a paying client yet, building a mock listing package for a fictional or real property lets you show proof of your skills rather than just claiming them on a resume - and without a real deadline, you can take the time to make it genuinely polished."
+            },
+            {
+              "heading": "Picking a Practice Property",
+              "bullets": [
+                "Use a real listing you find online for practice",
+                "Or invent a believable fictional property",
+                "Choose something typical of your target market"
+              ],
+              "narration": "You can practice using a real active listing you find online (clearly labeled as a practice exercise, not a real client project) or invent a believable fictional property. Either way, choose something typical of the market you'd like to work in, whether that's suburban homes or condos."
+            },
+            {
+              "heading": "Building the Full Package",
+              "bullets": [
+                "An MLS-style data sheet with accurate details",
+                "A designed flyer and social media graphics",
+                "A simple transaction checklist template"
+              ],
+              "narration": "Build out a complete package: an MLS-style data sheet with accurate property details, a designed flyer plus a few social media graphics for the listing, and a simple transaction checklist template - together these show you can handle both the marketing and the coordination side of the role."
+            },
+            {
+              "heading": "Polishing and Organizing Your Sample",
+              "bullets": [
+                "Proofread every detail carefully",
+                "Keep a consistent visual style throughout",
+                "Export everything into one clean, shareable folder"
+              ],
+              "narration": "Proofread every number and detail carefully, since accuracy is exactly what agents are hiring for, keep a consistent visual style across the flyer and social graphics, and export everything into one clean, well-organized folder that's easy to share in a proposal."
+            }
+          ]
+        },
+        {
+          "id": "re-m4-l2",
+          "title": "Building a Real Estate VA Portfolio",
+          "slides": [
+            {
+              "heading": "What a Real Estate VA Portfolio Needs",
+              "bullets": [
+                "A short intro about you and your specialty",
+                "2-3 sample projects with visuals",
+                "Your process, not just the pretty pictures"
+              ],
+              "narration": "A strong portfolio has a short introduction about who you are and what you specialize in, two or three sample projects with real visuals like flyers or a mock MLS sheet, and a brief explanation of your process - agents want to understand how you work, not just see finished graphics."
+            },
+            {
+              "heading": "Where to Host Your Portfolio",
+              "bullets": [
+                "A simple free website (Canva or Carrd)",
+                "A well-organized Google Drive folder works too",
+                "Keep the link short and easy to share"
+              ],
+              "narration": "You don't need a paid website - a simple site built for free in Canva or Carrd, or even a neatly organized, view-only Google Drive folder, works well as long as the link is short and easy to drop into a proposal, email, or freelance profile."
+            },
+            {
+              "heading": "Presenting Your Sample Work Effectively",
+              "bullets": [
+                "Show the finished piece large and clear",
+                "Briefly explain the property and your role",
+                "Be upfront that it's sample, not real client, work"
+              ],
+              "narration": "Present each sample large and clear rather than as a tiny thumbnail, briefly explain the property and what you personally created, and be upfront that it's practice work rather than a real client project - honesty here builds more trust than an impressive but misleading claim."
+            },
+            {
+              "heading": "Keeping Your Portfolio Updated",
+              "bullets": [
+                "Swap in real client work as soon as you have it",
+                "Remove your weakest samples over time",
+                "Revisit it every few months"
+              ],
+              "narration": "As soon as you land real client work (with their permission to showcase it), swap it in for your mock samples, and keep quietly removing your weakest pieces over time so your portfolio only ever reflects your current best work."
+            }
+          ]
+        },
+        {
+          "id": "re-m4-l3",
+          "title": "Showcasing Your Organizational & Marketing Skills",
+          "slides": [
+            {
+              "heading": "Why Organization Is Your Real Selling Point",
+              "bullets": [
+                "Agents are hiring for reliability, not just design",
+                "A clean checklist impresses as much as a pretty flyer",
+                "Show your systems, not just your outputs"
+              ],
+              "narration": "While a nice flyer catches the eye, what agents are really hiring for is reliability and organization - so your portfolio should also show your systems, like a transaction checklist template or a sample tracking spreadsheet, not only the finished marketing pieces."
+            },
+            {
+              "heading": "Demonstrating Your Marketing Range",
+              "bullets": [
+                "Include a flyer, a social post, and a listing description",
+                "Show you can adapt style to different property types",
+                "Keep every sample polished and error-free"
+              ],
+              "narration": "Show range by including different types of marketing in your samples - a printed flyer, a social media graphic, and a written listing description - and if possible, demonstrate that you can adapt your style for a luxury home versus a starter condo, all while keeping every piece error-free."
+            },
+            {
+              "heading": "Turning Your Process Into a Simple Case Study",
+              "bullets": [
+                "Describe the property and the goal",
+                "Walk through what you created and why",
+                "Note the organizational system you set up"
+              ],
+              "narration": "A simple case study for a sample project can be just a few sentences: describe the property and what the listing needed, walk through the flyer, social graphics, or checklist you created, and note the small organizational system - like a shared tracker - you set up to support it."
+            },
+            {
+              "heading": "Getting Ready to Apply With Confidence",
+              "bullets": [
+                "Your portfolio proves both marketing and coordination skills",
+                "You have real samples to reference in proposals",
+                "Next: resumes and applications"
+              ],
+              "narration": "With a portfolio that proves both your marketing eye and your organizational skills, you're ready to start referencing real samples in your proposals and applications - which is exactly what we'll build on in the next module."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "re-m5",
+      "title": "Module 5: Resume and Job Application Mastery for Real Estate VAs",
+      "lessons": [
+        {
+          "id": "re-m5-l1",
+          "title": "Writing a Real Estate VA Resume",
+          "slides": [
+            {
+              "heading": "What Belongs on a Real Estate VA Resume",
+              "bullets": [
+                "A clear headline naming your specialty",
+                "Tools you know - MLS platforms, DocuSign, a CRM",
+                "A link to your portfolio, front and center"
+              ],
+              "narration": "Your resume should open with a clear headline naming your specialty - 'Real Estate Virtual Assistant' - list the specific tools you know such as MLS platforms, DocuSign, and a CRM like Follow Up Boss, and put your portfolio link somewhere it can't be missed."
+            },
+            {
+              "heading": "Describing Experience Without a Job History",
+              "bullets": [
+                "Frame your training and mock packages as real work",
+                "Use action verbs - coordinated, entered, tracked, designed",
+                "Quantify wherever you can, even mock numbers"
+              ],
+              "narration": "If you don't have paid experience yet, describe your training and mock listing packages using strong action verbs - coordinated, entered, tracked, designed - and quantify what you can, like 'created a complete listing package including flyer, MLS sheet, and transaction checklist.'"
+            },
+            {
+              "heading": "Formatting for Readability",
+              "bullets": [
+                "Keep it to one page",
+                "Use short bullet points, not paragraphs",
+                "Consistent, clean font and spacing"
+              ],
+              "narration": "Keep your resume to a single page with short, scannable bullet points rather than dense paragraphs, using a clean, consistent font - a busy agent reviewing applicants will spend only seconds per resume before deciding whether to look closer."
+            },
+            {
+              "heading": "Common Resume Mistakes to Avoid",
+              "bullets": [
+                "Vague phrases like 'real estate expert'",
+                "No portfolio link at all",
+                "Typos - always proofread out loud"
+              ],
+              "narration": "Avoid vague self-descriptions like 'real estate expert' with nothing to back it up, never submit a resume without your portfolio link, and always proofread out loud before sending - since accuracy is the whole job, a typo on your own resume undercuts your credibility instantly."
+            }
+          ]
+        },
+        {
+          "id": "re-m5-l2",
+          "title": "Crafting Winning Proposals for Real Estate Agents",
+          "slides": [
+            {
+              "heading": "What a Good Proposal Includes",
+              "bullets": [
+                "A quick summary of what you noticed about their listings",
+                "Your specific plan for helping them",
+                "Clear pricing and next steps"
+              ],
+              "narration": "A strong proposal briefly summarizes what you noticed about the agent's current listings or workload, lays out your specific plan for helping - whether that's MLS entry, marketing, or transaction coordination - and ends with clear pricing and an easy next step, like a short call."
+            },
+            {
+              "heading": "Personalizing Every Proposal",
+              "bullets": [
+                "Reference their actual listings or recent activity",
+                "Never send an obviously copy-pasted pitch",
+                "Mention one specific opportunity you spotted"
+              ],
+              "narration": "Every proposal should reference something specific about the agent - an outdated listing photo, a busy-looking transaction pipeline, or a market they clearly focus on. A generic, copy-pasted pitch is easy for a busy agent to spot and easy to ignore."
+            },
+            {
+              "heading": "Structuring Your Pricing",
+              "bullets": [
+                "Package by deliverables - listings, coordination, marketing",
+                "Offer 2-3 clear tiers, not endless options",
+                "Be upfront about what's NOT included"
+              ],
+              "narration": "Package your pricing around clear deliverables - for example, a certain number of listings entered per month, plus ongoing transaction coordination - and offer two or three simple tiers rather than overwhelming an agent with options. Be upfront about anything that falls outside the package too."
+            },
+            {
+              "heading": "Following Up Without Being Pushy",
+              "bullets": [
+                "One polite follow-up after about a week",
+                "Add new value, don't just 'check in'",
+                "Know when to move on gracefully"
+              ],
+              "narration": "If you don't hear back, one polite follow-up after about a week is reasonable - ideally adding something new, like a quick observation about one of their listings, rather than just 'checking in.' If there's still no response after that, it's fine to move on gracefully."
+            }
+          ]
+        },
+        {
+          "id": "re-m5-l3",
+          "title": "Where to Find Real Estate VA Clients",
+          "slides": [
+            {
+              "heading": "Freelance Platforms",
+              "bullets": [
+                "Upwork, Onlinejobs.ph, and similar sites",
+                "Filter for real estate / transaction coordination roles",
+                "A strong profile and portfolio link matter most"
+              ],
+              "narration": "Freelance platforms like Upwork and Onlinejobs.ph list real estate VA and transaction coordination roles regularly - filter specifically for those, and make sure your profile headline and portfolio link are strong, since agents often decide who to message in seconds."
+            },
+            {
+              "heading": "Local Real Estate Agents and Brokerages",
+              "bullets": [
+                "Solo agents and small teams often need help most",
+                "Many have outdated listings or slow follow-up",
+                "A polite, specific outreach message works well"
+              ],
+              "narration": "Solo agents and small teams are often the ones most in need of help, since they may be juggling everything themselves. A polite, specific outreach message - pointing out one thing you noticed, like a listing without recent photos - can open the door to a conversation."
+            },
+            {
+              "heading": "Referrals and Word of Mouth",
+              "bullets": [
+                "Your first agent client is your best source of the next",
+                "Ask happy clients if they know other agents",
+                "A short testimonial makes referrals even easier"
+              ],
+              "narration": "Once you land one happy agent client, ask directly whether they know other agents on their team or brokerage who could use similar help - referrals convert far more easily than cold outreach, especially with a short testimonial from that first client to share."
+            },
+            {
+              "heading": "Real Estate Facebook Groups and Communities",
+              "bullets": [
+                "Local and niche real estate agent groups",
+                "VA and freelancer communities share leads too",
+                "Be an active, helpful member, not just a lurker"
+              ],
+              "narration": "Facebook groups for local real estate agents or specific niches often have members mentioning they need help with listings or coordination, and dedicated VA or freelancer communities frequently share leads too - being an active, genuinely helpful member tends to bring in the best opportunities."
+            }
+          ]
+        },
+        {
+          "id": "re-m5-l4",
+          "title": "Nailing the Client Interview/Discovery Call",
+          "slides": [
+            {
+              "heading": "What Agents Are Actually Evaluating",
+              "bullets": [
+                "Can you understand their workflow quickly?",
+                "Do you ask smart, specific questions?",
+                "Will you be reliable and easy to work with?"
+              ],
+              "narration": "In a discovery call, agents aren't just checking your skills on paper - they're watching whether you can understand their current workflow quickly, whether you ask smart and specific questions, and whether you seem like someone they can trust with sensitive transaction details."
+            },
+            {
+              "heading": "Questions You Should Ask Them",
+              "bullets": [
+                "What does your current listing/lead process look like?",
+                "What's frustrated you about admin work so far?",
+                "Which tools and CRM do you already use?"
+              ],
+              "narration": "Come prepared with your own questions: what does their current listing and lead process look like, what's frustrated them about admin work so far, and which specific tools and CRM they already use - this shows you're thinking like a real partner, not just an order-taker."
+            },
+            {
+              "heading": "Talking About Pricing Confidently",
+              "bullets": [
+                "Know your rate before the call, don't improvise",
+                "Explain what's included, not just the number",
+                "It's okay to say you'll follow up in writing"
+              ],
+              "narration": "Decide your rate before the call so you're never improvising under pressure, explain clearly what's included for that price, and it's completely fine to say you'll send the full proposal in writing afterward rather than negotiating pricing on the spot."
+            },
+            {
+              "heading": "Following Up After the Call",
+              "bullets": [
+                "Send a written summary within 24 hours",
+                "Restate what you understood about their needs",
+                "Attach your proposal or next steps clearly"
+              ],
+              "narration": "Within 24 hours of the call, send a short written summary restating what you understood about their needs, attached to your proposal or a clear next step - this reinforces that you listened closely and keeps momentum going while the conversation is still fresh."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "re-m6",
+      "title": "Module 6: Landing Your First Real Estate Client and Beyond",
+      "lessons": [
+        {
+          "id": "re-m6-l1",
+          "title": "Onboarding a New Real Estate Agent Client",
+          "slides": [
+            {
+              "heading": "What Onboarding Actually Covers",
+              "bullets": [
+                "Getting access to MLS, CRM, and documents safely",
+                "Gathering branding and past listing examples",
+                "Agreeing on the first month's plan"
+              ],
+              "narration": "Onboarding is the process of getting properly set up with a new agent client: gaining safe access to their MLS, CRM, and document platforms, collecting their branding and any past listing examples, and agreeing together on what the first month will actually look like."
+            },
+            {
+              "heading": "Getting Account Access the Right Way",
+              "bullets": [
+                "Ask to be added as a user under their license/account",
+                "Never ask for personal login passwords",
+                "Confirm exactly what access you'll have"
+              ],
+              "narration": "Always ask to be added as an authorized user under the agent's MLS, CRM, or transaction platform account rather than sharing personal passwords - this is safer for both of you, and it's worth confirming exactly which systems and documents you'll actually have access to."
+            },
+            {
+              "heading": "Collecting Branding and Reference Materials",
+              "bullets": [
+                "Logo, headshot, and brand colors",
+                "Examples of past listings or flyers they've liked",
+                "Any brokerage branding guidelines that apply"
+              ],
+              "narration": "Request the agent's logo, headshot, and brand colors, a few examples of past listings or marketing they've been happy with, and any brokerage-wide branding guidelines that must be followed - having these upfront saves a lot of back-and-forth on your very first project."
+            },
+            {
+              "heading": "Setting the First 30 Days' Plan",
+              "bullets": [
+                "Agree on which tasks you'll own first",
+                "Set your first check-in date",
+                "Clarify how and when you'll be paid"
+              ],
+              "narration": "Before diving in, agree on exactly which tasks you'll own first - maybe just MLS entry and marketing to start - set a date for your first check-in call, and make sure payment terms - amount, method, and schedule - are clearly agreed on both sides."
+            }
+          ]
+        },
+        {
+          "id": "re-m6-l2",
+          "title": "Setting Expectations and Pricing Your Services",
+          "slides": [
+            {
+              "heading": "Why Clear Expectations Prevent Problems",
+              "bullets": [
+                "Most client conflicts come from unspoken assumptions",
+                "A short written agreement protects you both",
+                "Revisit and adjust as the relationship grows"
+              ],
+              "narration": "Most conflicts between a VA and an agent come from things that were never actually agreed on out loud - a short written agreement covering scope, pricing, and response times protects you both and can always be revisited as the working relationship grows."
+            },
+            {
+              "heading": "Common Pricing Models",
+              "bullets": [
+                "Monthly retainer - most common for ongoing support",
+                "Per-listing or per-transaction - for one-off work",
+                "Hourly - less common, harder to scale"
+              ],
+              "narration": "A monthly retainer is the most common model for ongoing support across listings and transactions, a per-listing or per-transaction rate suits one-off work like a single busy month, and hourly pricing is less common in this niche since it's harder to scale as you take on more agents."
+            },
+            {
+              "heading": "What to Include in Your Scope of Work",
+              "bullets": [
+                "Number of listings/transactions included",
+                "What counts as a 'revision' vs a new request",
+                "What's explicitly NOT included (e.g. licensed advice)"
+              ],
+              "narration": "Your scope of work should spell out how many listings or transactions are covered, what counts as a normal revision versus a brand-new request, and what's explicitly NOT included - reminding everyone that anything requiring a real estate license always stays with the agent, never you."
+            },
+            {
+              "heading": "Raising Your Rates Over Time",
+              "bullets": [
+                "Review rates as your skill and results grow",
+                "Give existing clients advance notice",
+                "New clients can start at your current rate"
+              ],
+              "narration": "As your skills and track record grow, it's normal and healthy to raise your rates - give existing agent clients advance notice, typically 30 to 60 days, while any brand-new client simply starts at your current, updated rate."
+            }
+          ]
+        },
+        {
+          "id": "re-m6-l3",
+          "title": "Managing Multiple Agent/Team Accounts",
+          "slides": [
+            {
+              "heading": "Staying Organized Across Agents",
+              "bullets": [
+                "One shared system, separate views per agent",
+                "Color-code or label everything by client",
+                "A weekly planning block prevents last-minute chaos"
+              ],
+              "narration": "Managing several agents well usually comes down to using one consistent system for everyone, color-coding or clearly labeling files and tasks by client, and setting aside a dedicated weekly block to review every active listing and transaction rather than reacting day to day."
+            },
+            {
+              "heading": "Avoiding Mix-Ups Between Agents",
+              "bullets": [
+                "Double-check the account before every MLS update",
+                "Never reuse a document meant for another agent's deal",
+                "Build a simple pre-task checklist"
+              ],
+              "narration": "Entering data into the wrong agent's listing is a real and serious risk once you're juggling multiple accounts - always double-check which account you're in before making an update, never copy a document from one transaction into another, and consider a short pre-task checklist."
+            },
+            {
+              "heading": "Batching Work for Efficiency",
+              "bullets": [
+                "Update all listings in one sitting",
+                "Review all open transactions together",
+                "Batch client communications too"
+              ],
+              "narration": "Batching similar tasks - updating every listing in one sitting, reviewing all open transactions together, or replying to all agent messages at set times - is far more efficient than constantly switching between different clients and different types of work throughout the day."
+            },
+            {
+              "heading": "Knowing When You've Reached Capacity",
+              "bullets": [
+                "Quality should never quietly slip as you add clients",
+                "Track your actual hours per agent honestly",
+                "It's okay to pause new clients or raise rates instead"
+              ],
+              "narration": "Watch for signs that quality is slipping as you take on more agents - missed deadlines, data errors, slower replies. Track your real hours per client honestly, and remember it's completely fine to pause taking new clients, or raise your rates instead of stretching yourself too thin."
+            }
+          ]
+        },
+        {
+          "id": "re-m6-l4",
+          "title": "Handling Difficult Feedback and Revisions",
+          "slides": [
+            {
+              "heading": "Receiving Feedback Without Getting Defensive",
+              "bullets": [
+                "Feedback is about the work, not you personally",
+                "Ask clarifying questions before revising",
+                "Thank the agent for being specific"
+              ],
+              "narration": "It's easy to feel personally criticized when an agent pushes back on a flyer or a listing description, but feedback is about the work, not you - ask clarifying questions if something's vague, and genuinely thank agents who give specific, actionable feedback."
+            },
+            {
+              "heading": "Handling Vague Feedback",
+              "bullets": [
+                "'This doesn't feel right' needs more detail",
+                "Offer 2-3 specific directions to choose from",
+                "Show, don't just ask - options speed things up"
+              ],
+              "narration": "When feedback is vague, like 'this doesn't feel right, try again,' ask what specifically isn't working, and consider offering two or three specific alternative directions rather than an open-ended redo - showing options is often faster than endless back-and-forth with a busy agent."
+            },
+            {
+              "heading": "Managing Scope Creep in Revisions",
+              "bullets": [
+                "Define how many revision rounds are included",
+                "A brand-new listing package isn't a 'revision'",
+                "Politely price extra requests separately"
+              ],
+              "narration": "Define upfront how many rounds of revision are included per listing or task - a request for a completely new marketing package, rather than a tweak to the current one, isn't really a 'revision,' and it's fair to politely price that as an additional request."
+            },
+            {
+              "heading": "Turning Difficult Clients Into Long-Term Ones",
+              "bullets": [
+                "Most 'difficult' agents just want to feel heard",
+                "Consistent, calm communication builds trust",
+                "Know when a client truly isn't the right fit"
+              ],
+              "narration": "Many agents who seem difficult at first are simply busy and stressed and just want to feel heard and kept in the loop - consistent, calm communication usually turns them into your most loyal clients over time. Occasionally, though, a client genuinely isn't the right fit, and it's okay to part ways professionally."
+            }
+          ]
+        },
+        {
+          "id": "re-m6-l5",
+          "title": "Growing Your Real Estate VA Career",
+          "slides": [
+            {
+              "heading": "Leveling Up Your Skill Set",
+              "bullets": [
+                "Learn deeper transaction coordination",
+                "Get comfortable with more CRM and marketing platforms",
+                "Study your local market's listing trends"
+              ],
+              "narration": "As you grow, learning deeper transaction coordination skills, getting comfortable with a wider range of CRM and marketing platforms, and paying attention to your local market's listing trends all let you take on more responsibility and charge higher rates over time."
+            },
+            {
+              "heading": "Deciding Between More Clients or Higher Rates",
+              "bullets": [
+                "More agents means more income but more hours",
+                "Higher rates mean the same hours, more income",
+                "Most successful VAs eventually favor the second"
+              ],
+              "narration": "At some point you'll choose between taking on more agent clients at your current rate, or fewer clients at a higher rate - most experienced Real Estate VAs eventually favor raising rates over endlessly adding more clients, since it protects both accuracy and your own time."
+            },
+            {
+              "heading": "Specializing as You Grow",
+              "bullets": [
+                "Some VAs focus purely on transaction coordination",
+                "Others specialize in listing marketing and design",
+                "Both paths can support a full-time income"
+              ],
+              "narration": "Some experienced Real Estate VAs eventually specialize entirely in transaction coordination, becoming the trusted deadline-tracker for several teams; others lean into listing marketing and design. Neither path is more 'correct' - it depends on which side of the work you genuinely enjoy most."
+            },
+            {
+              "heading": "Congratulations on Finishing This Training",
+              "bullets": [
+                "You've covered the full Real Estate VA skillset",
+                "You have a portfolio, resume, and pricing plan",
+                "Time to start applying with confidence"
+              ],
+              "narration": "Congratulations - you've now covered the full Real Estate VA skillset, from the tools and daily coordination work to portfolio-building, client acquisition, and long-term growth. You're ready to start applying and pitching to real estate agents with real confidence."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -17,6 +17,42 @@
       "isPublished": true,
       "curriculumFile": "curriculum/va-social-media.json",
       "quizzesFile": "quizzes/va-social-media.json"
+    },
+    {
+      "courseId": "va-ecommerce",
+      "title": "E-commerce VA",
+      "shortDescription": "Product listings, order fulfillment, and customer service for Shopify and Amazon stores - built for VAs who want to support online sellers.",
+      "icon": "🛒",
+      "isPublished": true,
+      "curriculumFile": "curriculum/va-ecommerce.json",
+      "quizzesFile": "quizzes/va-ecommerce.json"
+    },
+    {
+      "courseId": "va-medical",
+      "title": "Medical VA",
+      "shortDescription": "Administrative support for medical practices - scheduling, EHR data entry, insurance verification, and patient communication. Purely administrative, never clinical.",
+      "icon": "🏥",
+      "isPublished": true,
+      "curriculumFile": "curriculum/va-medical.json",
+      "quizzesFile": "quizzes/va-medical.json"
+    },
+    {
+      "courseId": "va-bookkeeping",
+      "title": "Bookkeeping VA",
+      "shortDescription": "Transaction recording, reconciliation, invoicing, and basic financial reports using QuickBooks and Xero - built for detail-oriented VAs who love keeping numbers organized.",
+      "icon": "💰",
+      "isPublished": true,
+      "curriculumFile": "curriculum/va-bookkeeping.json",
+      "quizzesFile": "quizzes/va-bookkeeping.json"
+    },
+    {
+      "courseId": "va-real-estate",
+      "title": "Real Estate VA",
+      "shortDescription": "Listing coordination, lead follow-up, transaction coordination, and marketing support for real estate agents and teams.",
+      "icon": "🏠",
+      "isPublished": true,
+      "curriculumFile": "curriculum/va-real-estate.json",
+      "quizzesFile": "quizzes/va-real-estate.json"
     }
   ]
 }

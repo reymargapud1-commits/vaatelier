@@ -1,0 +1,1094 @@
+{
+  "courseId": "va-ecommerce",
+  "courseTitle": "E-commerce VA: From Zero to First Client",
+  "courseDescription": "A complete beginner-to-job-ready training program for aspiring E-commerce Virtual Assistants. Covers the tools, daily skills, portfolio-building, resume and proposal writing, and how to land and manage your first e-commerce client.",
+  "priceNote": "One-time payment unlocks lifetime access to all modules, video lessons, quizzes, and your Certificate of Completion.",
+  "modules": [
+    {
+      "id": "ec-m1",
+      "title": "Module 1: Starting Out as an E-commerce VA",
+      "lessons": [
+        {
+          "id": "ec-m1-l1",
+          "title": "What Is an E-commerce VA?",
+          "slides": [
+            {
+              "heading": "What Is an E-commerce VA?",
+              "bullets": [
+                "Welcome to your E-commerce VA journey",
+                "Manages online stores remotely for busy owners",
+                "Works across Shopify, Amazon, and Etsy sellers"
+              ],
+              "narration": "Welcome to Module 1 of your E-commerce VA training. An E-commerce VA is a remote professional who helps online store owners manage their day-to-day operations - listing products, processing orders, answering customer questions, and keeping the store running smoothly on platforms like Shopify and Amazon."
+            },
+            {
+              "heading": "What an E-commerce VA Actually Does Day to Day",
+              "bullets": [
+                "Uploads and updates product listings",
+                "Processes and tracks customer orders",
+                "Handles customer messages and simple returns"
+              ],
+              "narration": "On a typical day, an E-commerce VA uploads new products with clear titles and descriptions, checks that orders are being fulfilled and tracked correctly, replies to customer questions about shipping or sizing, and keeps an eye on inventory so popular items don't run out unexpectedly."
+            },
+            {
+              "heading": "Why Businesses Hire an E-commerce VA",
+              "bullets": [
+                "Running a store is more work than it looks",
+                "Frees the owner to focus on products and growth",
+                "Keeps the store professional and responsive"
+              ],
+              "narration": "Most online sellers start out doing everything themselves, but listings, orders, and customer messages quickly pile up. Hiring an E-commerce VA means the store stays organized and responsive to customers, while the owner focuses on sourcing products and growing the business."
+            },
+            {
+              "heading": "Is This Niche Right for You?",
+              "bullets": [
+                "You're detail-oriented and organized",
+                "You're comfortable with numbers and tracking",
+                "You enjoy solving customer problems calmly"
+              ],
+              "narration": "This niche is a great fit if you like keeping things organized, don't mind double-checking details like SKUs and tracking numbers, and feel satisfied helping a customer sort out a shipping issue or a confusing product question."
+            }
+          ]
+        },
+        {
+          "id": "ec-m1-l2",
+          "title": "Skills and Traits of a Great E-commerce VA",
+          "slides": [
+            {
+              "heading": "Core Skills You'll Build",
+              "bullets": [
+                "Product listing and description writing",
+                "Order and inventory management basics",
+                "Customer service for online buyers"
+              ],
+              "narration": "Over this training, you'll build four core skills: writing product listings that actually sell, keeping orders and inventory moving smoothly, handling customer service professionally, and reading basic sales reports to spot what's working."
+            },
+            {
+              "heading": "Traits Clients Look For",
+              "bullets": [
+                "Accuracy - a wrong SKU or price causes real problems",
+                "Responsiveness - customers expect fast answers",
+                "Trustworthiness - you'll often handle order and payment details"
+              ],
+              "narration": "Clients trust E-commerce VAs who are accurate with details like SKUs, prices, and stock counts, who respond quickly to customer messages, and who can be trusted around sensitive information like order and payment details."
+            },
+            {
+              "heading": "A Day in the Life",
+              "bullets": [
+                "Morning: check new orders and messages",
+                "Midday: update listings or inventory",
+                "End of day: quick sales and stock check"
+              ],
+              "narration": "A typical day might start by checking overnight orders and customer messages, move into updating product listings or restocking inventory counts, and end with a quick look at that day's sales - all very doable in a focused block of time per client."
+            },
+            {
+              "heading": "Where Growth Leads",
+              "bullets": [
+                "Handle more platforms over time",
+                "Take on light marketing or SEO tasks",
+                "Manage several store accounts at once"
+              ],
+              "narration": "As you gain experience, you can grow from basic listing and order tasks into helping with product SEO or promotions, and eventually manage several clients' stores at once for a full-time income."
+            }
+          ]
+        },
+        {
+          "id": "ec-m1-l3",
+          "title": "Understanding Online Store Models (Shopify, Amazon, Etsy)",
+          "slides": [
+            {
+              "heading": "Shopify: The Independent Storefront",
+              "bullets": [
+                "The seller owns their own branded website",
+                "Full control over design and customer experience",
+                "Seller handles their own traffic and marketing"
+              ],
+              "narration": "Shopify lets a business run its own independent, branded online store. The seller has full control over how the site looks and feels, but they're also responsible for driving their own traffic through ads, social media, or SEO."
+            },
+            {
+              "heading": "Amazon: The Marketplace Giant",
+              "bullets": [
+                "Sellers list products inside Amazon's marketplace",
+                "Huge built-in customer traffic",
+                "Strict rules on listings, shipping, and service"
+              ],
+              "narration": "Amazon works differently - sellers list their products inside Amazon's massive existing marketplace, gaining access to huge built-in traffic, but they must follow Amazon's strict rules on listing quality, shipping speed, and customer service standards."
+            },
+            {
+              "heading": "Etsy: Handmade and Niche Goods",
+              "bullets": [
+                "Marketplace focused on handmade, vintage, and craft items",
+                "Smaller scale but very engaged buyers",
+                "Listings lean heavily on storytelling and photos"
+              ],
+              "narration": "Etsy is a marketplace built around handmade, vintage, and niche craft goods. It's generally smaller in scale than Amazon, but buyers are highly engaged, and listings tend to rely heavily on strong photos and a personal, storytelling tone."
+            },
+            {
+              "heading": "Why This Matters for You as a VA",
+              "bullets": [
+                "Each platform has its own dashboard and rules",
+                "Clients may use one platform or several together",
+                "Knowing all three makes you more hireable"
+              ],
+              "narration": "Each of these platforms has its own admin dashboard, listing requirements, and quirks, so a client might use just one or run the same products across several. Understanding all three makes you a far more flexible and hireable E-commerce VA."
+            }
+          ]
+        },
+        {
+          "id": "ec-m1-l4",
+          "title": "Setting Up Your Home Workspace for E-commerce Work",
+          "slides": [
+            {
+              "heading": "What You Actually Need to Get Started",
+              "bullets": [
+                "A laptop or desktop with a stable browser",
+                "Reliable internet for uploading photos and data",
+                "A quiet space for the occasional client call"
+              ],
+              "narration": "You don't need expensive equipment to start - a reliable laptop, decent internet for uploading product photos and spreadsheets, and a reasonably quiet space for client calls is enough to get going as an E-commerce VA."
+            },
+            {
+              "heading": "Organizing Client Files",
+              "bullets": [
+                "One folder per client store",
+                "Subfolders for product photos, listings, and orders",
+                "A shared drive so clients can drop in new products"
+              ],
+              "narration": "Keep every client's store assets organized in their own folder, with subfolders for product photos, listing drafts, and order records. A shared Google Drive or Dropbox folder also makes it easy for clients to drop in new products whenever they're ready."
+            },
+            {
+              "heading": "Building a Simple Product Tracker Template",
+              "bullets": [
+                "Columns for SKU, product name, price, and stock",
+                "A status column - draft, live, out of stock",
+                "One tab per client keeps things simple"
+              ],
+              "narration": "A basic spreadsheet with columns for SKU, product name, price, and stock count, plus a status column like draft, live, or out of stock, is often all you need to stay organized - and it's something you'll build for real in Module 4."
+            },
+            {
+              "heading": "Ready for Module 2",
+              "bullets": [
+                "You know what the role involves",
+                "You understand the major store platforms",
+                "Next: the tools you'll actually use daily"
+              ],
+              "narration": "You now understand what an E-commerce VA does and how Shopify, Amazon, and Etsy differ. In Module 2, we'll get hands-on with the actual tools you'll use every day on the job."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ec-m2",
+      "title": "Module 2: Essential Tools Every E-commerce VA Must Know",
+      "lessons": [
+        {
+          "id": "ec-m2-l1",
+          "title": "Shopify Admin Basics",
+          "slides": [
+            {
+              "heading": "Getting Around the Shopify Admin",
+              "bullets": [
+                "Dashboard shows orders, products, and analytics",
+                "Left-side menu organizes every major section",
+                "Getting comfortable here is step one"
+              ],
+              "narration": "The Shopify admin dashboard is your control center - it shows recent orders, product counts, and sales analytics at a glance, with a left-side menu organizing everything else. Getting comfortable navigating this screen is the first real skill you'll build in Module 2."
+            },
+            {
+              "heading": "Adding and Editing Products",
+              "bullets": [
+                "Title, description, price, and images",
+                "Variants for size, color, or style",
+                "Save as draft or publish immediately"
+              ],
+              "narration": "Adding a product means filling in a clear title, description, price, and images, and setting up variants if it comes in different sizes or colors. You can save a listing as a draft to review later or publish it live right away."
+            },
+            {
+              "heading": "Managing Orders in Shopify",
+              "bullets": [
+                "Orders tab shows paid, unfulfilled, and fulfilled",
+                "Mark orders fulfilled once shipped, with tracking",
+                "Refunds and cancellations happen here too"
+              ],
+              "narration": "The Orders tab in Shopify shows which orders are paid, unfulfilled, or already fulfilled. Once an item ships, you mark it fulfilled and add tracking information, and this is also where refunds or cancellations get processed when needed."
+            },
+            {
+              "heading": "Common Shopify Apps VAs Should Know",
+              "bullets": [
+                "Oberlo/DSers for dropshipping fulfillment",
+                "Klaviyo for email marketing",
+                "Loox or similar for review collection"
+              ],
+              "narration": "Many Shopify stores rely on apps beyond the core platform - fulfillment apps like DSers for dropshipping, Klaviyo for email marketing, and review apps like Loox - so it's worth recognizing these names even if you don't manage them all yourself."
+            }
+          ]
+        },
+        {
+          "id": "ec-m2-l2",
+          "title": "Amazon Seller Central Basics",
+          "slides": [
+            {
+              "heading": "What Is Seller Central?",
+              "bullets": [
+                "Amazon's dashboard for managing a seller account",
+                "Handles listings, orders, and performance metrics",
+                "Different from a regular Amazon shopping account"
+              ],
+              "narration": "Seller Central is Amazon's dedicated dashboard for sellers, completely separate from a regular shopping account. It's where a seller manages product listings, tracks orders, and monitors account health and performance metrics."
+            },
+            {
+              "heading": "FBA vs FBM Explained",
+              "bullets": [
+                "FBA - Fulfilled by Amazon handles storage and shipping",
+                "FBM - Fulfilled by Merchant means the seller ships it",
+                "VAs support both models differently"
+              ],
+              "narration": "FBA, or Fulfilled by Amazon, means Amazon stores, packs, and ships the product for the seller. FBM, or Fulfilled by Merchant, means the seller (or their VA) handles storage and shipping directly - each model changes what a VA's daily tasks actually look like."
+            },
+            {
+              "heading": "Managing Listings in Seller Central",
+              "bullets": [
+                "Add products through the Inventory tab",
+                "Titles and bullet points must follow Amazon's rules",
+                "Keyword-rich content helps products get found"
+              ],
+              "narration": "Product listings are managed through the Inventory tab, where titles, bullet points, and descriptions must follow Amazon's specific formatting rules. Using relevant keywords naturally in these fields is what helps a product actually get found in search."
+            },
+            {
+              "heading": "Keeping Account Health in Good Standing",
+              "bullets": [
+                "Order defect rate and late shipment rate matter",
+                "Poor metrics can lead to suspension",
+                "A VA helps monitor these numbers regularly"
+              ],
+              "narration": "Amazon tracks metrics like order defect rate and late shipment rate closely, and consistently poor numbers can lead to account suspension. Part of a VA's job is helping monitor these metrics regularly so small problems get caught early."
+            }
+          ]
+        },
+        {
+          "id": "ec-m2-l3",
+          "title": "Product Listing & Photo Editing Tools",
+          "slides": [
+            {
+              "heading": "Why Listing Quality Drives Sales",
+              "bullets": [
+                "Clear photos and copy build buyer trust",
+                "Poor listings lead to returns and bad reviews",
+                "Small improvements can boost conversion a lot"
+              ],
+              "narration": "A product listing is often the only chance to convince a stranger to buy - clear, honest photos and copy build trust, while a vague or misleading listing tends to lead straight to returns and poor reviews. Small improvements here can meaningfully boost conversion."
+            },
+            {
+              "heading": "Canva and Photoshop for Product Images",
+              "bullets": [
+                "Canva for simple graphics and lifestyle mockups",
+                "Photoshop or Photopea for detailed photo editing",
+                "Consistent backgrounds keep a store looking professional"
+              ],
+              "narration": "Canva works well for simple graphics, size charts, and lifestyle mockups, while Photoshop (or the free Photopea) handles more detailed photo editing like background removal. Keeping backgrounds and lighting consistent across a store's photos makes it look far more professional."
+            },
+            {
+              "heading": "Background Removal Tools",
+              "bullets": [
+                "Remove.bg for quick automatic background removal",
+                "Useful for clean, white-background product shots",
+                "Amazon often requires a pure white background"
+              ],
+              "narration": "Tools like Remove.bg can strip a background from a product photo in seconds, which is especially useful since Amazon requires a pure white background for the main product image on most listings."
+            },
+            {
+              "heading": "Writing SEO-Friendly Listing Copy",
+              "bullets": [
+                "Research keywords buyers actually search",
+                "Weave keywords naturally into titles and bullets",
+                "Keep the tone clear, not stuffed with jargon"
+              ],
+              "narration": "Good listing copy starts with researching the words buyers actually type into search, then weaving those keywords naturally into the title and bullet points - never stuffing them in a way that reads awkwardly or robotic to a real customer."
+            }
+          ]
+        },
+        {
+          "id": "ec-m2-l4",
+          "title": "Inventory & Order Management Tools",
+          "slides": [
+            {
+              "heading": "Why Inventory Tracking Matters",
+              "bullets": [
+                "Running out of stock loses sales and ranking",
+                "Overselling damages customer trust",
+                "Tools help catch problems before they happen"
+              ],
+              "narration": "Running out of stock costs sales and can even hurt a listing's search ranking, while overselling an item you don't actually have damages customer trust fast. Inventory tools help catch these problems before they become real headaches."
+            },
+            {
+              "heading": "Built-In Platform Inventory Tools",
+              "bullets": [
+                "Shopify's Inventory tab tracks stock per variant",
+                "Amazon's Manage Inventory shows stock and restock alerts",
+                "Both can send low-stock notifications"
+              ],
+              "narration": "Shopify's Inventory tab tracks stock levels per product variant, while Amazon's Manage Inventory page shows current stock and can flag items that need restocking soon - both platforms can send low-stock alerts if set up correctly."
+            },
+            {
+              "heading": "Multi-Channel Tools for Bigger Stores",
+              "bullets": [
+                "Tools like Sellbrite or Linnworks sync stock across platforms",
+                "Useful once a client sells on Shopify AND Amazon",
+                "Prevents overselling the same item twice"
+              ],
+              "narration": "For clients selling the same products across multiple platforms, tools like Sellbrite or Linnworks sync inventory counts automatically, so selling an item on Amazon updates the Shopify stock count too - preventing the same item from being oversold twice."
+            },
+            {
+              "heading": "Order Management Best Practices",
+              "bullets": [
+                "Process orders daily, not just weekly",
+                "Double-check shipping addresses before fulfilling",
+                "Keep tracking numbers updated for customers"
+              ],
+              "narration": "Good order management means processing new orders daily rather than letting them pile up, double-checking shipping addresses before fulfillment, and keeping tracking numbers updated so customers always know where their package is."
+            }
+          ]
+        },
+        {
+          "id": "ec-m2-l5",
+          "title": "Customer Service & Helpdesk Tools",
+          "slides": [
+            {
+              "heading": "Why Customer Service Makes or Breaks a Store",
+              "bullets": [
+                "Reviews and ratings depend heavily on it",
+                "Fast, helpful replies reduce refund requests",
+                "Poor service spreads quickly online"
+              ],
+              "narration": "Customer service directly shapes a store's reviews and ratings - a fast, helpful reply often prevents a refund request or a bad review entirely, while poor service tends to spread quickly through online reviews and word of mouth."
+            },
+            {
+              "heading": "Helpdesk Tools E-commerce VAs Use",
+              "bullets": [
+                "Gorgias and Zendesk organize customer messages",
+                "Tickets keep conversations from getting lost",
+                "Canned responses speed up common questions"
+              ],
+              "narration": "Tools like Gorgias and Zendesk organize customer messages into tickets so nothing gets lost across email, chat, and social platforms, and saved canned responses let you answer common questions quickly and consistently."
+            },
+            {
+              "heading": "Handling Common Customer Questions",
+              "bullets": [
+                "Where's my order? - point to tracking info",
+                "Sizing/fit questions - reference the size chart",
+                "Damaged item - offer replacement or refund per policy"
+              ],
+              "narration": "Most customer questions repeat themselves: where's my order (point them to tracking), does this fit (reference the size chart), or my item arrived damaged (offer a replacement or refund according to the client's policy)."
+            },
+            {
+              "heading": "Escalating the Right Issues to Your Client",
+              "bullets": [
+                "Large refund requests above your authority",
+                "Angry customers threatening chargebacks or bad press",
+                "Anything involving legal or safety concerns"
+              ],
+              "narration": "While most questions can be handled directly, always escalate large refund requests beyond your authority, customers threatening chargebacks or public complaints, and anything touching on legal or product safety concerns straight to your client."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ec-m3",
+      "title": "Module 3: Core E-commerce Management Skills",
+      "lessons": [
+        {
+          "id": "ec-m3-l1",
+          "title": "Writing Product Listings & Descriptions",
+          "slides": [
+            {
+              "heading": "The Anatomy of a Strong Listing",
+              "bullets": [
+                "A clear, keyword-rich title",
+                "Bullet points covering key benefits and features",
+                "A description that answers likely buyer questions"
+              ],
+              "narration": "A strong product listing has a clear, keyword-rich title, a set of bullet points highlighting the key benefits and features, and a fuller description that answers questions a buyer would likely have before purchasing."
+            },
+            {
+              "heading": "Features vs Benefits",
+              "bullets": [
+                "A feature is what the product has",
+                "A benefit is why that matters to the buyer",
+                "Great listings translate features into benefits"
+              ],
+              "narration": "A feature is simply what the product has - '100% cotton fabric' - while a benefit explains why that matters to the buyer, like 'stays cool and comfortable all day.' Great listings translate every feature into a real benefit for the reader."
+            },
+            {
+              "heading": "Writing for Skimmers, Not Just Readers",
+              "bullets": [
+                "Most shoppers scan, they don't read every word",
+                "Short bullets and bold key phrases help",
+                "Put the most important info first"
+              ],
+              "narration": "Most online shoppers skim rather than read every word, so short, scannable bullet points and the most important information placed first make a listing far more effective than one dense wall of text."
+            },
+            {
+              "heading": "Proofreading and Consistency Checks",
+              "bullets": [
+                "Match the client's tone and terminology",
+                "Double-check prices, sizes, and specs are correct",
+                "Typos hurt trust and can hurt search ranking"
+              ],
+              "narration": "Before publishing, always match the client's established tone and product terminology, double-check that prices, sizes, and specs are accurate, and proofread carefully - typos undermine buyer trust and can even affect how a listing ranks in search."
+            }
+          ]
+        },
+        {
+          "id": "ec-m3-l2",
+          "title": "Order Fulfillment & Tracking",
+          "slides": [
+            {
+              "heading": "The Order Fulfillment Workflow",
+              "bullets": [
+                "Order comes in, payment confirms",
+                "Item is picked, packed, and shipped",
+                "Tracking number is added and customer notified"
+              ],
+              "narration": "A typical fulfillment workflow starts when an order comes in and payment is confirmed, moves through picking, packing, and shipping the item, and finishes by adding the tracking number and notifying the customer that it's on its way."
+            },
+            {
+              "heading": "Working With Shipping Carriers",
+              "bullets": [
+                "Common carriers vary by client's location and platform",
+                "Compare shipping speed and cost options",
+                "Confirm carrier accounts before processing bulk orders"
+              ],
+              "narration": "Which shipping carriers a client uses depends on their location and platform, so it's worth comparing speed and cost options together with the client, and always confirming carrier account details are set up correctly before processing a batch of orders."
+            },
+            {
+              "heading": "Keeping Tracking Information Accurate",
+              "bullets": [
+                "Update tracking numbers immediately after shipping",
+                "Wrong or missing tracking causes support tickets",
+                "Batch updates save time for high order volume"
+              ],
+              "narration": "Tracking numbers should be updated in the system immediately after an order ships - a missing or incorrect tracking number is one of the most common causes of a customer support message, so getting this right protects everyone's time."
+            },
+            {
+              "heading": "Handling Delayed or Lost Shipments",
+              "bullets": [
+                "Check carrier tracking history first",
+                "Communicate proactively with the customer",
+                "Know the client's policy for replacements or refunds"
+              ],
+              "narration": "When a shipment looks delayed or lost, start by reviewing the carrier's tracking history for clues, then reach out to the customer proactively rather than waiting for them to ask, and follow the client's agreed policy on replacements or refunds."
+            }
+          ]
+        },
+        {
+          "id": "ec-m3-l3",
+          "title": "Handling Customer Inquiries & Returns",
+          "slides": [
+            {
+              "heading": "Responding to Common Inquiries",
+              "bullets": [
+                "Order status, sizing, and product details lead the list",
+                "Templates speed up repetitive questions",
+                "Always personalize the greeting and closing"
+              ],
+              "narration": "Most inquiries fall into a few common categories - order status, sizing, and product details - so having response templates ready speeds things up considerably, as long as you still personalize the greeting and closing for each customer."
+            },
+            {
+              "heading": "Processing a Return Step by Step",
+              "bullets": [
+                "Confirm the return meets the store's policy",
+                "Provide clear return instructions or a label",
+                "Process the refund once the item is received"
+              ],
+              "narration": "Processing a return usually means first confirming it fits within the store's return policy window and conditions, providing the customer clear instructions or a prepaid label, and processing the refund once the returned item is actually received back."
+            },
+            {
+              "heading": "De-escalating an Upset Customer",
+              "bullets": [
+                "Acknowledge their frustration genuinely",
+                "Focus on the solution, not who's at fault",
+                "Follow up to confirm the issue is resolved"
+              ],
+              "narration": "With an upset customer, start by genuinely acknowledging their frustration rather than getting defensive, keep the conversation focused on finding a solution rather than assigning blame, and follow up afterward to confirm they're satisfied with how it was resolved."
+            },
+            {
+              "heading": "Documenting Returns for the Client",
+              "bullets": [
+                "Log the reason for each return",
+                "Patterns can reveal a product or listing problem",
+                "Share a simple returns summary periodically"
+              ],
+              "narration": "Logging the reason behind every return helps reveal patterns - maybe a size runs small or a description is misleading - that a client can actually fix. Sharing a simple returns summary periodically turns this data into real value for them."
+            }
+          ]
+        },
+        {
+          "id": "ec-m3-l4",
+          "title": "Basic Sales & Inventory Reporting",
+          "slides": [
+            {
+              "heading": "Why Reporting Matters to Clients",
+              "bullets": [
+                "Proves the value of your daily work",
+                "Shows what products are selling best",
+                "Helps plan restocking and promotions"
+              ],
+              "narration": "Regular reporting proves to a client that your day-to-day work is paying off, highlights which products are actually selling best, and helps plan ahead for restocking popular items or running promotions on slower ones."
+            },
+            {
+              "heading": "Key Numbers Worth Tracking",
+              "bullets": [
+                "Units sold and revenue by product",
+                "Stock levels and low-stock warnings",
+                "Return rate by product"
+              ],
+              "narration": "The numbers worth tracking for almost any store are units sold and revenue by product, current stock levels with any low-stock warnings, and the return rate for each product, which can flag a quality or listing issue early."
+            },
+            {
+              "heading": "Where to Pull These Reports",
+              "bullets": [
+                "Shopify Analytics for sales and product performance",
+                "Amazon Business Reports in Seller Central",
+                "Export to a spreadsheet for a clean summary"
+              ],
+              "narration": "Shopify's built-in Analytics section covers sales and product performance, Amazon's Business Reports inside Seller Central offer similar data for that marketplace, and exporting the key numbers into a clean spreadsheet makes it easy to build a simple summary."
+            },
+            {
+              "heading": "Building a Simple Weekly or Monthly Report",
+              "bullets": [
+                "One page: top sellers, low stock, key numbers",
+                "Use screenshots or simple charts, not raw data dumps",
+                "Send it consistently on the same schedule"
+              ],
+              "narration": "A simple one-page report covering top sellers, any low-stock alerts, and the key sales numbers is usually all a client wants - screenshots or a simple chart communicate faster than a raw data dump, and sending it on a consistent schedule builds trust."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ec-m4",
+      "title": "Module 4: Building Your E-commerce Portfolio",
+      "lessons": [
+        {
+          "id": "ec-m4-l1",
+          "title": "Creating Sample Product Listings and Store Mockups",
+          "slides": [
+            {
+              "heading": "Why You Need Samples Before Your First Client",
+              "bullets": [
+                "Clients want to see proof, not just a resume",
+                "A mock listing shows your actual writing and eye",
+                "You control the quality - no client pressure yet"
+              ],
+              "narration": "Since you may not have a paying client yet, building sample product listings and a mock store lets you show proof of your skills, not just claim them on a resume - and you control the quality with no deadline pressure."
+            },
+            {
+              "heading": "Picking Products to Practice With",
+              "bullets": [
+                "Choose a product category you understand well",
+                "Use real products you own or admire (for practice only)",
+                "Or invent a believable fictional store"
+              ],
+              "narration": "Pick a product category you already understand - maybe skincare, home goods, or accessories. You can practice on real products you own or admire, purely as a personal exercise, or invent a believable fictional store of your own."
+            },
+            {
+              "heading": "Writing Full Sample Listings",
+              "bullets": [
+                "Write complete titles, bullets, and descriptions",
+                "Include a simple size chart or specs table if relevant",
+                "Aim for 3-5 polished sample listings"
+              ],
+              "narration": "Write out complete, polished listings - full titles, bullet points, and descriptions - for three to five sample products, including a simple specs table or size chart where it fits, since finished work is what impresses a future client."
+            },
+            {
+              "heading": "Designing Simple Store Mockups",
+              "bullets": [
+                "Use Canva to mock up a product page layout",
+                "Include clean product images with white backgrounds",
+                "Export everything neatly into one shared folder"
+              ],
+              "narration": "Use Canva to mock up how a product page or store banner might look, pairing it with clean, white-background product images, then export and organize everything into one clean, shareable folder for Lesson 2."
+            }
+          ]
+        },
+        {
+          "id": "ec-m4-l2",
+          "title": "Building an E-commerce VA Portfolio",
+          "slides": [
+            {
+              "heading": "What an E-commerce VA Portfolio Needs",
+              "bullets": [
+                "A short intro about you and your specialty",
+                "2-3 sample listings or store mockups",
+                "Your process, not just the finished product"
+              ],
+              "narration": "A strong portfolio has a short introduction about who you are and what you specialize in, two or three sample listings or store mockups, and a brief explanation of your process - clients want to understand HOW you work, not just see finished listings."
+            },
+            {
+              "heading": "Where to Host Your Portfolio",
+              "bullets": [
+                "A simple free website (Canva, Carrd, or similar)",
+                "A well-organized Google Drive folder works too",
+                "Keep the link short and easy to share"
+              ],
+              "narration": "You don't need a paid website - a simple site built for free in Canva or Carrd, or even a neatly organized, view-only Google Drive folder, works perfectly well as long as the link is short and easy to share in a proposal or application."
+            },
+            {
+              "heading": "Highlighting Relevant Platform Experience",
+              "bullets": [
+                "Note which platforms you've practiced with",
+                "Shopify, Amazon, and Etsy are worth naming specifically",
+                "Be honest about what's mock work vs real experience"
+              ],
+              "narration": "Clearly note which platforms your sample work covers - naming Shopify, Amazon, or Etsy specifically helps a client quickly see if you match their needs - and always be upfront about what's practice work versus real paid experience."
+            },
+            {
+              "heading": "Keeping Your Portfolio Updated",
+              "bullets": [
+                "Swap in real client work as soon as you have it",
+                "Remove your weakest samples over time",
+                "Revisit it every few months"
+              ],
+              "narration": "As soon as you land real client work (with their permission to showcase it), swap it in for your mock samples, and keep quietly removing your weakest pieces over time so your portfolio only ever shows your current best work."
+            }
+          ]
+        },
+        {
+          "id": "ec-m4-l3",
+          "title": "Showcasing Before/After Store Improvements",
+          "slides": [
+            {
+              "heading": "Why Before/After Comparisons Convert Well",
+              "bullets": [
+                "Visuals build trust faster than claims",
+                "Clients hire outcomes, not just tasks",
+                "Even small improvements are worth showing"
+              ],
+              "narration": "A clear before-and-after comparison - a cluttered listing turned clean and keyword-rich, for example - builds trust faster than a vague promise, because it shows you deliver real improvements, not just busywork."
+            },
+            {
+              "heading": "What to Improve for a Compelling Before/After",
+              "bullets": [
+                "Rewrite a messy or thin product description",
+                "Clean up product photos or add a white background",
+                "Reorganize confusing product categories"
+              ],
+              "narration": "Good before/after candidates include rewriting a thin or confusing product description into something clear and persuasive, cleaning up a product photo with a proper white background, or reorganizing a store's messy product categories."
+            },
+            {
+              "heading": "Turning the Work Into a Simple Case Study",
+              "bullets": [
+                "One paragraph: the original problem",
+                "One paragraph: what you changed",
+                "One paragraph: the improved result"
+              ],
+              "narration": "A simple case study is just three short paragraphs: what the original listing or store problem was, exactly what you changed about it, and what the improved result looked like - ideally shown side by side."
+            },
+            {
+              "heading": "Getting Permission to Share Real Store Results",
+              "bullets": [
+                "Always ask before using a client's store name or numbers",
+                "Some clients prefer to stay anonymous - that's fine",
+                "A quick written 'yes' protects you both"
+              ],
+              "narration": "Always ask a client's permission before sharing their store name, listings, or sales numbers publicly - some are happy to be named, others prefer anonymity, and either way a quick written yes over email or chat protects you both."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ec-m5",
+      "title": "Module 5: Resume and Job Application Mastery for E-commerce VAs",
+      "lessons": [
+        {
+          "id": "ec-m5-l1",
+          "title": "Writing an E-commerce VA Resume",
+          "slides": [
+            {
+              "heading": "What Belongs on an E-commerce VA Resume",
+              "bullets": [
+                "A clear headline naming your specialty",
+                "Platforms you know - Shopify, Amazon, Etsy",
+                "A link to your portfolio, front and center"
+              ],
+              "narration": "Your resume should open with a clear headline naming your specialty - 'E-commerce Virtual Assistant' - list the specific platforms you know like Shopify and Amazon Seller Central, and put your portfolio link somewhere it can't be missed."
+            },
+            {
+              "heading": "Describing Experience Without a Job History",
+              "bullets": [
+                "Frame your training and mock listings as real work",
+                "Use action verbs - listed, fulfilled, resolved",
+                "Quantify wherever you can, even mock numbers"
+              ],
+              "narration": "If you don't have paid experience yet, describe your training and mock listings using strong action verbs - listed, fulfilled, resolved, tracked - and quantify what you can, like 'wrote 5 SEO-optimized product listings.'"
+            },
+            {
+              "heading": "Formatting for Readability",
+              "bullets": [
+                "Keep it to one page",
+                "Use short bullet points, not paragraphs",
+                "Consistent, clean font and spacing"
+              ],
+              "narration": "Keep your resume to a single page with short, scannable bullet points rather than dense paragraphs, using a clean, consistent font - a client reviewing dozens of applicants will spend only seconds per resume."
+            },
+            {
+              "heading": "Common Resume Mistakes to Avoid",
+              "bullets": [
+                "Vague phrases like 'e-commerce expert'",
+                "No portfolio link at all",
+                "Typos - always proofread out loud"
+              ],
+              "narration": "Avoid vague self-descriptions like 'e-commerce expert' with nothing to back it up, never submit a resume without your portfolio link, and always proofread out loud before sending - typos undercut your credibility instantly in this field."
+            }
+          ]
+        },
+        {
+          "id": "ec-m5-l2",
+          "title": "Crafting Winning Proposals for E-commerce Clients",
+          "slides": [
+            {
+              "heading": "What a Good Proposal Includes",
+              "bullets": [
+                "A quick summary of their current store",
+                "Your specific plan for improving it",
+                "Clear pricing and next steps"
+              ],
+              "narration": "A strong proposal briefly summarizes what you noticed about their current store or listings, lays out your specific plan for improving it, and ends with clear pricing and an easy next step, like a short call."
+            },
+            {
+              "heading": "Personalizing Every Proposal",
+              "bullets": [
+                "Reference their actual store and product listings",
+                "Never send an obviously copy-pasted pitch",
+                "Mention one specific opportunity you spotted"
+              ],
+              "narration": "Every proposal should reference the client's actual store and something specific you noticed - a thin product description, missing photos, or a slow fulfillment process - a generic copy-pasted pitch is easy to spot and easy to ignore."
+            },
+            {
+              "heading": "Structuring Your Pricing",
+              "bullets": [
+                "Package by deliverables - listings, orders, support hours",
+                "Offer 2-3 clear tiers, not endless options",
+                "Be upfront about what's NOT included"
+              ],
+              "narration": "Package your pricing around clear deliverables - for example, a certain number of listings updated per week, plus daily order and customer support - and offer two or three simple tiers rather than overwhelming a client with options."
+            },
+            {
+              "heading": "Following Up Without Being Pushy",
+              "bullets": [
+                "One polite follow-up after about a week",
+                "Add new value, don't just 'check in'",
+                "Know when to move on gracefully"
+              ],
+              "narration": "If you don't hear back, one polite follow-up after about a week is reasonable - ideally adding something new, like a quick listing improvement idea, rather than just 'checking in.' If there's still no response after that, it's fine to move on gracefully."
+            }
+          ]
+        },
+        {
+          "id": "ec-m5-l3",
+          "title": "Where to Find E-commerce VA Clients",
+          "slides": [
+            {
+              "heading": "Freelance Platforms",
+              "bullets": [
+                "Upwork, Onlinejobs.ph, and similar sites",
+                "Filter for e-commerce / Shopify / Amazon roles",
+                "A strong profile and portfolio link matter most"
+              ],
+              "narration": "Freelance platforms like Upwork and Onlinejobs.ph list e-commerce and Shopify or Amazon-specific roles regularly - filter specifically for those, and make sure your profile headline and portfolio link are strong, since clients often decide in seconds."
+            },
+            {
+              "heading": "Small Online Sellers",
+              "bullets": [
+                "Independent Shopify and Etsy shop owners",
+                "Many are overwhelmed managing everything solo",
+                "A polite, specific outreach message works well"
+              ],
+              "narration": "Small independent Shopify and Etsy shop owners are often overwhelmed trying to manage listings, orders, and customer service all by themselves. A polite, specific outreach message pointing out one thing you could help improve works well."
+            },
+            {
+              "heading": "Referrals and Word of Mouth",
+              "bullets": [
+                "Your first client is your best source of the next",
+                "Ask happy clients if they know other sellers",
+                "A short testimonial makes referrals even easier"
+              ],
+              "narration": "Once you land one happy client, ask directly whether they know any other online sellers who could use similar help - referrals convert far more easily than cold outreach, especially if you have a short testimonial to share."
+            },
+            {
+              "heading": "Facebook Groups and Seller Communities",
+              "bullets": [
+                "Shopify and Amazon seller groups often post 'looking for help'",
+                "VA and freelancer communities share leads too",
+                "Be an active, helpful member, not just a lurker"
+              ],
+              "narration": "Shopify and Amazon seller Facebook groups often have owners posting that they need help, and dedicated VA or freelancer communities frequently share leads too - being an active, genuinely helpful member of these groups tends to bring in the best opportunities."
+            }
+          ]
+        },
+        {
+          "id": "ec-m5-l4",
+          "title": "Nailing the Client Interview/Discovery Call",
+          "slides": [
+            {
+              "heading": "What Clients Are Actually Evaluating",
+              "bullets": [
+                "Can you understand their store quickly?",
+                "Do you ask smart, specific questions?",
+                "Will you be easy and pleasant to work with?"
+              ],
+              "narration": "In a discovery call, clients aren't just checking your skills on paper - they're watching whether you can understand their store and products quickly, whether you ask smart and specific questions, and whether you seem easy and pleasant to work with."
+            },
+            {
+              "heading": "Questions You Should Ask Them",
+              "bullets": [
+                "What does success look like to you?",
+                "What's frustrated you about running the store so far?",
+                "Who else is involved in approving changes?"
+              ],
+              "narration": "Come prepared with your own questions: what does success actually look like to them, what's frustrated them about managing the store so far, and who else needs to approve listing or pricing changes - this shows you're thinking like a real partner."
+            },
+            {
+              "heading": "Talking About Pricing Confidently",
+              "bullets": [
+                "Know your rate before the call, don't improvise",
+                "Explain what's included, not just the number",
+                "It's okay to say you'll follow up in writing"
+              ],
+              "narration": "Decide your rate before the call so you're never improvising under pressure, explain clearly what's included for that price, and it's completely fine to say you'll send the full proposal in writing afterward rather than negotiating on the spot."
+            },
+            {
+              "heading": "Following Up After the Call",
+              "bullets": [
+                "Send a written summary within 24 hours",
+                "Restate what you understood about their needs",
+                "Attach your proposal or next steps clearly"
+              ],
+              "narration": "Within 24 hours of the call, send a short written summary restating what you understood about their needs, attached to your proposal or a clear next step - this reinforces that you listened closely and keeps momentum going."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ec-m6",
+      "title": "Module 6: Landing Your First E-commerce Client and Beyond",
+      "lessons": [
+        {
+          "id": "ec-m6-l1",
+          "title": "Onboarding a New E-commerce Client",
+          "slides": [
+            {
+              "heading": "What Onboarding Actually Covers",
+              "bullets": [
+                "Getting access to their store safely",
+                "Gathering product and brand assets",
+                "Agreeing on the first month's plan"
+              ],
+              "narration": "Onboarding is the process of getting properly set up with a new client: gaining safe access to their store, collecting their product and brand assets, and agreeing together on what the first month will actually look like."
+            },
+            {
+              "heading": "Getting Store Access the Right Way",
+              "bullets": [
+                "Ask to be added as staff/collaborator, not owner login",
+                "Never ask for personal account passwords",
+                "Confirm who owns the account long-term"
+              ],
+              "narration": "Always ask to be added as a staff account or collaborator on Shopify, or as a user on Seller Central, rather than requesting a personal password - this is safer for both of you, and it makes clear the client remains the true, permanent owner."
+            },
+            {
+              "heading": "Collecting Product and Brand Assets",
+              "bullets": [
+                "Product photos, specs, and pricing sheets",
+                "Brand colors, logo, and tone guidelines",
+                "Existing supplier or shipping information"
+              ],
+              "narration": "Request the client's product photos, specs, and pricing information, any brand colors or logo files, and existing supplier or shipping details - having these upfront saves a lot of back-and-forth later."
+            },
+            {
+              "heading": "Setting the First 30 Days' Plan",
+              "bullets": [
+                "Agree on which tasks you'll own first",
+                "Set your first check-in date",
+                "Clarify how and when you'll be paid"
+              ],
+              "narration": "Before touching the store, agree on which tasks you'll take on first - listings, orders, or customer service - set a date for your first check-in call, and make sure payment terms are clearly agreed on both sides."
+            }
+          ]
+        },
+        {
+          "id": "ec-m6-l2",
+          "title": "Setting Expectations and Pricing Your Services",
+          "slides": [
+            {
+              "heading": "Why Clear Expectations Prevent Problems",
+              "bullets": [
+                "Most client conflicts come from unspoken assumptions",
+                "A short written agreement protects you both",
+                "Revisit and adjust as the relationship grows"
+              ],
+              "narration": "Most conflicts between a VA and a client come from things that were never actually agreed on out loud - a short written agreement covering scope, pricing, and response times protects you both and can always be revisited as things grow."
+            },
+            {
+              "heading": "Common Pricing Models",
+              "bullets": [
+                "Monthly retainer - most common for ongoing work",
+                "Per-project - for a listing overhaul or store setup",
+                "Hourly - useful for unpredictable order volume"
+              ],
+              "narration": "A monthly retainer is the most common model for ongoing store management, a per-project rate suits a one-time listing overhaul or store setup, and hourly pricing can work well for clients with unpredictable order volume."
+            },
+            {
+              "heading": "What to Include in Your Scope of Work",
+              "bullets": [
+                "Number of listings/orders included per week",
+                "What counts as a 'revision' vs a new request",
+                "What's explicitly NOT included (e.g. paid ads)"
+              ],
+              "narration": "Your scope of work should spell out how many listings or orders are covered per week, what counts as a normal revision versus a brand-new request, and what's explicitly NOT included, like running paid ad campaigns, unless you charge separately for that."
+            },
+            {
+              "heading": "Raising Your Rates Over Time",
+              "bullets": [
+                "Review rates as your skill and results grow",
+                "Give existing clients advance notice",
+                "New clients can start at your current rate"
+              ],
+              "narration": "As your skills and track record grow, it's normal and healthy to raise your rates - give existing clients advance notice (30-60 days is common), while any brand-new client simply starts at your current, updated rate."
+            }
+          ]
+        },
+        {
+          "id": "ec-m6-l3",
+          "title": "Managing Multiple Store Accounts",
+          "slides": [
+            {
+              "heading": "Staying Organized Across Clients",
+              "bullets": [
+                "One shared tracker, separate client tabs",
+                "Color-code or label tasks by client",
+                "A weekly planning block prevents last-minute chaos"
+              ],
+              "narration": "Managing several stores well usually comes down to using one shared tracker with separate tabs per client, color-coding or labeling tasks clearly, and setting aside a dedicated weekly block to plan ahead rather than reacting day to day."
+            },
+            {
+              "heading": "Avoiding Mix-Ups Between Stores",
+              "bullets": [
+                "Double-check the account before every action",
+                "Never reuse a listing meant for another client",
+                "Build a simple pre-task checklist"
+              ],
+              "narration": "Updating the wrong store is a real and costly risk once you're juggling multiple clients - always double-check which account you're in before making changes, never copy a listing written for one client into another's store, and consider a short pre-task checklist."
+            },
+            {
+              "heading": "Batching Work for Efficiency",
+              "bullets": [
+                "Process a batch of orders in one sitting",
+                "Write several product listings together",
+                "Batch client communications too"
+              ],
+              "narration": "Batching similar tasks - processing a whole batch of orders in one sitting, writing several product listings back to back, or replying to all client messages at set times - is far more efficient than constantly switching between different types of work."
+            },
+            {
+              "heading": "Knowing When You've Reached Capacity",
+              "bullets": [
+                "Quality should never quietly slip as you add clients",
+                "Track your actual hours per client honestly",
+                "It's okay to pause new clients or raise rates instead"
+              ],
+              "narration": "Watch for signs that quality is slipping as you take on more clients - missed orders, slower replies, rushed listings. Track your real hours per client honestly, and remember it's completely fine to pause taking new clients, or raise your rates instead of stretching yourself too thin."
+            }
+          ]
+        },
+        {
+          "id": "ec-m6-l4",
+          "title": "Handling Difficult Feedback and Revisions",
+          "slides": [
+            {
+              "heading": "Receiving Feedback Without Getting Defensive",
+              "bullets": [
+                "Feedback is about the work, not you personally",
+                "Ask clarifying questions before revising",
+                "Thank the client for being specific"
+              ],
+              "narration": "It's easy to feel personally criticized when a client pushes back on a listing or a process, but feedback is about the work, not you - ask clarifying questions if something's vague, and genuinely thank clients who give specific, actionable feedback."
+            },
+            {
+              "heading": "Handling Vague Feedback",
+              "bullets": [
+                "'This listing isn't working' needs more detail",
+                "Offer 2-3 specific directions to choose from",
+                "Show, don't just ask - options speed things up"
+              ],
+              "narration": "When feedback is vague, like 'this listing isn't working, fix it,' ask what specifically isn't landing, and consider offering two or three specific alternative directions rather than an open-ended redo - showing options is often faster than endless back-and-forth."
+            },
+            {
+              "heading": "Managing Scope Creep in Revisions",
+              "bullets": [
+                "Define how many revision rounds are included",
+                "A brand-new store section isn't a 'revision'",
+                "Politely price extra requests separately"
+              ],
+              "narration": "Define upfront how many rounds of revision are included per listing or task - a request to build a completely new store section, rather than a tweak to existing work, isn't really a 'revision,' and it's fair to politely price that as an additional request."
+            },
+            {
+              "heading": "Turning Difficult Clients Into Long-Term Ones",
+              "bullets": [
+                "Most 'difficult' clients just want to feel heard",
+                "Consistent, calm communication builds trust",
+                "Know when a client truly isn't the right fit"
+              ],
+              "narration": "Many clients who seem difficult at first just want to feel heard and kept in the loop - consistent, calm communication usually turns them into your most loyal clients over time. Occasionally, though, a client genuinely isn't the right fit, and it's okay to part ways professionally."
+            }
+          ]
+        },
+        {
+          "id": "ec-m6-l5",
+          "title": "Growing Your E-commerce VA Career",
+          "slides": [
+            {
+              "heading": "Leveling Up Your Skill Set",
+              "bullets": [
+                "Learn basic paid ads (Amazon PPC, Meta Ads)",
+                "Get comfortable with simple SEO research",
+                "Study sales reports more deeply over time"
+              ],
+              "narration": "As you grow, learning basic paid advertising like Amazon PPC or Meta Ads, getting comfortable with simple keyword and SEO research, and studying sales reports more deeply all let you charge more and take on bigger stores."
+            },
+            {
+              "heading": "Deciding Between More Clients or Higher Rates",
+              "bullets": [
+                "More clients means more income but more hours",
+                "Higher rates mean the same hours, more income",
+                "Most successful VAs eventually favor the second"
+              ],
+              "narration": "At some point you'll choose between taking on more clients at your current rate, or fewer clients at a higher rate - most experienced E-commerce VAs eventually favor raising rates over endlessly adding more clients, since it protects both quality and your own time."
+            },
+            {
+              "heading": "Building Toward an Agency or Team",
+              "bullets": [
+                "Some VAs eventually hire their own subcontractors",
+                "Others stay solo and simply raise rates",
+                "Both paths are valid - choose what fits your goals"
+              ],
+              "narration": "Some experienced E-commerce VAs eventually build a small team, subcontracting listing or fulfillment work to other freelancers and keeping strategy for themselves; others prefer staying solo and simply commanding premium rates. Neither path is more 'correct' - it depends on what kind of work-life you actually want."
+            },
+            {
+              "heading": "Congratulations on Finishing This Training",
+              "bullets": [
+                "You've covered the full E-commerce VA skillset",
+                "You have a portfolio, resume, and pricing plan",
+                "Time to start applying with confidence"
+              ],
+              "narration": "Congratulations - you've now covered the full E-commerce VA skillset, from the tools and daily skills to portfolio-building, client acquisition, and long-term growth. You're ready to start applying and pitching with real confidence."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

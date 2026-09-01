@@ -1,0 +1,426 @@
+{
+  "quizzes": [
+    {
+      "id": "ec-quiz-m1",
+      "moduleId": "ec-m1",
+      "title": "Module 1 Quiz: Starting Out as an E-commerce VA",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "ec-m1-q1",
+          "text": "What does an E-commerce VA primarily do?",
+          "choices": [
+            "Manages an online store's listings, orders, and customer service remotely",
+            "Handles a company's payroll",
+            "Repairs computer hardware",
+            "Manages warehouse construction"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ec-m1-q2",
+          "text": "Why do most online sellers hire an E-commerce VA?",
+          "choices": [
+            "They are legally required to",
+            "Running a store's daily tasks becomes more than they can handle alone",
+            "It is cheaper than hiring no one",
+            "Online stores require a license to operate"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ec-m1-q3",
+          "text": "Which store model gives the seller their own independent, branded website?",
+          "choices": [
+            "Amazon",
+            "Shopify",
+            "Etsy only",
+            "None of these"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ec-m1-q4",
+          "text": "What best describes Amazon as a selling platform?",
+          "choices": [
+            "A marketplace with huge built-in traffic and strict seller rules",
+            "A tool only for email marketing",
+            "A free website builder with no rules",
+            "A platform exclusively for handmade goods"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ec-m1-q5",
+          "text": "What is a key part of setting up a productive home workspace for e-commerce work?",
+          "choices": [
+            "A reliable internet connection and an organized file system",
+            "Working only from a phone with no backup plan",
+            "Avoiding all spreadsheets",
+            "Sharing your client login with friends"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "ec-quiz-m2",
+      "moduleId": "ec-m2",
+      "title": "Module 2 Quiz: Essential Tools",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "ec-m2-q1",
+          "text": "Where does a Shopify VA go to manage orders and mark them fulfilled?",
+          "choices": [
+            "The Orders tab in the Shopify admin",
+            "A separate accounting app only",
+            "Amazon Seller Central",
+            "A personal email inbox"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ec-m2-q2",
+          "text": "What is the difference between FBA and FBM on Amazon?",
+          "choices": [
+            "FBA means Amazon stores and ships the product; FBM means the seller does",
+            "FBA and FBM are the same thing",
+            "FBM is only for digital products",
+            "FBA means the seller ships internationally only"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ec-m2-q3",
+          "text": "Why does Amazon require a white background for main product images?",
+          "choices": [
+            "It's one of Amazon's listing image requirements for consistency",
+            "It makes photos load faster",
+            "It is optional and rarely followed",
+            "It only applies to clothing items"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ec-m2-q4",
+          "text": "What is a key purpose of tools like Sellbrite or Linnworks?",
+          "choices": [
+            "Designing company logos",
+            "Syncing inventory across multiple sales channels to prevent overselling",
+            "Processing payroll",
+            "Writing product descriptions automatically"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ec-m2-q5",
+          "text": "What is the main purpose of a helpdesk tool like Gorgias or Zendesk?",
+          "choices": [
+            "Organizing customer messages into tickets so nothing gets lost",
+            "Tracking company payroll",
+            "Hosting product photos",
+            "Managing supplier contracts"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ec-m2-q6",
+          "text": "Why is monitoring Amazon account health metrics important?",
+          "choices": [
+            "Poor metrics like late shipment rate can lead to account suspension",
+            "Metrics have no effect on a seller account",
+            "It is only relevant for FBA sellers",
+            "It replaces the need for customer service"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ec-m2-q7",
+          "text": "Which tool is commonly used for removing a product photo's background?",
+          "choices": [
+            "Remove.bg",
+            "QuickBooks",
+            "Trello",
+            "Zendesk"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "ec-quiz-m3",
+      "moduleId": "ec-m3",
+      "title": "Module 3 Quiz: Core Management Skills",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "ec-m3-q1",
+          "text": "What is the difference between a feature and a benefit in a product listing?",
+          "choices": [
+            "A feature is what the product has; a benefit explains why that matters to the buyer",
+            "They mean exactly the same thing",
+            "A benefit is only used in Amazon listings",
+            "A feature always comes after the benefit"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ec-m3-q2",
+          "text": "What is the correct order in a typical order fulfillment workflow?",
+          "choices": [
+            "Order and payment confirm, item is picked/packed/shipped, tracking is added",
+            "Tracking is added before the order is placed",
+            "The customer ships the item back first",
+            "Payment is confirmed after the item is delivered"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ec-m3-q3",
+          "text": "Why is it important to update tracking numbers immediately after shipping?",
+          "choices": [
+            "It has no real effect on the customer",
+            "Missing or wrong tracking is a common cause of customer support tickets",
+            "Carriers require it to process the payment",
+            "It is only needed for international orders"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ec-m3-q4",
+          "text": "How should an E-commerce VA handle an upset customer?",
+          "choices": [
+            "Argue about who is at fault",
+            "Acknowledge their frustration and focus on the solution",
+            "Ignore the message",
+            "Immediately issue a refund without checking the policy"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ec-m3-q5",
+          "text": "Why should return reasons be logged and shared with the client?",
+          "choices": [
+            "They have no use once a refund is processed",
+            "Patterns in returns can reveal a product or listing problem worth fixing",
+            "It is only required for accounting purposes",
+            "It replaces the need for customer communication"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "ec-quiz-m4",
+      "moduleId": "ec-m4",
+      "title": "Module 4 Quiz: Building Your Portfolio",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "ec-m4-q1",
+          "text": "What is a 'mock listing' used for in a portfolio?",
+          "choices": [
+            "A real paid client project",
+            "A sample listing created to demonstrate your skills",
+            "A type of scam",
+            "A required legal document"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ec-m4-q2",
+          "text": "How should mock listings be labeled in a portfolio?",
+          "choices": [
+            "As real client results with no disclaimer",
+            "Clearly and honestly as sample or practice work",
+            "They should never be shown",
+            "As guaranteed sales outcomes for future clients"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ec-m4-q3",
+          "text": "What is a good way to showcase improvements in a portfolio?",
+          "choices": [
+            "Vague claims with no specifics",
+            "Clear before/after examples of listings or store changes",
+            "Only screenshots of unrelated websites",
+            "Avoiding results entirely"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ec-m4-q4",
+          "text": "Which free tools work well for building a simple portfolio page?",
+          "choices": [
+            "Canva, Google Sites, or Carrd",
+            "Only expensive custom-built websites",
+            "None exist for free",
+            "Only printed paper portfolios"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ec-m4-q5",
+          "text": "Why is a portfolio valuable even without paid e-commerce client experience?",
+          "choices": [
+            "It has no real value",
+            "It proves your skills with listings, photo editing, and organization",
+            "It replaces the need for any actual skills",
+            "Clients never look at portfolios"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "ec-quiz-m5",
+      "moduleId": "ec-m5",
+      "title": "Module 5 Quiz: Resume and Applications",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "ec-m5-q1",
+          "text": "What should an E-commerce VA resume bullet point focus on?",
+          "choices": [
+            "Vague statements with no detail",
+            "Specific results and tasks, with numbers when possible",
+            "Only job titles",
+            "Personal hobbies unrelated to the role"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ec-m5-q2",
+          "text": "What makes a strong proposal for an e-commerce job posting?",
+          "choices": [
+            "A generic copy-paste message sent to everyone",
+            "Personalization that references the client's actual store and needs",
+            "Extremely long, unfocused paragraphs",
+            "No mention of relevant platforms or tools"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ec-m5-q3",
+          "text": "Which platforms are commonly used to find E-commerce VA clients?",
+          "choices": [
+            "OnlineJobs.ph and Upwork",
+            "Only local newspapers",
+            "Random unrelated apps",
+            "None, clients cannot be found online"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ec-m5-q4",
+          "text": "What is a good goal during a discovery call with a potential client?",
+          "choices": [
+            "Avoid asking any questions",
+            "Understand the client's store, goals, and expectations",
+            "Immediately demand payment before speaking",
+            "Refuse to discuss the client's products"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ec-m5-q5",
+          "text": "A good freelance profile headline for an E-commerce VA should be:",
+          "choices": [
+            "Vague, like 'Hardworking VA'",
+            "Specific and benefit-driven, naming the platforms and value you offer",
+            "Left blank",
+            "Written only in technical jargon"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "ec-quiz-m6",
+      "moduleId": "ec-m6",
+      "title": "Module 6 Quiz: Landing Your First Client and Beyond",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "ec-m6-q1",
+          "text": "What is a good first step when onboarding a new e-commerce client?",
+          "choices": [
+            "Guess what they want without asking",
+            "Clarify goals, access needs, and priority tasks in writing",
+            "Immediately increase your rate",
+            "Avoid all communication in week one"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ec-m6-q2",
+          "text": "Which is a common pricing model for E-commerce VA services?",
+          "choices": [
+            "Monthly retainer",
+            "Random guessing",
+            "Refusing to state a price",
+            "Charging only in a currency you don't understand"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ec-m6-q3",
+          "text": "What is a practical way to manage multiple client stores without mixing them up?",
+          "choices": [
+            "Use one shared login for every client",
+            "Use separate trackers and clearly labeled folders per client",
+            "Post the same listings to every client's store",
+            "Avoid using any organizational tools"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ec-m6-q4",
+          "text": "How should an E-commerce VA respond to difficult client feedback?",
+          "choices": [
+            "Take it personally and stop responding",
+            "Listen professionally, clarify the concern, and revise where reasonable",
+            "Argue that the client is always wrong",
+            "Ignore the feedback completely"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ec-m6-q5",
+          "text": "What helps build a long-term E-commerce VA career?",
+          "choices": [
+            "Refusing to learn new platforms or tools",
+            "Asking for testimonials and continuously learning new platform features",
+            "Never asking for client feedback",
+            "Avoiding all specialization"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ec-m6-q6",
+          "text": "Why should account access be given through a staff/collaborator role rather than a shared password?",
+          "choices": [
+            "It's safer and keeps the client as the true account owner",
+            "It gives the VA full ownership of the store",
+            "Platforms don't allow staff accounts",
+            "It has no security benefit"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ec-m6-q7",
+          "text": "What is a healthy way to handle reaching client capacity?",
+          "choices": [
+            "Keep adding clients even if quality slips",
+            "Pause new clients or raise rates instead of stretching too thin",
+            "Stop tracking hours entirely",
+            "Lower your rates to attract more clients"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    }
+  ]
+}

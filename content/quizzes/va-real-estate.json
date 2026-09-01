@@ -1,0 +1,426 @@
+{
+  "quizzes": [
+    {
+      "id": "re-quiz-m1",
+      "moduleId": "re-m1",
+      "title": "Module 1 Quiz: Starting Out as a Real Estate VA",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "re-m1-q1",
+          "text": "What does a Real Estate VA primarily do?",
+          "choices": [
+            "Supports agents with listing coordination, data entry, marketing, and admin tasks",
+            "Represents buyers in contract negotiations",
+            "Appraises home values for banks",
+            "Inspects homes for structural issues"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "re-m1-q2",
+          "text": "Why do agents hire a Real Estate VA?",
+          "choices": [
+            "It's legally required",
+            "They lack time for paperwork and want to focus on clients and closings",
+            "VAs are licensed to sell homes",
+            "MLS access requires a VA"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "re-m1-q3",
+          "text": "Which trait matters most for a Real Estate VA?",
+          "choices": [
+            "Accuracy and attention to deadlines",
+            "Ignoring transaction dates",
+            "Guessing at listing details",
+            "Avoiding communication with agents"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "re-m1-q4",
+          "text": "In the real estate transaction process, what happens during 'closing'?",
+          "choices": [
+            "The home is first listed",
+            "Final paperwork is signed and ownership transfers",
+            "The buyer submits an offer",
+            "The agent designs a flyer"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "re-m1-q5",
+          "text": "What's an important part of setting up a home workspace for real estate VA work?",
+          "choices": [
+            "Reliable internet and organized client/listing folders",
+            "Avoiding all cloud tools",
+            "Working without a schedule",
+            "Sharing login credentials with friends"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "re-quiz-m2",
+      "moduleId": "re-m2",
+      "title": "Module 2 Quiz: Essential Tools",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "re-m2-q1",
+          "text": "What is the MLS?",
+          "choices": [
+            "A shared database where licensed agents list homes for sale",
+            "A tool for editing photos",
+            "A payment processor",
+            "A social media app"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "re-m2-q2",
+          "text": "Under whose access does a Real Estate VA typically use the MLS?",
+          "choices": [
+            "Their own real estate license",
+            "The agent's license/account",
+            "A public account",
+            "No access is needed"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "re-m2-q3",
+          "text": "What is a Real Estate CRM like Follow Up Boss used for?",
+          "choices": [
+            "Managing leads, follow-ups, and client relationships",
+            "Filing taxes",
+            "Editing property photos",
+            "Scheduling home inspections"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "re-m2-q4",
+          "text": "What is DocuSign primarily used for?",
+          "choices": [
+            "Legally signing and tracking real estate documents remotely",
+            "Hosting property photos",
+            "Managing MLS listings",
+            "Running social media ads"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "re-m2-q5",
+          "text": "Why do listings need social media and marketing beyond the MLS?",
+          "choices": [
+            "Buyers browse social platforms and portals daily, so strong visuals help listings stand out",
+            "MLS listings are illegal without social posts",
+            "Marketing replaces the need for accurate data",
+            "Social media is only for luxury homes"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "re-m2-q6",
+          "text": "What is the purpose of transaction management software like Dotloop or SkySlope?",
+          "choices": [
+            "Tracking documents and deadlines for a transaction in one shared place",
+            "Designing property flyers",
+            "Managing payroll",
+            "Hosting virtual tours only"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "re-m2-q7",
+          "text": "What should a VA do if they notice a missing document in a transaction checklist?",
+          "choices": [
+            "Ignore it and hope it appears",
+            "Flag it to the agent early, before it becomes urgent",
+            "Sign it themselves",
+            "Delete the checklist item"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "re-quiz-m3",
+      "moduleId": "re-m3",
+      "title": "Module 3 Quiz: Core Real Estate VA Skills",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "re-m3-q1",
+          "text": "What does listing coordination involve?",
+          "choices": [
+            "Gathering details and entering accurate data before a listing goes live",
+            "Negotiating the sale price",
+            "Approving mortgage applications",
+            "Conducting home inspections"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "re-m3-q2",
+          "text": "Why is fast lead follow-up so important in real estate?",
+          "choices": [
+            "Leads go cold quickly and a competitor agent may respond first",
+            "Leads never expire",
+            "Follow-up is optional and rarely matters",
+            "CRMs automatically close deals"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "re-m3-q3",
+          "text": "What is transaction coordination primarily focused on?",
+          "choices": [
+            "Tracking deadlines and documents once a home is under contract",
+            "Designing the seller's new home",
+            "Approving buyer financing",
+            "Marketing homes that haven't sold yet"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "re-m3-q4",
+          "text": "What should a good listing flyer include?",
+          "choices": [
+            "The strongest photo, key features, price, and agent contact info",
+            "Only a phone number",
+            "A blank page for the buyer to fill in",
+            "Legal disclaimers only"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "re-m3-q5",
+          "text": "Why should a VA update a listing's status promptly (e.g., to pending or sold)?",
+          "choices": [
+            "Because inaccurate live listings mislead buyers and can violate MLS rules",
+            "Status updates are optional and rarely checked",
+            "Only the agent is allowed to view listing status",
+            "Buyers do not see listing status"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "re-quiz-m4",
+      "moduleId": "re-m4",
+      "title": "Module 4 Quiz: Building Your Portfolio",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "re-m4-q1",
+          "text": "What is a 'mock listing package' used for?",
+          "choices": [
+            "A sample project created to demonstrate your skills without a paying client",
+            "A real signed contract",
+            "A required legal filing",
+            "A type of MLS violation"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "re-m4-q2",
+          "text": "How should mock/practice projects be labeled in a portfolio?",
+          "choices": [
+            "As real client results with no disclaimer",
+            "Clearly and honestly as sample or practice work",
+            "They should never be shown to anyone",
+            "As guaranteed future outcomes"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "re-m4-q3",
+          "text": "What should a complete sample listing package include?",
+          "choices": [
+            "An MLS-style data sheet, a designed flyer, and a transaction checklist",
+            "Only a property address",
+            "A blank spreadsheet",
+            "A single social media hashtag"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "re-m4-q4",
+          "text": "Which free tools work well for building a simple portfolio page?",
+          "choices": [
+            "Canva, Google Sites, or Carrd",
+            "Only expensive custom-built websites",
+            "No free tools exist",
+            "Printed paper only"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "re-m4-q5",
+          "text": "Besides marketing, what else should a Real Estate VA portfolio demonstrate?",
+          "choices": [
+            "Organizational skills, like checklists and tracking systems",
+            "Personal hobbies unrelated to the work",
+            "A list of unrelated certifications",
+            "Nothing beyond visual design"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "re-quiz-m5",
+      "moduleId": "re-m5",
+      "title": "Module 5 Quiz: Resume and Applications",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "re-m5-q1",
+          "text": "What should a Real Estate VA resume bullet point focus on?",
+          "choices": [
+            "Specific, quantifiable tasks like listings entered or transactions tracked",
+            "Vague statements with no detail",
+            "Only unrelated hobbies",
+            "Generic job titles with no context"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "re-m5-q2",
+          "text": "What makes a strong proposal to a real estate agent?",
+          "choices": [
+            "Personalization referencing the agent's actual listings or workflow",
+            "A generic copy-pasted message sent to everyone",
+            "Extremely long, unfocused paragraphs",
+            "No mention of relevant tools or skills"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "re-m5-q3",
+          "text": "Which platforms are commonly used to find Real Estate VA clients?",
+          "choices": [
+            "OnlineJobs.ph and Upwork",
+            "Only local newspapers",
+            "Random unrelated apps",
+            "Clients cannot be found online"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "re-m5-q4",
+          "text": "What is a good goal during a discovery call with a potential agent client?",
+          "choices": [
+            "Understand their current workflow, tools, and expectations",
+            "Avoid asking any questions",
+            "Immediately demand payment before speaking",
+            "Refuse to discuss their listings"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "re-m5-q5",
+          "text": "A good freelance profile headline for a Real Estate VA should be:",
+          "choices": [
+            "Specific, naming your real estate skills and the value you offer",
+            "Vague, like 'Hardworking VA'",
+            "Left blank",
+            "Written only in technical jargon"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "re-quiz-m6",
+      "moduleId": "re-m6",
+      "title": "Module 6 Quiz: Landing Your First Client and Beyond",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "re-m6-q1",
+          "text": "What is a good first step when onboarding a new agent client?",
+          "choices": [
+            "Clarify scope, access, and the first month's plan in writing",
+            "Guess what they want without asking",
+            "Immediately increase your rate",
+            "Avoid all communication in week one"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "re-m6-q2",
+          "text": "Which is a common pricing model for Real Estate VA services?",
+          "choices": [
+            "Monthly retainer",
+            "Random guessing",
+            "Refusing to state a price",
+            "Charging in a currency you don't understand"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "re-m6-q3",
+          "text": "What is a practical way to manage multiple agent accounts without mixing them up?",
+          "choices": [
+            "Use separate, clearly labeled files and double-check accounts before updates",
+            "Use one shared login for every agent",
+            "Enter the same data into every account",
+            "Avoid using any organizational tools"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "re-m6-q4",
+          "text": "How should a Real Estate VA respond to difficult client feedback?",
+          "choices": [
+            "Listen professionally, clarify the concern, and revise where reasonable",
+            "Take it personally and stop responding",
+            "Argue that the agent is always wrong",
+            "Ignore the feedback completely"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "re-m6-q5",
+          "text": "What helps build a long-term Real Estate VA career?",
+          "choices": [
+            "Asking for testimonials and continuously learning new tools/platforms",
+            "Refusing to learn new platforms or tools",
+            "Never asking for client feedback",
+            "Avoiding all specialization"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "re-m6-q6",
+          "text": "What should always remain the licensed agent's responsibility, never the VA's?",
+          "choices": [
+            "Legal, contractual, and licensed real estate decisions",
+            "Entering data into the MLS",
+            "Designing a flyer in Canva",
+            "Logging a lead in the CRM"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "re-m6-q7",
+          "text": "When is it appropriate to raise your rates as a Real Estate VA?",
+          "choices": [
+            "As your skills and track record grow, with advance notice to existing clients",
+            "Never, rates should stay fixed forever",
+            "Only when a client asks you to raise them",
+            "Immediately upon signing any new client"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    }
+  ]
+}

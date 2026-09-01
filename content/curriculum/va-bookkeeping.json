@@ -1,0 +1,1094 @@
+{
+  "courseId": "va-bookkeeping",
+  "courseTitle": "Bookkeeping VA: From Zero to First Client",
+  "courseDescription": "A complete beginner-to-job-ready training program for aspiring Bookkeeping Virtual Assistants. Covers the tools, daily skills, portfolio-building, resume and proposal writing, and how to land and manage your first bookkeeping client.",
+  "priceNote": "One-time payment unlocks lifetime access to all modules, video lessons, quizzes, and your Certificate of Completion.",
+  "modules": [
+    {
+      "id": "bk-m1",
+      "title": "Module 1: Starting Out as a Bookkeeping VA",
+      "lessons": [
+        {
+          "id": "bk-m1-l1",
+          "title": "What Is a Bookkeeping VA?",
+          "slides": [
+            {
+              "heading": "What Is a Bookkeeping VA?",
+              "bullets": [
+                "Welcome to your Bookkeeping VA journey",
+                "Keeps a business's financial records organized remotely",
+                "Works with businesses of every size"
+              ],
+              "narration": "Welcome to Module 1 of your Bookkeeping VA training. A Bookkeeping VA is a remote professional who records transactions, categorizes expenses, reconciles accounts, and keeps a business's financial records accurate and up to date - using tools like QuickBooks Online or Xero - so the business owner always knows where their money stands."
+            },
+            {
+              "heading": "What a Bookkeeping VA Actually Does Day to Day",
+              "bullets": [
+                "Records transactions and categorizes expenses",
+                "Reconciles bank and credit card accounts",
+                "Sends invoices and tracks payments"
+              ],
+              "narration": "On a typical day, a Bookkeeping VA logs new transactions, categorizes expenses correctly, matches bank feed entries to receipts, reconciles accounts against bank statements, sends out client invoices, and follows up on unpaid ones. It's steady, detail-focused work that keeps a business's books clean and ready whenever the owner needs a clear financial picture."
+            },
+            {
+              "heading": "Why Businesses Hire a Bookkeeping VA",
+              "bullets": [
+                "Messy books cost time, money, and peace of mind",
+                "Most owners aren't trained bookkeepers themselves",
+                "Frees the owner to focus on running their business"
+              ],
+              "narration": "Most small business owners know their books need attention, but don't have the time, training, or patience to keep them current. Hiring a Bookkeeping VA means transactions get recorded consistently, accounts stay reconciled, and the owner can check in anytime and trust the numbers - while they focus on serving their own customers."
+            },
+            {
+              "heading": "Is This Niche Right for You?",
+              "bullets": [
+                "You enjoy detail-oriented, organized work",
+                "You're comfortable with numbers and software",
+                "You like the satisfaction of balanced books"
+              ],
+              "narration": "This niche is a great fit if you're naturally detail-oriented, enjoy following a consistent process, and don't mind working with numbers and spreadsheets every day. If it feels satisfying to watch a messy set of books become clean and balanced, bookkeeping could be your ideal VA specialty."
+            }
+          ]
+        },
+        {
+          "id": "bk-m1-l2",
+          "title": "Skills and Traits of a Great Bookkeeping VA",
+          "slides": [
+            {
+              "heading": "Core Skills You'll Build",
+              "bullets": [
+                "Recording and categorizing transactions",
+                "Reconciling bank and credit card accounts",
+                "Reading basic financial reports"
+              ],
+              "narration": "Over this training, you'll build four core skills: accurately recording and categorizing every transaction, reconciling bank and credit card accounts each month, creating and tracking invoices, and reading basic financial reports well enough to explain them clearly to a client."
+            },
+            {
+              "heading": "Traits Clients Look For",
+              "bullets": [
+                "Accuracy - numbers must be right, every time",
+                "Confidentiality - handling sensitive financial data with care",
+                "Consistency - books stay current, not just at tax time"
+              ],
+              "narration": "Clients trust Bookkeeping VAs who are meticulously accurate, since even small errors can snowball into real problems. They also value confidentiality, because you'll see sensitive financial details, and consistency - keeping books updated weekly or monthly rather than scrambling to catch up once a year."
+            },
+            {
+              "heading": "A Day in the Life",
+              "bullets": [
+                "Morning: check bank feeds for new transactions",
+                "Midday: categorize expenses and reconcile accounts",
+                "End of day: send invoices or follow up on payments"
+              ],
+              "narration": "A typical day might start by reviewing new transactions pulled in from a bank feed, move into categorizing expenses and working through reconciliation, and end with sending a new invoice or following up on an overdue one - often just an hour or two of focused work per client."
+            },
+            {
+              "heading": "Where Growth Leads",
+              "bullets": [
+                "Handle more complex accounts over time",
+                "Take on monthly reporting, not just data entry",
+                "Manage several clients' books at once"
+              ],
+              "narration": "As you gain experience, you can grow from basic data entry into producing full monthly reports, and eventually manage several clients' books at the same time for a full-time income - with room to specialize further as you build your reputation."
+            }
+          ]
+        },
+        {
+          "id": "bk-m1-l3",
+          "title": "Understanding Basic Bookkeeping Concepts",
+          "slides": [
+            {
+              "heading": "What Bookkeeping Actually Tracks",
+              "bullets": [
+                "Every dollar coming in and going out",
+                "Organized into consistent categories",
+                "The foundation for every financial report"
+              ],
+              "narration": "At its core, bookkeeping is simply the organized tracking of every dollar a business earns and spends. Each transaction gets recorded and sorted into a consistent category, so the business always has an accurate, up-to-date picture of its finances - and so every report built later is trustworthy."
+            },
+            {
+              "heading": "Debits and Credits, Simplified",
+              "bullets": [
+                "Every transaction affects at least two accounts",
+                "Debits and credits just show where money moved",
+                "Software handles most of the math for you"
+              ],
+              "narration": "Debits and credits can sound intimidating, but the idea is simple: every transaction moves money between at least two accounts, and debits and credits just describe that movement. The good news is that tools like QuickBooks and Xero handle the underlying math - your job is mostly picking the right accounts."
+            },
+            {
+              "heading": "The Chart of Accounts",
+              "bullets": [
+                "A list of every category a business uses",
+                "Groups: income, expenses, assets, liabilities, equity",
+                "Keeping it clean makes reports actually useful"
+              ],
+              "narration": "The chart of accounts is simply the list of categories a business uses to sort its transactions - things like income, expenses, assets, liabilities, and equity. Keeping this list clean and consistent, without duplicate or overly specific categories, is what makes financial reports clear and genuinely useful later on."
+            },
+            {
+              "heading": "Cash Basis vs Accrual Basis",
+              "bullets": [
+                "Cash basis: records money when it actually moves",
+                "Accrual basis: records income/expenses when earned or billed",
+                "Most small clients use cash basis - simpler day to day"
+              ],
+              "narration": "Cash basis bookkeeping records a transaction only when money actually changes hands, while accrual basis records income when it's earned and expenses when they're billed, even before payment. Most small business clients you'll work with use cash basis because it's simpler - your software is usually already set up to match whichever method the client uses."
+            }
+          ]
+        },
+        {
+          "id": "bk-m1-l4",
+          "title": "Setting Up Your Home Workspace for Bookkeeping Work",
+          "slides": [
+            {
+              "heading": "What You Actually Need to Get Started",
+              "bullets": [
+                "A laptop or desktop with a stable browser",
+                "Reliable, secure internet connection",
+                "A quiet, private space for financial data"
+              ],
+              "narration": "You don't need expensive equipment to start - a reliable computer, a stable internet connection, and a quiet, private space where sensitive financial information stays confidential is enough to get going. Since you'll be handling real money data, a secure setup matters more here than in many other VA niches."
+            },
+            {
+              "heading": "Organizing Client Files Securely",
+              "bullets": [
+                "One secure folder per client",
+                "Subfolders for receipts, statements, and reports",
+                "Strong, unique passwords for every account"
+              ],
+              "narration": "Keep every client's files organized in their own secure folder, with subfolders for receipts, bank statements, and reports. Use a strong, unique password for each client login, and consider a password manager - security habits matter enormously in bookkeeping, since you're trusted with real financial data."
+            },
+            {
+              "heading": "Building a Simple Tracking Template",
+              "bullets": [
+                "Date, client, task, and status columns",
+                "A status column - to do, in progress, reconciled",
+                "One tab per client keeps things simple"
+              ],
+              "narration": "A basic spreadsheet with columns for date, client, task, and status - to do, in progress, or reconciled - is often all you need to stay on top of multiple clients, and it's something you'll build for real in Module 4."
+            },
+            {
+              "heading": "Ready for Module 2",
+              "bullets": [
+                "You know what the role involves",
+                "You understand the basic concepts",
+                "Next: the tools you'll actually use daily"
+              ],
+              "narration": "You now understand what a Bookkeeping VA does and the basic concepts behind the numbers. In Module 2, we'll get hands-on with the actual software tools you'll use every day on the job, starting with the industry standard, QuickBooks Online."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bk-m2",
+      "title": "Module 2: Essential Tools Every Bookkeeping VA Must Know",
+      "lessons": [
+        {
+          "id": "bk-m2-l1",
+          "title": "QuickBooks Online Basics",
+          "slides": [
+            {
+              "heading": "Why QuickBooks Online Is Industry Standard",
+              "bullets": [
+                "Most widely used small business accounting software",
+                "Cloud-based - access from anywhere",
+                "Most clients already use it or expect you to know it"
+              ],
+              "narration": "QuickBooks Online is the most widely used accounting software among small businesses, which makes it an essential tool to know well. Because it's cloud-based, you can securely access a client's books from anywhere, and most bookkeeping job postings either require QuickBooks experience or list it as a strong preference."
+            },
+            {
+              "heading": "Navigating the Dashboard",
+              "bullets": [
+                "Home dashboard shows a business's financial snapshot",
+                "Banking tab for reviewing transactions",
+                "Reports tab for pulling financial statements"
+              ],
+              "narration": "The QuickBooks Online dashboard gives a quick financial snapshot the moment you log in. The Banking tab is where you'll review and categorize incoming transactions, and the Reports tab is where you'll pull the profit and loss statement, balance sheet, and other reports clients ask for regularly."
+            },
+            {
+              "heading": "Key Features You'll Use Daily",
+              "bullets": [
+                "Bank feeds that pull in transactions automatically",
+                "Invoicing and accepting online payments",
+                "Bank rules that auto-categorize repeat transactions"
+              ],
+              "narration": "Day to day, you'll rely on connected bank feeds that pull transactions in automatically, the invoicing feature for billing clients' customers, and bank rules that automatically categorize recurring transactions - like a monthly software subscription - saving you from re-entering the same category every single time."
+            },
+            {
+              "heading": "Getting Client Access the Right Way",
+              "bullets": [
+                "Ask to be added as an accountant or standard user",
+                "Never ask for a client's personal login",
+                "Confirm your access level covers what you need"
+              ],
+              "narration": "You'll typically be invited into a client's QuickBooks Online company as an accountant or standard user through their own invite system - never as their personal login. Before starting, confirm your access level actually lets you do the tasks you're responsible for, like reconciling or invoicing."
+            }
+          ]
+        },
+        {
+          "id": "bk-m2-l2",
+          "title": "Xero Basics",
+          "slides": [
+            {
+              "heading": "Xero as a QuickBooks Alternative",
+              "bullets": [
+                "Popular cloud accounting software, especially internationally",
+                "Similar core purpose to QuickBooks Online",
+                "Worth learning to widen your client pool"
+              ],
+              "narration": "Xero is another major cloud-based accounting platform, especially popular with clients outside the US. It serves the same core purpose as QuickBooks Online - tracking transactions, reconciling accounts, and generating reports - so learning its interface widens the range of bookkeeping jobs you can confidently apply for."
+            },
+            {
+              "heading": "Key Differences From QuickBooks",
+              "bullets": [
+                "Different layout and terminology for similar features",
+                "Strong reputation for clean bank reconciliation",
+                "Pricing and add-ons work a bit differently"
+              ],
+              "narration": "Xero organizes similar features under different names and menus than QuickBooks, so expect a short learning curve even if you already know QuickBooks well. Xero is particularly known for a clean, intuitive bank reconciliation screen, which many bookkeepers find faster to work through once they're used to it."
+            },
+            {
+              "heading": "Core Xero Features",
+              "bullets": [
+                "Bank feeds and reconciliation tools",
+                "Invoicing with online payment options",
+                "Dashboard reports similar to QuickBooks"
+              ],
+              "narration": "Xero offers the same essential toolkit you'll use constantly: connected bank feeds for pulling in transactions, a reconciliation screen for matching them to statements, invoicing with built-in online payment links, and dashboard reports covering profit and loss, balance sheet, and cash flow at a glance."
+            },
+            {
+              "heading": "Choosing Which Tool to Learn First",
+              "bullets": [
+                "QuickBooks Online has the largest US client base",
+                "Learn QuickBooks first, then add Xero",
+                "Both use the same underlying bookkeeping principles"
+              ],
+              "narration": "If you can only master one tool right now, QuickBooks Online is usually the better first choice given how many small businesses use it. Once you're comfortable there, picking up Xero is much faster, since both tools apply the exact same underlying bookkeeping principles you learned in Module 1."
+            }
+          ]
+        },
+        {
+          "id": "bk-m2-l3",
+          "title": "Wave and Other Free Bookkeeping Tools",
+          "slides": [
+            {
+              "heading": "Why Free Tools Matter for Small Clients",
+              "bullets": [
+                "Many very small businesses can't afford paid software",
+                "Free tools still cover the bookkeeping basics",
+                "Being flexible with tools widens your client options"
+              ],
+              "narration": "Not every client can afford a paid subscription, especially very small or brand-new businesses. Free tools like Wave still cover the bookkeeping essentials - transactions, invoicing, and basic reports - so being comfortable with them means you can take on clients at every budget level, not just larger ones."
+            },
+            {
+              "heading": "Wave Accounting Basics",
+              "bullets": [
+                "Free accounting software for small businesses",
+                "Covers invoicing, transactions, and basic reports",
+                "Makes money through payment processing and payroll add-ons"
+              ],
+              "narration": "Wave is a genuinely free accounting platform that covers invoicing, transaction tracking, and basic financial reports - the company earns revenue instead through optional paid features like payment processing and payroll, which means the core bookkeeping tools stay free for small business clients."
+            },
+            {
+              "heading": "Other Free/Low-Cost Options",
+              "bullets": [
+                "Zoho Books - free tier for very small businesses",
+                "GnuCash - free, downloadable, more technical",
+                "Google Sheets - a manual fallback for the simplest clients"
+              ],
+              "narration": "Beyond Wave, Zoho Books offers a free tier for the smallest businesses, GnuCash is a free downloadable option for more technically comfortable clients, and a well-built Google Sheet can even work as a manual fallback for an extremely simple, low-transaction-volume client just starting out."
+            },
+            {
+              "heading": "Matching Tool to Client Budget",
+              "bullets": [
+                "Ask about budget before recommending software",
+                "Free tools for very small or new businesses",
+                "Paid tools once transaction volume grows"
+              ],
+              "narration": "Always ask about budget before recommending a platform. A brand-new or very small client may be perfectly served by Wave, while a growing business with more transactions and complexity will benefit from QuickBooks or Xero's more robust reporting and automation as their needs increase."
+            }
+          ]
+        },
+        {
+          "id": "bk-m2-l4",
+          "title": "Receipt & Expense Tracking Tools",
+          "slides": [
+            {
+              "heading": "Why Receipt Tracking Matters",
+              "bullets": [
+                "Every expense needs proof behind the entry",
+                "Missing receipts create gaps in the books",
+                "Good habits now prevent scrambling later"
+              ],
+              "narration": "Every expense entry ideally has a receipt backing it up, which keeps the books accurate and defensible if a client is ever asked questions about their spending. Building a consistent receipt-collection habit from day one prevents the stressful scramble of hunting for months-old paperwork later."
+            },
+            {
+              "heading": "Popular Receipt-Scanning Apps",
+              "bullets": [
+                "Dext - scans and categorizes receipts automatically",
+                "Hubdoc - pulls in statements and receipts, syncs to software",
+                "QuickBooks and Xero also have built-in receipt capture"
+              ],
+              "narration": "Dext and Hubdoc are popular apps that let a client snap a photo of a receipt, then automatically extract the details and sync them into QuickBooks or Xero. Both platforms also have their own built-in receipt capture features, which are often enough for clients with lighter receipt volume."
+            },
+            {
+              "heading": "Connecting Bank Feeds",
+              "bullets": [
+                "Bank feeds pull transactions in automatically",
+                "Saves hours versus manual data entry",
+                "Still needs your review, not full automation"
+              ],
+              "narration": "Connecting a client's bank and credit card accounts through a secure feed pulls transactions in automatically, saving hours of manual entry. That said, feeds aren't fully automatic - you'll still review each transaction to confirm the category and description are accurate before it's finalized."
+            },
+            {
+              "heading": "Building a Simple Receipt Workflow",
+              "bullets": [
+                "Client uploads receipts to one shared folder or app",
+                "You match receipts to transactions weekly",
+                "Flag anything missing right away, don't wait"
+              ],
+              "narration": "A simple, repeatable workflow works best: the client uploads receipts to one shared app or folder as they get them, you match them to bank transactions on a set weekly schedule, and you flag anything missing right away rather than waiting until reconciliation to notice a gap."
+            }
+          ]
+        },
+        {
+          "id": "bk-m2-l5",
+          "title": "Spreadsheet & Reporting Tools",
+          "slides": [
+            {
+              "heading": "Why Spreadsheets Still Matter",
+              "bullets": [
+                "Not every task fits inside accounting software",
+                "Great for tracking, summaries, and client checklists",
+                "A universal skill every client recognizes"
+              ],
+              "narration": "Even with QuickBooks or Xero doing the heavy lifting, spreadsheets remain a Bookkeeping VA's flexible extra tool - useful for tracking your own task lists, building custom summaries a client asks for, or organizing information before it goes into the accounting software itself."
+            },
+            {
+              "heading": "Google Sheets vs Excel",
+              "bullets": [
+                "Google Sheets - free, cloud-based, easy to share",
+                "Excel - more powerful formulas, works offline",
+                "Most VA work only needs Google Sheets"
+              ],
+              "narration": "Google Sheets is free, lives in the cloud, and makes sharing and real-time collaboration with clients effortless - which covers most of what a Bookkeeping VA needs day to day. Excel offers more advanced formulas and works well offline, but is less essential unless a client specifically requests it."
+            },
+            {
+              "heading": "Useful Spreadsheet Formulas",
+              "bullets": [
+                "SUM and SUMIF for quick totals by category",
+                "VLOOKUP or XLOOKUP for matching data",
+                "Conditional formatting to flag issues visually"
+              ],
+              "narration": "A handful of formulas cover most bookkeeping spreadsheet needs: SUM and SUMIF for quickly totaling amounts by category, VLOOKUP or XLOOKUP for matching data between two lists, and conditional formatting to visually flag things like overdue invoices or unusually large expenses at a glance."
+            },
+            {
+              "heading": "Building Simple Client Reports",
+              "bullets": [
+                "One tab per report type keeps it organized",
+                "Clear labels - clients aren't bookkeeping experts",
+                "Charts help numbers land faster than tables alone"
+              ],
+              "narration": "When a client wants a custom summary beyond what QuickBooks or Xero produces automatically, a clean spreadsheet with one tab per report type, clearly labeled for a non-expert reader, works well - and a simple chart often communicates a trend faster than a table of numbers alone."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bk-m3",
+      "title": "Module 3: Core Bookkeeping Skills",
+      "lessons": [
+        {
+          "id": "bk-m3-l1",
+          "title": "Recording Transactions & Categorizing Expenses",
+          "slides": [
+            {
+              "heading": "What Recording Transactions Involves",
+              "bullets": [
+                "Entering or confirming each transaction",
+                "Choosing the correct category every time",
+                "Adding a clear, useful description"
+              ],
+              "narration": "Recording a transaction means confirming the date, amount, and correct category, then adding a short, clear description so anyone reviewing the books later understands what it was for. This is the most frequent task you'll do as a Bookkeeping VA, so building speed and accuracy here pays off immediately."
+            },
+            {
+              "heading": "Choosing the Right Category",
+              "bullets": [
+                "Match the expense to an existing chart of accounts category",
+                "When unsure, ask rather than guess",
+                "Consistency matters more than perfection"
+              ],
+              "narration": "Always try to match a transaction to an existing category in the chart of accounts rather than creating a new one for every slightly different expense. When you're genuinely unsure how something should be categorized, ask the client rather than guessing - consistency over time matters more than any single perfect entry."
+            },
+            {
+              "heading": "Handling Ambiguous Transactions",
+              "bullets": [
+                "Flag anything unclear instead of assuming",
+                "Keep a running list of open questions",
+                "Batch questions into one weekly check-in"
+              ],
+              "narration": "Some transactions are genuinely ambiguous - a charge from an unfamiliar vendor, or a personal-looking expense on a business card. Flag these rather than guessing, keep a running list as you go, and batch your questions into one weekly check-in instead of interrupting the client constantly."
+            },
+            {
+              "heading": "Keeping Records Audit-Ready",
+              "bullets": [
+                "Every entry should have supporting documentation",
+                "Clear, consistent descriptions save time later",
+                "Good habits now prevent painful catch-up work"
+              ],
+              "narration": "Keeping books \"audit-ready\" simply means every entry has a receipt or document behind it, descriptions are clear and consistent, and nothing is left half-finished. Building this habit from day one - rather than promising to clean it up later - is what actually separates a great Bookkeeping VA from an average one."
+            }
+          ]
+        },
+        {
+          "id": "bk-m3-l2",
+          "title": "Bank & Credit Card Reconciliation",
+          "slides": [
+            {
+              "heading": "What Reconciliation Actually Means",
+              "bullets": [
+                "Matching your records to the bank's records",
+                "Confirms nothing is missing or duplicated",
+                "Usually done once a month"
+              ],
+              "narration": "Reconciliation is the process of comparing the transactions recorded in the books against the actual bank or credit card statement, to confirm every transaction is accounted for exactly once - nothing missing, nothing duplicated. Most businesses reconcile monthly, right after the statement period closes."
+            },
+            {
+              "heading": "The Monthly Reconciliation Process",
+              "bullets": [
+                "Pull the statement and compare it to your records",
+                "Check off each transaction that matches",
+                "Investigate and resolve anything left over"
+              ],
+              "narration": "The monthly process starts with pulling the official bank or credit card statement and comparing it line by line against what's recorded in the books. Most software lets you check off matching transactions quickly, leaving only the mismatches to investigate and resolve before you mark the account reconciled."
+            },
+            {
+              "heading": "Common Reconciliation Problems",
+              "bullets": [
+                "A transaction recorded twice by mistake",
+                "A transaction missing entirely",
+                "Bank fees or interest not yet recorded"
+              ],
+              "narration": "The most common issues you'll run into are a transaction accidentally entered twice, a transaction that never got recorded at all, or small bank fees and interest charges that the client's software didn't automatically pick up. Each has a straightforward fix once you spot it."
+            },
+            {
+              "heading": "Building a Reconciliation Checklist",
+              "bullets": [
+                "Same order of steps every single month",
+                "Note the exact date and balance you reconciled to",
+                "Save the statement for your records"
+              ],
+              "narration": "A simple checklist - pull the statement, compare transactions, resolve differences, confirm the ending balance matches - followed the same way every month keeps reconciliation fast and reliable. Always note the exact date and balance you reconciled to, and keep the statement on file."
+            }
+          ]
+        },
+        {
+          "id": "bk-m3-l3",
+          "title": "Invoicing & Accounts Receivable",
+          "slides": [
+            {
+              "heading": "Creating Professional Invoices",
+              "bullets": [
+                "Clear itemized details - what, how much, when due",
+                "Consistent branding builds client trust",
+                "Include easy ways to pay"
+              ],
+              "narration": "A professional invoice clearly itemizes what's being billed, the amount, and the due date, uses the client's own branding and logo, and includes a simple way for their customer to pay - like a link for online payment. QuickBooks and Xero both make this quick to set up."
+            },
+            {
+              "heading": "Tracking Who Owes What",
+              "bullets": [
+                "Accounts receivable = money owed to the business",
+                "An aging report shows what's overdue and by how long",
+                "Review it regularly, not just once a month"
+              ],
+              "narration": "Accounts receivable is simply the money a business is owed by its own customers. An aging report breaks this down by how overdue each invoice is - current, 30 days, 60 days, and beyond - and reviewing it regularly helps catch slow payers before they become a real cash flow problem."
+            },
+            {
+              "heading": "Following Up on Late Payments",
+              "bullets": [
+                "A friendly reminder a few days after the due date",
+                "A firmer follow-up if it stays unpaid",
+                "Always confirm with the client before escalating"
+              ],
+              "narration": "Most invoicing tools can send an automatic friendly reminder a few days after a due date passes. If a payment stays outstanding longer, a slightly firmer personal follow-up is appropriate - but always check with your client on their preferred approach before escalating with their own customer."
+            },
+            {
+              "heading": "Setting Up Recurring Invoices",
+              "bullets": [
+                "Great for retainer or subscription-style clients",
+                "Automates a repetitive, easy-to-forget task",
+                "Still worth a quick review before it sends"
+              ],
+              "narration": "For clients billing the same customer on a regular schedule - a monthly retainer or subscription, for example - setting up a recurring invoice saves real time and prevents a forgotten bill. It's still smart to glance over each one before it goes out, in case anything changed that month."
+            }
+          ]
+        },
+        {
+          "id": "bk-m3-l4",
+          "title": "Basic Financial Reports (P&L, Balance Sheet)",
+          "slides": [
+            {
+              "heading": "Why Reports Matter to Clients",
+              "bullets": [
+                "Shows whether the business is actually profitable",
+                "Helps owners make informed decisions",
+                "Builds their trust in your work"
+              ],
+              "narration": "Financial reports turn a pile of transactions into something a business owner can actually use - whether they're truly profitable, how much cash they have, and where their money is going. Producing clear reports regularly is one of the clearest ways to demonstrate the value of your work."
+            },
+            {
+              "heading": "Reading a Profit & Loss Statement",
+              "bullets": [
+                "Shows income minus expenses over a period",
+                "The bottom line is net profit or loss",
+                "Compare periods to spot trends"
+              ],
+              "narration": "A Profit and Loss statement, sometimes called an income statement, shows total income minus total expenses over a chosen period, ending in the bottom-line number - net profit or loss. Comparing this month to last month, or this year to last year, is often more useful to a client than the number alone."
+            },
+            {
+              "heading": "Reading a Balance Sheet",
+              "bullets": [
+                "A snapshot of what the business owns and owes",
+                "Assets = liabilities + equity, always",
+                "Shows financial health at a single point in time"
+              ],
+              "narration": "A balance sheet is a snapshot of everything a business owns - its assets, like cash and equipment - and everything it owes, its liabilities, at one specific point in time. The two sides, plus owner's equity, always balance out, which is exactly where the report gets its name."
+            },
+            {
+              "heading": "Presenting Reports Clearly",
+              "bullets": [
+                "Lead with the one or two numbers that matter most",
+                "Use plain language, not jargon",
+                "Offer to walk through it live if helpful"
+              ],
+              "narration": "When sharing a report, lead with the one or two numbers your client actually cares about, like this month's profit or their current cash balance, explained in plain language rather than accounting jargon. Offering a quick call to walk through it together builds far more trust than an email attachment alone."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bk-m4",
+      "title": "Module 4: Building Your Bookkeeping Portfolio",
+      "lessons": [
+        {
+          "id": "bk-m4-l1",
+          "title": "Creating Sample Bookkeeping Records",
+          "slides": [
+            {
+              "heading": "Why You Need Sample Work Before Your First Client",
+              "bullets": [
+                "Clients want to see proof, not just a resume",
+                "A mock set of books shows your actual skills",
+                "You control the quality - no client pressure yet"
+              ],
+              "narration": "Since you may not have a paying client yet, building a mock set of books for a fictional or real local business lets you show proof of your bookkeeping skills, not just claim them on a resume - and you control the pace and quality with no real deadline pressure."
+            },
+            {
+              "heading": "Picking a Practice Business",
+              "bullets": [
+                "Choose an industry you understand well",
+                "A real local shop works great (with permission)",
+                "Or invent a believable fictional business"
+              ],
+              "narration": "Pick an industry you already understand - maybe a coffee shop, a small retail store, or a freelance service business. You can build sample books around a real business you know (with their knowledge) or a believable fictional company you invent yourself for the exercise."
+            },
+            {
+              "heading": "Building a Month of Mock Transactions",
+              "bullets": [
+                "Create 30-50 realistic transactions",
+                "Include a mix - sales, expenses, and a few tricky ones",
+                "Categorize every single one correctly"
+              ],
+              "narration": "Build out a realistic month of activity - somewhere around 30 to 50 transactions, mixing sales, everyday expenses, and a few intentionally tricky ones, like an ambiguous vendor charge. Categorize every transaction correctly and reconcile the mock bank account, since this full process is what a real client will judge you on."
+            },
+            {
+              "heading": "Producing Sample Reports From Your Mock Books",
+              "bullets": [
+                "Generate a P&L and balance sheet from your mock data",
+                "Clean formatting makes a strong first impression",
+                "Export everything into one shared folder"
+              ],
+              "narration": "Once your mock books are complete, generate an actual Profit and Loss statement and balance sheet from the software itself - not by hand - so a prospective client sees exactly the kind of clean, real output you'd deliver for them, then export everything neatly into one shareable folder."
+            }
+          ]
+        },
+        {
+          "id": "bk-m4-l2",
+          "title": "Building a Bookkeeping VA Portfolio",
+          "slides": [
+            {
+              "heading": "What a Bookkeeping Portfolio Needs",
+              "bullets": [
+                "A short intro about you and your specialty",
+                "1-2 sample projects with reports",
+                "Your process, not just the finished numbers"
+              ],
+              "narration": "A strong portfolio has a short introduction about who you are and what you specialize in, one or two sample projects with real sample reports attached, and a brief explanation of your process - clients want to understand HOW you keep books organized, not just see a finished spreadsheet."
+            },
+            {
+              "heading": "Where to Host Your Portfolio",
+              "bullets": [
+                "A simple free website (Carrd or similar)",
+                "A well-organized Google Drive folder works too",
+                "Keep the link short and easy to share"
+              ],
+              "narration": "You don't need a paid website - a simple site built for free in Carrd or similar tools, or even a neatly organized, view-only Google Drive folder, works perfectly well as long as the link is short and easy to share in a proposal or application."
+            },
+            {
+              "heading": "Presenting Sample Work Professionally",
+              "bullets": [
+                "Screenshot clean reports, not raw spreadsheets",
+                "Add a one-line caption explaining each sample",
+                "Be upfront that it's practice, not a real client"
+              ],
+              "narration": "Present your work with clean screenshots of finished reports rather than raw exported spreadsheets, adding a short caption explaining what each sample shows. Be upfront that it's sample or practice work rather than a real paid engagement - honesty builds more trust than an impressive but misleading claim."
+            },
+            {
+              "heading": "Keeping Your Portfolio Updated",
+              "bullets": [
+                "Swap in real client work as soon as you have it",
+                "Remove your weakest samples over time",
+                "Revisit it every few months"
+              ],
+              "narration": "As soon as you land real client work (with their permission to showcase anonymized samples), swap it in for your mock books, and keep quietly removing your weakest early samples so your portfolio only ever shows your current best, most polished work."
+            }
+          ]
+        },
+        {
+          "id": "bk-m4-l3",
+          "title": "Showcasing Your Accuracy & Organization Skills",
+          "slides": [
+            {
+              "heading": "Why Accuracy Sells Better Than Promises",
+              "bullets": [
+                "Clean, reconciled books speak for themselves",
+                "Clients hire trust, not just task completion",
+                "Even small samples can prove real precision"
+              ],
+              "narration": "In bookkeeping, a perfectly reconciled account and a clean, well-labeled report say more than any resume bullet point could. Clients aren't just hiring someone to enter data - they're hiring someone they can trust completely with their money, so demonstrating precision, even in a small sample, matters enormously."
+            },
+            {
+              "heading": "Demonstrating Your Process",
+              "bullets": [
+                "Show your reconciliation checklist or workflow",
+                "Explain how you organize client files",
+                "Mention your habits around deadlines and accuracy"
+              ],
+              "narration": "Beyond the finished numbers, describe the process behind them - your reconciliation checklist, how you organize client folders, and your habits around hitting deadlines and double-checking entries. Seeing that you have a real, repeatable system reassures a client far more than seeing polished numbers alone."
+            },
+            {
+              "heading": "Turning Your Process Into a Simple Case Study",
+              "bullets": [
+                "One paragraph: the starting situation",
+                "One paragraph: what you did",
+                "One paragraph: the organized result"
+              ],
+              "narration": "A simple case study, even from mock or practice work, is just three short paragraphs: what the books looked like at the start, what steps you took to organize and reconcile them, and what clean, accurate result followed - written in plain, confident language."
+            },
+            {
+              "heading": "Getting Permission to Share Sample/Real Work",
+              "bullets": [
+                "Always ask before using a client's real numbers",
+                "Anonymize figures if a client prefers privacy",
+                "A quick written 'yes' protects you both"
+              ],
+              "narration": "Always ask a client's permission before sharing anything from their real books publicly - most are happy to let you show anonymized or rounded figures, and a quick written yes over email or chat protects you both, since financial data deserves an extra layer of care."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bk-m5",
+      "title": "Module 5: Resume and Job Application Mastery for Bookkeeping VAs",
+      "lessons": [
+        {
+          "id": "bk-m5-l1",
+          "title": "Writing a Bookkeeping VA Resume",
+          "slides": [
+            {
+              "heading": "What Belongs on a Bookkeeping VA Resume",
+              "bullets": [
+                "A clear headline naming your specialty",
+                "Tools you know - QuickBooks, Xero, Wave, etc.",
+                "A link to your portfolio, front and center"
+              ],
+              "narration": "Your resume should open with a clear headline naming your specialty - 'Bookkeeping VA' - list the specific software you know, like QuickBooks Online, Xero, or Wave, and put your portfolio link somewhere it can't be missed, since that's often what actually gets you shortlisted."
+            },
+            {
+              "heading": "Describing Experience Without a Job History",
+              "bullets": [
+                "Frame your training and mock books as real work",
+                "Use action verbs - recorded, reconciled, categorized",
+                "Quantify wherever you can, even mock numbers"
+              ],
+              "narration": "If you don't have paid bookkeeping experience yet, describe your training and mock projects using strong action verbs - recorded, reconciled, categorized, reported - and quantify what you can, like 'reconciled a full month of transactions across three accounts with zero discrepancies.'"
+            },
+            {
+              "heading": "Formatting for Readability",
+              "bullets": [
+                "Keep it to one page",
+                "Use short bullet points, not paragraphs",
+                "Consistent, clean font and spacing"
+              ],
+              "narration": "Keep your resume to a single page with short, scannable bullet points rather than dense paragraphs, using a clean, consistent font - a client reviewing dozens of applicants will spend only seconds per resume, so clarity and structure matter more than length."
+            },
+            {
+              "heading": "Common Resume Mistakes to Avoid",
+              "bullets": [
+                "Vague phrases like 'good with numbers'",
+                "No portfolio link at all",
+                "Typos - always proofread out loud"
+              ],
+              "narration": "Avoid vague self-descriptions like 'good with numbers' with nothing to back it up, never submit a resume without your portfolio link, and always proofread out loud before sending - a single typo undercuts your credibility fast in a field built entirely on precision and attention to detail."
+            }
+          ]
+        },
+        {
+          "id": "bk-m5-l2",
+          "title": "Crafting Winning Proposals for Bookkeeping Clients",
+          "slides": [
+            {
+              "heading": "What a Good Proposal Includes",
+              "bullets": [
+                "A quick summary of their current bookkeeping situation",
+                "Your specific plan for organizing it",
+                "Clear pricing and next steps"
+              ],
+              "narration": "A strong proposal briefly summarizes what you noticed or understood about the client's current bookkeeping situation, lays out your specific plan for getting and keeping their books organized, and ends with clear pricing and an easy next step, like a short discovery call."
+            },
+            {
+              "heading": "Personalizing Every Proposal",
+              "bullets": [
+                "Reference their actual industry and situation",
+                "Never send an obviously copy-pasted pitch",
+                "Mention one specific way you can help"
+              ],
+              "narration": "Every proposal should reference the client's actual industry and something specific about their situation - months of unreconciled transactions, or a need for cleaner monthly reports, for example - a generic copy-pasted pitch is easy to spot and easy to ignore in a stack of applicants."
+            },
+            {
+              "heading": "Structuring Your Pricing",
+              "bullets": [
+                "Package by scope - transaction volume, accounts, reports",
+                "Offer 2-3 clear tiers, not endless options",
+                "Be upfront about what's NOT included"
+              ],
+              "narration": "Package your pricing around clear scope - how many accounts, roughly how many transactions per month, and which reports are included - and offer two or three simple tiers rather than overwhelming a client with options. Be upfront about what falls outside the package too, like payroll or tax filing."
+            },
+            {
+              "heading": "Following Up Without Being Pushy",
+              "bullets": [
+                "One polite follow-up after about a week",
+                "Add new value, don't just 'check in'",
+                "Know when to move on gracefully"
+              ],
+              "narration": "If you don't hear back, one polite follow-up after about a week is reasonable - ideally adding something new, like a quick observation about their books, rather than just 'checking in.' If there's still no response after that, it's fine to move on gracefully."
+            }
+          ]
+        },
+        {
+          "id": "bk-m5-l3",
+          "title": "Where to Find Bookkeeping VA Clients",
+          "slides": [
+            {
+              "heading": "Freelance Platforms",
+              "bullets": [
+                "Upwork, Onlinejobs.ph, and similar sites",
+                "Filter for bookkeeping / accounting support roles",
+                "A strong profile and portfolio link matter most"
+              ],
+              "narration": "Freelance platforms like Upwork and Onlinejobs.ph list bookkeeping and accounting support roles regularly - filter specifically for those, and make sure your profile headline, listed software skills, and portfolio link are strong, since clients often decide who to interview in just seconds."
+            },
+            {
+              "heading": "Local Small Businesses",
+              "bullets": [
+                "Shops, contractors, and service businesses nearby",
+                "Many have messy or outdated books",
+                "A polite, specific outreach message works well"
+              ],
+              "narration": "Local small businesses - shops, contractors, salons, service providers - often have messy or months-behind books simply because the owner is too busy running the business. A polite, specific outreach message offering to help get things caught up and organized works well as an opening conversation."
+            },
+            {
+              "heading": "Referrals and Word of Mouth",
+              "bullets": [
+                "Your first client is your best source of the next",
+                "Ask happy clients if they know anyone else",
+                "A short testimonial makes referrals even easier"
+              ],
+              "narration": "Once you land one happy client, ask directly whether they know any other business owners who could use similar help - referrals convert far more easily than cold outreach in bookkeeping, especially since trust with money matters so much, and a short testimonial makes that trust easy to transfer."
+            },
+            {
+              "heading": "Bookkeeping and Accounting Communities",
+              "bullets": [
+                "Bookkeeper and VA Facebook groups share leads",
+                "Accounting firms sometimes subcontract overflow work",
+                "Be an active, helpful member, not just a lurker"
+              ],
+              "narration": "Dedicated bookkeeper and VA communities on Facebook and elsewhere frequently share client leads, and small accounting firms sometimes subcontract overflow bookkeeping work to reliable freelancers. Being an active, genuinely helpful member of these groups - not just posting your own ads - tends to bring in the best opportunities."
+            }
+          ]
+        },
+        {
+          "id": "bk-m5-l4",
+          "title": "Nailing the Client Interview/Discovery Call",
+          "slides": [
+            {
+              "heading": "What Clients Are Actually Evaluating",
+              "bullets": [
+                "Can you understand their business quickly?",
+                "Do you ask smart, specific questions?",
+                "Will they feel comfortable trusting you with their finances?"
+              ],
+              "narration": "In a discovery call, clients aren't just checking your software skills on paper - they're watching whether you can understand their business quickly, whether you ask smart and specific questions, and above all, whether they feel genuinely comfortable trusting you with their financial information."
+            },
+            {
+              "heading": "Questions You Should Ask Them",
+              "bullets": [
+                "How current are your books right now?",
+                "What software, if any, are you already using?",
+                "What's frustrated you about bookkeeping so far?"
+              ],
+              "narration": "Come prepared with your own questions: how current are their books right now, what software they're already using (if any), and what's frustrated them about bookkeeping in the past - this shows you're thinking like a real partner, not just an order-taker."
+            },
+            {
+              "heading": "Talking About Pricing Confidently",
+              "bullets": [
+                "Know your rate before the call, don't improvise",
+                "Explain what's included, not just the number",
+                "It's okay to say you'll follow up in writing"
+              ],
+              "narration": "Decide your rate before the call so you're never improvising under pressure, explain clearly what's included for that price - reconciliation, reports, invoicing - and it's completely fine to say you'll send the full proposal in writing afterward rather than negotiating on the spot."
+            },
+            {
+              "heading": "Following Up After the Call",
+              "bullets": [
+                "Send a written summary within 24 hours",
+                "Restate what you understood about their needs",
+                "Attach your proposal or next steps clearly"
+              ],
+              "narration": "Within 24 hours of the call, send a short written summary restating what you understood about their books and needs, attached to your proposal or a clear next step - this reinforces that you listened closely and keeps momentum going toward signing them as a client."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bk-m6",
+      "title": "Module 6: Landing Your First Bookkeeping Client and Beyond",
+      "lessons": [
+        {
+          "id": "bk-m6-l1",
+          "title": "Onboarding a New Bookkeeping Client",
+          "slides": [
+            {
+              "heading": "What Onboarding Actually Covers",
+              "bullets": [
+                "Getting access to their accounting software safely",
+                "Gathering financial documents and bank statements",
+                "Agreeing on the first month's plan"
+              ],
+              "narration": "Onboarding is the process of getting properly set up with a new client: gaining safe access to their accounting software, collecting the financial documents you'll need, and agreeing together on what catching up and the first month of ongoing work will actually look like."
+            },
+            {
+              "heading": "Getting Account Access the Right Way",
+              "bullets": [
+                "Ask to be added as a user in QuickBooks or Xero",
+                "Never ask for personal bank passwords",
+                "Confirm who owns the account long-term"
+              ],
+              "narration": "Always ask to be added as a user directly inside QuickBooks or Xero rather than requesting a personal banking password - this is safer for both of you, and it makes clear that the client remains the true, permanent owner of their own financial accounts."
+            },
+            {
+              "heading": "Collecting Financial Documents",
+              "bullets": [
+                "Recent bank and credit card statements",
+                "Any existing bookkeeping file or spreadsheet",
+                "A list of recurring bills and income sources"
+              ],
+              "narration": "Request the client's recent bank and credit card statements, any existing bookkeeping file or spreadsheet they've been using, and a simple list of their recurring bills and income sources - having these upfront saves a lot of back-and-forth once you start recording transactions."
+            },
+            {
+              "heading": "Setting the First 30 Days' Plan",
+              "bullets": [
+                "Agree on how far back you'll catch up",
+                "Set your first check-in date",
+                "Clarify how and when you'll be paid"
+              ],
+              "narration": "Before diving in, agree on how far back the books need to be caught up, set a date for your first check-in call, and make sure payment terms - amount, method, and schedule - are clearly agreed on both sides so there's no confusion later."
+            }
+          ]
+        },
+        {
+          "id": "bk-m6-l2",
+          "title": "Setting Expectations and Pricing Your Services",
+          "slides": [
+            {
+              "heading": "Why Clear Expectations Prevent Problems",
+              "bullets": [
+                "Most client conflicts come from unspoken assumptions",
+                "A short written agreement protects you both",
+                "Revisit and adjust as the relationship grows"
+              ],
+              "narration": "Most conflicts between a Bookkeeping VA and a client come from things that were never actually agreed on out loud - a short written agreement covering scope, pricing, and turnaround times protects you both and can always be revisited as the relationship and the client's needs grow."
+            },
+            {
+              "heading": "Common Pricing Models",
+              "bullets": [
+                "Monthly retainer - most common for ongoing work",
+                "Per-project - for catch-up or cleanup work",
+                "Hourly - less common, harder to scale"
+              ],
+              "narration": "A monthly retainer is the most common model for ongoing bookkeeping, a per-project rate suits one-off catch-up or cleanup work on months of backlogged transactions, and hourly pricing is less common in this niche since it's harder to scale as you take on more clients."
+            },
+            {
+              "heading": "What to Include in Your Scope of Work",
+              "bullets": [
+                "Number of accounts and transactions included",
+                "Which reports are delivered and how often",
+                "What's explicitly NOT included (e.g. tax filing)"
+              ],
+              "narration": "Your scope of work should spell out exactly how many accounts and roughly how many transactions are included, which reports you'll deliver and how often, and what's explicitly NOT included, like tax filing or formal financial advice, which fall outside a bookkeeper's role and belong with a licensed accountant."
+            },
+            {
+              "heading": "Raising Your Rates Over Time",
+              "bullets": [
+                "Review rates as your skill and reliability grow",
+                "Give existing clients advance notice",
+                "New clients can start at your current rate"
+              ],
+              "narration": "As your skills and track record grow, it's normal and healthy to raise your rates - give existing clients advance notice (30-60 days is common), while any brand-new client simply starts at your current, updated rate rather than an old, outdated one."
+            }
+          ]
+        },
+        {
+          "id": "bk-m6-l3",
+          "title": "Managing Multiple Client Books",
+          "slides": [
+            {
+              "heading": "Staying Organized Across Clients",
+              "bullets": [
+                "One dashboard or login list per client",
+                "Color-code or label tasks by client",
+                "A weekly planning block prevents last-minute chaos"
+              ],
+              "narration": "Managing several clients' books well usually comes down to keeping a clear list of logins and dashboards for each one, color-coding or labeling tasks clearly by client, and setting aside a dedicated weekly block to work through reconciliations rather than reacting day to day."
+            },
+            {
+              "heading": "Avoiding Mix-Ups Between Client Books",
+              "bullets": [
+                "Double-check which company file you're in before entering",
+                "Never copy a category setup from one client to another",
+                "Build a simple pre-entry checklist"
+              ],
+              "narration": "Entering a transaction into the wrong client's company file is a real and costly risk once you're juggling multiple sets of books - always double-check which file you're working in before entering anything, and avoid assuming one client's chart of accounts applies to another's."
+            },
+            {
+              "heading": "Batching Work for Efficiency",
+              "bullets": [
+                "Reconcile a week's transactions in one sitting",
+                "Batch invoicing tasks together",
+                "Batch client communications too"
+              ],
+              "narration": "Batching similar tasks - reconciling a batch of transactions in one focused sitting, sending out a round of invoices together, or replying to all client questions at set times - is far more efficient than constantly switching between different clients' books throughout the day."
+            },
+            {
+              "heading": "Knowing When You've Reached Capacity",
+              "bullets": [
+                "Accuracy should never quietly slip as you add clients",
+                "Track your actual hours per client honestly",
+                "It's okay to pause new clients or raise rates instead"
+              ],
+              "narration": "Watch for signs that accuracy is slipping as you take on more clients - missed reconciliations, late reports, rushed categorizing. Track your real hours per client honestly, and remember it's completely fine to pause taking new clients, or raise your rates instead of stretching your attention too thin."
+            }
+          ]
+        },
+        {
+          "id": "bk-m6-l4",
+          "title": "Handling Difficult Feedback and Revisions",
+          "slides": [
+            {
+              "heading": "Receiving Feedback Without Getting Defensive",
+              "bullets": [
+                "Feedback is about the numbers, not you personally",
+                "Ask clarifying questions before revising",
+                "Thank the client for being specific"
+              ],
+              "narration": "It's easy to feel personally criticized when a client questions a report or a category, but feedback is about the numbers, not you - ask clarifying questions if something's unclear, and genuinely thank clients who give specific, actionable feedback rather than vague frustration."
+            },
+            {
+              "heading": "Handling Discrepancies and Questions",
+              "bullets": [
+                "Investigate calmly before responding",
+                "Explain what you found in plain language",
+                "Correct honestly, even if it was your mistake"
+              ],
+              "narration": "When a client questions a number or spots what looks like a discrepancy, investigate calmly before responding, explain what you found in plain, non-technical language, and correct any genuine mistake honestly and promptly - clients respect an honest fix far more than a defensive excuse."
+            },
+            {
+              "heading": "Managing Scope Creep in Revisions",
+              "bullets": [
+                "Define what's included in ongoing support",
+                "A request for old-year cleanup isn't routine work",
+                "Politely price extra requests separately"
+              ],
+              "narration": "Define upfront what's included in your regular ongoing support - a request to go back and clean up two years of old, unrelated transactions isn't routine monthly work, and it's fair to politely price that kind of extra request as a separate project."
+            },
+            {
+              "heading": "Turning Difficult Clients Into Long-Term Ones",
+              "bullets": [
+                "Most 'difficult' clients just want to feel informed",
+                "Consistent, calm communication builds trust",
+                "Know when a client truly isn't the right fit"
+              ],
+              "narration": "Many clients who seem difficult at first just want to feel informed and in control of their own finances - consistent, calm communication usually turns them into your most loyal clients over time. Occasionally, though, a client genuinely isn't the right fit, and it's okay to part ways professionally."
+            }
+          ]
+        },
+        {
+          "id": "bk-m6-l5",
+          "title": "Growing Your Bookkeeping VA Career",
+          "slides": [
+            {
+              "heading": "Leveling Up Your Skill Set",
+              "bullets": [
+                "Learn payroll basics",
+                "Get comfortable with more advanced reporting",
+                "Study a second software platform deeply"
+              ],
+              "narration": "As you grow, learning payroll basics, getting comfortable producing more advanced reports like cash flow statements, and studying a second platform like Xero more deeply all let you charge more and take on bigger, more complex clients over time."
+            },
+            {
+              "heading": "Deciding Between More Clients or Higher Rates",
+              "bullets": [
+                "More clients means more income but more hours",
+                "Higher rates mean the same hours, more income",
+                "Most successful VAs eventually favor the second"
+              ],
+              "narration": "At some point you'll choose between taking on more clients at your current rate, or fewer clients at a higher rate - most experienced Bookkeeping VAs eventually favor raising rates over endlessly adding more clients, since it protects both accuracy and your own time."
+            },
+            {
+              "heading": "Building Toward an Agency or Team",
+              "bullets": [
+                "Some VAs eventually hire their own subcontractors",
+                "Others stay solo and simply raise rates",
+                "Both paths are valid - choose what fits your goals"
+              ],
+              "narration": "Some experienced Bookkeeping VAs eventually build a small team, subcontracting data entry or reconciliation to other freelancers while keeping client relationships and review for themselves; others prefer staying solo and simply commanding premium rates. Neither path is more 'correct' - it depends on what kind of work-life you actually want."
+            },
+            {
+              "heading": "Congratulations on Finishing This Training",
+              "bullets": [
+                "You've covered the full Bookkeeping VA skillset",
+                "You have a portfolio, resume, and pricing plan",
+                "Time to start applying with confidence"
+              ],
+              "narration": "Congratulations - you've now covered the full Bookkeeping VA skillset, from core concepts and software tools to portfolio-building, client acquisition, and long-term growth. You're ready to start applying and pitching with real confidence."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
