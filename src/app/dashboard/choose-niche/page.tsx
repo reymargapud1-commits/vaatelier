@@ -16,7 +16,11 @@ import niches from "../../../../content/niches.json";
  * courseId); a student with courseId already set is bounced straight to
  * their dashboard.
  */
-export default async function ChooseNichePage() {
+export default async function ChooseNichePage({
+  searchParams,
+}: {
+  searchParams?: { error?: string };
+}) {
   const session = await getServerSession(authOptions);
   if (!session?.user) redirect("/login");
 
@@ -46,7 +50,7 @@ export default async function ChooseNichePage() {
           </p>
         </div>
 
-        <NichePicker niches={publishedNiches} />
+        <NichePicker niches={publishedNiches} initialError={searchParams?.error} />
       </main>
     </>
   );
