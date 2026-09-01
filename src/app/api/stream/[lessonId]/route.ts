@@ -35,10 +35,14 @@ export async function GET(req: Request, { params }: { params: { lessonId: string
   }
 
   // A lesson belongs to exactly one niche (via its module's courseId) - make
-  // sure a student can only stream their own niche's videos.
-  const [lessonModule] = await db.select().from(modules).where(eq(modules.id, lesson.moduleId)).limit(1);
-  if (!lessonModule || lessonModule.courseId !== user.courseId) {
-    return new NextResponse("Not found", { status: 404 });
+  // sure a student can only stream their own niche's videos. Admins are
+  // exempt from this check so they can review every niche's videos from
+  // /admin/curriculum without having to pick a niche themselves.
+  if (user.role !== "admin") {
+    const [lessonModule] = await db.select().from(modules).where(eq(modules.id, lesson.moduleId)).limit(1);
+    if (!lessonModule || lessonModule.courseId !== user.courseId) {
+      return new NextResponse("Not found", { status: 404 });
+    }
   }
 
   const filePath = path.join(VIDEO_DIR, `${lessonId}.mp4`);
