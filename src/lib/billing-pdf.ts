@@ -382,91 +382,87 @@ export async function generateCommissionInvoicePdf(
     color: gray,
   });
 
-  const tableTop = y - 20;
-  const rowHeight = 15.5;
-  let rowY = tableTop;
-  const tableX = marginX;
-  const tableWidth = drawTripTableHeader(page, tableX, rowY, TRIP_COLUMNS, sansBold, wine, white);
-  rowY -= 16;
-
+  // A plain, usual-looking service invoice: one line item (not a full trip
+  // breakdown - that detail already lives on the Billing Statement this
+  // invoice references above) plus the total due.
   const rate = client.commissionRatePerTrip;
-  trips.forEach((t, idx) => {
-    if (idx % 2 === 1) {
-      page.drawRectangle({ x: tableX, y: rowY - rowHeight, width: tableWidth, height: rowHeight, color: rgb(0.97, 0.96, 0.95) });
-    }
-    drawRow(
-      page,
-      tableX,
-      rowY,
-      [
-        String(idx + 1),
-        formatDate(t.tripDate),
-        t.plateNumber,
-        t.driverName,
-        [t.helper1Name, t.helper2Name].filter(Boolean).join(" "),
-        t.routeFrom,
-        t.routeTo,
-        t.gatePassNumber,
-        t.drSiNumber,
-        t.waybillNumber,
-        t.remarks,
-      ],
-      TRIP_COLUMNS,
-      sans,
-      ink,
-      rowHeight
-    );
-    const amtText = peso(rate);
-    const amtX = tableX + tableWidth + 90 - 3 - sans.widthOfTextAtSize(amtText, 7);
-    page.drawText(amtText, { x: amtX, y: rowY - rowHeight + 5, size: 7, font: sans, color: ink });
-    rowY -= rowHeight;
-    page.drawLine({ start: { x: tableX, y: rowY }, end: { x: tableX + tableWidth + 90, y: rowY }, thickness: 0.4, color: lineColor });
-  });
+  const tripDates = trips.map((t) => t.tripDate.getTime());
+  if (tripDates.length) {
+    const minDate = new Date(Math.min(...tripDates));
+    const maxDate = new Date(Math.max(...tripDates));
+    const period = minDate.getTime() === maxDate.getTime() ? formatDate(minDate) : `${formatDate(minDate)} - ${formatDate(maxDate)}`;
+    y -= 12;
+    page.drawText(`Period Covered: ${period}`, { x: marginX, y, size: 8, font: sans, color: gray });
+  }
 
-  page.drawRectangle({ x: tableX + tableWidth, y: tableTop - 16, width: 90, height: 16, color: wine });
-  const amtHeader = "Commission";
-  page.drawText(amtHeader, {
-    x: tableX + tableWidth + 90 - 3 - sansBold.widthOfTextAtSize(amtHeader, 7),
-    y: tableTop - 11,
-    size: 7,
+  const tableX = marginX;
+  const tableWidth = width - marginX * 2;
+  const descColWidth = tableWidth - 180;
+  const amtColWidth = 180;
+  const headerHeight = 20;
+  const rowHeight = 30;
+  const tableTop = y - 26;
+
+  page.drawRectangle({ x: tableX, y: tableTop - headerHeight, width: tableWidth, height: headerHeight, color: wine });
+  page.drawText("Description", { x: tableX + 10, y: tableTop - headerHeight + 6, size: 9, font: sansBold, color: white });
+  const amtHeaderLabel = "Amount";
+  page.drawText(amtHeaderLabel, {
+    x: tableX + tableWidth - 10 - sansBold.widthOfTextAtSize(amtHeaderLabel, 9),
+    y: tableTop - headerHeight + 6,
+    size: 9,
     font: sansBold,
     color: white,
   });
 
+  const rowTop = tableTop - headerHeight;
+  const description = `VA Atelier Service Fee - trucking services agent commission (${trips.length} trip${
+    trips.length === 1 ? "" : "s"
+  } x ${peso(rate)})`;
+  page.drawText(fitText(sans, description, 9.5, descColWidth - 20), {
+    x: tableX + 10,
+    y: rowTop - rowHeight / 2 - 3,
+    size: 9.5,
+    font: sans,
+    color: ink,
+  });
+  const rowAmtText = `Php ${peso(batch.commissionTotal)}`;
+  page.drawText(rowAmtText, {
+    x: tableX + tableWidth - 10 - sansBold.widthOfTextAtSize(rowAmtText, 10),
+    y: rowTop - rowHeight / 2 - 4,
+    size: 10,
+    font: sansBold,
+    color: ink,
+  });
+
   page.drawRectangle({
     x: tableX,
-    y: rowY,
-    width: tableWidth + 90,
-    height: tableTop - rowY,
+    y: rowTop - rowHeight,
+    width: tableWidth,
+    height: headerHeight + rowHeight,
     borderColor: lineColor,
     borderWidth: 0.75,
   });
-  let vx = tableX;
-  for (const col of TRIP_COLUMNS) {
-    page.drawLine({ start: { x: vx, y: tableTop }, end: { x: vx, y: rowY }, thickness: 0.5, color: lineColor });
-    vx += col.width;
-  }
-  page.drawLine({ start: { x: vx, y: tableTop }, end: { x: vx, y: rowY }, thickness: 0.5, color: lineColor });
-
-  const totalsY = rowY - 18;
-  page.drawText(`${trips.length} trip(s) x ${peso(rate)} flat commission per trip`, {
-    x: marginX,
-    y: totalsY,
-    size: 8,
-    font: sans,
-    color: gray,
+  page.drawLine({
+    start: { x: tableX + descColWidth, y: tableTop },
+    end: { x: tableX + descColWidth, y: rowTop - rowHeight },
+    thickness: 0.5,
+    color: lineColor,
   });
+
+  const totalsY = rowTop - rowHeight - 26;
   const totalDueLabel = "TOTAL DUE:";
-  const totalsX = tableX + tableWidth + 90 - 3 - sansBold.widthOfTextAtSize(totalDueLabel + "   Php 000,000.00", 11);
-  page.drawText(totalDueLabel, { x: totalsX, y: totalsY, size: 11, font: sansBold, color: wine });
+  const totalsX = tableX + tableWidth - sansBold.widthOfTextAtSize(totalDueLabel + "   Php 000,000.00", 12);
+  page.drawText(totalDueLabel, { x: totalsX, y: totalsY, size: 12, font: sansBold, color: wine });
   const totalText = `Php ${peso(batch.commissionTotal)}`;
   page.drawText(totalText, {
-    x: tableX + tableWidth + 90 - 3 - sansBold.widthOfTextAtSize(totalText, 11),
+    x: tableX + tableWidth - sansBold.widthOfTextAtSize(totalText, 12),
     y: totalsY,
-    size: 11,
+    size: 12,
     font: sansBold,
     color: wine,
   });
+
+  page.drawText("Thank you!", { x: marginX, y: totalsY, size: 9.5, font: serif, color: gray });
 
   const sigY = 52;
   page.drawText("Prepared by:", { x: marginX, y: sigY + 40, size: 8.5, font: sans, color: gray });
