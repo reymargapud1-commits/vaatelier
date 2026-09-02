@@ -4,7 +4,7 @@ import path from "path";
 import bcrypt from "bcryptjs";
 import { eq } from "drizzle-orm";
 import { db } from "./index";
-import { users, courses, modules, lessons, quizzes, questions } from "./schema";
+import { users, courses, modules, lessons, quizzes, questions, personalClients, personalClientCustomers } from "./schema";
 
 // -----------------------------------------------------------------------
 // Training niches: content/niches.json lists every niche (= one course).
@@ -192,5 +192,46 @@ export async function seedDatabase() {
     );
   }
 
+  await seedPersonalClients();
+
   console.log("Seed complete.");
+}
+
+// -----------------------------------------------------------------------
+// Personal client services (Admin > Clients) - Reymar's own outsourced-VA
+// work, unrelated to the training portal's students. Unlike the course
+// content above, this is meant to be edited freely from the admin UI once
+// it exists, so this ONLY inserts the starting record the first time (by
+// fixed ID) and never overwrites it again afterward - a redeploy must never
+// clobber edits made from /admin/clients.
+// -----------------------------------------------------------------------
+async function seedPersonalClients() {
+  const existing = await db.query.personalClients.findFirst({
+    where: eq(personalClients.id, "5rjsl"),
+  });
+  if (existing) return;
+
+  await db.insert(personalClients).values({
+    id: "5rjsl",
+    name: "5RJSL Lanuza Logistics Corp.",
+    industry: "Trucking Services",
+    businessAddress: "A-J. B-1, L-13, Samaka Site, GMA, Cavite",
+    email: "5rjstruckingservices@gmail.com / liverjsl@yahoo.com",
+    tin: "624-297-819-000 VAT",
+    commissionRatePerTrip: 500,
+    preparedByName: "Reymar Gapud",
+    preparedByTitle: "Trucking Manager",
+    nextInvoiceNumber: 1,
+  });
+
+  await db.insert(personalClientCustomers).values({
+    id: "5rjsl-paintplas",
+    personalClientId: "5rjsl",
+    name: "Paintplas Corporation",
+    // Continues the paper-trail sequence from the last statement (BS #0202)
+    // shown in the sample - editable any time from the customer's page.
+    nextBsNumber: 203,
+  });
+
+  console.log("Seeded personal client: 5RJSL Lanuza Logistics Corp. (customer: Paintplas Corporation)");
 }

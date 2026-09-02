@@ -34,6 +34,9 @@ export default function Navbar() {
                   <Link href="/admin/curriculum" className="text-gray-700 hover:text-brand-700">
                     Curriculum
                   </Link>
+                  <Link href="/admin/clients" className="text-gray-700 hover:text-brand-700">
+                    My Services
+                  </Link>
                   <Link href="/admin/feedback" className="text-gray-700 hover:text-brand-700">
                     Feedback
                   </Link>

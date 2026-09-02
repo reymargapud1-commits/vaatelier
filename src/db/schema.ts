@@ -1,4 +1,4 @@
-import { sqliteTable, text, integer, uniqueIndex } from "drizzle-orm/sqlite-core";
+import { sqliteTable, text, integer, real, uniqueIndex } from "drizzle-orm/sqlite-core";
 
 // -----------------------------------------------------------------------
 // This schema targets the SQLite dialect (via drizzle-orm/sqlite-core), and
@@ -190,4 +190,92 @@ export const storeOrders = sqliteTable("store_orders", {
   checkoutSessionId: text("checkout_session_id").unique(),
   createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
   updatedAt: integer("updated_at", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
+});
+
+// -----------------------------------------------------------------------
+// Personal client services - Reymar's own outsourced-VA/agent work,
+// entirely separate from the training portal's students. A personalClient
+// is a business Reymar works FOR as their admin/agent (e.g. 5RJSL Lanuza
+// Logistics Corp.). Each one can have its own end-customers
+// (personalClientCustomers, e.g. Paintplas Corporation) whose deliveries
+// Reymar monitors and bills on the personal client's behalf.
+//
+// One billingBatch = one "Generate Billing" action: it groups a chosen set
+// of deliveryTrips together and produces BOTH documents from that same
+// group at once - a Billing Statement (personalClient -> their customer,
+// subtotal + 12% VAT) and a Commission Invoice (VA Atelier -> personal
+// client, Reymar's flat per-trip fee, no VAT). See lib/billing-pdf.ts for
+// the actual PDF rendering of each.
+// -----------------------------------------------------------------------
+
+export const personalClients = sqliteTable("personal_clients", {
+  id: text("id").primaryKey(),
+  name: text("name").notNull(),
+  industry: text("industry").notNull().default(""),
+  businessAddress: text("business_address").notNull().default(""),
+  email: text("email").notNull().default(""),
+  tin: text("tin").notNull().default(""),
+  // Reymar's flat commission per trip when billing THIS personal client as
+  // their agent - plain pesos (not centavos), matching how every amount in
+  // this feature is entered/displayed (see deliveryTrips.amountRate).
+  commissionRatePerTrip: real("commission_rate_per_trip").notNull().default(500),
+  preparedByName: text("prepared_by_name").notNull().default(""),
+  preparedByTitle: text("prepared_by_title").notNull().default(""),
+  confirmedByName: text("confirmed_by_name").notNull().default(""),
+  confirmedByTitle: text("confirmed_by_title").notNull().default(""),
+  // VA Atelier's own commission-invoice numbering to this personal client -
+  // increments every time a billingBatch is generated for any of their
+  // customers. Formatted as "VA-####" - see lib/billing-pdf.ts.
+  nextInvoiceNumber: integer("next_invoice_number").notNull().default(1),
+  createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
+});
+
+export const personalClientCustomers = sqliteTable("personal_client_customers", {
+  id: text("id").primaryKey(),
+  personalClientId: text("personal_client_id").notNull().references(() => personalClients.id),
+  name: text("name").notNull(),
+  // This customer's own Billing Statement numbering (what the personal
+  // client uses to bill THEM) - a 4-digit sequence, e.g. "0203". Editable
+  // on the customer's page so it can be set to continue an existing
+  // paper-trail sequence.
+  nextBsNumber: integer("next_bs_number").notNull().default(1),
+  createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
+});
+
+export const deliveryTrips = sqliteTable("delivery_trips", {
+  id: text("id").primaryKey(),
+  customerId: text("customer_id").notNull().references(() => personalClientCustomers.id),
+  tripDate: integer("trip_date", { mode: "timestamp" }).notNull(),
+  plateNumber: text("plate_number").notNull(),
+  driverName: text("driver_name").notNull(),
+  helper1Name: text("helper1_name").notNull().default(""),
+  helper2Name: text("helper2_name").notNull().default(""),
+  routeFrom: text("route_from").notNull(),
+  routeTo: text("route_to").notNull(),
+  gatePassNumber: text("gate_pass_number").notNull().default(""),
+  drSiNumber: text("dr_si_number").notNull().default(""),
+  waybillNumber: text("waybill_number").notNull().default(""),
+  remarks: text("remarks").notNull().default(""),
+  // Plain pesos, VAT-exclusive - matches the source paper billing
+  // statement, which enters and displays this figure the same way.
+  amountRate: real("amount_rate").notNull(),
+  // Set once this trip is included in a "Generate Billing" batch - from
+  // then on it's excluded from the unbilled list and can't be picked again.
+  billingBatchId: text("billing_batch_id").references(() => billingBatches.id),
+  createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
+});
+
+export const billingBatches = sqliteTable("billing_batches", {
+  id: text("id").primaryKey(),
+  customerId: text("customer_id").notNull().references(() => personalClientCustomers.id),
+  personalClientId: text("personal_client_id").notNull().references(() => personalClients.id),
+  bsNumber: text("bs_number").notNull(),
+  invoiceNumber: text("invoice_number").notNull(),
+  batchDate: integer("batch_date", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
+  tripCount: integer("trip_count").notNull(),
+  subtotal: real("subtotal").notNull(),
+  vatAmount: real("vat_amount").notNull(),
+  totalToCustomer: real("total_to_customer").notNull(),
+  commissionTotal: real("commission_total").notNull(),
+  createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
 });
