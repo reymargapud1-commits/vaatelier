@@ -1,0 +1,415 @@
+{
+  "quizzes": [
+    {
+      "id": "ai-quiz-m1",
+      "moduleId": "ai-m1",
+      "title": "Module 1 Quiz: Starting Out as an AI-Powered VA",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "ai-m1-q1",
+          "text": "What does an AI-Powered VA primarily do?",
+          "choices": [
+            "Uses AI tools to complete business tasks faster while still applying judgment and quality checks",
+            "Builds AI models from scratch for clients",
+            "Only forwards whatever a chatbot outputs without review",
+            "Repairs computer hardware"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ai-m1-q2",
+          "text": "Why do businesses hire an AI-Powered VA instead of just using AI tools themselves?",
+          "choices": [
+            "AI tools are illegal for small businesses to use directly",
+            "They want the time savings of AI without learning prompt engineering and tool setup themselves",
+            "AI tools cannot be used by businesses at all",
+            "It is required by freelance platforms"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ai-m1-q3",
+          "text": "Which trait most separates a professional AI VA from someone who just copy-pastes chatbot replies?",
+          "choices": [
+            "Typing speed",
+            "Catching and correcting AI mistakes before they reach a client",
+            "Using only one AI tool ever",
+            "Avoiding all client communication"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ai-m1-q4",
+          "text": "When a client says 'use AI for this,' what do they usually actually mean?",
+          "choices": [
+            "They want a specific AI tool installed on their computer",
+            "They want the result faster or cheaper - not necessarily a specific technology",
+            "They want to learn prompt engineering themselves",
+            "They are testing whether you know a programming language"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ai-m1-q5",
+          "text": "What is a reasonable minimum setup to start practicing as an AI VA?",
+          "choices": [
+            "An expensive dedicated AI workstation",
+            "A reliable computer and free accounts on tools like ChatGPT and Claude",
+            "A university degree in computer science",
+            "A paid subscription to every AI tool that exists"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "ai-quiz-m2",
+      "moduleId": "ai-m2",
+      "title": "Module 2 Quiz: Essential AI Tools",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "ai-m2-q1",
+          "text": "What are ChatGPT and Claude best described as?",
+          "choices": [
+            "General-purpose AI assistants strong at writing, research, and reasoning",
+            "Spreadsheet software",
+            "Video editing tools only",
+            "Password managers"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ai-m2-q2",
+          "text": "What is prompt engineering?",
+          "choices": [
+            "A type of computer programming language",
+            "Writing clear, specific instructions that get useful results from an AI tool",
+            "Repairing broken AI models",
+            "A certification required to use ChatGPT"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ai-m2-q3",
+          "text": "What do Zapier and Make primarily help you do?",
+          "choices": [
+            "Connect different apps so information flows between them automatically",
+            "Design company logos",
+            "Process client payments",
+            "Write legal contracts"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ai-m2-q4",
+          "text": "In Zapier, what is a 'Zap' made of?",
+          "choices": [
+            "Only a trigger, with no further action",
+            "A trigger and one or more actions",
+            "A chatbot script",
+            "A billing invoice"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ai-m2-q5",
+          "text": "What is Grammarly best used for in an AI VA's workflow?",
+          "choices": [
+            "Generating the entire first draft from scratch",
+            "A final quality pass on grammar, tone, and clarity",
+            "Building automations",
+            "Scheduling social media posts"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ai-m2-q6",
+          "text": "What should you always confirm before using AI-generated images in client-facing content?",
+          "choices": [
+            "Nothing - AI images are always safe to use anywhere",
+            "That the client is comfortable with AI-generated imagery",
+            "The exact pixel dimensions only",
+            "Whether the image tool has a mobile app"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ai-m2-q7",
+          "text": "What is the recommended approach to building your AI toolkit?",
+          "choices": [
+            "Master every AI tool that exists immediately",
+            "Focus on a handful of tools that fit your niche and add more as real needs arise",
+            "Use only one tool forever, regardless of the task",
+            "Avoid learning any new tools after your first month"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "ai-quiz-m3",
+      "moduleId": "ai-m3",
+      "title": "Module 3 Quiz: Core AI VA Skills",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "ai-m3-q1",
+          "text": "Before sending an AI-drafted email reply, what should you always do?",
+          "choices": [
+            "Send it immediately with no review",
+            "Give it a quick tone check to make sure it fits the relationship",
+            "Delete it and start over every time",
+            "Forward it to a random colleague"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ai-m3-q2",
+          "text": "When using AI for research, why must you still verify facts?",
+          "choices": [
+            "AI can state incorrect information confidently, known as hallucination",
+            "AI research is always illegal to use",
+            "Verification is only needed for numbers, never names or claims",
+            "It isn't necessary if the AI sounds confident"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ai-m3-q3",
+          "text": "What is the best first step before building any automation?",
+          "choices": [
+            "Open Zapier immediately and start clicking",
+            "Write out the workflow in plain language first, identifying the trigger and each action",
+            "Skip planning since automations rarely need structure",
+            "Ask the client to build it themselves"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ai-m3-q4",
+          "text": "What should any basic business chatbot always include?",
+          "choices": [
+            "No way to reach a human under any circumstance",
+            "A clear, easy path for a visitor to reach a real human when needed",
+            "Only Yes/No answers",
+            "Access to the client's full financial records"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ai-m3-q5",
+          "text": "What content types deserve extra-careful human review before publishing?",
+          "choices": [
+            "Casual social captions only",
+            "Content with specific client facts, sensitive announcements, or legal/medical/financial claims",
+            "Nothing - all AI content is safe to publish as-is",
+            "Only content written on weekends"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ai-m3-q6",
+          "text": "What is the safest habit regarding client data and public AI tools?",
+          "choices": [
+            "Paste anything into any AI tool without checking",
+            "Never paste sensitive client data into a public AI tool without understanding its data policy, and ask the client when in doubt",
+            "Only worry about data privacy for large companies",
+            "Assume all AI tools delete data instantly with no exceptions"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "ai-quiz-m4",
+      "moduleId": "ai-m4",
+      "title": "Module 4 Quiz: Building Your AI VA Portfolio",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "ai-m4-q1",
+          "text": "What is a 'mock project' used for in an AI VA portfolio?",
+          "choices": [
+            "A real paid client project",
+            "A sample project created to demonstrate your skills before you have paid clients",
+            "A type of scam",
+            "A required legal document"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ai-m4-q2",
+          "text": "How should mock projects be labeled in a portfolio?",
+          "choices": [
+            "As real client results with no disclaimer",
+            "Clearly and honestly as sample or practice work",
+            "They should never be shown to anyone",
+            "As guaranteed outcomes for future clients"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ai-m4-q3",
+          "text": "What is often the clearest success metric an AI VA can show?",
+          "choices": [
+            "The number of AI tools they own",
+            "Time saved on a task, shown honestly as a before/after comparison",
+            "How many hours they worked, regardless of output",
+            "The size of the AI model used"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ai-m4-q4",
+          "text": "Which free-or-low-cost options work well for hosting a simple AI VA portfolio?",
+          "choices": [
+            "Carrd, Notion, or a well-organized Google Drive folder",
+            "Only expensive custom-built websites",
+            "None exist for free",
+            "Only printed paper portfolios"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ai-m4-q5",
+          "text": "Why should you document your process (prompts, automation steps) in a portfolio, not just the final result?",
+          "choices": [
+            "It has no value to a future client",
+            "Clients want to understand how you think and work, not just see a finished output",
+            "It is required by AI tool terms of service",
+            "It replaces the need for any actual skills"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "ai-quiz-m5",
+      "moduleId": "ai-m5",
+      "title": "Module 5 Quiz: Resume and Applications",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "ai-m5-q1",
+          "text": "What should an AI VA resume bullet point focus on?",
+          "choices": [
+            "Vague statements with no detail",
+            "Specific tools and quantified results, like estimated time saved",
+            "Only job titles",
+            "Personal hobbies unrelated to the role"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ai-m5-q2",
+          "text": "What makes a strong proposal for an AI-related job posting?",
+          "choices": [
+            "A generic copy-paste message mentioning 'AI' in general terms",
+            "Personalization that identifies their specific repetitive task or bottleneck",
+            "Extremely long, unfocused paragraphs",
+            "No mention of relevant tools or skills"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ai-m5-q3",
+          "text": "Which platforms are commonly used to find AI VA clients?",
+          "choices": [
+            "Upwork and Onlinejobs.ph, filtering for AI/automation roles",
+            "Only local newspapers",
+            "Random unrelated apps",
+            "None, clients cannot be found online"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ai-m5-q4",
+          "text": "What is a good goal during a discovery call with a potential AI VA client?",
+          "choices": [
+            "Avoid asking any questions",
+            "Understand their current workflow, past frustrations, and who needs to approve the work",
+            "Immediately demand payment before speaking",
+            "Refuse to discuss their business"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ai-m5-q5",
+          "text": "Why should you never list a tool on your resume that you haven't actually practiced with?",
+          "choices": [
+            "It doesn't matter, clients never check",
+            "Clients in this niche often test your tool knowledge on the spot",
+            "Tools listed on a resume are legally binding",
+            "There is no reason, it is just a suggestion"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "ai-quiz-m6",
+      "moduleId": "ai-m6",
+      "title": "Module 6 Quiz: Landing Your First Client and Beyond",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "ai-m6-q1",
+          "text": "What is a good first step when onboarding a new AI VA client?",
+          "choices": [
+            "Guess what they want without asking",
+            "Get minimum necessary account access safely and gather the context AI tools will need",
+            "Immediately increase your rate",
+            "Avoid all communication in week one"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ai-m6-q2",
+          "text": "Which is a common pricing model for AI VA services?",
+          "choices": [
+            "Monthly retainer",
+            "Random guessing",
+            "Refusing to state a price",
+            "Charging only in a currency you don't understand"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ai-m6-q3",
+          "text": "What is a basic security habit every AI VA should follow?",
+          "choices": [
+            "Share one login across all clients for convenience",
+            "Use a password manager and turn on two-factor authentication wherever offered",
+            "Write down passwords on paper and keep them at a client's office",
+            "Avoid using any organizational tools"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ai-m6-q4",
+          "text": "How should an AI VA respond to 'this doesn't sound like us' feedback on AI-drafted content?",
+          "choices": [
+            "Argue that the client is wrong",
+            "Ask for a specific example that does sound right and update saved style notes",
+            "Ignore the feedback completely",
+            "Stop using AI tools entirely for that client"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ai-m6-q5",
+          "text": "What helps build a long-term AI VA career?",
+          "choices": [
+            "Refusing to learn new tools or stay current",
+            "Going deeper into key tools, staying current with new releases, and asking for testimonials",
+            "Never asking for client feedback",
+            "Avoiding all specialization"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    }
+  ]
+}

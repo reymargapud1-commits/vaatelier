@@ -182,6 +182,32 @@ const TRACKS_BY_COURSE: Record<string, CertificateTrack[]> = {
       moduleIds: ["re-m6"],
     },
   ],
+  "va-ai": [
+    {
+      id: "foundations",
+      label: "Certificate I: AI-Powered VA Foundations & Tools",
+      subtitle: "Modules 1-2",
+      moduleIds: ["ai-m1", "ai-m2"],
+    },
+    {
+      id: "core-skills",
+      label: "Certificate II: Core AI VA Skills",
+      subtitle: "Module 3",
+      moduleIds: ["ai-m3"],
+    },
+    {
+      id: "portfolio",
+      label: "Certificate III: Portfolio & Job Application Mastery",
+      subtitle: "Modules 4-5",
+      moduleIds: ["ai-m4", "ai-m5"],
+    },
+    {
+      id: "client-launch",
+      label: "Certificate IV: Client Acquisition & Career Launch",
+      subtitle: "Module 6",
+      moduleIds: ["ai-m6"],
+    },
+  ],
 };
 
 export function getCertificateTracks(courseId: string): CertificateTrack[] {

@@ -1,0 +1,1094 @@
+{
+  "courseId": "va-ai",
+  "courseTitle": "AI-Powered VA: From Zero to First Client",
+  "courseDescription": "A complete beginner-to-job-ready training program for aspiring AI-Powered Virtual Assistants. Covers prompt engineering, AI writing and content tools, simple automations and chatbots, portfolio-building, resume and proposal writing, and how to land and manage your first AI VA client.",
+  "priceNote": "One-time payment unlocks lifetime access to all modules, video lessons, quizzes, and your Certificate of Completion.",
+  "modules": [
+    {
+      "id": "ai-m1",
+      "title": "Module 1: Starting Out as an AI-Powered VA",
+      "lessons": [
+        {
+          "id": "ai-m1-l1",
+          "title": "What Is an AI-Powered VA?",
+          "slides": [
+            {
+              "heading": "What Is an AI-Powered VA?",
+              "bullets": [
+                "Welcome to your AI-Powered VA journey",
+                "Uses AI tools to do VA work faster and better",
+                "Still a real person doing real, skilled work"
+              ],
+              "narration": "Welcome to Module 1 of your AI-Powered VA training. An AI-Powered VA is a Virtual Assistant who uses tools like ChatGPT and Claude, AI writing assistants, and simple automation platforms to complete everyday business tasks faster, more consistently, and often to a higher standard - while still applying their own judgment, quality checks, and client understanding."
+            },
+            {
+              "heading": "What an AI-Powered VA Actually Does Day to Day",
+              "bullets": [
+                "Drafts emails, documents, and content with AI, then edits",
+                "Automates repetitive tasks with simple no-code tools",
+                "Researches and summarizes information quickly"
+              ],
+              "narration": "On a typical day, an AI-Powered VA might draft a batch of client emails or social captions using AI and then polish them, set up a simple automation so leads flow straight into a spreadsheet, and use AI to summarize a long document or research topic in minutes instead of hours."
+            },
+            {
+              "heading": "Why Businesses Are Hiring AI-Powered VAs",
+              "bullets": [
+                "AI tools alone still need a skilled operator",
+                "Business owners want the time savings without the learning curve",
+                "You become the bridge between AI tools and real results"
+              ],
+              "narration": "Most business owners have heard of ChatGPT but don't have time to learn prompt engineering, test automation tools, or fact-check AI output - hiring an AI-Powered VA means they get the speed and cost savings of AI, without having to become AI experts themselves."
+            },
+            {
+              "heading": "Is This Niche Right for You?",
+              "bullets": [
+                "You're curious and comfortable trying new tools",
+                "You enjoy writing clear instructions and prompts",
+                "You're detail-oriented enough to catch AI mistakes"
+              ],
+              "narration": "This niche is a great fit if you enjoy experimenting with new software, if you're naturally good at giving clear instructions, and if you have the patience to double-check AI output rather than just copy-pasting it - that last trait is what actually separates a professional AI VA from someone just forwarding chatbot replies."
+            }
+          ]
+        },
+        {
+          "id": "ai-m1-l2",
+          "title": "Skills and Traits of a Great AI-Powered VA",
+          "slides": [
+            {
+              "heading": "Core Skills You'll Build",
+              "bullets": [
+                "Prompt engineering - getting useful output from AI",
+                "AI content editing and fact-checking",
+                "Basic automation building with no-code tools"
+              ],
+              "narration": "Over this training, you'll build four core skills: writing effective prompts that get useful results on the first or second try, editing and fact-checking AI-generated content before it reaches a client, building simple automations with tools like Zapier, and knowing which tasks AI should never fully handle alone."
+            },
+            {
+              "heading": "Traits Clients Look For",
+              "bullets": [
+                "Healthy skepticism - never trusting AI output blindly",
+                "Clear communication about what AI can and can't do",
+                "Staying current as tools change quickly"
+              ],
+              "narration": "Clients trust AI-Powered VAs who treat AI as a powerful assistant rather than an infallible oracle, who can honestly explain what a tool can and can't reliably do, and who keep learning as new AI tools and updates come out almost every month."
+            },
+            {
+              "heading": "A Day in the Life",
+              "bullets": [
+                "Morning: review and refine yesterday's AI drafts",
+                "Midday: run automations and handle AI-assisted research",
+                "End of day: quality-check everything before sending"
+              ],
+              "narration": "A typical day might start by reviewing and polishing content an AI tool drafted overnight, move into running automations and doing AI-assisted research for a client project, and end with a careful quality pass - because in this niche, the final human check is often the most valuable part of the job."
+            },
+            {
+              "heading": "Where Growth Leads",
+              "bullets": [
+                "Specialize in one or two tools deeply",
+                "Move from small tasks into full workflow design",
+                "Command premium rates as an 'AI-fluent' VA"
+              ],
+              "narration": "As you gain experience, you can grow from doing small AI-assisted tasks into designing entire workflows and automations for a business, and AI fluency is increasingly one of the highest-paid skills a VA can offer, since so few VAs have taken the time to learn it properly."
+            }
+          ]
+        },
+        {
+          "id": "ai-m1-l3",
+          "title": "Understanding What Clients Actually Want From \"AI Help\"",
+          "slides": [
+            {
+              "heading": "Clients Rarely Mean What They Think They Mean",
+              "bullets": [
+                "\"Use AI for this\" often just means \"make this faster\"",
+                "They want the result, not necessarily the technology",
+                "Your job is translating a goal into the right AI approach"
+              ],
+              "narration": "When a client says \"can you use AI for this,\" they usually just mean they want something done faster or cheaper - they're rarely asking for a specific tool. Part of your value as an AI-Powered VA is translating that vague request into the right tool and approach for their actual goal."
+            },
+            {
+              "heading": "Questions to Ask a New Client",
+              "bullets": [
+                "What repetitive task is eating the most time?",
+                "What's already been tried, and why did it stop?",
+                "How comfortable are they with AI-written content?"
+              ],
+              "narration": "Before recommending any tool, ask what repetitive task is costing them the most time, whether they've tried any AI tools before and why it didn't stick, and how comfortable they are with AI-assisted writing appearing under their brand's name - some clients want it invisible, others don't mind at all."
+            },
+            {
+              "heading": "Setting Realistic Expectations From Day One",
+              "bullets": [
+                "AI speeds things up - it doesn't replace judgment",
+                "Some tasks still need a fully human touch",
+                "Be upfront about where AI helps and where it doesn't"
+              ],
+              "narration": "Set expectations early: AI can draft, summarize, and automate remarkably well, but sensitive client communication, final legal or medical wording, and anything requiring real relationship context should still go through you directly rather than straight from an AI tool."
+            },
+            {
+              "heading": "Staying Aligned Over Time",
+              "bullets": [
+                "Check in on what's actually saving them time",
+                "Adjust your toolset as their needs change",
+                "Keep them informed as AI tools themselves evolve"
+              ],
+              "narration": "Revisit with your client regularly on what's genuinely saving them time versus what isn't worth the effort, and keep them briefly informed when a tool you use updates in a way that affects their work - this ongoing communication is what turns a one-off gig into a long-term retainer."
+            }
+          ]
+        },
+        {
+          "id": "ai-m1-l4",
+          "title": "Setting Up Your AI VA Workspace & Tools Checklist",
+          "slides": [
+            {
+              "heading": "What You Actually Need to Get Started",
+              "bullets": [
+                "A laptop or desktop with a modern browser",
+                "Free accounts on ChatGPT and Claude to start",
+                "A notes app for saving prompts that work well"
+              ],
+              "narration": "You don't need expensive software to start - a reliable computer, free accounts on ChatGPT and Claude (both offer usable free tiers), and a simple notes app or document for saving prompts that worked well is enough to begin practicing."
+            },
+            {
+              "heading": "Organizing Your Prompt Library",
+              "bullets": [
+                "Save your best prompts by task type",
+                "Note which tool and settings worked best",
+                "Build this into a real time-saving asset"
+              ],
+              "narration": "Keep a running \"prompt library\" organized by task - email drafts, social captions, research summaries - noting which tool and phrasing worked best each time. This library becomes one of your most valuable time-saving assets as you take on more clients."
+            },
+            {
+              "heading": "Understanding Free vs Paid AI Tools",
+              "bullets": [
+                "Free tiers are enough to learn and practice",
+                "Paid tiers unlock higher limits and better models",
+                "Decide per client who pays for premium tools"
+              ],
+              "narration": "Free tiers of most AI tools are genuinely enough to learn on and even complete simple client tasks, while paid tiers unlock higher usage limits, faster or smarter models, and extra features - always clarify with each client upfront whether you or they cover any tool subscription cost."
+            },
+            {
+              "heading": "Ready for Module 2",
+              "bullets": [
+                "You know what the role involves",
+                "You understand what clients actually want",
+                "Next: the specific AI tools you'll use daily"
+              ],
+              "narration": "You now understand what an AI-Powered VA does and what clients are really asking for when they mention AI. In Module 2, we'll get hands-on with the specific tools you'll use every day on the job."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-m2",
+      "title": "Module 2: Essential AI Tools Every AI VA Must Know",
+      "lessons": [
+        {
+          "id": "ai-m2-l1",
+          "title": "ChatGPT and Claude: The AI VA's Core Tools",
+          "slides": [
+            {
+              "heading": "Why These Two Tools First",
+              "bullets": [
+                "The most widely used general-purpose AI assistants",
+                "Strong at writing, research, summarizing, and reasoning",
+                "Most clients have already heard of at least one"
+              ],
+              "narration": "ChatGPT (by OpenAI) and Claude (by Anthropic) are the two most widely used general-purpose AI assistants, both strong at writing, research, summarizing, and step-by-step reasoning - learning these two well covers the large majority of everyday AI VA tasks."
+            },
+            {
+              "heading": "Understanding Chat-Based Work",
+              "bullets": [
+                "You have a back-and-forth conversation, not one command",
+                "Refine the output over several messages",
+                "Save useful conversations for reuse later"
+              ],
+              "narration": "Both tools work as an ongoing conversation rather than a single command - you can ask for a first draft, then say \"make it shorter\" or \"more formal,\" refining the result over several messages until it's client-ready. Save conversations that produced great results so you can reuse the approach later."
+            },
+            {
+              "heading": "Uploading Files and Context",
+              "bullets": [
+                "Both tools can read documents you upload",
+                "Great for summarizing reports or drafting from notes",
+                "Never upload sensitive client data without permission"
+              ],
+              "narration": "Both ChatGPT and Claude let you upload documents - a report, meeting notes, a spreadsheet - so the AI can summarize, analyze, or draft from that specific content instead of generic knowledge. Always get a client's explicit permission before uploading anything confidential to an outside AI tool."
+            },
+            {
+              "heading": "Choosing Between Them for a Task",
+              "bullets": [
+                "Try the same prompt in both when it matters",
+                "Notice which one you personally get better results from",
+                "Many AI VAs keep both subscriptions for flexibility"
+              ],
+              "narration": "For an important task, it's worth trying the same prompt in both tools and comparing the results - over time you'll notice patterns in which tool handles certain tasks better, and many working AI VAs simply keep both on hand for flexibility."
+            }
+          ]
+        },
+        {
+          "id": "ai-m2-l2",
+          "title": "Prompt Engineering Fundamentals",
+          "slides": [
+            {
+              "heading": "What Prompt Engineering Really Means",
+              "bullets": [
+                "Writing instructions that get useful results",
+                "Not magic words - just clear, specific communication",
+                "The single highest-leverage skill in this niche"
+              ],
+              "narration": "Prompt engineering simply means writing instructions clear and specific enough that an AI tool gives you something genuinely useful on the first or second try - it's not about secret magic phrases, it's about communicating as clearly as you would to a new employee."
+            },
+            {
+              "heading": "The Four Parts of a Strong Prompt",
+              "bullets": [
+                "Role - who should the AI act as?",
+                "Task - exactly what do you need done?",
+                "Context and format - background info and desired output"
+              ],
+              "narration": "A strong prompt usually covers four things: the role you want the AI to play (\"act as an experienced copywriter\"), the exact task, any relevant context (the client's industry, tone, or past examples), and the format you want back - a bullet list, an email, a table."
+            },
+            {
+              "heading": "Iterating Instead of Starting Over",
+              "bullets": [
+                "Your first result rarely needs a full restart",
+                "Give specific feedback: shorter, warmer, more formal",
+                "Ask the AI to keep what worked and change one thing"
+              ],
+              "narration": "When a result isn't quite right, don't start over from scratch - give specific feedback like \"keep the structure but make the tone warmer\" or \"shorten this by half.\" AI tools handle targeted revision requests very well, and it's usually much faster than rewriting your original prompt."
+            },
+            {
+              "heading": "Common Prompting Mistakes to Avoid",
+              "bullets": [
+                "Being too vague (\"write something about our business\")",
+                "Forgetting to specify tone or audience",
+                "Accepting the first draft without reviewing it"
+              ],
+              "narration": "The most common mistakes are giving a vague prompt with no real direction, forgetting to specify the tone or intended audience, and accepting whatever the AI produces without a careful review - that last habit is the one that gets AI VAs in trouble with clients."
+            }
+          ]
+        },
+        {
+          "id": "ai-m2-l3",
+          "title": "AI Writing & Content Tools",
+          "slides": [
+            {
+              "heading": "Beyond ChatGPT: Specialized Writing Tools",
+              "bullets": [
+                "Grammarly - grammar, tone, and clarity checks",
+                "Jasper - marketing copy at scale",
+                "Canva AI - design and content together"
+              ],
+              "narration": "Beyond general chat tools, several platforms specialize in specific writing tasks: Grammarly checks grammar, tone, and clarity on anything you write or paste in, Jasper is built specifically for marketing copy at scale, and Canva's built-in AI features combine writing help directly with design."
+            },
+            {
+              "heading": "Using Grammarly as a Final Quality Pass",
+              "bullets": [
+                "Runs on top of AI-drafted content, not instead of it",
+                "Catches tone issues a first read might miss",
+                "A quick final layer before anything goes to a client"
+              ],
+              "narration": "Grammarly works best as a final quality pass on top of AI-drafted content rather than as your main writing tool - running any AI draft through it before sending catches awkward phrasing or tone issues that are easy to miss on your own quick read-through."
+            },
+            {
+              "heading": "When to Use a Specialized Tool vs ChatGPT",
+              "bullets": [
+                "One-off task: ChatGPT or Claude is usually enough",
+                "High-volume marketing copy: consider Jasper",
+                "Design-heavy content: Canva AI keeps it in one place"
+              ],
+              "narration": "For a one-off email or document, ChatGPT or Claude alone is usually all you need. For a client needing a high volume of marketing copy every month, a dedicated tool like Jasper can be worth the extra subscription; for anything design-heavy, Canva AI keeps writing and visuals in one workflow."
+            },
+            {
+              "heading": "Keeping Client Content Consistent",
+              "bullets": [
+                "Save a short style guide per client (tone, words to avoid)",
+                "Feed that style guide into your prompts every time",
+                "Consistency matters more than any single tool's cleverness"
+              ],
+              "narration": "Whichever tools you use, keep a short style guide per client - preferred tone, words they like or avoid, example sentences - and include it in your prompts every time. Consistency across everything you produce matters far more to clients than which specific tool created it."
+            }
+          ]
+        },
+        {
+          "id": "ai-m2-l4",
+          "title": "AI Automation Tools: Zapier, Make, and Simple Workflows",
+          "slides": [
+            {
+              "heading": "What Automation Tools Actually Do",
+              "bullets": [
+                "Connect apps so information flows automatically",
+                "\"When X happens, do Y\" - no coding required",
+                "Save hours of manual copy-pasting between apps"
+              ],
+              "narration": "Automation tools like Zapier and Make connect different apps together so information flows automatically between them - \"when a new form response comes in, add it to a spreadsheet and send a Slack message\" - all without writing a single line of code."
+            },
+            {
+              "heading": "Zapier Basics",
+              "bullets": [
+                "\"Zaps\" - one trigger, one or more actions",
+                "Huge library of pre-built app connections",
+                "Great starting point for simple, single-path automations"
+              ],
+              "narration": "In Zapier, a \"Zap\" is one automation made of a trigger (something that starts it, like a new email) and one or more actions (what happens next, like creating a spreadsheet row). Its huge library of pre-built app connections makes it the easiest starting point for simple automations."
+            },
+            {
+              "heading": "Make Basics (for More Complex Workflows)",
+              "bullets": [
+                "Visual, flowchart-style automation builder",
+                "Handles branching logic Zapier can't as easily",
+                "Worth learning once you outgrow simple Zaps"
+              ],
+              "narration": "Make (formerly Integromat) uses a visual, flowchart-style builder that can branch, loop, and handle more complex logic than a simple Zap can - it has a steeper learning curve, but it's worth picking up once a client's needs outgrow a single trigger-and-action automation."
+            },
+            {
+              "heading": "A Simple First Automation to Practice",
+              "bullets": [
+                "New form submission -> add row to spreadsheet",
+                "Then -> send a notification message",
+                "Build this exact flow to get comfortable with the tool"
+              ],
+              "narration": "A great first automation to practice is: a new form submission automatically adds a row to a spreadsheet, then sends a notification message to an email or chat app. Building this exact simple flow yourself is the fastest way to get comfortable with how these tools think."
+            }
+          ]
+        },
+        {
+          "id": "ai-m2-l5",
+          "title": "AI Image, Voice & Meeting Tools",
+          "slides": [
+            {
+              "heading": "AI Image Generation Basics",
+              "bullets": [
+                "DALL-E and Midjourney turn text into images",
+                "Great for quick concept visuals and social graphics",
+                "Always check a client's usage rights and comfort level"
+              ],
+              "narration": "Tools like DALL-E (built into ChatGPT) and Midjourney generate original images from a text description - useful for quick concept visuals, social media graphics, or blog illustrations. Always confirm a client is comfortable with AI-generated imagery before using it in anything customer-facing."
+            },
+            {
+              "heading": "AI Meeting Notes and Transcription",
+              "bullets": [
+                "Tools like Otter.ai auto-transcribe calls and meetings",
+                "Generates summaries and action items automatically",
+                "Huge time-saver for client calls and interviews"
+              ],
+              "narration": "AI meeting tools like Otter.ai automatically transcribe calls and generate a summary with action items - this is a major time-saver for client discovery calls, team meetings, or interviews, since you no longer need to take notes by hand while also participating in the conversation."
+            },
+            {
+              "heading": "AI Voice Tools",
+              "bullets": [
+                "Text-to-speech for voiceovers and accessibility",
+                "Useful for video content, IVR messages, and more",
+                "Always disclose AI-generated voice where relevant"
+              ],
+              "narration": "AI text-to-speech tools can generate natural-sounding voiceovers for videos, phone system messages, or accessibility needs - a genuinely useful skill to offer, as long as you're transparent with clients and their audiences about when a voice is AI-generated."
+            },
+            {
+              "heading": "Building Your Personal Toolkit",
+              "bullets": [
+                "You don't need every tool - pick what fits your niche",
+                "Master a handful deeply rather than dabbling in dozens",
+                "Add new tools only when a real client need calls for it"
+              ],
+              "narration": "You don't need to master every AI tool that exists - pick a focused toolkit that fits the kind of clients you want to serve, get genuinely skilled with those, and only add a new tool when a real client need calls for it rather than chasing every new release."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-m3",
+      "title": "Module 3: Core AI VA Skills",
+      "lessons": [
+        {
+          "id": "ai-m3-l1",
+          "title": "Using AI for Admin Work: Email, Scheduling, and Research",
+          "slides": [
+            {
+              "heading": "AI-Assisted Email Management",
+              "bullets": [
+                "Draft replies to common questions in seconds",
+                "Summarize long email threads before responding",
+                "Always review tone before hitting send"
+              ],
+              "narration": "AI can draft replies to common client or customer questions in seconds and summarize a long, messy email thread into a few clear lines before you respond - just always give the draft a quick tone check, since AI can sometimes sound slightly off for a specific relationship."
+            },
+            {
+              "heading": "AI-Assisted Scheduling",
+              "bullets": [
+                "Draft meeting invites and agendas quickly",
+                "Summarize availability across multiple people",
+                "Pair with a scheduling tool for the actual booking"
+              ],
+              "narration": "AI is excellent at drafting a clear meeting invite or agenda from a rough set of notes, and can help summarize availability when coordinating several people - though the actual booking still works best through a dedicated scheduling tool like Calendly."
+            },
+            {
+              "heading": "AI-Assisted Research",
+              "bullets": [
+                "Summarize long reports or articles quickly",
+                "Compare options (tools, vendors, competitors) side by side",
+                "Always verify facts before passing them to a client"
+              ],
+              "narration": "AI tools can summarize long reports, compare options like vendors or competitors side by side, and pull together a first-pass overview of an unfamiliar topic remarkably fast - but always verify specific facts, numbers, or claims independently before passing them along to a client as fact."
+            },
+            {
+              "heading": "Building a Reliable Daily Workflow",
+              "bullets": [
+                "Batch similar AI-assisted tasks together",
+                "Keep a checklist for what still needs a human review",
+                "Track how much time each workflow actually saves"
+              ],
+              "narration": "Batch similar AI-assisted tasks together - all of today's email drafts at once, then all of today's research at once - and keep a simple checklist of what always needs a human review before going out, so speed never quietly comes at the cost of accuracy."
+            }
+          ]
+        },
+        {
+          "id": "ai-m3-l2",
+          "title": "AI-Assisted Content Creation & Copywriting for Clients",
+          "slides": [
+            {
+              "heading": "From Blank Page to First Draft in Minutes",
+              "bullets": [
+                "AI removes the hardest part - starting",
+                "Gives you something concrete to react to and improve",
+                "Still requires your judgment to make it truly good"
+              ],
+              "narration": "The biggest benefit of AI content tools is eliminating the blank page - instead of staring at nothing, you get a full first draft in seconds that you can react to, cut, and improve, which is almost always faster than writing completely from scratch."
+            },
+            {
+              "heading": "Matching a Client's Brand Voice",
+              "bullets": [
+                "Feed the AI real examples of their past content",
+                "Describe their tone in 3-5 specific words",
+                "Edit anything that sounds too generic or AI-typical"
+              ],
+              "narration": "To match a client's brand voice, include a few real examples of their past content in your prompt and describe their tone in three to five specific words - and always edit out phrasing that sounds generically \"AI-typical\" rather than genuinely like that specific business."
+            },
+            {
+              "heading": "Content Types AI Handles Well",
+              "bullets": [
+                "Social captions, blog outlines, product descriptions",
+                "Email newsletters and simple sales copy",
+                "First-draft scripts for short videos"
+              ],
+              "narration": "AI content tools are especially strong at social media captions, blog post outlines, product descriptions, email newsletters, and first-draft scripts for short videos - all high-volume content types where a strong starting draft saves the most time."
+            },
+            {
+              "heading": "Content That Still Needs a Careful Human Hand",
+              "bullets": [
+                "Anything referencing specific client facts or numbers",
+                "Sensitive announcements or crisis communication",
+                "Legal, medical, or financial claims"
+              ],
+              "narration": "Be extra careful with anything referencing specific client facts or figures (AI can get these wrong with total confidence), sensitive announcements, and any legal, medical, or financial claims - these should always get a thorough human review, and often a client's own final sign-off, before publishing."
+            }
+          ]
+        },
+        {
+          "id": "ai-m3-l3",
+          "title": "Building Simple Automations & Chatbots for a Business",
+          "slides": [
+            {
+              "heading": "Identifying a Good Automation Opportunity",
+              "bullets": [
+                "Look for repetitive, rule-based tasks",
+                "Ask: does this happen the same way every time?",
+                "Start small - one clear win before anything complex"
+              ],
+              "narration": "The best automation opportunities are repetitive, rule-based tasks that happen the same way every time - a new lead always needs to go into the same spreadsheet, a new order always triggers the same confirmation email. Start with one clear, small win rather than trying to automate an entire department at once."
+            },
+            {
+              "heading": "Mapping a Workflow Before Building It",
+              "bullets": [
+                "Write out every step in plain language first",
+                "Identify the trigger and each action clearly",
+                "Only then build it in Zapier or Make"
+              ],
+              "narration": "Before opening any automation tool, write out the workflow in plain language first: what starts it, and exactly what should happen, step by step. This plain-language map makes building the actual automation in Zapier or Make far faster and far less error-prone."
+            },
+            {
+              "heading": "Basic Chatbot Setup",
+              "bullets": [
+                "Simple chatbots answer FAQs automatically",
+                "Built with tools like ChatGPT's custom GPTs or chatbot builders",
+                "Always include a clear path to a real human"
+              ],
+              "narration": "A simple business chatbot can answer frequently asked questions automatically, often built using a custom GPT or a dedicated no-code chatbot builder - always make sure there's a clear, easy path for a visitor to reach a real human when the bot can't help."
+            },
+            {
+              "heading": "Testing Before Handing It Over",
+              "bullets": [
+                "Run every likely scenario yourself first",
+                "Have a colleague or the client try to break it",
+                "Document how it works in plain language for the client"
+              ],
+              "narration": "Before handing any automation or chatbot to a client, run through every likely scenario yourself, and ideally have someone else try to \"break it\" with an unexpected input - then write a short, plain-language explanation of how it works so the client isn't left guessing."
+            }
+          ]
+        },
+        {
+          "id": "ai-m3-l4",
+          "title": "Quality-Checking, Fact-Checking, and Ethics With AI Output",
+          "slides": [
+            {
+              "heading": "Why AI Output Always Needs a Human Check",
+              "bullets": [
+                "AI can state wrong information confidently (\"hallucination\")",
+                "It doesn't know a client's specific, current facts",
+                "You are the safety net between AI and the client"
+              ],
+              "narration": "AI tools can state incorrect information with complete confidence - this is called \"hallucination\" - and they don't automatically know a client's current prices, policies, or specific facts unless you provide them. You are the safety net that catches this before it ever reaches a client or their customers."
+            },
+            {
+              "heading": "A Simple Fact-Checking Habit",
+              "bullets": [
+                "Highlight every specific claim, number, or name",
+                "Verify each one against a real source",
+                "Never assume a confident tone means it's correct"
+              ],
+              "narration": "Build a simple habit: highlight every specific claim, statistic, or name in an AI draft, and verify each one against a real source before it goes anywhere - a confident, well-written tone is not the same thing as being correct."
+            },
+            {
+              "heading": "Avoiding Plagiarism and Originality Issues",
+              "bullets": [
+                "Run important content through a plagiarism checker",
+                "Always add your own edits and client-specific detail",
+                "Disclose AI use to clients when they ask directly"
+              ],
+              "narration": "For important published content, it's good practice to run it through a plagiarism checker and to always add your own edits and client-specific detail rather than publishing an unedited AI draft - and always be honest with a client if they directly ask whether AI was involved."
+            },
+            {
+              "heading": "Data Privacy and Ethics Basics",
+              "bullets": [
+                "Never paste sensitive client data into public AI tools",
+                "Understand each tool's data retention policy",
+                "When in doubt, ask the client before uploading anything"
+              ],
+              "narration": "Never paste sensitive information - customer data, financial details, unreleased business plans - into a public AI tool without understanding its data policy first, and when in doubt, simply ask your client before uploading anything you're not sure about. This one habit protects both you and your client."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-m4",
+      "title": "Module 4: Building Your AI VA Portfolio",
+      "lessons": [
+        {
+          "id": "ai-m4-l1",
+          "title": "Creating Mock AI Projects to Show Your Skills",
+          "slides": [
+            {
+              "heading": "Why You Need Samples Before Your First Client",
+              "bullets": [
+                "Clients want to see proof, not just a resume",
+                "A mock project shows your actual process",
+                "You control the quality with no deadline pressure"
+              ],
+              "narration": "Since you may not have a paying client yet, building a mock automation or AI content project for a fictional or real local business lets you show proof of your skills, not just claim them on a resume - and you control the quality with no deadline pressure."
+            },
+            {
+              "heading": "Picking a Practice Project",
+              "bullets": [
+                "Choose one repetitive task to automate end-to-end",
+                "Or build a small AI-assisted content package",
+                "Keep it realistic - the kind of task real clients have"
+              ],
+              "narration": "Pick one realistic project: fully automate a repetitive task end-to-end (like new-lead-to-spreadsheet-to-notification), or build a small AI-assisted content package - a week of social captions, an email newsletter, and a blog outline for a sample business."
+            },
+            {
+              "heading": "Documenting Your Process, Not Just the Result",
+              "bullets": [
+                "Screenshot the before and after",
+                "Write a short explanation of your approach",
+                "Include the actual prompts or automation steps used"
+              ],
+              "narration": "Document the process, not just the finished result: screenshot the messy \"before\" state, the clean \"after\" result, and write a short explanation of your approach - including the actual prompts or automation steps you used, since that's exactly what a client wants to understand about how you think."
+            },
+            {
+              "heading": "Keeping It Honest",
+              "bullets": [
+                "Label mock projects clearly as sample work",
+                "Never claim invented results as a real client's",
+                "Honesty about samples builds more trust than exaggeration"
+              ],
+              "narration": "Always label mock projects clearly as sample or practice work rather than presenting them as real client results - being upfront about this builds far more trust with a future client than an impressive-sounding but fabricated case study ever would."
+            }
+          ]
+        },
+        {
+          "id": "ai-m4-l2",
+          "title": "Building an AI VA Portfolio",
+          "slides": [
+            {
+              "heading": "What an AI VA Portfolio Needs",
+              "bullets": [
+                "A short intro about you and your AI toolkit",
+                "2-3 sample projects with visuals or process notes",
+                "Clear labeling of what's real vs. sample work"
+              ],
+              "narration": "A strong AI VA portfolio has a short introduction about you and the specific AI tools you specialize in, two or three sample projects with real visuals or clear process notes, and honest labeling throughout of what's real client work versus practice samples."
+            },
+            {
+              "heading": "Where to Host Your Portfolio",
+              "bullets": [
+                "A simple free website (Carrd, Notion, or similar)",
+                "A well-organized Google Drive or Notion page works too",
+                "Keep the link short and easy to share"
+              ],
+              "narration": "You don't need a paid website - a simple free site built in Carrd or Notion, or even a neatly organized, view-only Google Drive folder, works perfectly well as long as the link is short and easy to drop into a proposal or message."
+            },
+            {
+              "heading": "Presenting Time Saved as Your Key Result",
+              "bullets": [
+                "Time saved is the clearest AI VA success metric",
+                "Show before/after time estimates for each project",
+                "Be honest and conservative with your estimates"
+              ],
+              "narration": "Time saved is often the clearest, most convincing result an AI VA can show - for each sample project, estimate how long the task used to take manually versus how long it takes now, and keep those estimates honest and conservative rather than inflated."
+            },
+            {
+              "heading": "Keeping Your Portfolio Updated",
+              "bullets": [
+                "Swap in real client work as soon as you have it",
+                "Add new tools as you learn them",
+                "Revisit it every few months as AI tools evolve"
+              ],
+              "narration": "As soon as you land real client work (with their permission to showcase it), swap it in for your mock samples, and keep adding new tools as you learn them - this niche moves fast, so revisiting your portfolio every few months keeps it looking current."
+            }
+          ]
+        },
+        {
+          "id": "ai-m4-l3",
+          "title": "Showcasing Before/After Results",
+          "slides": [
+            {
+              "heading": "Why Results Convert Better Than Promises",
+              "bullets": [
+                "Numbers build trust faster than claims",
+                "Clients hire outcomes, not just tool familiarity",
+                "Even small, honest wins are worth showing"
+              ],
+              "narration": "A specific number - even a modest one, like \"cut weekly reporting time from 3 hours to 40 minutes\" - builds trust faster than a vague promise about being \"AI-savvy,\" because it shows you deliver real outcomes, not just familiarity with trendy tools."
+            },
+            {
+              "heading": "What to Track From Day One With a New Client",
+              "bullets": [
+                "Time a manual task before automating or AI-assisting it",
+                "Note the exact date you implemented the change",
+                "Re-measure after a few weeks for a fair comparison"
+              ],
+              "narration": "From the very first day with a new client, time how long a task actually takes manually, note the exact date you implemented your AI-assisted or automated approach, and re-measure a few weeks later - this makes an honest before/after comparison easy to produce."
+            },
+            {
+              "heading": "Turning Numbers Into a Simple Case Study",
+              "bullets": [
+                "One paragraph: the challenge",
+                "One paragraph: what you built or set up",
+                "One paragraph: the result, with a number"
+              ],
+              "narration": "A simple case study is just three short paragraphs: what challenge the client had, what you actually built or set up to solve it, and what result followed - ideally with a real time or cost number attached to that last part."
+            },
+            {
+              "heading": "Getting Permission to Share Results Publicly",
+              "bullets": [
+                "Always ask before using a client's name or numbers",
+                "Some clients prefer to stay anonymous - that's fine",
+                "A quick written 'yes' protects you both"
+              ],
+              "narration": "Always ask a client's permission before sharing their name or specific numbers publicly - some are happy to be named, others prefer anonymity, and either way a quick written yes over email or chat protects you both."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-m5",
+      "title": "Module 5: Resume and Job Application Mastery for AI VAs",
+      "lessons": [
+        {
+          "id": "ai-m5-l1",
+          "title": "Writing an AI-Powered VA Resume",
+          "slides": [
+            {
+              "heading": "What Belongs on an AI VA Resume",
+              "bullets": [
+                "A clear headline naming your AI specialty",
+                "Specific tools you know - ChatGPT, Zapier, etc.",
+                "A link to your portfolio, front and center"
+              ],
+              "narration": "Your resume should open with a clear headline naming your specialty - \"AI-Powered Virtual Assistant\" - list the specific tools you know like ChatGPT, Claude, and Zapier by name, and put your portfolio link somewhere it can't be missed."
+            },
+            {
+              "heading": "Describing Experience Without a Job History",
+              "bullets": [
+                "Frame your training and mock projects as real work",
+                "Use action verbs - automated, drafted, streamlined",
+                "Quantify wherever you can, even mock time-savings"
+              ],
+              "narration": "If you don't have paid experience yet, describe your training and mock projects using strong action verbs - automated, drafted, streamlined, researched - and quantify what you can, like \"automated a lead-intake workflow, cutting manual entry time by an estimated 70%.\""
+            },
+            {
+              "heading": "Formatting for Readability",
+              "bullets": [
+                "Keep it to one page",
+                "Use short bullet points, not paragraphs",
+                "Consistent, clean font and spacing"
+              ],
+              "narration": "Keep your resume to a single page with short, scannable bullet points rather than dense paragraphs, using a clean, consistent font - a client reviewing dozens of applicants will spend only seconds per resume."
+            },
+            {
+              "heading": "Common Resume Mistakes to Avoid",
+              "bullets": [
+                "Vague phrases like 'AI expert' with nothing to back it up",
+                "No portfolio link at all",
+                "Listing tools you haven't actually practiced with"
+              ],
+              "narration": "Avoid vague self-descriptions like \"AI expert\" with nothing to back it up, never submit a resume without your portfolio link, and never list a tool you haven't genuinely practiced with - clients in this niche often test you on the spot."
+            }
+          ]
+        },
+        {
+          "id": "ai-m5-l2",
+          "title": "Crafting Winning Proposals for AI-Related Gigs",
+          "slides": [
+            {
+              "heading": "What a Good Proposal Includes",
+              "bullets": [
+                "A quick read on their specific repetitive pain point",
+                "Your specific plan - which tools, what workflow",
+                "Clear pricing and next steps"
+              ],
+              "narration": "A strong proposal briefly identifies the specific repetitive task or bottleneck you noticed in their job post, lays out your specific plan for solving it - which tools, what workflow - and ends with clear pricing and an easy next step, like a short call."
+            },
+            {
+              "heading": "Personalizing Every Proposal",
+              "bullets": [
+                "Reference their actual job post or business detail",
+                "Never send an obviously copy-pasted pitch",
+                "Mention one specific tool-fit you spotted"
+              ],
+              "narration": "Every proposal should reference something specific from their job post or business - a tool they mentioned, a task they described - a generic copy-pasted pitch mentioning \"AI\" in general terms is easy to spot and easy to ignore in this fast-moving niche."
+            },
+            {
+              "heading": "Structuring Your Pricing",
+              "bullets": [
+                "Package by outcome - hours saved, tasks automated",
+                "Offer 2-3 clear tiers, not endless options",
+                "Be upfront about ongoing tool subscription costs"
+              ],
+              "narration": "Package your pricing around the outcome - hours saved per month, number of workflows automated - and offer two or three simple tiers rather than overwhelming a client with options. Always be upfront about whether any AI tool subscription costs are included or separate."
+            },
+            {
+              "heading": "Following Up Without Being Pushy",
+              "bullets": [
+                "One polite follow-up after about a week",
+                "Add new value, don't just 'check in'",
+                "Know when to move on gracefully"
+              ],
+              "narration": "If you don't hear back, one polite follow-up after about a week is reasonable - ideally adding something new, like a quick tool suggestion for their business, rather than just \"checking in.\" If there's still no response after that, it's fine to move on gracefully."
+            }
+          ]
+        },
+        {
+          "id": "ai-m5-l3",
+          "title": "Where to Find AI VA Clients",
+          "slides": [
+            {
+              "heading": "Freelance Platforms",
+              "bullets": [
+                "Upwork, Onlinejobs.ph, and similar sites",
+                "Filter for AI, automation, or 'ChatGPT' roles",
+                "A strong profile and portfolio link matter most"
+              ],
+              "narration": "Freelance platforms like Upwork and Onlinejobs.ph list a fast-growing number of AI, automation, and 'ChatGPT' roles - filter specifically for those, and make sure your profile headline and portfolio link are strong, since this is currently one of the most searched VA specialties."
+            },
+            {
+              "heading": "Small Businesses Drowning in Repetitive Tasks",
+              "bullets": [
+                "Many owners have heard of AI but haven't used it",
+                "Look for businesses doing everything manually",
+                "A specific, low-pressure pitch works well"
+              ],
+              "narration": "Many small business owners have heard of AI but haven't actually used it - look for businesses that are clearly still doing repetitive tasks manually (posting the same update everywhere by hand, for example), and offer a specific, low-pressure suggestion for one thing you could automate for them."
+            },
+            {
+              "heading": "Referrals and Word of Mouth",
+              "bullets": [
+                "Your first client is your best source of the next",
+                "Ask happy clients if they know anyone else",
+                "A short case study makes referrals even easier"
+              ],
+              "narration": "Once you land one happy client, ask directly whether they know any other business owners who could use similar help - referrals convert far more easily than cold outreach, especially if you have a short before/after case study to share."
+            },
+            {
+              "heading": "AI and Automation Communities",
+              "bullets": [
+                "Facebook groups and forums for AI tools and no-code",
+                "Often share leads and job postings directly",
+                "Be an active, helpful member, not just a lurker"
+              ],
+              "narration": "Facebook groups and forums built around specific AI tools or no-code automation often share leads and job postings directly, and being an active, genuinely helpful member of these communities (not just posting your own ads) tends to bring in the best opportunities."
+            }
+          ]
+        },
+        {
+          "id": "ai-m5-l4",
+          "title": "Nailing the Client Interview/Discovery Call",
+          "slides": [
+            {
+              "heading": "What Clients Are Actually Evaluating",
+              "bullets": [
+                "Can you understand their workflow quickly?",
+                "Do you ask smart, specific questions?",
+                "Do you seem trustworthy with their tools and data?"
+              ],
+              "narration": "In a discovery call, clients aren't just checking your tool knowledge on paper - they're watching whether you can understand their workflow quickly, whether you ask smart and specific questions, and whether you seem like someone they can trust with access to their accounts and data."
+            },
+            {
+              "heading": "Questions You Should Ask Them",
+              "bullets": [
+                "What does this task look like today, step by step?",
+                "What's frustrated them about trying AI/automation before?",
+                "Who else needs to approve or use whatever you build?"
+              ],
+              "narration": "Come prepared with your own questions: what does this task actually look like today, step by step; what's frustrated them about any AI or automation tools they've tried before; and who else on their team needs to approve or use whatever you eventually build."
+            },
+            {
+              "heading": "Talking About Pricing Confidently",
+              "bullets": [
+                "Know your rate before the call, don't improvise",
+                "Explain what's included, not just the number",
+                "It's okay to say you'll follow up in writing"
+              ],
+              "narration": "Decide your rate before the call so you're never improvising under pressure, explain clearly what's included for that price, and it's completely fine to say you'll send the full proposal in writing afterward rather than negotiating on the spot."
+            },
+            {
+              "heading": "Following Up After the Call",
+              "bullets": [
+                "Send a written summary within 24 hours",
+                "Restate the workflow and tools you discussed",
+                "Attach your proposal or next steps clearly"
+              ],
+              "narration": "Within 24 hours of the call, send a short written summary restating the workflow and tools you discussed, attached to your proposal or a clear next step - this reinforces that you listened closely and keeps momentum going."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-m6",
+      "title": "Module 6: Landing Your First AI VA Client and Beyond",
+      "lessons": [
+        {
+          "id": "ai-m6-l1",
+          "title": "Onboarding a New AI VA Client",
+          "slides": [
+            {
+              "heading": "What Onboarding Actually Covers",
+              "bullets": [
+                "Getting access to their tools and accounts safely",
+                "Gathering the context AI tools will need",
+                "Agreeing on the first project's scope and timeline"
+              ],
+              "narration": "Onboarding is the process of getting properly set up with a new client: gaining safe access to the accounts and tools involved, gathering the background information any AI tool will need to sound like their business, and agreeing together on the first project's scope and timeline."
+            },
+            {
+              "heading": "Getting Account Access the Right Way",
+              "bullets": [
+                "Ask to be added with the minimum access needed",
+                "Never ask for personal account passwords",
+                "Confirm who owns every tool and automation long-term"
+              ],
+              "narration": "Always ask to be added with only the access level a task actually requires, rather than requesting full personal passwords - and make clear from the start that the client remains the true, permanent owner of every account, tool, and automation you set up for them."
+            },
+            {
+              "heading": "Collecting the Context AI Tools Will Need",
+              "bullets": [
+                "Brand voice examples and key facts (prices, policies)",
+                "Existing content to learn their style from",
+                "A list of anything they never want AI touching"
+              ],
+              "narration": "Request a few examples of their past content, key business facts like current prices and policies, and - importantly - a clear list of anything they never want AI involved in at all, so you know exactly where the boundary is from day one."
+            },
+            {
+              "heading": "Setting the First Project's Plan",
+              "bullets": [
+                "Agree on the specific first task or automation",
+                "Set your first check-in date",
+                "Clarify how and when you'll be paid"
+              ],
+              "narration": "Before building anything, agree on the specific first task or automation you'll tackle, set a date for your first check-in call, and make sure payment terms - amount, method, and schedule - are clearly agreed on both sides."
+            }
+          ]
+        },
+        {
+          "id": "ai-m6-l2",
+          "title": "Setting Expectations and Pricing Your AI Services",
+          "slides": [
+            {
+              "heading": "Why Clear Expectations Prevent Problems",
+              "bullets": [
+                "Most client conflicts come from unspoken assumptions",
+                "A short written agreement protects you both",
+                "Revisit and adjust as tools and needs change"
+              ],
+              "narration": "Most conflicts between an AI VA and a client come from things that were never actually agreed on out loud - a short written agreement covering scope, pricing, and which tools are being used protects you both and can always be revisited as things grow."
+            },
+            {
+              "heading": "Common Pricing Models",
+              "bullets": [
+                "Monthly retainer - most common for ongoing AI support",
+                "Per-project - for a single automation or content batch",
+                "Hourly - useful early on, harder to scale long-term"
+              ],
+              "narration": "A monthly retainer is the most common model for ongoing AI-assisted work, a per-project rate suits a single automation build or content batch, and hourly pricing works fine early in your career but tends to be harder to scale as you take on more clients."
+            },
+            {
+              "heading": "What to Include in Your Scope of Work",
+              "bullets": [
+                "Exactly which tasks and tools are included",
+                "Who pays for any AI tool subscriptions",
+                "What's explicitly NOT included (e.g. new automation builds)"
+              ],
+              "narration": "Your scope of work should spell out exactly which tasks and tools are included, who pays for any ongoing AI tool subscriptions, and what's explicitly NOT included - like building an entirely new automation - unless you charge separately for that."
+            },
+            {
+              "heading": "Raising Your Rates Over Time",
+              "bullets": [
+                "Review rates as your skill and results grow",
+                "Give existing clients advance notice",
+                "New clients can start at your current rate"
+              ],
+              "narration": "As your skills and track record grow, it's normal and healthy to raise your rates - give existing clients advance notice (30-60 days is common), while any brand-new client simply starts at your current, updated rate."
+            }
+          ]
+        },
+        {
+          "id": "ai-m6-l3",
+          "title": "Managing Multiple Clients & Tools Securely",
+          "slides": [
+            {
+              "heading": "Staying Organized Across Clients",
+              "bullets": [
+                "One password manager, separate entries per client",
+                "Label prompts, automations, and files clearly by client",
+                "A weekly review block prevents last-minute chaos"
+              ],
+              "narration": "Managing several AI VA clients well usually comes down to using a password manager with clearly separated entries per client, labeling every prompt, automation, and file by client, and setting aside a dedicated weekly block to review what's running rather than reacting day to day."
+            },
+            {
+              "heading": "Avoiding Mix-Ups Between Clients",
+              "bullets": [
+                "Double-check the account before running an automation",
+                "Never reuse a prompt with another client's data inside it",
+                "Build a simple pre-send checklist"
+              ],
+              "narration": "Running an automation or sending AI-drafted content to the wrong client is a real and embarrassing risk once you're juggling several accounts - always double-check which account you're in, never reuse a prompt that still has another client's data pasted into it, and consider a short pre-send checklist."
+            },
+            {
+              "heading": "Security Basics Every AI VA Should Follow",
+              "bullets": [
+                "Use a password manager, not memory or sticky notes",
+                "Turn on two-factor authentication wherever offered",
+                "Revoke access immediately when a project ends"
+              ],
+              "narration": "Use a proper password manager rather than memorizing or writing down client logins, turn on two-factor authentication wherever it's offered, and always revoke your own access to a client's tools immediately once a project genuinely ends."
+            },
+            {
+              "heading": "Batching Work for Efficiency",
+              "bullets": [
+                "Review and refine a batch of AI drafts in one sitting",
+                "Check on all running automations at set times",
+                "Batch client communications too"
+              ],
+              "narration": "Batching similar tasks - reviewing a whole batch of AI drafts in one sitting, checking on all running automations at set times each day, or replying to all client messages together - is far more efficient than constantly switching between different types of work."
+            }
+          ]
+        },
+        {
+          "id": "ai-m6-l4",
+          "title": "Handling Difficult Feedback and AI Output Revisions",
+          "slides": [
+            {
+              "heading": "Receiving Feedback Without Getting Defensive",
+              "bullets": [
+                "Feedback is about the output, not you personally",
+                "Ask clarifying questions before revising",
+                "Thank the client for being specific"
+              ],
+              "narration": "It's easy to feel personally criticized when a client pushes back on AI-drafted content or an automation's behavior, but feedback is about the output, not you - ask clarifying questions if something's vague, and genuinely thank clients who give specific, actionable feedback."
+            },
+            {
+              "heading": "Handling \"This Doesn't Sound Like Us\" Feedback",
+              "bullets": [
+                "One of the most common AI content complaints",
+                "Ask for a specific example that DOES sound right",
+                "Update your style notes so it doesn't happen again"
+              ],
+              "narration": "\"This doesn't sound like us\" is one of the most common pieces of feedback in this niche - ask for a specific past example that does sound right to them, and update your saved style notes for that client so future drafts improve rather than repeating the same miss."
+            },
+            {
+              "heading": "Managing Scope Creep in Revisions",
+              "bullets": [
+                "Define how many revision rounds are included",
+                "A brand-new automation isn't a 'revision'",
+                "Politely price extra requests separately"
+              ],
+              "narration": "Define upfront how many rounds of revision are included per project - a request for an entirely new automation or content type, rather than a tweak to the current one, isn't really a \"revision,\" and it's fair to politely price that as an additional request."
+            },
+            {
+              "heading": "Turning Difficult Clients Into Long-Term Ones",
+              "bullets": [
+                "Most 'difficult' clients just want to feel heard",
+                "Consistent, calm communication builds trust",
+                "Know when a client truly isn't the right fit"
+              ],
+              "narration": "Many clients who seem difficult at first just want to feel heard and kept in the loop about how their automations and content are working - consistent, calm communication usually turns them into your most loyal clients over time. Occasionally, a client genuinely isn't the right fit, and it's okay to part ways professionally."
+            }
+          ]
+        },
+        {
+          "id": "ai-m6-l5",
+          "title": "Growing Your AI VA Career",
+          "slides": [
+            {
+              "heading": "Leveling Up Your Skill Set",
+              "bullets": [
+                "Go deeper into one automation platform (Zapier or Make)",
+                "Learn basic custom GPTs and simple chatbot building",
+                "Stay current - this field changes month to month"
+              ],
+              "narration": "As you grow, going deeper into one automation platform, learning to build simple custom GPTs and chatbots, and deliberately staying current with new AI tool releases all let you charge more and take on more advanced, higher-paying projects."
+            },
+            {
+              "heading": "Deciding Between More Clients or Higher Rates",
+              "bullets": [
+                "More clients means more income but more hours",
+                "Higher rates mean the same hours, more income",
+                "Most successful AI VAs eventually favor the second"
+              ],
+              "narration": "At some point you'll choose between taking on more clients at your current rate, or fewer clients at a higher rate - most experienced AI VAs eventually favor raising rates over endlessly adding more clients, since it protects both quality and your own time."
+            },
+            {
+              "heading": "Building Toward an Agency or Specialty",
+              "bullets": [
+                "Some AI VAs eventually build a small automation agency",
+                "Others specialize deeply in one industry's AI needs",
+                "Both paths are valid - choose what fits your goals"
+              ],
+              "narration": "Some experienced AI VAs eventually build a small agency, bringing on other freelancers for overflow work; others prefer staying solo and specializing deeply in one industry's specific AI needs. Neither path is more \"correct\" - it depends on what kind of work-life you actually want."
+            },
+            {
+              "heading": "Congratulations on Finishing This Training",
+              "bullets": [
+                "You've covered the full AI-Powered VA skillset",
+                "You have a portfolio, resume, and pricing plan",
+                "Time to start applying with confidence"
+              ],
+              "narration": "Congratulations - you've now covered the full AI-Powered VA skillset, from prompt engineering and automations to portfolio-building, client acquisition, and long-term growth. You're ready to start applying and pitching with real confidence."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

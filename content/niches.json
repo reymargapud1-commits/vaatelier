@@ -53,6 +53,15 @@
       "isPublished": true,
       "curriculumFile": "curriculum/va-real-estate.json",
       "quizzesFile": "quizzes/va-real-estate.json"
+    },
+    {
+      "courseId": "va-ai",
+      "title": "AI-Powered VA",
+      "shortDescription": "Prompt engineering, AI writing and content tools, and simple automations (Zapier + ChatGPT) - for VAs who want to offer AI-powered support across any client type.",
+      "icon": "🤖",
+      "isPublished": true,
+      "curriculumFile": "curriculum/va-ai.json",
+      "quizzesFile": "quizzes/va-ai.json"
     }
   ]
 }
