@@ -1,0 +1,404 @@
+{
+  "quizzes": [
+    {
+      "id": "aa-quiz-m1",
+      "moduleId": "aa-m1",
+      "title": "Module 1 Quiz: Starting Out as an AI Automation VA",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "aa-m1-q1",
+          "text": "What does an AI Automation VA primarily build?",
+          "choices": [
+            "Workflows that connect apps so information moves automatically",
+            "Physical computer hardware",
+            "Legal contracts",
+            "Social media graphics only"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "aa-m1-q2",
+          "text": "Why do businesses hire a dedicated Automation VA instead of building it themselves?",
+          "choices": [
+            "Automation tools are illegal for small businesses",
+            "Building something reliable takes real skill, and a badly-built automation can cause real problems",
+            "Automation tools do not exist for small businesses",
+            "It is required by law"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "aa-m1-q3",
+          "text": "What trait do clients look for most in an Automation VA?",
+          "choices": [
+            "Speed above all else, skipping testing",
+            "Thoroughness in testing and clear documentation of what was built",
+            "Avoiding all client communication",
+            "Never asking clarifying questions"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "aa-m1-q4",
+          "text": "Which phrase from a client is a strong signal of an automation opportunity?",
+          "choices": [
+            "'I love doing this task by hand'",
+            "'Every time X happens, I have to...'",
+            "'I never think about this task'",
+            "'This task is already fully automated'"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "aa-m1-q5",
+          "text": "What is a reasonable minimum setup to start practicing as an Automation VA?",
+          "choices": [
+            "An expensive dedicated server",
+            "A computer and free accounts on tools like Zapier and Make",
+            "A university degree in computer science",
+            "A paid subscription to every automation tool that exists"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "aa-quiz-m2",
+      "moduleId": "aa-m2",
+      "title": "Module 2 Quiz: Essential Automation Tools",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "aa-m2-q1",
+          "text": "What are the two basic parts of every Zap in Zapier?",
+          "choices": [
+            "A trigger and one or more actions",
+            "A password and a username",
+            "A logo and a slogan",
+            "A quiz and a certificate"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "aa-m2-q2",
+          "text": "What does a filter do in an automation?",
+          "choices": [
+            "Stops the automation from continuing unless a condition is met",
+            "Deletes the automation permanently",
+            "Sends an automatic invoice",
+            "Changes the automation's color scheme"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "aa-m2-q3",
+          "text": "Why might a builder choose Make over Zapier for a specific project?",
+          "choices": [
+            "Make is always cheaper",
+            "Make handles complex branching and looping logic more naturally",
+            "Make requires no internet connection",
+            "Make cannot connect to Google Sheets"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "aa-m2-q4",
+          "text": "What is one practical benefit of adding an AI step into an automation?",
+          "choices": [
+            "It makes the automation immune to all errors",
+            "It lets the workflow think about data - drafting, summarizing, or categorizing it automatically",
+            "It removes the need for any trigger",
+            "It guarantees the automation never needs testing"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "aa-m2-q5",
+          "text": "What does a tool like Chatbase let you do?",
+          "choices": [
+            "Upload a business's FAQs so the chatbot answers using only that information",
+            "Automatically file business taxes",
+            "Design company logos",
+            "Replace the need for any human review"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "aa-m2-q6",
+          "text": "What is a webhook, in plain terms?",
+          "choices": [
+            "A way for one app to instantly notify another the moment something happens",
+            "A physical network cable",
+            "A type of spreadsheet formula",
+            "A chatbot's error message"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "aa-m2-q7",
+          "text": "Why are Google Sheets and Google Forms often a good starting point for automation?",
+          "choices": [
+            "They are the only tools that exist",
+            "They are free, simple, and work well as a lightweight database and data-collection trigger",
+            "They cannot be connected to Zapier or Make",
+            "They require advanced coding knowledge"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "aa-quiz-m3",
+      "moduleId": "aa-m3",
+      "title": "Module 3 Quiz: Core Automation & Chatbot Skills",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "aa-m3-q1",
+          "text": "Why should you map a workflow before building it in Zapier or Make?",
+          "choices": [
+            "Mapping is not necessary if you're experienced",
+            "It catches edge cases and missing steps early, before they cause a broken automation",
+            "It takes longer than just building and fixing later",
+            "Clients never want to see a workflow map"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "aa-m3-q2",
+          "text": "What should you do before adding an action on top of a new trigger?",
+          "choices": [
+            "Add every action first, then test everything at once",
+            "Test the trigger alone to confirm it reliably detects the right event",
+            "Skip testing entirely to save time",
+            "Delete the trigger and start with actions instead"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "aa-m3-q3",
+          "text": "What should a chatbot do when it receives a question it wasn't trained to answer?",
+          "choices": [
+            "Guess confidently and hope it's right",
+            "Recognize this honestly and offer a clear path to a human",
+            "Repeat the last answer it gave",
+            "Shut down completely"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "aa-m3-q4",
+          "text": "What is a smart way to test an automation before going live?",
+          "choices": [
+            "Only test with perfectly clean example data",
+            "Deliberately try messy, unexpected data to see if it breaks",
+            "Skip testing since the client will report any issues",
+            "Test only once, right before turning it on"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "aa-m3-q5",
+          "text": "What should good automation documentation include for a non-technical client?",
+          "choices": [
+            "Only raw technical code with no explanation",
+            "A plain-language summary, a simple diagram, and what to do if something looks wrong",
+            "Nothing - clients don't need documentation",
+            "A list of every other client's automations"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "aa-quiz-m4",
+      "moduleId": "aa-m4",
+      "title": "Module 4 Quiz: Building Your Automation Portfolio",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "aa-m4-q1",
+          "text": "What is a 'mock automation project' used for in a portfolio?",
+          "choices": [
+            "A real paid client project",
+            "A sample project built to demonstrate your skills before you have paid clients",
+            "A type of scam",
+            "A required legal document"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "aa-m4-q2",
+          "text": "How should mock projects be labeled in a portfolio?",
+          "choices": [
+            "As real client results with no disclaimer",
+            "Clearly and honestly as sample or practice work",
+            "They should never be shown to anyone",
+            "As guaranteed outcomes for future clients"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "aa-m4-q3",
+          "text": "What is often the clearest success metric an Automation VA can show?",
+          "choices": [
+            "The number of tools they own",
+            "Time and cost saved, shown honestly as a before/after comparison",
+            "How many hours they worked, regardless of output",
+            "The number of client logins they have access to"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "aa-m4-q4",
+          "text": "What helps a portfolio communicate value faster than text alone?",
+          "choices": [
+            "A simple before/after workflow diagram",
+            "A long block of unformatted paragraphs",
+            "Hiding all visuals",
+            "Listing tools with no examples"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "aa-m4-q5",
+          "text": "Why should you document your process (tools, triggers, logic), not just the final result?",
+          "choices": [
+            "It has no value to a future client",
+            "Clients want to understand how you think and build, not just see a finished automation",
+            "It is required by automation platform terms of service",
+            "It replaces the need for any actual skills"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "aa-quiz-m5",
+      "moduleId": "aa-m5",
+      "title": "Module 5 Quiz: Resume and Applications",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "aa-m5-q1",
+          "text": "What should an Automation VA resume bullet point focus on?",
+          "choices": [
+            "Vague statements with no detail",
+            "Specific tools and quantified results, like estimated time saved",
+            "Only job titles",
+            "Personal hobbies unrelated to the role"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "aa-m5-q2",
+          "text": "What makes a strong proposal for an automation-related job posting?",
+          "choices": [
+            "A generic copy-paste message mentioning 'automation' in general terms",
+            "Personalization that identifies their specific repetitive task or bottleneck",
+            "Extremely long, unfocused paragraphs",
+            "No mention of relevant tools or skills"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "aa-m5-q3",
+          "text": "Which platforms are commonly used to find Automation VA clients?",
+          "choices": [
+            "Upwork and Onlinejobs.ph, filtering for Zapier/Make/automation roles",
+            "Only local newspapers",
+            "Random unrelated apps",
+            "None, clients cannot be found online"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "aa-m5-q4",
+          "text": "What is a good goal during a discovery call with a potential automation client?",
+          "choices": [
+            "Avoid asking any questions",
+            "Map their current workflow live and understand their real pain point",
+            "Immediately demand payment before speaking",
+            "Refuse to discuss their business process"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "aa-m5-q5",
+          "text": "Why should you never list a tool on your resume that you haven't actually built anything with?",
+          "choices": [
+            "It doesn't matter, clients never check",
+            "Clients in this niche often expect you to demonstrate real tool knowledge",
+            "Tools listed on a resume are legally binding",
+            "There is no reason, it is just a suggestion"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "aa-quiz-m6",
+      "moduleId": "aa-m6",
+      "title": "Module 6 Quiz: Landing Your First Client and Beyond",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "aa-m6-q1",
+          "text": "What is a good first step when onboarding a new automation client?",
+          "choices": [
+            "Guess what they want without asking",
+            "Get minimum necessary account access safely and confirm the exact workflow to build first",
+            "Immediately increase your rate",
+            "Avoid all communication in week one"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "aa-m6-q2",
+          "text": "Which is a common pricing model for a single automation build?",
+          "choices": [
+            "Per-project",
+            "Random guessing",
+            "Refusing to state a price",
+            "Charging only in a currency you don't understand"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "aa-m6-q3",
+          "text": "Why might a working automation break over time even without you changing anything?",
+          "choices": [
+            "Automations never break once built",
+            "A connected app can change its features, or a client can change their process",
+            "Only automations built incorrectly ever break",
+            "Breaking is impossible after the first month"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "aa-m6-q4",
+          "text": "How should an Automation VA respond when a client reports something is broken?",
+          "choices": [
+            "Argue that the client is wrong",
+            "Acknowledge it immediately, investigate methodically, then communicate clearly once resolved",
+            "Ignore the report completely",
+            "Delete the automation entirely without investigating"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "aa-m6-q5",
+          "text": "What helps build a long-term Automation VA career?",
+          "choices": [
+            "Refusing to learn new tools or platforms",
+            "Going deeper into key platforms, offering maintenance, and asking for testimonials",
+            "Never asking for client feedback",
+            "Avoiding all specialization"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    }
+  ]
+}

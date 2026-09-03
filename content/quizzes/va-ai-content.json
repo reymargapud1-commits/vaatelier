@@ -1,0 +1,404 @@
+{
+  "quizzes": [
+    {
+      "id": "ac-quiz-m1",
+      "moduleId": "ac-m1",
+      "title": "Module 1 Quiz: Starting Out as an AI Content & Copywriting VA",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "ac-m1-q1",
+          "text": "What does an AI Content & Copywriting VA primarily do?",
+          "choices": [
+            "Uses AI tools to produce content and copy faster while applying real editing skill and brand judgment",
+            "Builds automations that connect business apps",
+            "Only forwards whatever AI outputs without review",
+            "Repairs computer hardware"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ac-m1-q2",
+          "text": "Why do businesses hire a dedicated Content VA instead of just using ChatGPT themselves?",
+          "choices": [
+            "Making content consistently match a specific brand voice at real volume is genuinely difficult",
+            "AI writing tools are illegal for small businesses",
+            "AI tools cannot write any content at all",
+            "It is required by freelance platforms"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ac-m1-q3",
+          "text": "Left without deliberate direction, what does AI's writing tone tend to default to?",
+          "choices": [
+            "A smooth, generic, slightly corporate tone",
+            "Always matching any brand perfectly with no input",
+            "Completely random tone every time",
+            "Silence - it refuses to write without a brand voice"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ac-m1-q4",
+          "text": "What should a brand voice profile for AI prompts include?",
+          "choices": [
+            "3-5 words describing the tone, real example sentences, and words to avoid",
+            "Only the client's logo file",
+            "The client's tax identification number",
+            "A list of competitor names only"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ac-m1-q5",
+          "text": "What is a reasonable minimum setup to start practicing as an AI Content VA?",
+          "choices": [
+            "An expensive dedicated content workstation",
+            "A computer and free accounts on tools like ChatGPT/Claude and Canva",
+            "A university degree in journalism",
+            "A paid subscription to every content tool that exists"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "ac-quiz-m2",
+      "moduleId": "ac-m2",
+      "title": "Module 2 Quiz: Essential AI Content Tools",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "ac-m2-q1",
+          "text": "What are ChatGPT and Claude best described as, for this niche?",
+          "choices": [
+            "Strong general-purpose writers for both short and long-form content",
+            "Spreadsheet software",
+            "Video editing tools only",
+            "Password managers"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ac-m2-q2",
+          "text": "When does a dedicated tool like Jasper tend to be worth using?",
+          "choices": [
+            "Never - general tools are always better",
+            "For high-volume, template-friendly content like ad variations",
+            "Only for legal documents",
+            "Only when the client has no brand voice at all"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ac-m2-q3",
+          "text": "What does Canva's Magic Write feature let you do?",
+          "choices": [
+            "Draft text directly inside the same tool used for visual design",
+            "Automatically file business taxes",
+            "Delete a client's brand kit",
+            "Replace the need for any social media platform"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ac-m2-q4",
+          "text": "What should you always confirm before using AI-generated images in client-facing content?",
+          "choices": [
+            "Nothing - AI images are always safe to use anywhere",
+            "That the client is comfortable with AI-generated imagery and understands usage rights",
+            "The exact pixel dimensions only",
+            "Whether the image tool has a mobile app"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ac-m2-q5",
+          "text": "What does Grammarly's tone detector help with?",
+          "choices": [
+            "Flagging when writing reads as unexpectedly formal, harsh, or unclear",
+            "Automatically translating content into other languages",
+            "Scheduling social media posts",
+            "Building automations"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ac-m2-q6",
+          "text": "Why is a plagiarism/originality check especially important for SEO blog content?",
+          "choices": [
+            "AI models can occasionally echo commonly-used phrasing too closely for original, ranking-focused content",
+            "It is not important at all",
+            "Only paid content needs checking",
+            "Plagiarism checkers replace the need for editing entirely"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ac-m2-q7",
+          "text": "What should a personal editing checklist include before finalizing a piece?",
+          "choices": [
+            "Whether the tone matches the brand voice profile and facts are verified",
+            "Only whether the word count is over 500",
+            "Whether the font is Times New Roman",
+            "Nothing - AI output needs no checklist"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "ac-quiz-m3",
+      "moduleId": "ac-m3",
+      "title": "Module 3 Quiz: Core AI Content Creation Skills",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "ac-m3-q1",
+          "text": "What are the three parts of a strong AI-assisted caption?",
+          "choices": [
+            "A hook, the message/value, and a clear call-to-action",
+            "A hashtag, an emoji, and a link only",
+            "A price, a discount code, and a deadline",
+            "A question, an answer, and a disclaimer"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ac-m3-q2",
+          "text": "Why should you specify the exact platform when prompting for a caption?",
+          "choices": [
+            "Different platforms call for different lengths and tones",
+            "Platform has no effect on caption style",
+            "Only TikTok requires captions at all",
+            "AI cannot write for more than one platform"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ac-m3-q3",
+          "text": "Why must you fact-check AI-generated blog content?",
+          "choices": [
+            "AI can state outdated or incorrect information confidently",
+            "Blog posts never contain facts",
+            "Fact-checking is only needed for video content",
+            "AI content is always verified automatically"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ac-m3-q4",
+          "text": "What often makes AI-drafted content rank and convert better?",
+          "choices": [
+            "Adding a real client-specific story, testimonial, or insider detail",
+            "Repeating the target keyword as many times as possible",
+            "Removing all headings",
+            "Making the content as generic as possible"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ac-m3-q5",
+          "text": "What is a fast, simple way to catch awkward AI phrasing before publishing?",
+          "choices": [
+            "Reading the finished piece out loud",
+            "Never reading it again after the first draft",
+            "Only checking the word count",
+            "Publishing immediately without review"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "ac-quiz-m4",
+      "moduleId": "ac-m4",
+      "title": "Module 4 Quiz: Building Your AI Content Portfolio",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "ac-m4-q1",
+          "text": "What is a 'mock content campaign' used for in a portfolio?",
+          "choices": [
+            "A real paid client project",
+            "A sample campaign created to demonstrate your skills",
+            "A type of scam",
+            "A required legal document"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ac-m4-q2",
+          "text": "How should mock projects be labeled in a portfolio?",
+          "choices": [
+            "As real client results with no disclaimer",
+            "Clearly and honestly as sample or practice work",
+            "They should never be shown",
+            "As guaranteed outcomes for future clients"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ac-m4-q3",
+          "text": "What is a powerful way to prove real editing skill in a portfolio?",
+          "choices": [
+            "Showing only the finished, polished piece",
+            "Showing the raw AI draft next to your final edited version",
+            "Hiding the fact that AI was used at all",
+            "Listing tools with no actual writing samples"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ac-m4-q4",
+          "text": "Which free-or-low-cost options work well for hosting a simple content portfolio?",
+          "choices": [
+            "Canva, Carrd, or a well-organized Google Drive folder",
+            "Only expensive custom-built websites",
+            "None exist for free",
+            "Only printed paper portfolios"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ac-m4-q5",
+          "text": "Why is a portfolio valuable even without paid client experience?",
+          "choices": [
+            "It has no real value",
+            "It proves your skills with real writing and editing samples",
+            "It replaces the need for any actual skills",
+            "Clients never look at portfolios"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "ac-quiz-m5",
+      "moduleId": "ac-m5",
+      "title": "Module 5 Quiz: Resume and Applications",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "ac-m5-q1",
+          "text": "What should an AI Content VA resume bullet point focus on?",
+          "choices": [
+            "Vague statements with no detail",
+            "Specific results and tools, quantified when possible",
+            "Only job titles",
+            "Personal hobbies unrelated to the role"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ac-m5-q2",
+          "text": "What makes a strong proposal for a content/copywriting job posting?",
+          "choices": [
+            "A generic copy-paste message sent to everyone",
+            "Personalization that references their actual content and brand voice",
+            "Extremely long, unfocused paragraphs",
+            "No mention of relevant tools or skills"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ac-m5-q3",
+          "text": "Which platforms are commonly used to find AI Content VA clients?",
+          "choices": [
+            "Upwork and Onlinejobs.ph, filtering for content/copywriting roles",
+            "Only local newspapers",
+            "Random unrelated apps",
+            "None, clients cannot be found online"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ac-m5-q4",
+          "text": "What is a good goal during a discovery call with a potential content client?",
+          "choices": [
+            "Avoid asking any questions",
+            "Understand their brand voice, goals, and past content they loved or disliked",
+            "Immediately demand payment before speaking",
+            "Refuse to discuss the client's brand"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ac-m5-q5",
+          "text": "Why should you always proofread your resume out loud before sending it?",
+          "choices": [
+            "It has no effect on quality",
+            "Typos undercut your credibility instantly in a writing-focused role",
+            "It is required by freelance platforms",
+            "It replaces the need for a portfolio link"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "ac-quiz-m6",
+      "moduleId": "ac-m6",
+      "title": "Module 6 Quiz: Landing Your First Client and Beyond",
+      "passingScore": 70,
+      "questions": [
+        {
+          "id": "ac-m6-q1",
+          "text": "What is a good first step when onboarding a new content client?",
+          "choices": [
+            "Guess what they want without asking",
+            "Build their brand voice profile together and collect brand assets",
+            "Immediately increase your rate",
+            "Avoid all communication in week one"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ac-m6-q2",
+          "text": "Which is a common pricing model for AI-assisted content services?",
+          "choices": [
+            "Monthly retainer",
+            "Random guessing",
+            "Refusing to state a price",
+            "Charging only in a currency you don't understand"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ac-m6-q3",
+          "text": "What is a practical way to manage multiple clients' content without mixing up voices?",
+          "choices": [
+            "Use the same generic voice for every client",
+            "Double-check which brand voice profile you're using before drafting, with clearly labeled folders per client",
+            "Post the same content to every client's page",
+            "Avoid using any organizational tools"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ac-m6-q4",
+          "text": "How should an AI Content VA respond to 'this doesn't sound like us' feedback?",
+          "choices": [
+            "Argue that the client is always wrong",
+            "Ask for a specific example that does sound right and update the brand voice profile",
+            "Ignore the feedback completely",
+            "Stop using AI tools entirely for that client"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "ac-m6-q5",
+          "text": "What helps build a long-term AI Content VA career?",
+          "choices": [
+            "Refusing to learn new platforms or formats",
+            "Going deeper into SEO/strategy, learning ad copy, and asking for testimonials",
+            "Never asking for client feedback",
+            "Avoiding all specialization"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    }
+  ]
+}

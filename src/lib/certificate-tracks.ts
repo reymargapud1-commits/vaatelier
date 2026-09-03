@@ -208,6 +208,58 @@ const TRACKS_BY_COURSE: Record<string, CertificateTrack[]> = {
       moduleIds: ["ai-m6"],
     },
   ],
+  "va-ai-automation": [
+    {
+      id: "foundations",
+      label: "Certificate I: AI Automation VA Foundations & Tools",
+      subtitle: "Modules 1-2",
+      moduleIds: ["aa-m1", "aa-m2"],
+    },
+    {
+      id: "core-skills",
+      label: "Certificate II: Core Automation & Chatbot Skills",
+      subtitle: "Module 3",
+      moduleIds: ["aa-m3"],
+    },
+    {
+      id: "portfolio",
+      label: "Certificate III: Portfolio & Job Application Mastery",
+      subtitle: "Modules 4-5",
+      moduleIds: ["aa-m4", "aa-m5"],
+    },
+    {
+      id: "client-launch",
+      label: "Certificate IV: Client Acquisition & Career Launch",
+      subtitle: "Module 6",
+      moduleIds: ["aa-m6"],
+    },
+  ],
+  "va-ai-content": [
+    {
+      id: "foundations",
+      label: "Certificate I: AI Content VA Foundations & Tools",
+      subtitle: "Modules 1-2",
+      moduleIds: ["ac-m1", "ac-m2"],
+    },
+    {
+      id: "core-skills",
+      label: "Certificate II: Core AI Content Creation Skills",
+      subtitle: "Module 3",
+      moduleIds: ["ac-m3"],
+    },
+    {
+      id: "portfolio",
+      label: "Certificate III: Portfolio & Job Application Mastery",
+      subtitle: "Modules 4-5",
+      moduleIds: ["ac-m4", "ac-m5"],
+    },
+    {
+      id: "client-launch",
+      label: "Certificate IV: Client Acquisition & Career Launch",
+      subtitle: "Module 6",
+      moduleIds: ["ac-m6"],
+    },
+  ],
 };
 
 export function getCertificateTracks(courseId: string): CertificateTrack[] {

@@ -57,11 +57,29 @@
     {
       "courseId": "va-ai",
       "title": "AI-Powered VA",
-      "shortDescription": "Prompt engineering, AI writing and content tools, and simple automations (Zapier + ChatGPT) - for VAs who want to offer AI-powered support across any client type.",
+      "shortDescription": "Prompt engineering and everyday AI-assisted admin work - email, research, documents. The broad, generalist AI VA specialty across any client type.",
       "icon": "🤖",
       "isPublished": true,
       "curriculumFile": "curriculum/va-ai.json",
       "quizzesFile": "quizzes/va-ai.json"
+    },
+    {
+      "courseId": "va-ai-automation",
+      "title": "AI Automation & Chatbot VA",
+      "shortDescription": "Building simple automations and chatbots for businesses using Zapier, Make, and ChatGPT - for VAs who want to specialize in time-saving workflows.",
+      "icon": "⚡",
+      "isPublished": true,
+      "curriculumFile": "curriculum/va-ai-automation.json",
+      "quizzesFile": "quizzes/va-ai-automation.json"
+    },
+    {
+      "courseId": "va-ai-content",
+      "title": "AI Content & Copywriting VA",
+      "shortDescription": "Using AI tools like ChatGPT, Jasper, and Canva AI to produce content, captions, and marketing copy for clients faster - for VAs who want to specialize in AI-assisted content creation.",
+      "icon": "✍️",
+      "isPublished": true,
+      "curriculumFile": "curriculum/va-ai-content.json",
+      "quizzesFile": "quizzes/va-ai-content.json"
     }
   ]
 }

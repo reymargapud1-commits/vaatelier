@@ -1,0 +1,1094 @@
+{
+  "courseId": "va-ai-automation",
+  "courseTitle": "AI Automation & Chatbot VA: From Zero to First Client",
+  "courseDescription": "A complete beginner-to-job-ready training program for aspiring AI Automation & Chatbot Virtual Assistants. Covers Zapier and Make, connecting AI to automations, building FAQ chatbots, mapping and documenting client workflows, portfolio-building, resume and proposal writing, and how to land and manage your first automation client.",
+  "priceNote": "One-time payment unlocks lifetime access to all modules, video lessons, quizzes, and your Certificate of Completion.",
+  "modules": [
+    {
+      "id": "aa-m1",
+      "title": "Module 1: Starting Out as an AI Automation VA",
+      "lessons": [
+        {
+          "id": "aa-m1-l1",
+          "title": "What Is an AI Automation VA?",
+          "slides": [
+            {
+              "heading": "What Is an AI Automation VA?",
+              "bullets": [
+                "Welcome to your AI Automation VA journey",
+                "Builds workflows that connect apps and remove manual work",
+                "A specialist within the broader AI-Powered VA world"
+              ],
+              "narration": "Welcome to Module 1 of your AI Automation & Chatbot VA training. An AI Automation VA designs and builds workflows - using tools like Zapier, Make, and simple AI-powered chatbots - that connect a business's different apps together so information moves automatically instead of being copied and pasted by hand."
+            },
+            {
+              "heading": "What an AI Automation VA Actually Does Day to Day",
+              "bullets": [
+                "Maps out a client's repetitive task step by step",
+                "Builds and tests the automation in Zapier or Make",
+                "Sets up simple chatbots to handle common questions"
+              ],
+              "narration": "On a typical day, an AI Automation VA might interview a client about a repetitive task, map it out step by step, build and test the actual automation, and set up or refine a simple chatbot that answers a business's most common customer questions automatically."
+            },
+            {
+              "heading": "Why Businesses Hire a Dedicated Automation Specialist",
+              "bullets": [
+                "Automation tools have a real learning curve",
+                "A broken or badly-built automation can cause real problems",
+                "Business owners want it built right the first time"
+              ],
+              "narration": "While automation tools like Zapier look simple on the surface, building something reliable that won't quietly break or send the wrong information takes real skill - business owners hire a dedicated Automation VA so it gets built correctly and keeps working."
+            },
+            {
+              "heading": "Is This Niche Right for You?",
+              "bullets": [
+                "You enjoy logical, step-by-step problem solving",
+                "You're patient enough to test things thoroughly",
+                "You like the satisfaction of 'set it and forget it' systems"
+              ],
+              "narration": "This niche is a great fit if you enjoy breaking a messy process down into clear logical steps, if you have the patience to test an automation thoroughly before handing it over, and if you find real satisfaction in building a system that quietly keeps working long after you built it."
+            }
+          ]
+        },
+        {
+          "id": "aa-m1-l2",
+          "title": "Skills and Traits of a Great Automation VA",
+          "slides": [
+            {
+              "heading": "Core Skills You'll Build",
+              "bullets": [
+                "Workflow mapping - turning a messy process into clear steps",
+                "Hands-on Zapier and Make building",
+                "Testing and troubleshooting broken automations"
+              ],
+              "narration": "Over this training, you'll build three core skills: mapping a real business process into clear, logical steps, building that process hands-on in Zapier and Make, and testing and troubleshooting when something doesn't work exactly as planned."
+            },
+            {
+              "heading": "Traits Clients Look For",
+              "bullets": [
+                "Thoroughness - testing every likely scenario",
+                "Clear documentation of what was built and why",
+                "Honesty about what automation can't fix"
+              ],
+              "narration": "Clients trust Automation VAs who thoroughly test an automation before calling it done, who document clearly what was built and how it works, and who are honest when a task genuinely needs a human touch rather than forcing a bad automation onto it."
+            },
+            {
+              "heading": "A Day in the Life",
+              "bullets": [
+                "Morning: check that yesterday's automations ran correctly",
+                "Midday: build or refine a new workflow",
+                "End of day: document changes and note any issues"
+              ],
+              "narration": "A typical day might start by checking that every automation ran correctly overnight, move into building or refining a new workflow for a client, and end with documenting any changes made and flagging anything that needs a closer look tomorrow."
+            },
+            {
+              "heading": "Where Growth Leads",
+              "bullets": [
+                "Handle more complex, multi-step workflows over time",
+                "Move into building smarter chatbots with AI built in",
+                "Manage a portfolio of automations across several clients"
+              ],
+              "narration": "As you gain experience, you can grow from simple single-trigger automations into complex multi-step workflows, add real AI intelligence into your chatbots and automations, and eventually manage a whole portfolio of running systems across multiple clients."
+            }
+          ]
+        },
+        {
+          "id": "aa-m1-l3",
+          "title": "How Businesses Actually Waste Time (and Where Automation Helps)",
+          "slides": [
+            {
+              "heading": "The Hidden Cost of Manual Repetition",
+              "bullets": [
+                "Small repeated tasks add up to real hours every week",
+                "Manual copy-paste work is where errors creep in",
+                "Owners rarely realize how much time it actually costs"
+              ],
+              "narration": "A five-minute task repeated ten times a day adds up to hours every single week - and manual, repetitive copy-paste work is exactly where typos and missed steps creep in. Most business owners have never actually added up what it's costing them."
+            },
+            {
+              "heading": "Common Time-Wasting Patterns to Look For",
+              "bullets": [
+                "Re-typing the same information into multiple places",
+                "Manually notifying people when something happens",
+                "Answering the same customer questions over and over"
+              ],
+              "narration": "Watch for these common patterns: information being re-typed into multiple systems by hand, someone manually messaging a teammate every time an event happens, and customer service reps answering the exact same questions again and again."
+            },
+            {
+              "heading": "Spotting an Automation Opportunity in a Conversation",
+              "bullets": [
+                "Listen for 'every time X happens, I have to...'",
+                "Listen for 'I always forget to...'",
+                "Listen for 'my team keeps mixing this up'"
+              ],
+              "narration": "In any conversation with a business owner, listen for phrases like \"every time a new order comes in, I have to...\" or \"I always forget to follow up on...\" - these are direct signals pointing to a specific, buildable automation opportunity."
+            },
+            {
+              "heading": "Ready for Module 2",
+              "bullets": [
+                "You understand where automation actually helps",
+                "You can spot opportunities in a real conversation",
+                "Next: the specific tools you'll build with"
+              ],
+              "narration": "You now understand what an AI Automation VA does and how to spot real opportunities in a business's day-to-day work. In Module 2, we'll get hands-on with the specific tools you'll use to actually build these workflows."
+            }
+          ]
+        },
+        {
+          "id": "aa-m1-l4",
+          "title": "Setting Up Your Automation Workspace & Tools Checklist",
+          "slides": [
+            {
+              "heading": "What You Actually Need to Get Started",
+              "bullets": [
+                "A laptop or desktop with a modern browser",
+                "Free accounts on Zapier and Make to start practicing",
+                "A simple diagramming tool or even just pen and paper"
+              ],
+              "narration": "You don't need expensive software to start - a reliable computer, free accounts on Zapier and Make (both offer usable free tiers for learning), and even just pen and paper for sketching out workflows is enough to begin practicing."
+            },
+            {
+              "heading": "Organizing Your Automation Library",
+              "bullets": [
+                "Save a plain-language map of every workflow you build",
+                "Note which apps and triggers were used",
+                "Build this into a reusable template library"
+              ],
+              "narration": "Keep a running library of every workflow you build, saved as a plain-language map noting which apps, triggers, and actions were used - over time, many new client requests turn out to be small variations of something you've already built."
+            },
+            {
+              "heading": "Understanding Free vs Paid Automation Plans",
+              "bullets": [
+                "Free tiers are enough to learn and build simple flows",
+                "Paid tiers unlock more tasks per month and premium apps",
+                "Always clarify upfront who pays for the client's plan"
+              ],
+              "narration": "Free tiers of Zapier and Make are genuinely enough to learn on and build simple automations, while paid tiers unlock a higher monthly task limit and connections to premium apps - always clarify upfront whether you or the client covers any subscription cost for their live automation."
+            },
+            {
+              "heading": "Ready for Module 2",
+              "bullets": [
+                "You know what the role involves",
+                "You have a basic toolkit ready",
+                "Next: mastering the tools themselves"
+              ],
+              "narration": "You now understand what an AI Automation VA does and have the basics ready to start practicing. In Module 2, we'll dive deep into the specific platforms you'll be building with every day."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aa-m2",
+      "title": "Module 2: Essential Automation Tools Every AI Automation VA Must Know",
+      "lessons": [
+        {
+          "id": "aa-m2-l1",
+          "title": "Zapier Deep Dive: Triggers, Actions, and Multi-Step Zaps",
+          "slides": [
+            {
+              "heading": "The Anatomy of a Zap",
+              "bullets": [
+                "Trigger - the event that starts everything",
+                "Action(s) - what happens in response",
+                "Multi-step Zaps chain several actions together"
+              ],
+              "narration": "Every Zap starts with a trigger - a specific event like a new form submission - followed by one or more actions that happen in response. A multi-step Zap simply chains several actions together, so one trigger can update a spreadsheet, send a message, and create a task all at once."
+            },
+            {
+              "heading": "Filters and Paths",
+              "bullets": [
+                "Filters stop a Zap unless a condition is met",
+                "Paths let a Zap branch in different directions",
+                "Both add real logic to a simple trigger-action flow"
+              ],
+              "narration": "Filters let you stop a Zap from continuing unless a specific condition is true - for example, only notify the team if an order is over a certain amount. Paths let a single Zap branch into different directions depending on the data, adding real decision-making logic."
+            },
+            {
+              "heading": "Formatter and Data Cleanup",
+              "bullets": [
+                "Raw data often needs reformatting before use",
+                "Zapier's Formatter step cleans dates, text, and numbers",
+                "A small cleanup step prevents many downstream errors"
+              ],
+              "narration": "Data coming from one app is often in the wrong format for another - a date written differently, extra spaces in a name. Zapier's built-in Formatter step cleans this up mid-workflow, and skipping this step is one of the most common causes of an automation quietly breaking."
+            },
+            {
+              "heading": "When Zapier Is (and Isn't) the Right Tool",
+              "bullets": [
+                "Great for simple, linear, single-path automations",
+                "Gets harder to manage with heavy branching logic",
+                "Know when it's time to consider Make instead"
+              ],
+              "narration": "Zapier is the right tool for simple, mostly linear automations with a clear trigger and predictable actions. Once a workflow needs heavy branching, loops, or complex logic, it's worth considering Make instead - which we'll cover next."
+            }
+          ]
+        },
+        {
+          "id": "aa-m2-l2",
+          "title": "Make (Integromat) Deep Dive: Modules, Routers, and Filters",
+          "slides": [
+            {
+              "heading": "Why Make Handles Complexity Better",
+              "bullets": [
+                "Visual, flowchart-style scenario builder",
+                "Built for branching, looping, and complex logic",
+                "Steeper learning curve, but far more powerful"
+              ],
+              "narration": "Make's visual, flowchart-style builder lets you see an entire workflow ('scenario') laid out at once, and it's built from the ground up to handle branching, looping, and complex logic that would be awkward to force into a simpler tool."
+            },
+            {
+              "heading": "Modules and Routers",
+              "bullets": [
+                "Each step in Make is called a module",
+                "A router splits one flow into multiple branches",
+                "Each branch can have its own filter conditions"
+              ],
+              "narration": "In Make, each individual step is called a module, and a router lets one incoming flow split into multiple branches - each branch can carry its own filter conditions, so different types of data get handled completely differently within the same scenario."
+            },
+            {
+              "heading": "Error Handling in Make",
+              "bullets": [
+                "Scenarios can be set to retry on failure",
+                "Error handlers catch and respond to specific failures",
+                "Critical for automations that must never silently fail"
+              ],
+              "narration": "Make lets you configure a scenario to automatically retry a failed step, and dedicated error handlers can catch specific failures and respond appropriately - for example, notifying you directly rather than letting a broken automation fail silently for days."
+            },
+            {
+              "heading": "Choosing Zapier vs Make for a Client",
+              "bullets": [
+                "Simple, one-path task: Zapier is faster to build",
+                "Complex, multi-branch logic: Make is more reliable",
+                "Many Automation VAs end up using both"
+              ],
+              "narration": "For a simple, one-path task, Zapier is usually faster to build and easier for a client to understand later. For genuinely complex, multi-branch logic, Make tends to be more reliable long-term - most working Automation VAs end up comfortable with both."
+            }
+          ]
+        },
+        {
+          "id": "aa-m2-l3",
+          "title": "Connecting AI to Automations (ChatGPT + Zapier/Make)",
+          "slides": [
+            {
+              "heading": "Why Add AI Into an Automation",
+              "bullets": [
+                "Automations move data - AI can also think about it",
+                "Draft a reply, summarize, or categorize automatically",
+                "Turns a simple data pipe into a smart assistant"
+              ],
+              "narration": "A plain automation moves data from one place to another, but adding an AI step lets it also think about that data - drafting a reply, summarizing a long message, or categorizing an incoming request automatically before it reaches a human."
+            },
+            {
+              "heading": "Using ChatGPT/OpenAI Steps in Zapier and Make",
+              "bullets": [
+                "Both platforms have built-in AI/ChatGPT actions",
+                "Feed it the automation's data as the prompt",
+                "Pass its response into the next step"
+              ],
+              "narration": "Both Zapier and Make have built-in AI actions that can call ChatGPT or similar models directly inside a workflow - you feed it the data flowing through the automation as part of the prompt, and pass its response straight into the next step."
+            },
+            {
+              "heading": "A Practical Example: Auto-Categorizing Support Emails",
+              "bullets": [
+                "New email comes in as the trigger",
+                "AI step reads it and picks a category",
+                "Automation routes it to the right person or folder"
+              ],
+              "narration": "A practical example: a new support email triggers the automation, an AI step reads it and decides which category it falls into (billing, technical, general), and the automation then routes it to the right person or folder automatically - no manual sorting required."
+            },
+            {
+              "heading": "Keeping AI Steps Reliable",
+              "bullets": [
+                "Give the AI step a very specific, constrained prompt",
+                "Always have a fallback for an unexpected AI response",
+                "Test with real, messy examples before going live"
+              ],
+              "narration": "Keep the AI step's prompt specific and constrained (\"reply with exactly one of these three words\") rather than open-ended, always build in a fallback path for an unexpected response, and test with real, messy examples before ever turning it on for a live client."
+            }
+          ]
+        },
+        {
+          "id": "aa-m2-l4",
+          "title": "No-Code Chatbot Builders (Voiceflow, Chatbase, Custom GPTs)",
+          "slides": [
+            {
+              "heading": "What a No-Code Chatbot Builder Gives You",
+              "bullets": [
+                "A visual way to design conversation flows",
+                "No programming required to launch a working bot",
+                "Connects to a business's own documents or FAQs"
+              ],
+              "narration": "No-code chatbot builders let you visually design a conversation flow - what the bot says, what it asks, how it branches - without writing any code, and many can be trained directly on a business's own FAQ document or website content."
+            },
+            {
+              "heading": "Chatbase and Similar Document-Trained Bots",
+              "bullets": [
+                "Upload a business's FAQs or help docs",
+                "The bot answers using only that information",
+                "Fast way to launch a useful support chatbot"
+              ],
+              "narration": "Tools like Chatbase let you upload a business's existing FAQ page or help documents, and the resulting chatbot answers customer questions using only that information - this is often the fastest way to launch a genuinely useful support chatbot."
+            },
+            {
+              "heading": "Voiceflow for More Designed Conversations",
+              "bullets": [
+                "Visual conversation-flow builder, like a flowchart for chat",
+                "Good for structured processes - booking, intake forms",
+                "More control than a pure document-trained bot"
+              ],
+              "narration": "Voiceflow is built for designing more structured conversations step by step, like a flowchart - well suited to processes like appointment booking or an intake questionnaire where the exact flow of questions matters."
+            },
+            {
+              "heading": "Custom GPTs as a Simple Chatbot Option",
+              "bullets": [
+                "ChatGPT's own custom GPT builder needs no code either",
+                "Good for internal tools or simple public-facing bots",
+                "Easiest option if a client already uses ChatGPT Plus"
+              ],
+              "narration": "OpenAI's own custom GPT builder is a genuinely no-code option too, and it's often the simplest choice if a client is already comfortable with ChatGPT - well suited to internal team tools or a straightforward public-facing FAQ bot."
+            }
+          ]
+        },
+        {
+          "id": "aa-m2-l5",
+          "title": "Webhooks, APIs, and Google Sheets/Forms as Building Blocks",
+          "slides": [
+            {
+              "heading": "What a Webhook Actually Is",
+              "bullets": [
+                "A way for one app to instantly notify another",
+                "Triggers an automation the moment something happens",
+                "You don't need to write code to use one"
+              ],
+              "narration": "A webhook is simply a way for one app to instantly notify another the moment something happens - it's what lets an automation trigger immediately rather than checking every few minutes. Zapier and Make both let you use webhooks without writing any code."
+            },
+            {
+              "heading": "What an API Is, in Plain Terms",
+              "bullets": [
+                "A standard way apps talk to each other",
+                "Automation platforms handle the technical part for you",
+                "You mostly just need to know an API connection exists"
+              ],
+              "narration": "An API is just a standard way for two pieces of software to exchange information - as an Automation VA using Zapier or Make, the platform handles the technical connection for you; you mainly need to know that a given app has an API connection available at all."
+            },
+            {
+              "heading": "Google Sheets and Forms as Your Simplest Building Blocks",
+              "bullets": [
+                "A spreadsheet as a lightweight database",
+                "Google Forms as an easy, free data-collection trigger",
+                "Great starting point for almost any small business"
+              ],
+              "narration": "Google Sheets works surprisingly well as a lightweight database for small automations, and Google Forms is a free, easy way to collect structured data that can trigger a workflow - together they're often the simplest, cheapest starting point for a small business's first automation."
+            },
+            {
+              "heading": "Putting the Building Blocks Together",
+              "bullets": [
+                "Form submission -> webhook or native trigger",
+                "Data cleaned and logged to a spreadsheet",
+                "AI step and notification action complete the flow"
+              ],
+              "narration": "A complete simple system might look like: a Google Form submission triggers the automation, the data gets cleaned and logged to a spreadsheet, an AI step drafts a response, and a final action sends a notification - each block simple on its own, powerful together."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aa-m3",
+      "title": "Module 3: Core Automation & Chatbot Building Skills",
+      "lessons": [
+        {
+          "id": "aa-m3-l1",
+          "title": "Mapping a Client's Workflow Before Automating It",
+          "slides": [
+            {
+              "heading": "Why Mapping Comes Before Building",
+              "bullets": [
+                "Building first often means rebuilding later",
+                "A clear map catches edge cases early",
+                "Takes minutes, saves hours"
+              ],
+              "narration": "Jumping straight into Zapier before mapping the workflow almost always means rebuilding parts of it later - spending a few minutes mapping the process in plain language first catches edge cases and missing steps before they become a broken automation."
+            },
+            {
+              "heading": "Interviewing a Client About Their Process",
+              "bullets": [
+                "Ask them to walk through it exactly as they do it today",
+                "Ask 'what happens if...' for every likely exception",
+                "Watch a screen-share if possible - people forget steps"
+              ],
+              "narration": "Ask the client to walk through the process exactly as they do it today, step by step, and ask \"what happens if...\" for every exception you can think of. If possible, watch a screen-share of them doing it once - people reliably forget small steps when just describing it verbally."
+            },
+            {
+              "heading": "Turning a Conversation Into a Simple Flowchart",
+              "bullets": [
+                "Boxes for each step, arrows for what happens next",
+                "Diamonds for any yes/no decision points",
+                "Even a rough sketch is enough to build from"
+              ],
+              "narration": "Turn the conversation into a simple flowchart: a box for each step, arrows showing what happens next, and a diamond shape for any yes/no decision point - even a rough hand-drawn version is enough to build the actual automation from confidently."
+            },
+            {
+              "heading": "Confirming the Map Before Building",
+              "bullets": [
+                "Walk the map back to the client in plain language",
+                "Get their explicit confirmation it's accurate",
+                "Saves you from building the wrong thing"
+              ],
+              "narration": "Before opening any automation tool, walk the finished map back to the client in plain language and get their explicit confirmation that it's accurate - this single step prevents the most expensive mistake in this niche: building the wrong thing correctly."
+            }
+          ]
+        },
+        {
+          "id": "aa-m3-l2",
+          "title": "Building Your First Multi-Step Automation End-to-End",
+          "slides": [
+            {
+              "heading": "Starting With the Trigger",
+              "bullets": [
+                "Pick the most reliable trigger available",
+                "Test it fires correctly before adding anything else",
+                "A shaky trigger undermines everything built on it"
+              ],
+              "narration": "Always start by setting up and testing the trigger alone - firing it a few times to confirm it reliably detects the right event - before adding a single action on top of it. A shaky, unreliable trigger will undermine everything you build afterward."
+            },
+            {
+              "heading": "Adding Actions One at a Time",
+              "bullets": [
+                "Build and test one action, then add the next",
+                "Confirm the data passed between steps looks correct",
+                "Resist the urge to build all steps before testing any"
+              ],
+              "narration": "Add and test one action at a time rather than building the entire multi-step flow before testing anything - check that the data passed from each step to the next actually looks correct, since this is where most silent errors hide."
+            },
+            {
+              "heading": "Handling the Edge Cases You Mapped Earlier",
+              "bullets": [
+                "Go back to your workflow map's exception list",
+                "Build a filter or path for each one",
+                "An automation that only handles the 'happy path' isn't done"
+              ],
+              "narration": "Return to the exceptions you identified while mapping the workflow, and build a specific filter or path for each one - an automation that only works when everything goes perfectly isn't actually finished yet."
+            },
+            {
+              "heading": "Final Review Before Going Live",
+              "bullets": [
+                "Run it end-to-end with real, messy test data",
+                "Have the client review the actual result, not just the plan",
+                "Turn it on only after their explicit sign-off"
+              ],
+              "narration": "Run the finished automation end-to-end using real, messy sample data rather than a perfectly clean example, have the client review the actual result it produces, and only turn it on live after their explicit sign-off."
+            }
+          ]
+        },
+        {
+          "id": "aa-m3-l3",
+          "title": "Designing a Simple FAQ Chatbot That Actually Helps",
+          "slides": [
+            {
+              "heading": "Starting From Real Questions, Not Guesses",
+              "bullets": [
+                "Pull actual questions from past emails or chats",
+                "Group them into clear categories",
+                "Write the answer in the business's real voice"
+              ],
+              "narration": "Build a chatbot's content from a business's real, historical customer questions - pulled from old emails or chat logs - rather than guessing what people might ask. Group similar questions together and write each answer in the business's actual voice."
+            },
+            {
+              "heading": "Designing for the 'I Don't Know' Case",
+              "bullets": [
+                "A bot will always get an unexpected question eventually",
+                "Never let it guess confidently when it doesn't know",
+                "Always offer a clear path to a human"
+              ],
+              "narration": "Every chatbot will eventually get a question outside what it was trained to answer - design it to recognize this and say so honestly rather than guessing confidently, and always offer a clear, easy path to reach a real human instead."
+            },
+            {
+              "heading": "Keeping the Bot's Tone On-Brand",
+              "bullets": [
+                "Match the business's existing tone, not a generic bot voice",
+                "Short, clear answers beat long paragraphs in chat",
+                "Review actual sample conversations before launch"
+              ],
+              "narration": "Write the bot's responses to match the business's existing tone rather than a generic, robotic chatbot voice, keep answers short and scannable since long paragraphs read poorly in a chat window, and review full sample conversations before launch, not just individual answers in isolation."
+            },
+            {
+              "heading": "Launching and Improving Over Time",
+              "bullets": [
+                "Start with your best-guess set of questions",
+                "Review real conversations after a few weeks",
+                "Add new answers based on what people actually ask"
+              ],
+              "narration": "Launch with your best first version, then review real conversation logs after a few weeks - people will ask things you didn't anticipate, and steadily adding new answers based on real usage is how a chatbot actually improves over time."
+            }
+          ]
+        },
+        {
+          "id": "aa-m3-l4",
+          "title": "Testing, Error-Handling, and Documenting What You Build",
+          "slides": [
+            {
+              "heading": "Testing Like Something Will Go Wrong",
+              "bullets": [
+                "Test the happy path, then deliberately break it",
+                "Try missing fields, weird characters, duplicate entries",
+                "Assume real-world data will be messier than your test"
+              ],
+              "narration": "Test the ideal scenario first, then deliberately try to break your own automation - missing form fields, unusual characters, duplicate submissions. Real-world data is reliably messier than whatever clean example you tested with initially."
+            },
+            {
+              "heading": "Building in Error Notifications",
+              "bullets": [
+                "Set up an alert for when a step fails",
+                "Send it somewhere you'll actually see quickly",
+                "Silent failures are far worse than obvious ones"
+              ],
+              "narration": "Configure your automation platform to alert you the moment any step fails, sent somewhere you'll genuinely see quickly - a silent failure that runs undetected for days does far more damage to a client relationship than an obvious, quickly-fixed error."
+            },
+            {
+              "heading": "Writing Documentation a Non-Technical Client Can Read",
+              "bullets": [
+                "Plain-language summary of what it does",
+                "A simple diagram or step list",
+                "What to do if something looks wrong"
+              ],
+              "narration": "Write a short, plain-language summary of what the automation does, paired with a simple diagram or numbered step list, and a short section on what the client should do (and who to contact) if something ever looks wrong."
+            },
+            {
+              "heading": "Handing It Over Professionally",
+              "bullets": [
+                "Walk the client through the documentation live",
+                "Confirm they know who maintains it going forward",
+                "Agree on how future changes get requested"
+              ],
+              "narration": "Walk the client through the documentation together on a short call rather than just emailing it, confirm they understand who's responsible for maintaining it going forward, and agree clearly on how they should request any future changes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aa-m4",
+      "title": "Module 4: Building Your Automation Portfolio",
+      "lessons": [
+        {
+          "id": "aa-m4-l1",
+          "title": "Creating Mock Automation Projects",
+          "slides": [
+            {
+              "heading": "Why You Need Samples Before Your First Client",
+              "bullets": [
+                "Clients want to see proof, not just a resume",
+                "A mock project shows your actual building process",
+                "You control the quality with no deadline pressure"
+              ],
+              "narration": "Since you may not have a paying client yet, building a mock automation for a fictional or real local business lets you show proof of your skills, not just claim them on a resume - and you control the quality with no deadline pressure."
+            },
+            {
+              "heading": "Picking a Realistic Practice Project",
+              "bullets": [
+                "Choose a genuinely common small-business need",
+                "Lead intake, order confirmation, or review requests work well",
+                "Keep the scope small enough to finish and document well"
+              ],
+              "narration": "Pick a genuinely common small-business need - automatically logging new leads, sending order confirmations, or requesting reviews after a purchase - and keep the scope small enough that you can finish it and document it thoroughly."
+            },
+            {
+              "heading": "Documenting Your Process, Not Just the Result",
+              "bullets": [
+                "Screenshot the workflow map and the final build",
+                "Write a short explanation of your approach",
+                "Include the actual tools, triggers, and logic used"
+              ],
+              "narration": "Document the full process, not just the finished result: screenshot both your workflow map and the final automation build, and write a short explanation including the actual tools, triggers, and logic you used - exactly what a client wants to see."
+            },
+            {
+              "heading": "Keeping It Honest",
+              "bullets": [
+                "Label mock projects clearly as sample work",
+                "Never claim invented results as a real client's",
+                "Honesty about samples builds more trust than exaggeration"
+              ],
+              "narration": "Always label mock projects clearly as sample or practice work rather than presenting them as real client results - being upfront about this builds far more trust with a future client than an impressive-sounding but fabricated case study ever would."
+            }
+          ]
+        },
+        {
+          "id": "aa-m4-l2",
+          "title": "Building an Automation VA Portfolio",
+          "slides": [
+            {
+              "heading": "What an Automation Portfolio Needs",
+              "bullets": [
+                "A short intro about you and your toolset",
+                "2-3 sample workflows with diagrams",
+                "Clear labeling of real vs sample work"
+              ],
+              "narration": "A strong Automation VA portfolio has a short introduction about you and the specific tools you specialize in, two or three sample workflows shown with simple diagrams, and honest labeling throughout of what's real client work versus practice samples."
+            },
+            {
+              "heading": "Showing the Workflow Visually",
+              "bullets": [
+                "A simple before/after diagram works better than text alone",
+                "Screenshot the actual Zapier or Make build",
+                "Visuals make an abstract skill feel concrete"
+              ],
+              "narration": "A simple before/after diagram - the messy manual process versus the new automated flow - communicates your value far faster than a paragraph of text, and a screenshot of the actual Zapier or Make build makes an abstract skill feel concrete and real."
+            },
+            {
+              "heading": "Where to Host Your Portfolio",
+              "bullets": [
+                "A simple free website (Carrd, Notion, or similar)",
+                "A well-organized Google Drive folder works too",
+                "Keep the link short and easy to share"
+              ],
+              "narration": "You don't need a paid website - a simple free site built in Carrd or Notion, or even a neatly organized, view-only Google Drive folder, works perfectly well as long as the link is short and easy to drop into a proposal or message."
+            },
+            {
+              "heading": "Keeping Your Portfolio Updated",
+              "bullets": [
+                "Swap in real client work as soon as you have it",
+                "Add new tools and integrations as you learn them",
+                "Revisit it every few months as platforms evolve"
+              ],
+              "narration": "As soon as you land real client work (with their permission to showcase it), swap it in for your mock samples, and keep adding new tools and integrations as you learn them - revisiting your portfolio every few months keeps it looking current."
+            }
+          ]
+        },
+        {
+          "id": "aa-m4-l3",
+          "title": "Showing Time & Cost Saved as Your Core Result",
+          "slides": [
+            {
+              "heading": "Why Time and Cost Saved Convert Best",
+              "bullets": [
+                "It's the clearest, most concrete automation metric",
+                "Clients hire outcomes, not tool familiarity",
+                "Even a modest, honest number builds real trust"
+              ],
+              "narration": "Time and cost saved are the clearest, most concrete results an Automation VA can show - a specific number, even a modest one, builds trust far faster than a vague claim about being 'automation-savvy.'"
+            },
+            {
+              "heading": "What to Measure Before and After",
+              "bullets": [
+                "Time the manual process honestly before building",
+                "Note the exact date the automation went live",
+                "Re-measure the new process a few weeks later"
+              ],
+              "narration": "Time how long the manual process genuinely takes before you build anything, note the exact date the automation went live, and re-measure the new automated process a few weeks later for a fair, honest before-and-after comparison."
+            },
+            {
+              "heading": "Turning Numbers Into a Simple Case Study",
+              "bullets": [
+                "One paragraph: the problem",
+                "One paragraph: what you built",
+                "One paragraph: the measurable result"
+              ],
+              "narration": "A simple case study is just three short paragraphs: what problem the client had, what you actually built to solve it, and what measurable result followed - ideally with a real time or cost number attached to that last part."
+            },
+            {
+              "heading": "Getting Permission to Share Results Publicly",
+              "bullets": [
+                "Always ask before using a client's name or numbers",
+                "Some clients prefer to stay anonymous - that's fine",
+                "A quick written 'yes' protects you both"
+              ],
+              "narration": "Always ask a client's permission before sharing their name or specific numbers publicly - some are happy to be named, others prefer anonymity, and either way a quick written yes over email or chat protects you both."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aa-m5",
+      "title": "Module 5: Resume and Job Application Mastery for Automation VAs",
+      "lessons": [
+        {
+          "id": "aa-m5-l1",
+          "title": "Writing an Automation VA Resume",
+          "slides": [
+            {
+              "heading": "What Belongs on an Automation VA Resume",
+              "bullets": [
+                "A clear headline naming your specialty",
+                "Specific tools you know - Zapier, Make, chatbot builders",
+                "A link to your portfolio, front and center"
+              ],
+              "narration": "Your resume should open with a clear headline naming your specialty - \"AI Automation & Chatbot VA\" - list the specific tools you know like Zapier and Make by name, and put your portfolio link somewhere it can't be missed."
+            },
+            {
+              "heading": "Describing Experience Without a Job History",
+              "bullets": [
+                "Frame your training and mock projects as real work",
+                "Use action verbs - automated, built, streamlined",
+                "Quantify wherever you can, even mock time-savings"
+              ],
+              "narration": "If you don't have paid experience yet, describe your training and mock projects using strong action verbs - automated, built, streamlined, integrated - and quantify what you can, like \"built a lead-intake automation, cutting manual entry time by an estimated 80%.\""
+            },
+            {
+              "heading": "Formatting for Readability",
+              "bullets": [
+                "Keep it to one page",
+                "Use short bullet points, not paragraphs",
+                "Consistent, clean font and spacing"
+              ],
+              "narration": "Keep your resume to a single page with short, scannable bullet points rather than dense paragraphs, using a clean, consistent font - a client reviewing dozens of applicants will spend only seconds per resume."
+            },
+            {
+              "heading": "Common Resume Mistakes to Avoid",
+              "bullets": [
+                "Vague phrases like 'automation expert' with nothing to back it up",
+                "No portfolio link at all",
+                "Listing tools you haven't actually built anything with"
+              ],
+              "narration": "Avoid vague self-descriptions like \"automation expert\" with nothing to back it up, never submit a resume without your portfolio link, and never list a tool you haven't genuinely built a real workflow with."
+            }
+          ]
+        },
+        {
+          "id": "aa-m5-l2",
+          "title": "Crafting Winning Proposals for Automation Gigs",
+          "slides": [
+            {
+              "heading": "What a Good Proposal Includes",
+              "bullets": [
+                "A quick read on their specific repetitive pain point",
+                "Your specific plan - which tools, what workflow",
+                "Clear pricing and next steps"
+              ],
+              "narration": "A strong proposal briefly identifies the specific repetitive task or bottleneck you noticed in their job post, lays out your specific plan for solving it - which tools, what workflow - and ends with clear pricing and an easy next step, like a short call."
+            },
+            {
+              "heading": "Personalizing Every Proposal",
+              "bullets": [
+                "Reference their actual job post or business detail",
+                "Never send an obviously copy-pasted pitch",
+                "Mention one specific automation opportunity you spotted"
+              ],
+              "narration": "Every proposal should reference something specific from their job post or business - a tool they mentioned, a process they described - a generic copy-pasted pitch is easy to spot and easy to ignore in this specialty."
+            },
+            {
+              "heading": "Structuring Your Pricing",
+              "bullets": [
+                "Package by outcome - workflows built, hours saved",
+                "Offer 2-3 clear tiers, not endless options",
+                "Be upfront about ongoing tool subscription costs"
+              ],
+              "narration": "Package your pricing around the outcome - number of workflows built, hours saved per month - and offer two or three simple tiers rather than overwhelming a client with options. Always be upfront about whether any tool subscription costs are included or separate."
+            },
+            {
+              "heading": "Following Up Without Being Pushy",
+              "bullets": [
+                "One polite follow-up after about a week",
+                "Add new value, don't just 'check in'",
+                "Know when to move on gracefully"
+              ],
+              "narration": "If you don't hear back, one polite follow-up after about a week is reasonable - ideally adding something new, like a quick automation idea for their business, rather than just \"checking in.\" If there's still no response after that, it's fine to move on gracefully."
+            }
+          ]
+        },
+        {
+          "id": "aa-m5-l3",
+          "title": "Where to Find Automation & Chatbot Clients",
+          "slides": [
+            {
+              "heading": "Freelance Platforms",
+              "bullets": [
+                "Upwork, Onlinejobs.ph, and similar sites",
+                "Filter for Zapier, Make, or automation roles",
+                "A strong profile and portfolio link matter most"
+              ],
+              "narration": "Freelance platforms like Upwork and Onlinejobs.ph list a growing number of Zapier, Make, and general automation roles - filter specifically for those, and make sure your profile headline and portfolio link are strong."
+            },
+            {
+              "heading": "Small Businesses Still Doing Everything by Hand",
+              "bullets": [
+                "Many owners have never heard automation is affordable",
+                "Look for visibly manual, repetitive processes",
+                "A specific, low-pressure pitch works well"
+              ],
+              "narration": "Many small business owners have simply never realized automation is affordable and accessible - look for businesses with visibly manual, repetitive processes, and offer a specific, low-pressure suggestion for one thing you could automate for them."
+            },
+            {
+              "heading": "Referrals and Word of Mouth",
+              "bullets": [
+                "Your first client is your best source of the next",
+                "Ask happy clients if they know anyone else",
+                "A short before/after case study makes referrals easier"
+              ],
+              "narration": "Once you land one happy client, ask directly whether they know any other business owners who could use similar help - referrals convert far more easily than cold outreach, especially with a short before/after case study to share."
+            },
+            {
+              "heading": "No-Code and Automation Communities",
+              "bullets": [
+                "Facebook groups and forums for Zapier, Make, and no-code",
+                "Often share leads and job postings directly",
+                "Be an active, helpful member, not just a lurker"
+              ],
+              "narration": "Facebook groups and forums built around Zapier, Make, or no-code tools generally often share leads and job postings directly, and being an active, genuinely helpful member of these communities tends to bring in the best opportunities."
+            }
+          ]
+        },
+        {
+          "id": "aa-m5-l4",
+          "title": "Nailing the Discovery Call (Mapping Their Workflow Live)",
+          "slides": [
+            {
+              "heading": "What Clients Are Actually Evaluating",
+              "bullets": [
+                "Can you understand their process quickly?",
+                "Do you ask smart, specific questions?",
+                "Do you seem trustworthy with access to their tools?"
+              ],
+              "narration": "In a discovery call, clients aren't just checking your tool knowledge on paper - they're watching whether you can understand their process quickly, ask smart and specific questions, and seem like someone they can trust with access to their business tools."
+            },
+            {
+              "heading": "Mapping Their Workflow Live on the Call",
+              "bullets": [
+                "Ask them to walk through the process step by step",
+                "Sketch it back to them as they talk",
+                "This alone often impresses more than any pitch"
+              ],
+              "narration": "Ask them to walk through their current process step by step right there on the call, and sketch a rough workflow map back to them as they talk - genuinely understanding their process in real time often impresses a client more than any prepared pitch could."
+            },
+            {
+              "heading": "Talking About Pricing Confidently",
+              "bullets": [
+                "Know your rate before the call, don't improvise",
+                "Explain what's included, not just the number",
+                "It's okay to say you'll follow up in writing"
+              ],
+              "narration": "Decide your rate before the call so you're never improvising under pressure, explain clearly what's included for that price, and it's completely fine to say you'll send the full proposal in writing afterward rather than negotiating on the spot."
+            },
+            {
+              "heading": "Following Up After the Call",
+              "bullets": [
+                "Send a written summary within 24 hours",
+                "Attach the rough workflow map you sketched",
+                "Include your proposal or clear next steps"
+              ],
+              "narration": "Within 24 hours of the call, send a short written summary along with the rough workflow map you sketched together, attached to your proposal or a clear next step - this reinforces that you listened closely and keeps momentum going."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aa-m6",
+      "title": "Module 6: Landing Your First Automation Client and Beyond",
+      "lessons": [
+        {
+          "id": "aa-m6-l1",
+          "title": "Onboarding a New Automation Client",
+          "slides": [
+            {
+              "heading": "What Onboarding Actually Covers",
+              "bullets": [
+                "Getting access to their tools and accounts safely",
+                "Confirming the exact workflow to build first",
+                "Agreeing on the first project's scope and timeline"
+              ],
+              "narration": "Onboarding is the process of getting properly set up with a new client: gaining safe access to the accounts and tools involved, confirming exactly which workflow you're building first, and agreeing together on the first project's scope and timeline."
+            },
+            {
+              "heading": "Getting Account Access the Right Way",
+              "bullets": [
+                "Ask to be added with the minimum access needed",
+                "Never ask for personal account passwords",
+                "Confirm who owns every tool and automation long-term"
+              ],
+              "narration": "Always ask to be added with only the access level a task actually requires, rather than requesting full personal passwords - and make clear from the start that the client remains the true, permanent owner of every account and automation you build."
+            },
+            {
+              "heading": "Confirming Scope Before Building Anything",
+              "bullets": [
+                "Re-confirm the workflow map you agreed on",
+                "Clarify what's in scope vs a future phase",
+                "Get written sign-off before you start building"
+              ],
+              "narration": "Re-confirm the workflow map you agreed on during the discovery call, clarify explicitly what's in scope for this first project versus a future phase, and get written sign-off before you start actually building anything."
+            },
+            {
+              "heading": "Setting the First Check-In Date",
+              "bullets": [
+                "Agree on when you'll show a working first version",
+                "Set expectations for how testing will happen",
+                "Clarify how and when you'll be paid"
+              ],
+              "narration": "Agree on a date when you'll show a working first version of the automation, set expectations for how testing will happen together, and make sure payment terms - amount, method, and schedule - are clearly agreed on both sides."
+            }
+          ]
+        },
+        {
+          "id": "aa-m6-l2",
+          "title": "Pricing Automation & Chatbot Projects",
+          "slides": [
+            {
+              "heading": "Why Clear Expectations Prevent Problems",
+              "bullets": [
+                "Most client conflicts come from unspoken assumptions",
+                "A short written agreement protects you both",
+                "Revisit and adjust as workflows change"
+              ],
+              "narration": "Most conflicts between an Automation VA and a client come from things that were never actually agreed on out loud - a short written agreement covering scope, pricing, and which tools are being used protects you both and can always be revisited."
+            },
+            {
+              "heading": "Common Pricing Models",
+              "bullets": [
+                "Per-project - most common for a single automation build",
+                "Monthly retainer - for ongoing maintenance and new builds",
+                "Hourly - useful early on, harder to scale long-term"
+              ],
+              "narration": "A per-project rate is the most common model for a single automation build, a monthly retainer suits ongoing maintenance plus new workflows over time, and hourly pricing works fine early in your career but tends to be harder to scale."
+            },
+            {
+              "heading": "What to Include in Your Scope of Work",
+              "bullets": [
+                "Exactly which workflow(s) are included",
+                "Who pays for any tool subscriptions",
+                "What's explicitly NOT included (e.g. ongoing maintenance)"
+              ],
+              "narration": "Your scope of work should spell out exactly which workflow or workflows are included, who pays for any ongoing tool subscriptions, and what's explicitly NOT included - like ongoing maintenance or monitoring - unless you charge separately for that."
+            },
+            {
+              "heading": "Pricing Ongoing Maintenance Separately",
+              "bullets": [
+                "Automations need occasional monitoring and fixes",
+                "Offer a simple monthly maintenance add-on",
+                "Be clear this is optional but recommended"
+              ],
+              "narration": "Automations occasionally need monitoring and fixes as connected apps update - offering a simple, optional monthly maintenance add-on is a smart way to build recurring income while being upfront that it's optional but genuinely recommended."
+            }
+          ]
+        },
+        {
+          "id": "aa-m6-l3",
+          "title": "Maintaining and Monitoring Automations Over Time",
+          "slides": [
+            {
+              "heading": "Why Automations Break Over Time",
+              "bullets": [
+                "Connected apps change their features or layout",
+                "A client changes their process without telling you",
+                "API or integration changes outside anyone's control"
+              ],
+              "narration": "Automations can break over time for reasons outside anyone's immediate control - a connected app changes its layout or features, a client quietly changes their process, or an integration is updated on the platform's end."
+            },
+            {
+              "heading": "Setting Up Ongoing Monitoring",
+              "bullets": [
+                "Automation platforms can alert you on failure",
+                "Do a periodic manual check even without an alert",
+                "Keep a simple log of what's running for each client"
+              ],
+              "narration": "Configure your automation platform's built-in failure alerts, but also do a periodic manual check even when nothing has alerted you, and keep a simple running log of exactly what's live for each client so nothing gets forgotten."
+            },
+            {
+              "heading": "Responding Quickly When Something Breaks",
+              "bullets": [
+                "Acknowledge the issue to the client immediately",
+                "Investigate before promising a fix time",
+                "Communicate clearly once it's resolved"
+              ],
+              "narration": "When something breaks, acknowledge the issue to the client immediately even before you know the cause, investigate before promising a specific fix time, and communicate clearly once it's actually resolved rather than leaving them wondering."
+            },
+            {
+              "heading": "Reviewing and Improving Automations Periodically",
+              "bullets": [
+                "Revisit each client's automations every few months",
+                "Ask if their process has changed at all",
+                "Suggest improvements proactively, don't just wait"
+              ],
+              "narration": "Revisit each client's live automations every few months, ask whether their underlying process has changed, and proactively suggest improvements rather than only reacting when something breaks - this is what turns a one-time build into an ongoing relationship."
+            }
+          ]
+        },
+        {
+          "id": "aa-m6-l4",
+          "title": "Handling Broken Automations and Client Feedback",
+          "slides": [
+            {
+              "heading": "Receiving Feedback Without Getting Defensive",
+              "bullets": [
+                "Feedback is about the system, not you personally",
+                "Ask clarifying questions before changing anything",
+                "Thank the client for reporting issues promptly"
+              ],
+              "narration": "It's easy to feel personally criticized when a client reports something isn't working right, but feedback is about the system, not you - ask clarifying questions before making changes, and genuinely thank clients who report issues promptly rather than letting them go unreported."
+            },
+            {
+              "heading": "Diagnosing a Reported Problem Methodically",
+              "bullets": [
+                "Reproduce the issue yourself before assuming a cause",
+                "Check each step of the automation in order",
+                "Don't guess - verify with the actual run history"
+              ],
+              "narration": "Reproduce the reported issue yourself before assuming you know the cause, check each step of the automation in order using the platform's actual run history, and avoid guessing at a fix before you've verified where it actually broke."
+            },
+            {
+              "heading": "Managing Scope Creep in Fixes and Changes",
+              "bullets": [
+                "Define what counts as a bug fix vs a new feature",
+                "A request for new functionality isn't a 'fix'",
+                "Politely price genuinely new requests separately"
+              ],
+              "narration": "Define clearly what counts as fixing a bug versus adding new functionality - a request for the automation to do something it was never designed to do isn't really a \"fix,\" and it's fair to politely price that as an additional request."
+            },
+            {
+              "heading": "Turning Difficult Clients Into Long-Term Ones",
+              "bullets": [
+                "Most 'difficult' clients just want reliability restored quickly",
+                "Consistent, calm communication builds trust",
+                "Know when a client truly isn't the right fit"
+              ],
+              "narration": "Many clients who seem difficult after something breaks simply want reliability restored quickly and to be kept informed - consistent, calm communication usually turns them into your most loyal clients over time."
+            }
+          ]
+        },
+        {
+          "id": "aa-m6-l5",
+          "title": "Growing Your Automation VA Career",
+          "slides": [
+            {
+              "heading": "Leveling Up Your Skill Set",
+              "bullets": [
+                "Go deeper into Make for complex, branching logic",
+                "Learn to build more advanced AI-integrated chatbots",
+                "Study basic API concepts to unlock more integrations"
+              ],
+              "narration": "As you grow, going deeper into Make for genuinely complex logic, learning to build more advanced AI-integrated chatbots, and studying basic API concepts all let you take on higher-paying, more technically demanding projects."
+            },
+            {
+              "heading": "Deciding Between More Clients or Higher Rates",
+              "bullets": [
+                "More clients means more income but more maintenance",
+                "Higher rates mean the same workload, more income",
+                "Most successful Automation VAs eventually favor the second"
+              ],
+              "narration": "At some point you'll choose between taking on more clients at your current rate, or fewer clients at a higher rate - most experienced Automation VAs eventually favor raising rates over endlessly adding more clients, since more running automations also means more ongoing maintenance."
+            },
+            {
+              "heading": "Building Toward an Agency or Specialty",
+              "bullets": [
+                "Some Automation VAs eventually build a small agency",
+                "Others specialize deeply in one industry's workflows",
+                "Both paths are valid - choose what fits your goals"
+              ],
+              "narration": "Some experienced Automation VAs eventually build a small agency, bringing on other freelancers for overflow builds; others prefer staying solo and specializing deeply in one industry's specific workflows. Neither path is more \"correct\" - it depends on what kind of work-life you actually want."
+            },
+            {
+              "heading": "Congratulations on Finishing This Training",
+              "bullets": [
+                "You've covered the full Automation VA skillset",
+                "You have a portfolio, resume, and pricing plan",
+                "Time to start applying with confidence"
+              ],
+              "narration": "Congratulations - you've now covered the full AI Automation & Chatbot VA skillset, from Zapier and Make to workflow mapping, chatbot design, portfolio-building, and long-term growth. You're ready to start applying and pitching with real confidence."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
