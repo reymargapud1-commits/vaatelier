@@ -55,16 +55,49 @@ export async function GET(req: Request, { params }: { params: { courseId: string
   const coachTitle = course.coachTitle || process.env.COACH_TITLE || "VA Coach & Trainer";
   const certTitle = trackDef.label.replace(/^Certificate [IV]+:\s*/, "");
 
+  // Everything below only draws into an in-memory PDF - nothing here should
+  // ever be able to crash the whole request, but a missing/corrupted asset
+  // file or an unexpected pdf-lib error still could. Wrap it all so a
+  // student always gets a clear message (and the real cause lands in the
+  // server logs) instead of a bare "HTTP ERROR 500" with no explanation.
+  try {
+    return await buildCertificatePdf();
+  } catch (err) {
+    console.error(`[certificate] Failed to generate PDF for ${params.courseId}/${params.track}:`, err);
+    return new NextResponse(
+      "Something went wrong generating this certificate. This has been logged - please try again in a moment, " +
+        "or contact support if it keeps happening.",
+      { status: 500 }
+    );
+  }
+
+  async function buildCertificatePdf() {
+  if (!trackDef) throw new Error("unreachable: trackDef already checked above");
   const pdfDoc = await PDFDocument.create();
   pdfDoc.registerFontkit(fontkit);
 
   const page = pdfDoc.addPage([842, 595]); // A4 landscape
   const { width, height } = page.getSize();
 
-  const loraBytes = fs.readFileSync(path.join(FONTS_DIR, "Lora-Variable.ttf"));
-  const loraItalicBytes = fs.readFileSync(path.join(FONTS_DIR, "Lora-Italic-Variable.ttf"));
-  const serif = await pdfDoc.embedFont(loraBytes);
-  const serifItalic = await pdfDoc.embedFont(loraItalicBytes);
+  // The custom serif font makes the certificate look polished, but it lives
+  // outside the database (in assets/fonts/) and can go missing if it's ever
+  // dropped during a manual file copy/deploy - rather than letting a missing
+  // font file crash the whole certificate with a 500, fall back to a built-in
+  // PDF serif font so a certificate can always be generated.
+  const loraPath = path.join(FONTS_DIR, "Lora-Variable.ttf");
+  const loraItalicPath = path.join(FONTS_DIR, "Lora-Italic-Variable.ttf");
+  let serif, serifItalic;
+  if (fs.existsSync(loraPath) && fs.existsSync(loraItalicPath)) {
+    serif = await pdfDoc.embedFont(fs.readFileSync(loraPath));
+    serifItalic = await pdfDoc.embedFont(fs.readFileSync(loraItalicPath));
+  } else {
+    console.error(
+      `[certificate] Custom serif font missing at ${FONTS_DIR} - falling back to a built-in font. ` +
+        "Re-deploy with assets/fonts/Lora-Variable.ttf and Lora-Italic-Variable.ttf present to restore the usual look."
+    );
+    serif = await pdfDoc.embedFont(StandardFonts.TimesRomanBold);
+    serifItalic = await pdfDoc.embedFont(StandardFonts.TimesRomanItalic);
+  }
   const sans = await pdfDoc.embedFont(StandardFonts.Helvetica);
   const sansBold = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
 
@@ -218,10 +251,11 @@ export async function GET(req: Request, { params }: { params: { courseId: string
 
   const pdfBytes = await pdfDoc.save();
 
-  return new NextResponse(Buffer.from(pdfBytes), {
+  return new NextResponse(new Uint8Array(pdfBytes), {
     headers: {
       "Content-Type": "application/pdf",
       "Content-Disposition": `inline; filename="The-VA-Atelier-Certificate-${trackDef.id}-${user.name.replace(/\s+/g, "-")}.pdf"`,
     },
   });
+  }
 }
