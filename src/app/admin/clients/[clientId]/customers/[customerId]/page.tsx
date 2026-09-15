@@ -11,14 +11,26 @@ function fmtDate(d: Date) {
   return d.toLocaleDateString("en-PH", { year: "numeric", month: "short", day: "numeric" });
 }
 
+function fmtDateInput(d: Date) {
+  // yyyy-mm-dd, what an <input type="date"> needs for defaultValue
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
+}
+
 export default async function CustomerMonitoringPage({
   params,
+  searchParams,
 }: {
   params: { clientId: string; customerId: string };
+  searchParams: { edit?: string };
 }) {
   const session = await getServerSession(authOptions);
   if (!session?.user) redirect("/login");
   if ((session.user as any).role !== "admin") redirect("/dashboard");
+
+  const editingTripId = searchParams?.edit || "";
 
   const [client] = await db.select().from(personalClients).where(eq(personalClients.id, params.clientId)).limit(1);
   if (!client) notFound();
@@ -133,7 +145,12 @@ export default async function CustomerMonitoringPage({
           {unbilledTrips.length === 0 ? (
             <p className="text-sm text-gray-500">No unbilled deliveries - add one above.</p>
           ) : (
-            <form action={`/api/admin/customers/${customer.id}/billing`} method="POST">
+            <>
+              {/* Checkboxes and the submit button below reference this form by id
+                  (the "form" attribute) instead of wrapping the table in it, so
+                  each row can also have its own small Edit/Remove form without
+                  illegally nesting one <form> inside another. */}
+              <form id="billing-form" action={`/api/admin/customers/${customer.id}/billing`} method="POST" />
               <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
                 <table className="w-full text-left text-xs">
                   <thead className="bg-gray-50 text-gray-600">
@@ -154,43 +171,156 @@ export default async function CustomerMonitoringPage({
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-100">
-                    {unbilledTrips.map((t) => (
-                      <tr key={t.id}>
-                        <td className="px-3 py-2">
-                          <input type="checkbox" name="tripIds" value={t.id} defaultChecked />
-                        </td>
-                        <td className="px-3 py-2 text-gray-700">{fmtDate(t.tripDate)}</td>
-                        <td className="px-3 py-2 text-gray-700">{t.plateNumber}</td>
-                        <td className="px-3 py-2 text-gray-700">{t.driverName}</td>
-                        <td className="px-3 py-2 text-gray-700">
-                          {[t.helper1Name, t.helper2Name].filter(Boolean).join(", ")}
-                        </td>
-                        <td className="px-3 py-2 text-gray-700">{t.routeFrom}</td>
-                        <td className="px-3 py-2 text-gray-700">{t.routeTo}</td>
-                        <td className="px-3 py-2 text-gray-700">{t.gatePassNumber}</td>
-                        <td className="px-3 py-2 text-gray-700">{t.drSiNumber}</td>
-                        <td className="px-3 py-2 text-gray-700">{t.waybillNumber}</td>
-                        <td className="px-3 py-2 text-gray-700">{t.remarks}</td>
-                        <td className="px-3 py-2 text-gray-700">
-                          ₱{t.amountRate.toLocaleString("en-PH", { minimumFractionDigits: 2 })}
-                        </td>
-                        <td className="px-3 py-2">
-                          <button
-                            formAction={`/api/admin/trips/${t.id}/delete`}
-                            formMethod="POST"
-                            className="text-red-600 hover:underline"
-                            title="Remove this delivery"
-                          >
-                            Remove
-                          </button>
-                        </td>
-                      </tr>
-                    ))}
+                    {unbilledTrips.map((t) =>
+                      editingTripId === t.id ? (
+                        <tr key={t.id} className="bg-amber-50">
+                          <td className="px-3 py-2"></td>
+                          <td colSpan={12} className="px-3 py-3">
+                            <form
+                              action={`/api/admin/trips/${t.id}/update`}
+                              method="POST"
+                              className="space-y-3"
+                            >
+                              <div className="grid gap-3 sm:grid-cols-3">
+                                <div>
+                                  <label className="mb-1 block text-xs font-medium text-gray-700">Date</label>
+                                  <input
+                                    name="tripDate"
+                                    type="date"
+                                    required
+                                    defaultValue={fmtDateInput(t.tripDate)}
+                                    className="input"
+                                  />
+                                </div>
+                                <div>
+                                  <label className="mb-1 block text-xs font-medium text-gray-700">Plate #</label>
+                                  <input name="plateNumber" required defaultValue={t.plateNumber} className="input" />
+                                </div>
+                                <div>
+                                  <label className="mb-1 block text-xs font-medium text-gray-700">
+                                    Driver's Name
+                                  </label>
+                                  <input name="driverName" required defaultValue={t.driverName} className="input" />
+                                </div>
+                              </div>
+                              <div className="grid gap-3 sm:grid-cols-2">
+                                <div>
+                                  <label className="mb-1 block text-xs font-medium text-gray-700">
+                                    Helper's Name (1)
+                                  </label>
+                                  <input name="helper1Name" defaultValue={t.helper1Name} className="input" />
+                                </div>
+                                <div>
+                                  <label className="mb-1 block text-xs font-medium text-gray-700">
+                                    Helper's Name (2)
+                                  </label>
+                                  <input name="helper2Name" defaultValue={t.helper2Name} className="input" />
+                                </div>
+                              </div>
+                              <div className="grid gap-3 sm:grid-cols-2">
+                                <div>
+                                  <label className="mb-1 block text-xs font-medium text-gray-700">
+                                    Route: From
+                                  </label>
+                                  <input name="routeFrom" required defaultValue={t.routeFrom} className="input" />
+                                </div>
+                                <div>
+                                  <label className="mb-1 block text-xs font-medium text-gray-700">Route: To</label>
+                                  <input name="routeTo" required defaultValue={t.routeTo} className="input" />
+                                </div>
+                              </div>
+                              <div className="grid gap-3 sm:grid-cols-3">
+                                <div>
+                                  <label className="mb-1 block text-xs font-medium text-gray-700">
+                                    Gate Pass #
+                                  </label>
+                                  <input name="gatePassNumber" defaultValue={t.gatePassNumber} className="input" />
+                                </div>
+                                <div>
+                                  <label className="mb-1 block text-xs font-medium text-gray-700">DR/SI #</label>
+                                  <input name="drSiNumber" defaultValue={t.drSiNumber} className="input" />
+                                </div>
+                                <div>
+                                  <label className="mb-1 block text-xs font-medium text-gray-700">Waybill #</label>
+                                  <input name="waybillNumber" defaultValue={t.waybillNumber} className="input" />
+                                </div>
+                              </div>
+                              <div className="grid gap-3 sm:grid-cols-2">
+                                <div>
+                                  <label className="mb-1 block text-xs font-medium text-gray-700">Remarks</label>
+                                  <input name="remarks" defaultValue={t.remarks} className="input" />
+                                </div>
+                                <div>
+                                  <label className="mb-1 block text-xs font-medium text-gray-700">
+                                    Amount Rate (₱, VAT-exclusive)
+                                  </label>
+                                  <input
+                                    name="amountRate"
+                                    type="number"
+                                    step="0.01"
+                                    min="0"
+                                    required
+                                    defaultValue={t.amountRate}
+                                    className="input"
+                                  />
+                                </div>
+                              </div>
+                              <div className="flex items-center gap-3">
+                                <button type="submit" className="btn-primary">
+                                  Save Changes
+                                </button>
+                                <Link
+                                  href={`/admin/clients/${client.id}/customers/${customer.id}`}
+                                  className="text-sm text-gray-600 hover:underline"
+                                >
+                                  Cancel
+                                </Link>
+                              </div>
+                            </form>
+                          </td>
+                        </tr>
+                      ) : (
+                        <tr key={t.id}>
+                          <td className="px-3 py-2">
+                            <input type="checkbox" name="tripIds" value={t.id} defaultChecked form="billing-form" />
+                          </td>
+                          <td className="px-3 py-2 text-gray-700">{fmtDate(t.tripDate)}</td>
+                          <td className="px-3 py-2 text-gray-700">{t.plateNumber}</td>
+                          <td className="px-3 py-2 text-gray-700">{t.driverName}</td>
+                          <td className="px-3 py-2 text-gray-700">
+                            {[t.helper1Name, t.helper2Name].filter(Boolean).join(", ")}
+                          </td>
+                          <td className="px-3 py-2 text-gray-700">{t.routeFrom}</td>
+                          <td className="px-3 py-2 text-gray-700">{t.routeTo}</td>
+                          <td className="px-3 py-2 text-gray-700">{t.gatePassNumber}</td>
+                          <td className="px-3 py-2 text-gray-700">{t.drSiNumber}</td>
+                          <td className="px-3 py-2 text-gray-700">{t.waybillNumber}</td>
+                          <td className="px-3 py-2 text-gray-700">{t.remarks}</td>
+                          <td className="px-3 py-2 text-gray-700">
+                            ₱{t.amountRate.toLocaleString("en-PH", { minimumFractionDigits: 2 })}
+                          </td>
+                          <td className="px-3 py-2 whitespace-nowrap">
+                            <Link
+                              href={`/admin/clients/${client.id}/customers/${customer.id}?edit=${t.id}`}
+                              className="mr-3 text-brand-700 hover:underline"
+                              title="Edit this delivery"
+                            >
+                              Edit
+                            </Link>
+                            <form action={`/api/admin/trips/${t.id}/delete`} method="POST" className="inline">
+                              <button type="submit" className="text-red-600 hover:underline" title="Remove this delivery">
+                                Remove
+                              </button>
+                            </form>
+                          </td>
+                        </tr>
+                      )
+                    )}
                   </tbody>
                 </table>
               </div>
               <div className="mt-4 flex flex-wrap items-center gap-3">
-                <button type="submit" className="btn-primary">
+                <button type="submit" form="billing-form" className="btn-primary">
                   Generate Billing for Checked Deliveries
                 </button>
                 <p className="text-xs text-gray-500">
@@ -199,7 +329,7 @@ export default async function CustomerMonitoringPage({
                   commission from {client.name} - both from the deliveries checked above.
                 </p>
               </div>
-            </form>
+            </>
           )}
         </div>
 
