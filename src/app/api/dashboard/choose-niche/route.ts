@@ -4,6 +4,7 @@ import { eq } from "drizzle-orm";
 import { authOptions } from "@/lib/auth";
 import { db } from "@/db";
 import { users, courses } from "@/db/schema";
+import { redirectUrl } from "@/lib/redirect-url";
 import niches from "../../../../../content/niches.json";
 
 /**
@@ -30,7 +31,7 @@ export async function POST(req: Request) {
 
   function fail(message: string, status: number) {
     if (isFormSubmit) {
-      const url = new URL("/dashboard/choose-niche", req.url);
+      const url = redirectUrl(req, "/dashboard/choose-niche");
       url.searchParams.set("error", message);
       return NextResponse.redirect(url, { status: 303 });
     }
@@ -40,7 +41,7 @@ export async function POST(req: Request) {
   const session = await getServerSession(authOptions);
   if (!session?.user) {
     if (isFormSubmit) {
-      return NextResponse.redirect(new URL("/login", req.url), { status: 303 });
+      return NextResponse.redirect(redirectUrl(req, "/login"), { status: 303 });
     }
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
@@ -55,7 +56,7 @@ export async function POST(req: Request) {
     // the JS path already succeeded and this is a leftover native submit)
     // should just land them on their dashboard rather than show an error.
     if (isFormSubmit) {
-      return NextResponse.redirect(new URL("/dashboard", req.url), { status: 303 });
+      return NextResponse.redirect(redirectUrl(req, "/dashboard"), { status: 303 });
     }
     return NextResponse.json({ error: "You've already chosen a training niche" }, { status: 400 });
   }
@@ -82,7 +83,7 @@ export async function POST(req: Request) {
   await db.update(users).set({ courseId }).where(eq(users.id, userId));
 
   if (isFormSubmit) {
-    return NextResponse.redirect(new URL("/dashboard", req.url), { status: 303 });
+    return NextResponse.redirect(redirectUrl(req, "/dashboard"), { status: 303 });
   }
   return NextResponse.json({ success: true, courseId });
 }

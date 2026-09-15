@@ -5,6 +5,7 @@ import { and, eq, inArray, isNull } from "drizzle-orm";
 import { authOptions } from "@/lib/auth";
 import { db } from "@/db";
 import { personalClients, personalClientCustomers, deliveryTrips, billingBatches } from "@/db/schema";
+import { redirectUrl } from "@/lib/redirect-url";
 
 /**
  * The core "Generate Billing" action: takes a checked set of unbilled
@@ -102,5 +103,5 @@ export async function POST(req: Request, { params }: { params: { customerId: str
     .set({ nextInvoiceNumber: client.nextInvoiceNumber + 1 })
     .where(eq(personalClients.id, client.id));
 
-  return NextResponse.redirect(new URL(`/admin/clients/${client.id}/billing/${batchId}`, req.url), { status: 303 });
+  return NextResponse.redirect(redirectUrl(req, `/admin/clients/${client.id}/billing/${batchId}`), { status: 303 });
 }

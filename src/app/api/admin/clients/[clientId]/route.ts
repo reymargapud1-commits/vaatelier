@@ -4,6 +4,7 @@ import { eq } from "drizzle-orm";
 import { authOptions } from "@/lib/auth";
 import { db } from "@/db";
 import { personalClients } from "@/db/schema";
+import { redirectUrl } from "@/lib/redirect-url";
 
 /**
  * Updates a personal client's details (letterhead info, commission rate,
@@ -37,5 +38,5 @@ export async function POST(req: Request, { params }: { params: { clientId: strin
     })
     .where(eq(personalClients.id, params.clientId));
 
-  return NextResponse.redirect(new URL(`/admin/clients/${params.clientId}`, req.url), { status: 303 });
+  return NextResponse.redirect(redirectUrl(req, `/admin/clients/${params.clientId}`), { status: 303 });
 }

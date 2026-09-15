@@ -4,6 +4,7 @@ import { eq } from "drizzle-orm";
 import { authOptions } from "@/lib/auth";
 import { db } from "@/db";
 import { deliveryTrips, personalClientCustomers } from "@/db/schema";
+import { redirectUrl } from "@/lib/redirect-url";
 
 /**
  * Removes an unbilled delivery entry (a mis-logged trip). Trips that are
@@ -35,7 +36,7 @@ export async function POST(req: Request, { params }: { params: { tripId: string 
   await db.delete(deliveryTrips).where(eq(deliveryTrips.id, trip.id));
 
   return NextResponse.redirect(
-    new URL(`/admin/clients/${customer?.personalClientId}/customers/${trip.customerId}`, req.url),
+    redirectUrl(req, `/admin/clients/${customer?.personalClientId}/customers/${trip.customerId}`),
     { status: 303 }
   );
 }

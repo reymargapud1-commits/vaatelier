@@ -4,6 +4,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import { db } from "@/db";
 import { personalClients } from "@/db/schema";
+import { redirectUrl } from "@/lib/redirect-url";
 
 /**
  * Creates a new personal client (Admin > My Services). A plain HTML <form>
@@ -32,5 +33,5 @@ export async function POST(req: Request) {
     commissionRatePerTrip: Number(form.get("commissionRatePerTrip") || 500),
   });
 
-  return NextResponse.redirect(new URL(`/admin/clients/${id}`, req.url), { status: 303 });
+  return NextResponse.redirect(redirectUrl(req, `/admin/clients/${id}`), { status: 303 });
 }

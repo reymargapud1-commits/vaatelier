@@ -340,16 +340,25 @@ export default async function CustomerMonitoringPage({
           ) : (
             <ul className="space-y-2">
               {recentBatches.map((b) => (
-                <li key={b.id}>
+                <li key={b.id} className="flex items-center gap-2">
                   <Link
                     href={`/admin/clients/${client.id}/billing/${b.id}`}
-                    className="card flex items-center justify-between transition hover:-translate-y-0.5 hover:border-brand-300 hover:shadow-md"
+                    className="card flex flex-1 items-center justify-between transition hover:-translate-y-0.5 hover:border-brand-300 hover:shadow-md"
                   >
                     <span className="text-sm text-gray-700">
                       BS #{b.bsNumber} · {fmtDate(b.batchDate)} · {b.tripCount} trip(s)
                     </span>
                     <span className="text-sm text-brand-700">View / Download →</span>
                   </Link>
+                  <form action={`/api/admin/billing/${b.id}/delete`} method="POST">
+                    <button
+                      type="submit"
+                      className="text-sm text-red-600 hover:underline"
+                      title="Delete this billing statement (its deliveries return to Unbilled)"
+                    >
+                      Delete
+                    </button>
+                  </form>
                 </li>
               ))}
             </ul>

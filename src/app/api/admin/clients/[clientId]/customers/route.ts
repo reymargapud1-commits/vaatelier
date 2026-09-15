@@ -5,6 +5,7 @@ import { eq } from "drizzle-orm";
 import { authOptions } from "@/lib/auth";
 import { db } from "@/db";
 import { personalClients, personalClientCustomers } from "@/db/schema";
+import { redirectUrl } from "@/lib/redirect-url";
 
 /**
  * Adds a customer (an end-customer of a personal client, e.g. Paintplas
@@ -34,5 +35,5 @@ export async function POST(req: Request, { params }: { params: { clientId: strin
     name,
   });
 
-  return NextResponse.redirect(new URL(`/admin/clients/${client.id}`, req.url), { status: 303 });
+  return NextResponse.redirect(redirectUrl(req, `/admin/clients/${client.id}`), { status: 303 });
 }

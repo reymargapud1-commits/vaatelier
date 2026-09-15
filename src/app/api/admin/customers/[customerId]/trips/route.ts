@@ -5,6 +5,7 @@ import { eq } from "drizzle-orm";
 import { authOptions } from "@/lib/auth";
 import { db } from "@/db";
 import { personalClientCustomers, deliveryTrips } from "@/db/schema";
+import { redirectUrl } from "@/lib/redirect-url";
 
 /** Logs one delivery/trip for a personal client's customer (the monitoring table). */
 export async function POST(req: Request, { params }: { params: { customerId: string } }) {
@@ -62,7 +63,7 @@ export async function POST(req: Request, { params }: { params: { customerId: str
   });
 
   return NextResponse.redirect(
-    new URL(`/admin/clients/${customer.personalClientId}/customers/${customer.id}`, req.url),
+    redirectUrl(req, `/admin/clients/${customer.personalClientId}/customers/${customer.id}`),
     { status: 303 }
   );
 }

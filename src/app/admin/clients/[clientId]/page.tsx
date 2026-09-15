@@ -205,10 +205,22 @@ export default async function ClientDetailPage({ params }: { params: { clientId:
                       <td className="px-4 py-3 text-gray-700">{b.tripCount}</td>
                       <td className="px-4 py-3 text-gray-700">₱{b.totalToCustomer.toLocaleString("en-PH", { minimumFractionDigits: 2 })}</td>
                       <td className="px-4 py-3 text-gray-700">₱{b.commissionTotal.toLocaleString("en-PH", { minimumFractionDigits: 2 })}</td>
-                      <td className="px-4 py-3">
-                        <Link href={`/admin/clients/${client.id}/billing/${b.id}`} className="text-brand-700 hover:underline">
+                      <td className="whitespace-nowrap px-4 py-3">
+                        <Link
+                          href={`/admin/clients/${client.id}/billing/${b.id}`}
+                          className="mr-3 text-brand-700 hover:underline"
+                        >
                           View
                         </Link>
+                        <form action={`/api/admin/billing/${b.id}/delete`} method="POST" className="inline">
+                          <button
+                            type="submit"
+                            className="text-red-600 hover:underline"
+                            title="Delete this billing statement (its deliveries return to Unbilled)"
+                          >
+                            Delete
+                          </button>
+                        </form>
                       </td>
                     </tr>
                   ))}
