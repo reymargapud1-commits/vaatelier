@@ -60,6 +60,39 @@
             "Sharing your client login with friends"
           ],
           "correctIndex": 0
+        },
+        {
+          "id": "ec-m1-q6",
+          "text": "In dropshipping, who typically ships the product to the customer?",
+          "choices": [
+            "A third-party supplier, not the seller directly",
+            "The seller always ships it personally",
+            "The customer picks it up in person",
+            "It is never actually shipped"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ec-m1-q7",
+          "text": "What best describes social commerce?",
+          "choices": [
+            "Buying happens directly inside a social media app like TikTok",
+            "A type of in-store cash register",
+            "A method of paying employees",
+            "A way to remove products from a store"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ec-m1-q8",
+          "text": "What generally affects how much an E-commerce VA can charge?",
+          "choices": [
+            "Platform depth, scope of work, and portfolio strength",
+            "The VA’s favorite color",
+            "The time zone of the client only",
+            "Nothing - all E-commerce VAs charge the same rate"
+          ],
+          "correctIndex": 0
         }
       ]
     },
@@ -145,6 +178,39 @@
             "Zendesk"
           ],
           "correctIndex": 0
+        },
+        {
+          "id": "ec-m2-q8",
+          "text": "What is a key feature of TikTok Shop for sellers?",
+          "choices": [
+            "Products can be tagged directly in short videos or livestreams",
+            "It only supports print catalogs",
+            "It requires no fulfillment at all",
+            "It cannot be used by affiliates or creators"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ec-m2-q9",
+          "text": "What should you do before running a large bulk product upload?",
+          "choices": [
+            "Test the template with just a few products first",
+            "Skip reviewing the results afterward",
+            "Delete the original file immediately",
+            "Avoid using the platform’s official template"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ec-m2-q10",
+          "text": "What does a seller pay for with Amazon PPC (Sponsored Products)?",
+          "choices": [
+            "A charge each time a shopper clicks the ad",
+            "A flat yearly licensing fee",
+            "Nothing - Amazon PPC is entirely free",
+            "A charge only when the item is out of stock"
+          ],
+          "correctIndex": 0
         }
       ]
     },
@@ -208,6 +274,39 @@
             "It replaces the need for customer communication"
           ],
           "correctIndex": 1
+        },
+        {
+          "id": "ec-m3-q6",
+          "text": "What is the recommended way to respond to a negative product review?",
+          "choices": [
+            "Respond calmly, never defensively, and offer to resolve it",
+            "Delete it without responding",
+            "Argue publicly with the reviewer",
+            "Offer payment in exchange for changing the review"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ec-m3-q7",
+          "text": "What is a chargeback?",
+          "choices": [
+            "A customer disputes a charge directly through their bank or card",
+            "A discount code applied at checkout",
+            "A type of product return label",
+            "A fee charged for using a coupon"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ec-m3-q8",
+          "text": "What is the difference between cross-selling and upselling?",
+          "choices": [
+            "Cross-selling suggests a related item; upselling suggests a better/bigger version of the same item",
+            "They are exactly the same technique",
+            "Cross-selling only applies to refunds",
+            "Upselling means offering a lower price"
+          ],
+          "correctIndex": 0
         }
       ]
     },
@@ -271,6 +370,39 @@
             "Clients never look at portfolios"
           ],
           "correctIndex": 1
+        },
+        {
+          "id": "ec-m4-q6",
+          "text": "What should a mock store audit in your portfolio include?",
+          "choices": [
+            "A few observations plus specific, actionable recommendations",
+            "Only vague, general compliments about the store",
+            "Private customer data from the store",
+            "Nothing - audits should never be shown to clients"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ec-m4-q7",
+          "text": "What is a good use for a short portfolio walkthrough video?",
+          "choices": [
+            "Showing your voice and communication style beyond a static resume",
+            "Replacing the need for any written portfolio at all",
+            "Sharing a client’s private login information",
+            "Avoiding the need to ever apply to jobs"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ec-m4-q8",
+          "text": "What makes a client testimonial strong?",
+          "choices": [
+            "It names a specific result, not just a vague compliment",
+            "It is written entirely by the VA, not the client",
+            "It never mentions any actual outcome",
+            "It must always be anonymous"
+          ],
+          "correctIndex": 0
         }
       ]
     },
@@ -334,6 +466,39 @@
             "Written only in technical jargon"
           ],
           "correctIndex": 1
+        },
+        {
+          "id": "ec-m5-q6",
+          "text": "How should you approach a paid trial task from a potential client?",
+          "choices": [
+            "Treat it with the same care as real paid work",
+            "Rush through it without reading the instructions",
+            "Ignore any clarifying questions you might have",
+            "Refuse to complete any trial tasks ever"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ec-m5-q7",
+          "text": "What is a smart way to negotiate without undervaluing yourself?",
+          "choices": [
+            "Offer a smaller scope instead of simply lowering your rate",
+            "Always agree to whatever rate is offered",
+            "Refuse to discuss scope at all",
+            "Never put any agreement in writing"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ec-m5-q8",
+          "text": "Which is a red flag to watch for in a client job posting?",
+          "choices": [
+            "Vague scope paired with an unrealistically low budget",
+            "A clearly defined scope and fair budget",
+            "A client who answers questions patiently",
+            "A reasonable, agreed-upon timeline"
+          ],
+          "correctIndex": 0
         }
       ]
     },
@@ -419,6 +584,39 @@
             "Lower your rates to attract more clients"
           ],
           "correctIndex": 1
+        },
+        {
+          "id": "ec-m6-q8",
+          "text": "What does DDP mean in international shipping?",
+          "choices": [
+            "The seller covers duties and taxes upfront for the customer",
+            "The customer always pays duties on delivery",
+            "The product cannot be shipped internationally",
+            "Duties are never charged on any order"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ec-m6-q9",
+          "text": "What does COGS stand for, and why does it matter?",
+          "choices": [
+            "Cost of Goods Sold - it helps show a rough profit picture",
+            "Customer Order Growth Score - a marketing metric only",
+            "A shipping carrier abbreviation",
+            "A type of product return policy"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "ec-m6-q10",
+          "text": "What is the main benefit of writing SOPs (Standard Operating Procedures)?",
+          "choices": [
+            "They turn a known task into a repeatable process others can follow",
+            "They are required by law for every online store",
+            "They replace the need for any client communication",
+            "They only apply to Amazon sellers"
+          ],
+          "correctIndex": 0
         }
       ]
     }
