@@ -35,28 +35,39 @@ interface Column {
   label: string;
   width: number;
   align?: "left" | "right" | "center";
+  // Free-text fields (names, addresses, remarks) wrap onto extra lines
+  // instead of being truncated, so a long driver/helper name or address
+  // is never cut off - see wrapText() below. Short, fixed-format codes
+  // (SN, date, plate #) stay single-line since they never need it.
+  wrap?: boolean;
 }
 
 const TRIP_COLUMNS: Column[] = [
   { key: "sn", label: "SN", width: 16, align: "center" },
   { key: "date", label: "Date", width: 46, align: "center" },
   { key: "plate", label: "Plate #", width: 42, align: "center" },
-  { key: "driver", label: "Driver's Name", width: 75 },
-  { key: "helpers", label: "Helper's Name", width: 115 },
-  { key: "from", label: "From", width: 88 },
-  { key: "to", label: "To", width: 62 },
-  { key: "gatepass", label: "Gate Pass #", width: 40, align: "center" },
-  { key: "drsi", label: "DR/SI #", width: 65, align: "center" },
-  { key: "waybill", label: "Waybill #", width: 42, align: "center" },
-  { key: "remarks", label: "Remarks", width: 79 },
+  { key: "driver", label: "Driver's Name", width: 85, wrap: true },
+  { key: "helpers", label: "Helper's Name", width: 140, wrap: true },
+  { key: "from", label: "From", width: 95, wrap: true },
+  { key: "to", label: "To", width: 67, wrap: true },
+  { key: "gatepass", label: "Gate Pass", width: 42, align: "center", wrap: true },
+  { key: "drsi", label: "DR/SI #", width: 55, align: "center", wrap: true },
+  { key: "waybill", label: "Waybill #", width: 40, align: "center", wrap: true },
+  { key: "remarks", label: "Remarks", width: 60, wrap: true },
 ];
 
-// pdf-lib's drawText will happily overflow past its box - and with
-// maxWidth set, it WRAPS onto a second line instead of clipping, which
-// then collides with the row drawn underneath it. Since these cells are
-// short, single-line data (names, plate numbers, reference numbers), the
-// right fix is truncating with an ellipsis rather than wrapping, so a long
-// value never bleeds into the next row.
+// Row geometry shared between the height calculation and the drawing pass
+// below - a wrapped cell needs to know its own line count before the row
+// height (and therefore every other cell's vertical position) can be set.
+const LINE_HEIGHT = 8.5;
+const ROW_TOP_PADDING = 10.5; // matches the original single-line baseline offset
+const ROW_BOTTOM_PADDING = 4;
+const MIN_ROW_HEIGHT = 15.5;
+const MAX_WRAP_LINES = 4;
+
+// pdf-lib's drawText will happily overflow past its box, so single-line
+// cells (short, fixed-format codes) are truncated with an ellipsis rather
+// than left to bleed into the next column.
 function fitText(font: PDFFont, text: string, size: number, maxWidth: number): string {
   if (font.widthOfTextAtSize(text, size) <= maxWidth) return text;
   let truncated = text;
@@ -64,6 +75,58 @@ function fitText(font: PDFFont, text: string, size: number, maxWidth: number): s
     truncated = truncated.slice(0, -1);
   }
   return truncated + "…";
+}
+
+// Greedy word-wrap for free-text cells (names, addresses, remarks) so the
+// full value stays readable instead of being cut off with "…". Caps at
+// MAX_WRAP_LINES - beyond that (a genuinely huge value) the last line is
+// truncated, same as fitText, so one outlier can't blow up the whole table.
+function wrapText(font: PDFFont, text: string, size: number, maxWidth: number): string[] {
+  if (!text) return [""];
+  const words = text.split(/\s+/).filter(Boolean);
+  if (words.length === 0) return [""];
+
+  // Wrap the full value first, uncapped, so we know exactly how much text
+  // exists past the line budget (if any) - a truncation indicator is only
+  // meaningful when we know for certain something was cut.
+  const lines: string[] = [];
+  let current = "";
+  for (const word of words) {
+    const candidate = current ? `${current} ${word}` : word;
+    if (font.widthOfTextAtSize(candidate, size) <= maxWidth) {
+      current = candidate;
+      continue;
+    }
+    if (current) lines.push(current);
+    // A single word longer than the whole column (rare - a long reference
+    // code with no spaces) is hard-broken character by character.
+    if (font.widthOfTextAtSize(word, size) > maxWidth) {
+      let chunk = "";
+      for (const ch of word) {
+        const test = chunk + ch;
+        if (font.widthOfTextAtSize(test, size) > maxWidth && chunk) {
+          lines.push(chunk);
+          chunk = ch;
+        } else {
+          chunk = test;
+        }
+      }
+      current = chunk;
+    } else {
+      current = word;
+    }
+  }
+  if (current) lines.push(current);
+
+  if (lines.length <= MAX_WRAP_LINES) return lines;
+
+  // Too tall for the row budget - collapse everything from MAX_WRAP_LINES
+  // onward into one line and let fitText truncate it with "…", so a cut
+  // value is always visibly marked rather than silently dropped.
+  const kept = lines.slice(0, MAX_WRAP_LINES - 1);
+  const remainder = lines.slice(MAX_WRAP_LINES - 1).join(" ");
+  kept.push(fitText(font, remainder, size, maxWidth));
+  return kept;
 }
 
 function drawTripTableHeader(
@@ -79,36 +142,54 @@ function drawTripTableHeader(
   const totalWidth = columns.reduce((s, c) => s + c.width, 0);
   page.drawRectangle({ x: x0, y: y - 16, width: totalWidth, height: 16, color: headerColor });
   for (const col of columns) {
-    page.drawText(col.label, { x: x + 3, y: y - 11, size: 7, font, color: textColor });
+    // Fit each header label to its own column - a couple of the reference-
+    // number columns (Gate Pass #, DR/SI #) are narrow enough that an
+    // un-truncated bold label would otherwise bleed into the next header.
+    const label = fitText(font, col.label, 7, col.width - 4);
+    page.drawText(label, { x: x + 3, y: y - 11, size: 7, font, color: textColor });
     x += col.width;
   }
   return totalWidth;
+}
+
+// Wraps each cell in a row (for columns marked wrap: true) and returns the
+// row height that fits the tallest cell - call this before drawRow so the
+// caller knows how much vertical space the row will actually need.
+function measureRow(values: string[], columns: Column[], font: PDFFont, size: number): { linesPerCol: string[][]; rowHeight: number } {
+  const linesPerCol = columns.map((col, i) => {
+    const text = values[i] ?? "";
+    if (col.wrap) return wrapText(font, text, size, col.width - 4);
+    return [fitText(font, text, size, col.width - 4)];
+  });
+  const maxLines = Math.max(1, ...linesPerCol.map((l) => l.length));
+  const rowHeight = maxLines <= 1 ? MIN_ROW_HEIGHT : ROW_TOP_PADDING + (maxLines - 1) * LINE_HEIGHT + ROW_BOTTOM_PADDING;
+  return { linesPerCol, rowHeight };
 }
 
 function drawRow(
   page: PDFPage,
   x0: number,
   y: number,
-  values: string[],
+  linesPerCol: string[][],
   columns: Column[],
   font: PDFFont,
-  color: RGB,
-  rowHeight: number
+  color: RGB
 ) {
   let x = x0;
+  const size = 7;
   for (let i = 0; i < columns.length; i++) {
     const col = columns[i];
-    const size = 7;
-    const text = fitText(font, values[i] ?? "", size, col.width - 4);
-    let drawX = x + 3;
-    if (col.align === "center") {
-      const w = font.widthOfTextAtSize(text, size);
-      drawX = x + (col.width - w) / 2;
-    } else if (col.align === "right") {
-      const w = font.widthOfTextAtSize(text, size);
-      drawX = x + col.width - w - 3;
-    }
-    page.drawText(text, { x: drawX, y: y - rowHeight + 5, size, font, color });
+    const lines = linesPerCol[i];
+    lines.forEach((line, li) => {
+      let drawX = x + 3;
+      const w = font.widthOfTextAtSize(line, size);
+      if (col.align === "center") {
+        drawX = x + (col.width - w) / 2;
+      } else if (col.align === "right") {
+        drawX = x + col.width - w - 3;
+      }
+      page.drawText(line, { x: drawX, y: y - ROW_TOP_PADDING - li * LINE_HEIGHT, size, font, color });
+    });
     x += col.width;
   }
 }
@@ -198,7 +279,6 @@ export async function generateBillingStatementPdf(
 
   // Table
   const tableTop = y - 24;
-  const rowHeight = 15.5;
   let rowY = tableTop;
   const tableX = marginX;
   const tableWidth = drawTripTableHeader(page, tableX, rowY, TRIP_COLUMNS, sansBold, navy, white);
@@ -207,37 +287,32 @@ export async function generateBillingStatementPdf(
   let subtotal = 0;
   trips.forEach((t, idx) => {
     subtotal += t.amountRate;
+    const values = [
+      String(idx + 1),
+      formatDate(t.tripDate),
+      t.plateNumber,
+      t.driverName,
+      [t.helper1Name, t.helper2Name].filter(Boolean).join(", "),
+      t.routeFrom,
+      t.routeTo,
+      t.gatePassNumber,
+      t.drSiNumber,
+      t.waybillNumber,
+      t.remarks,
+    ];
+    const { linesPerCol, rowHeight: thisRowHeight } = measureRow(values, TRIP_COLUMNS, sans, 7);
+
     if (idx % 2 === 1) {
-      page.drawRectangle({ x: tableX, y: rowY - rowHeight, width: tableWidth, height: rowHeight, color: rgb(0.96, 0.96, 0.97) });
+      page.drawRectangle({ x: tableX, y: rowY - thisRowHeight, width: tableWidth, height: thisRowHeight, color: rgb(0.96, 0.96, 0.97) });
     }
-    drawRow(
-      page,
-      tableX,
-      rowY,
-      [
-        String(idx + 1),
-        formatDate(t.tripDate),
-        t.plateNumber,
-        t.driverName,
-        [t.helper1Name, t.helper2Name].filter(Boolean).join(" "),
-        t.routeFrom,
-        t.routeTo,
-        t.gatePassNumber,
-        t.drSiNumber,
-        t.waybillNumber,
-        t.remarks,
-      ],
-      TRIP_COLUMNS,
-      sans,
-      ink,
-      rowHeight
-    );
+    drawRow(page, tableX, rowY, linesPerCol, TRIP_COLUMNS, sans, ink);
     // Amount column drawn separately (right-aligned, outside the shared
-    // column set so it can carry its own header/number formatting).
+    // column set so it can carry its own header/number formatting). Kept
+    // on the row's first line, matching the top-aligned name/route cells.
     const amtText = peso(t.amountRate);
     const amtX = tableX + tableWidth + 90 - 3 - sans.widthOfTextAtSize(amtText, 7);
-    page.drawText(amtText, { x: amtX, y: rowY - rowHeight + 5, size: 7, font: sans, color: ink });
-    rowY -= rowHeight;
+    page.drawText(amtText, { x: amtX, y: rowY - ROW_TOP_PADDING, size: 7, font: sans, color: ink });
+    rowY -= thisRowHeight;
     page.drawLine({ start: { x: tableX, y: rowY }, end: { x: tableX + tableWidth + 90, y: rowY }, thickness: 0.4, color: lineColor });
   });
 
