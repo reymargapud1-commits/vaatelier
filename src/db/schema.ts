@@ -12,7 +12,7 @@ export const users = sqliteTable("users", {
   name: text("name").notNull(),
   email: text("email").notNull().unique(),
   passwordHash: text("password_hash").notNull(),
-  role: text("role").notNull().default("student"), // "student" | "admin"
+  role: text("role").notNull().default("student"), // "student" | "admin" | "staff"
   isPaid: integer("is_paid", { mode: "boolean" }).notNull().default(false),
   paidAt: integer("paid_at", { mode: "timestamp" }),
   // Every enrolled (isPaid) student gets exactly ONE free 1-on-1 coaching
@@ -241,6 +241,97 @@ export const personalClientCustomers = sqliteTable("personal_client_customers", 
   nextBsNumber: integer("next_bs_number").notNull().default(1),
   createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
 });
+
+// -----------------------------------------------------------------------
+// Personal VA / Staff module - Reymar's own employee(s) (users.role ===
+// "staff"), entirely separate from both the training portal's students and
+// the personalClients billing tools above. Built for one staff member today
+// but flexible for more: everything keys off userId, so adding another
+// staff account is just creating another user + staffProfiles row, nothing
+// here is hardcoded to a single person.
+//
+// Pay model (locked-in design decisions):
+// - Fixed DAILY rate (araw-araw) - not hourly, not a flat monthly salary.
+//   A day counts as "present" if there's at least one clock-in that
+//   Asia/Manila calendar day - see lib/staff-payroll.ts.
+// - Semi-monthly cutoff: the 1st-15th and the 16th-end of each month.
+// - Cash advances are a running ledger, but the amount DEDUCTED from any
+//   given payroll run is always typed in by hand by the admin when
+//   generating that run (staffPayrollRuns.cashAdvanceDeductionCentavos) -
+//   never auto-computed from the ledger below.
+// -----------------------------------------------------------------------
+
+// One-to-one with a users row (role: "staff") - the employment details that
+// don't apply to a training-portal student.
+export const staffProfiles = sqliteTable("staff_profiles", {
+  id: text("id").primaryKey(),
+  userId: text("user_id").notNull().unique().references(() => users.id),
+  position: text("position").notNull().default("Virtual Assistant"),
+  dailyRateCentavos: integer("daily_rate_centavos").notNull(),
+  startDate: integer("start_date", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
+  // Free-text service agreement body (employment terms), set by the admin
+  // when adding/editing the staff member - rendered as a downloadable PDF,
+  // see lib/staff-pdf.ts.
+  serviceAgreement: text("service_agreement").notNull().default(""),
+  active: integer("active", { mode: "boolean" }).notNull().default(true),
+  createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
+});
+
+// One row per clock-in. clockOut is null while the staff member is
+// currently clocked in. "Present that day" (for payroll) = at least one row
+// whose clockIn falls on a given Asia/Manila calendar day.
+export const staffTimeEntries = sqliteTable("staff_time_entries", {
+  id: text("id").primaryKey(),
+  userId: text("user_id").notNull().references(() => users.id),
+  clockIn: integer("clock_in", { mode: "timestamp" }).notNull(),
+  clockOut: integer("clock_out", { mode: "timestamp" }),
+  createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
+});
+
+// A cash advance given to the staff member, logged as it happens. This is
+// just the running ledger - it is NOT automatically deducted from any
+// payroll run (see staffPayrollRuns.cashAdvanceDeductionCentavos). `settled`
+// is a manual flag the admin toggles once they've accounted for an advance
+// in a payroll run, purely for tracking - it has no computed effect.
+export const staffCashAdvances = sqliteTable("staff_cash_advances", {
+  id: text("id").primaryKey(),
+  userId: text("user_id").notNull().references(() => users.id),
+  amountCentavos: integer("amount_centavos").notNull(),
+  dateGiven: integer("date_given", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
+  note: text("note").notNull().default(""),
+  settled: integer("settled", { mode: "boolean" }).notNull().default(false),
+  createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
+});
+
+// One payroll run = one semi-monthly cutoff for one staff member.
+// daysPresent x dailyRateCentavos = grossPayCentavos. dailyRateCentavos is
+// copied from staffProfiles at generation time (frozen, so a later rate
+// change never rewrites an already-issued payslip). periodKey (e.g.
+// "2026-08-A"/"2026-08-B" - see lib/staff-payroll.ts) makes "has this
+// period already been generated" a simple lookup and prevents duplicates.
+export const staffPayrollRuns = sqliteTable(
+  "staff_payroll_runs",
+  {
+    id: text("id").primaryKey(),
+    userId: text("user_id").notNull().references(() => users.id),
+    periodKey: text("period_key").notNull(),
+    periodLabel: text("period_label").notNull(),
+    periodStart: integer("period_start", { mode: "timestamp" }).notNull(),
+    periodEnd: integer("period_end", { mode: "timestamp" }).notNull(),
+    daysPresent: integer("days_present").notNull(),
+    dailyRateCentavos: integer("daily_rate_centavos").notNull(),
+    grossPayCentavos: integer("gross_pay_centavos").notNull(),
+    // Typed in by hand by the admin when generating this run - see the
+    // module-level comment above. Defaults to 0 (no deduction this period).
+    cashAdvanceDeductionCentavos: integer("cash_advance_deduction_centavos").notNull().default(0),
+    deductionNote: text("deduction_note").notNull().default(""),
+    netPayCentavos: integer("net_pay_centavos").notNull(),
+    generatedAt: integer("generated_at", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
+  },
+  (table) => ({
+    userPeriodUnique: uniqueIndex("staff_payroll_user_period_unique").on(table.userId, table.periodKey),
+  })
+);
 
 export const deliveryTrips = sqliteTable("delivery_trips", {
   id: text("id").primaryKey(),

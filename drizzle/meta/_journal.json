@@ -50,6 +50,13 @@
       "when": 1788372771791,
       "tag": "0006_sweet_fantastic_four",
       "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "6",
+      "when": 1792972997316,
+      "tag": "0007_sharp_blockbuster",
+      "breakpoints": true
     }
   ]
 }

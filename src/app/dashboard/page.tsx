@@ -16,6 +16,11 @@ export default async function DashboardPage() {
   const [user] = await db.select().from(users).where(eq(users.id, userId)).limit(1);
   if (!user) redirect("/login");
 
+  // Staff accounts (Personal VA / Staff module) have their own dashboard -
+  // time keeping, payroll, payslips, cash advances - entirely separate from
+  // the training-portal flow below.
+  if (user.role === "staff") redirect("/staff");
+
   // Coaching and the VA Document Store don't require enrollment - a
   // registered-but-not-yet-enrolled student gets a menu of all 3 instead
   // of being forced straight to the enrollment payment page.

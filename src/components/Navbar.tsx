@@ -17,15 +17,34 @@ export default function Navbar() {
         <nav className="flex items-center gap-3 text-sm">
           {session?.user ? (
             <>
-              <Link href="/dashboard" className="text-gray-700 hover:text-brand-700">
-                Dashboard
-              </Link>
-              <Link href="/dashboard/booking" className="text-gray-700 hover:text-brand-700">
-                Coaching
-              </Link>
-              <Link href="/dashboard/store" className="text-gray-700 hover:text-brand-700">
-                Store
-              </Link>
+              {(session.user as any).role === "staff" ? (
+                <>
+                  <Link href="/staff" className="text-gray-700 hover:text-brand-700">
+                    Dashboard
+                  </Link>
+                  <Link href="/staff/payslips" className="text-gray-700 hover:text-brand-700">
+                    Payslips
+                  </Link>
+                  <Link href="/staff/cash-advances" className="text-gray-700 hover:text-brand-700">
+                    Cash Advances
+                  </Link>
+                  <Link href="/staff/agreement" className="text-gray-700 hover:text-brand-700">
+                    Agreement
+                  </Link>
+                </>
+              ) : (
+                <>
+                  <Link href="/dashboard" className="text-gray-700 hover:text-brand-700">
+                    Dashboard
+                  </Link>
+                  <Link href="/dashboard/booking" className="text-gray-700 hover:text-brand-700">
+                    Coaching
+                  </Link>
+                  <Link href="/dashboard/store" className="text-gray-700 hover:text-brand-700">
+                    Store
+                  </Link>
+                </>
+              )}
               {(session.user as any).role === "admin" && (
                 <>
                   <Link href="/admin/students" className="text-gray-700 hover:text-brand-700">
@@ -33,6 +52,9 @@ export default function Navbar() {
                   </Link>
                   <Link href="/admin/curriculum" className="text-gray-700 hover:text-brand-700">
                     Curriculum
+                  </Link>
+                  <Link href="/admin/staff" className="text-gray-700 hover:text-brand-700">
+                    Staff
                   </Link>
                   <Link href="/admin/clients" className="text-gray-700 hover:text-brand-700">
                     My Services
