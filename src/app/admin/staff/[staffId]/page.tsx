@@ -88,6 +88,10 @@ export default async function AdminStaffDetailPage({ params }: { params: { staff
         <div className="card mb-8">
           <h2 className="mb-4 font-bold text-gray-900">Profile</h2>
           <form action={`/api/admin/staff/${staffUser.id}/update`} method="POST" className="space-y-3">
+            <div>
+              <label className="mb-1 block text-sm font-medium text-gray-700">Full Name</label>
+              <input name="name" required defaultValue={staffUser.name} className="input" />
+            </div>
             <div className="grid gap-3 sm:grid-cols-2">
               <div>
                 <label className="mb-1 block text-sm font-medium text-gray-700">Position</label>
