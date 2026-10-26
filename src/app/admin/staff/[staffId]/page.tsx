@@ -6,7 +6,7 @@ import { authOptions } from "@/lib/auth";
 import { db } from "@/db";
 import { users, staffProfiles, staffTimeEntries, staffCashAdvances, staffPayrollRuns } from "@/db/schema";
 import Navbar from "@/components/Navbar";
-import { listRecentPayPeriods } from "@/lib/staff-payroll";
+import { listRecentPayPeriods, listPresentDates } from "@/lib/staff-payroll";
 
 function peso(centavos: number): string {
   return `₱${(centavos / 100).toLocaleString("en-PH", { minimumFractionDigits: 2 })}`;
@@ -17,6 +17,16 @@ function fmtDateInput(d: Date): string {
   const m = String(d.getMonth() + 1).padStart(2, "0");
   const day = String(d.getDate()).padStart(2, "0");
   return `${y}-${m}-${day}`;
+}
+
+/** "2026-10-14" -> "Oct 14" for the little present-date chips. */
+function fmtChip(isoDate: string): string {
+  const [y, m, d] = isoDate.split("-").map(Number);
+  return new Date(Date.UTC(y, m - 1, d)).toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    timeZone: "UTC",
+  });
 }
 
 export default async function AdminStaffDetailPage({ params }: { params: { staffId: string } }) {
@@ -34,7 +44,7 @@ export default async function AdminStaffDetailPage({ params }: { params: { staff
     .from(staffTimeEntries)
     .where(eq(staffTimeEntries.userId, params.staffId))
     .orderBy(desc(staffTimeEntries.clockIn))
-    .limit(15);
+    .limit(30);
 
   const cashAdvances = await db
     .select()
@@ -51,6 +61,18 @@ export default async function AdminStaffDetailPage({ params }: { params: { staff
   const generatedPeriodKeys = new Set(payrollRuns.map((r) => r.periodKey));
 
   const candidatePeriods = listRecentPayPeriods(8).filter((p) => !generatedPeriodKeys.has(p.key));
+
+  // Attendance log sheet, summarized by pay period - lets the admin see at a
+  // glance which days are already logged (and spot gaps to fill in manually)
+  // before generating payroll for that period.
+  const recentPeriods = listRecentPayPeriods(4);
+  const periodSummaries = await Promise.all(
+    recentPeriods.map(async (p) => ({
+      period: p,
+      presentDates: await listPresentDates(params.staffId, p),
+      payrollGenerated: generatedPeriodKeys.has(p.key),
+    }))
+  );
 
   return (
     <>
@@ -121,6 +143,122 @@ export default async function AdminStaffDetailPage({ params }: { params: { staff
           </form>
         </div>
 
+        {/* --- Attendance / Time Log --- */}
+        <div className="card mb-8">
+          <h2 className="mb-1 font-bold text-gray-900">Attendance</h2>
+          <p className="mb-4 text-sm text-gray-500">
+            Cutoff: the 11th-25th is paid on the 30th of that month; the 26th through the 10th of the next
+            month is paid on the 15th of that next month.
+          </p>
+
+          {/* Log sheet summary, per period - catch missing days before generating payroll. */}
+          <div className="mb-6 space-y-3">
+            {periodSummaries.map(({ period, presentDates, payrollGenerated }) => (
+              <div key={period.key} className="rounded-lg border border-gray-100 px-4 py-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <p className="text-sm font-semibold text-gray-900">{period.label}</p>
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs text-gray-500">Payday {period.paydayLabel}</span>
+                    {payrollGenerated && (
+                      <span className="rounded-full bg-emerald-50 px-2 py-0.5 text-xs font-medium text-emerald-700">
+                        Payroll generated
+                      </span>
+                    )}
+                  </div>
+                </div>
+                <p className="mt-1 text-xs text-gray-500">
+                  {presentDates.length} day(s) logged
+                  {presentDates.length > 0 && ":"}
+                </p>
+                {presentDates.length > 0 && (
+                  <div className="mt-2 flex flex-wrap gap-1.5">
+                    {presentDates.map((d) => (
+                      <span key={d} className="rounded-full bg-brand-50 px-2 py-0.5 text-xs text-brand-700">
+                        {fmtChip(d)}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Manual entry - for a day the staff member forgot to clock in/out. */}
+          <form
+            action={`/api/admin/staff/${staffUser.id}/time-entries`}
+            method="POST"
+            className="mb-6 space-y-3 border-t border-gray-100 pt-5"
+          >
+            <h3 className="text-sm font-semibold text-gray-900">Add a Manual Entry</h3>
+            <div className="grid gap-3 sm:grid-cols-3">
+              <div>
+                <label className="mb-1 block text-sm font-medium text-gray-700">Date</label>
+                <input name="date" type="date" required defaultValue={fmtDateInput(new Date())} className="input" />
+              </div>
+              <div>
+                <label className="mb-1 block text-sm font-medium text-gray-700">Clock In (optional)</label>
+                <input name="clockInTime" type="time" defaultValue="09:00" className="input" />
+              </div>
+              <div>
+                <label className="mb-1 block text-sm font-medium text-gray-700">Clock Out (optional)</label>
+                <input name="clockOutTime" type="time" defaultValue="18:00" className="input" />
+              </div>
+            </div>
+            <p className="text-xs text-gray-500">
+              Only the date matters for payroll - a day counts as "present" if it has at least one entry. The
+              times above are just for the record.
+            </p>
+            <button type="submit" className="btn-secondary">
+              Add Entry
+            </button>
+          </form>
+
+          {/* Raw log, most recent first. */}
+          <div>
+            <h3 className="mb-3 text-sm font-semibold text-gray-900">Full Log</h3>
+            {recentEntries.length === 0 ? (
+              <p className="text-sm text-gray-500">No time entries yet.</p>
+            ) : (
+              <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
+                <table className="w-full text-left text-sm">
+                  <thead className="bg-gray-50 text-gray-600">
+                    <tr>
+                      <th className="px-4 py-3 font-medium">Date</th>
+                      <th className="px-4 py-3 font-medium">Clock In</th>
+                      <th className="px-4 py-3 font-medium">Clock Out</th>
+                      <th className="px-4 py-3 font-medium"></th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-100">
+                    {recentEntries.map((e) => (
+                      <tr key={e.id}>
+                        <td className="px-4 py-3 text-gray-700">
+                          {e.clockIn.toLocaleDateString("en-PH", { timeZone: "Asia/Manila", dateStyle: "medium" })}
+                        </td>
+                        <td className="px-4 py-3 text-gray-700">
+                          {e.clockIn.toLocaleTimeString("en-PH", { timeZone: "Asia/Manila", hour: "numeric", minute: "2-digit" })}
+                        </td>
+                        <td className="px-4 py-3 text-gray-700">
+                          {e.clockOut
+                            ? e.clockOut.toLocaleTimeString("en-PH", { timeZone: "Asia/Manila", hour: "numeric", minute: "2-digit" })
+                            : <span className="text-brand-600">Still clocked in</span>}
+                        </td>
+                        <td className="px-4 py-3 text-right">
+                          <form action={`/api/admin/staff/${staffUser.id}/time-entries/${e.id}/delete`} method="POST">
+                            <button type="submit" className="text-xs text-red-600 hover:underline">
+                              Delete
+                            </button>
+                          </form>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
+          </div>
+        </div>
+
         {/* --- Payroll --- */}
         <div className="card mb-8">
           <h2 className="mb-4 font-bold text-gray-900">Generate Payroll</h2>
@@ -136,7 +274,7 @@ export default async function AdminStaffDetailPage({ params }: { params: { staff
                   <select name="periodKey" required className="input">
                     {candidatePeriods.map((p) => (
                       <option key={p.key} value={p.key}>
-                        {p.label}
+                        {p.label} (Payday {p.paydayLabel})
                       </option>
                     ))}
                   </select>
@@ -158,7 +296,7 @@ export default async function AdminStaffDetailPage({ params }: { params: { staff
                 </p>
               )}
               <p className="text-xs text-gray-500">
-                Days present and gross pay are computed automatically from the time clock below, using the
+                Days present and gross pay are computed automatically from the attendance log above, using the
                 current daily rate ({peso(profile.dailyRateCentavos)}).
               </p>
               <button type="submit" className="btn-primary">
@@ -202,7 +340,7 @@ export default async function AdminStaffDetailPage({ params }: { params: { staff
         </div>
 
         {/* --- Cash Advances --- */}
-        <div className="card mb-8">
+        <div className="card">
           <h2 className="mb-4 font-bold text-gray-900">Cash Advances</h2>
           <form action={`/api/admin/staff/${staffUser.id}/cash-advances`} method="POST" className="mb-5 space-y-3">
             <div className="grid gap-3 sm:grid-cols-3">
@@ -251,43 +389,6 @@ export default async function AdminStaffDetailPage({ params }: { params: { staff
                   </form>
                 </div>
               ))}
-            </div>
-          )}
-        </div>
-
-        {/* --- Time Log --- */}
-        <div className="card">
-          <h2 className="mb-4 font-bold text-gray-900">Recent Time Log</h2>
-          {recentEntries.length === 0 ? (
-            <p className="text-sm text-gray-500">No time entries yet.</p>
-          ) : (
-            <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
-              <table className="w-full text-left text-sm">
-                <thead className="bg-gray-50 text-gray-600">
-                  <tr>
-                    <th className="px-4 py-3 font-medium">Date</th>
-                    <th className="px-4 py-3 font-medium">Clock In</th>
-                    <th className="px-4 py-3 font-medium">Clock Out</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-100">
-                  {recentEntries.map((e) => (
-                    <tr key={e.id}>
-                      <td className="px-4 py-3 text-gray-700">
-                        {e.clockIn.toLocaleDateString("en-PH", { timeZone: "Asia/Manila", dateStyle: "medium" })}
-                      </td>
-                      <td className="px-4 py-3 text-gray-700">
-                        {e.clockIn.toLocaleTimeString("en-PH", { timeZone: "Asia/Manila", hour: "numeric", minute: "2-digit" })}
-                      </td>
-                      <td className="px-4 py-3 text-gray-700">
-                        {e.clockOut
-                          ? e.clockOut.toLocaleTimeString("en-PH", { timeZone: "Asia/Manila", hour: "numeric", minute: "2-digit" })
-                          : <span className="text-brand-600">Still clocked in</span>}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
             </div>
           )}
         </div>
