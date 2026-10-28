@@ -4,7 +4,16 @@ import path from "path";
 import bcrypt from "bcryptjs";
 import { eq } from "drizzle-orm";
 import { db } from "./index";
-import { users, courses, modules, lessons, quizzes, questions, personalClients, personalClientCustomers } from "./schema";
+import {
+  users,
+  courses,
+  modules,
+  lessons,
+  quizzes,
+  questions,
+  personalClients,
+  personalClientCustomers,
+} from "./schema";
 
 // -----------------------------------------------------------------------
 // Training niches: content/niches.json lists every niche (= one course).
@@ -193,6 +202,7 @@ export async function seedDatabase() {
   }
 
   await seedPersonalClients();
+  await seedJjts();
 
   console.log("Seed complete.");
 }
@@ -234,4 +244,36 @@ async function seedPersonalClients() {
   });
 
   console.log("Seeded personal client: 5RJSL Lanuza Logistics Corp. (customer: Paintplas Corporation)");
+}
+
+// JJTS Enterprises - a trucking client whose engagement with Reymar is PMS
+// (preventive maintenance) monitoring for their delivery fleet, not trip
+// billing - see fleetVehicles/fleetPmsRecords in schema.ts. They're still a
+// personalClients row (same "Admin > Clients" area as 5RJSL) so the two
+// kinds of engagement share one client list; commissionRatePerTrip is
+// simply unused for a client with no deliveryTrips. JJTS itself services
+// Triton Industrial Plastic Manufacturing Corp, whose own PMS form this
+// client's fleet reports are printed on - see lib/fleet-pdf.ts.
+async function seedJjts() {
+  const existing = await db.query.personalClients.findFirst({
+    where: eq(personalClients.id, "jjts"),
+  });
+  if (existing) return;
+
+  await db.insert(personalClients).values({
+    id: "jjts",
+    name: "JJTS Enterprises",
+    industry: "Trucking Services",
+    businessAddress: "Blk 13A Lot 02 Severino Delas Alas, General Mariano Alvarez, Cavite",
+    email: "jjtstrucking@yahoo.com",
+    tin: "",
+    commissionRatePerTrip: 0,
+    preparedByName: "",
+    preparedByTitle: "",
+    confirmedByName: "",
+    confirmedByTitle: "",
+    nextInvoiceNumber: 1,
+  });
+
+  console.log("Seeded personal client: JJTS Enterprises (fleet PMS monitoring)");
 }
