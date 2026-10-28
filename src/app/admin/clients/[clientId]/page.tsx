@@ -1,10 +1,11 @@
 import { getServerSession } from "next-auth";
 import { redirect, notFound } from "next/navigation";
 import Link from "next/link";
-import { desc, eq } from "drizzle-orm";
+import { desc, eq, inArray } from "drizzle-orm";
 import { authOptions } from "@/lib/auth";
 import { db } from "@/db";
-import { personalClients, personalClientCustomers, billingBatches } from "@/db/schema";
+import { personalClients, personalClientCustomers, billingBatches, fleetVehicles, fleetPmsRecords } from "@/db/schema";
+import { computeDueStatus } from "@/lib/fleet-pms";
 import Navbar from "@/components/Navbar";
 
 export default async function ClientDetailPage({ params }: { params: { clientId: string } }) {
@@ -27,6 +28,21 @@ export default async function ClientDetailPage({ params }: { params: { clientId:
     .orderBy(desc(billingBatches.batchDate));
 
   const customerNameById = new Map(customers.map((c) => [c.id, c.name]));
+
+  const vehicles = await db
+    .select()
+    .from(fleetVehicles)
+    .where(eq(fleetVehicles.personalClientId, client.id))
+    .orderBy(fleetVehicles.plateNumber);
+  const vehicleIds = vehicles.map((v) => v.id);
+  const allPmsRecords = vehicleIds.length
+    ? await db.select().from(fleetPmsRecords).where(inArray(fleetPmsRecords.vehicleId, vehicleIds))
+    : [];
+  const pmsRecordsByVehicle = new Map<string, typeof allPmsRecords>();
+  for (const r of allPmsRecords) {
+    if (!pmsRecordsByVehicle.has(r.vehicleId)) pmsRecordsByVehicle.set(r.vehicleId, []);
+    pmsRecordsByVehicle.get(r.vehicleId)!.push(r);
+  }
 
   return (
     <>
@@ -172,6 +188,77 @@ export default async function ClientDetailPage({ params }: { params: { clientId:
             </div>
             <button type="submit" className="btn-primary">
               Add Customer
+            </button>
+          </form>
+        </div>
+
+        <div className="mb-8">
+          <h2 className="mb-3 font-bold text-gray-900">Fleet / PMS Monitoring</h2>
+          <div className="space-y-3">
+            {vehicles.length === 0 && <p className="text-sm text-gray-500">No trucks yet - add one below.</p>}
+            {vehicles.map((v) => {
+              const status = computeDueStatus(pmsRecordsByVehicle.get(v.id) || []);
+              return (
+                <Link
+                  key={v.id}
+                  href={`/admin/clients/${client.id}/trucks/${v.id}`}
+                  className="card flex items-center justify-between transition hover:-translate-y-0.5 hover:border-brand-300 hover:shadow-md"
+                >
+                  <div>
+                    <p className="font-semibold text-gray-900">
+                      {v.plateNumber}
+                      {v.truckName && <span className="font-normal text-gray-500"> ({v.truckName})</span>}
+                    </p>
+                    <p className="text-xs text-gray-500">
+                      {status.neverServiced
+                        ? "No completed PMS on record yet"
+                        : `Last PMS: ${new Date(status.lastCompleted!.pmsDate!).toLocaleDateString("en-PH")} · Next due: ${new Date(
+                            status.nextDueDate!
+                          ).toLocaleDateString("en-PH")}`}
+                    </p>
+                  </div>
+                  {status.overdue && (
+                    <span className="rounded-full bg-red-50 px-2.5 py-1 text-xs font-medium text-red-700">Overdue</span>
+                  )}
+                </Link>
+              );
+            })}
+          </div>
+
+          <form action={`/api/admin/clients/${client.id}/trucks`} method="POST" className="card mt-4 space-y-3">
+            <h3 className="text-sm font-semibold text-gray-900">Add a Truck</h3>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <div>
+                <label className="mb-1 block text-sm font-medium text-gray-700">Plate No.</label>
+                <input name="plateNumber" required className="input" placeholder="e.g. CBR2532" />
+              </div>
+              <div>
+                <label className="mb-1 block text-sm font-medium text-gray-700">Truck Name (optional)</label>
+                <input name="truckName" className="input" />
+              </div>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <div>
+                <label className="mb-1 block text-sm font-medium text-gray-700">Date Acquired (optional)</label>
+                <input name="dateAcquired" type="date" className="input" />
+              </div>
+              <div>
+                <label className="mb-1 block text-sm font-medium text-gray-700">Registration Date (optional)</label>
+                <input name="registrationDate" type="date" className="input" />
+              </div>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <div>
+                <label className="mb-1 block text-sm font-medium text-gray-700">Location (optional)</label>
+                <input name="location" className="input" placeholder="e.g. Loading Area" />
+              </div>
+              <div>
+                <label className="mb-1 block text-sm font-medium text-gray-700">Status/Remarks (optional)</label>
+                <input name="status" className="input" placeholder="e.g. Good Running Condition" />
+              </div>
+            </div>
+            <button type="submit" className="btn-primary">
+              Add Truck
             </button>
           </form>
         </div>

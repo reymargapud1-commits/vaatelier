@@ -370,3 +370,44 @@ export const billingBatches = sqliteTable("billing_batches", {
   commissionTotal: real("commission_total").notNull(),
   createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
 });
+
+// -----------------------------------------------------------------------
+// Fleet PMS monitoring (Admin > Clients > a client's Trucks) - preventive
+// maintenance schedule tracking for a personal client's delivery trucks
+// (first client: JJTS Enterprises, servicing Triton Industrial Plastic
+// Manufacturing Corp). Separate from deliveryTrips/billingBatches above
+// (that feature is trip billing; this is vehicle maintenance history). A
+// truck belongs to a personalClients row the same way a
+// personalClientCustomers row does.
+// -----------------------------------------------------------------------
+
+export const fleetVehicles = sqliteTable("fleet_vehicles", {
+  id: text("id").primaryKey(),
+  personalClientId: text("personal_client_id").notNull().references(() => personalClients.id),
+  plateNumber: text("plate_number").notNull(),
+  truckName: text("truck_name").notNull().default(""),
+  dateAcquired: integer("date_acquired", { mode: "timestamp" }),
+  registrationDate: integer("registration_date", { mode: "timestamp" }),
+  location: text("location").notNull().default(""),
+  status: text("status").notNull().default(""),
+  active: integer("active", { mode: "boolean" }).notNull().default(true),
+  createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
+});
+
+// One row per PMS event for a truck - planned, completed, or both. Entered
+// by hand by the admin (including backfilled historical entries), so every
+// field except remarks/personInCharge is nullable: a record with no
+// actualOdo/pmsDate yet is just a planned slot. "Last completed PMS" for
+// the overdue calculation (see lib/fleet-pms.ts) = the most recent row
+// with both actualOdo and pmsDate set.
+export const fleetPmsRecords = sqliteTable("fleet_pms_records", {
+  id: text("id").primaryKey(),
+  vehicleId: text("vehicle_id").notNull().references(() => fleetVehicles.id),
+  planOdo: integer("plan_odo"),
+  actualOdo: integer("actual_odo"),
+  mileage: integer("mileage"),
+  pmsDate: integer("pms_date", { mode: "timestamp" }),
+  remarks: text("remarks").notNull().default(""),
+  personInCharge: text("person_in_charge").notNull().default(""),
+  createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
+});
