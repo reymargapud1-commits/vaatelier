@@ -556,65 +556,62 @@ export async function generateFleetPmsChecklistPdf(params: FleetPmsChecklistPara
     y = drawChecklistRow(page, fonts, MARGIN, y, item, i % 2 === 1);
   });
 
-  // Legend + Remarks, side by side with the truck diagram (for marking
-  // S/D/B damage locations by hand) - laid out as two columns instead of
-  // stacked so the diagram fits without pushing the form past one page.
-  // The diagram is part of the original Triton form (per Reymar), included
-  // here exactly as supplied.
-  // The truck diagram sits on the right (same side as the source Triton
-  // form) and is given more room; the Remarks/Comments box on the left is
-  // kept deliberately smaller than the diagram's height, per Reymar.
+  // Truck diagram on the LEFT, Legend + Remarks + Evaluated-by on the RIGHT
+  // - matches the actual position in the source Triton Excel form (per
+  // Reymar's screenshot of the original sheet). Laid out as two columns so
+  // the diagram fits without pushing the form past one page.
   y -= 8;
   const diagram = await loadImage(pdfDoc, "truck-diagram.png");
-  const diagramW = 180;
-  const diagramH = diagram ? diagram.height * (diagramW / diagram.width) : 127;
-  const legendBlockH = diagramH + 9;
-  if (y < legendBlockH + 30) {
+  const diagramW = 200;
+  const diagramH = diagram ? diagram.height * (diagramW / diagram.width) : 162;
+  const blockH = diagramH;
+  if (y < blockH + 30) {
     page = pdfDoc.addPage([PAGE_WIDTH, PAGE_HEIGHT]);
     y = PAGE_HEIGHT - MARGIN;
   }
 
-  const leftColW = CONTENT_WIDTH - diagramW - 14;
-  let ly = y;
-  page.drawText("LEGEND:", { x: MARGIN, y: ly, size: 7, font: fonts.sansBold, color: DARK });
-  ly -= 10;
-  page.drawText("S - SCRATCH     D - DENTS     B - BROKEN", { x: MARGIN, y: ly, size: 6.5, font: fonts.sans, color: GRAY });
-  ly -= 12;
-  page.drawText("REMARKS / COMMENTS", { x: MARGIN, y: ly, size: 7, font: fonts.sansBold, color: DARK });
-  ly -= 5;
-  const fullBoxH = ly - (y - legendBlockH);
-  const remarksBoxH = Math.max(40, fullBoxH - 30); // shrunk - a shorter box than the diagram's height, anchored to the label above it
+  // Left column: the truck diagram, for marking damage location by hand.
+  page.drawText("MARK DAMAGE LOCATION (S / D / B)", { x: MARGIN, y, size: 6, font: fonts.sansBold, color: GRAY });
+  if (diagram) {
+    page.drawImage(diagram, { x: MARGIN, y: y - 9 - diagramH, width: diagramW, height: diagramH });
+  }
+
+  // Right column: Legend, Remarks/Comments box, and the Evaluated-by
+  // signature - all stacked together, same as the original form's layout.
+  const rightColX = MARGIN + diagramW + 14;
+  const rightColW = CONTENT_WIDTH - diagramW - 14;
+  let ry = y;
+  page.drawText("LEGEND:", { x: rightColX, y: ry, size: 7, font: fonts.sansBold, color: DARK });
+  ry -= 10;
+  page.drawText("S - SCRATCH     D - DENTS     B - BROKEN", { x: rightColX, y: ry, size: 6.5, font: fonts.sans, color: GRAY });
+  ry -= 12;
+  page.drawText("REMARKS / COMMENTS", { x: rightColX, y: ry, size: 7, font: fonts.sansBold, color: DARK });
+  ry -= 5;
+  const sigReserve = 32; // room below the box for "Evaluated by:" + line + role
+  const remarksBoxH = Math.max(40, ry - (y - blockH) - 8 - sigReserve);
   page.drawRectangle({
-    x: MARGIN,
-    y: ly - remarksBoxH,
-    width: leftColW,
+    x: rightColX,
+    y: ry - remarksBoxH,
+    width: rightColW,
     height: remarksBoxH,
     borderColor: BORDER,
     borderWidth: 0.75,
   });
-
-  const diagramX = MARGIN + leftColW + 14;
-  page.drawText("MARK DAMAGE LOCATION (S / D / B)", { x: diagramX, y, size: 6, font: fonts.sansBold, color: GRAY });
-  if (diagram) {
-    page.drawImage(diagram, { x: diagramX, y: y - 9 - diagramH, width: diagramW, height: diagramH });
-  }
-  y -= legendBlockH + 4;
+  ry -= remarksBoxH + 10;
 
   // Signature - blank, filled in by hand at print time (per Reymar: no
   // fixed defaults, since who evaluates/mans the shift varies visit to
   // visit - same approach as the history report's signature block).
-  if (y < 36) {
-    page = pdfDoc.addPage([PAGE_WIDTH, PAGE_HEIGHT]);
-    y = PAGE_HEIGHT - MARGIN - 20;
-  }
-  const sigX = MARGIN;
-  const sigW = 220;
-  page.drawText("Evaluated by:", { x: sigX, y: y + 16, size: 7.5, font: fonts.sansBold, color: GRAY });
-  page.drawLine({ start: { x: sigX, y }, end: { x: sigX + sigW, y }, thickness: 0.75, color: DARK });
-  page.drawText("Mechanic on Duty", { x: sigX, y: y - 10, size: 7, font: fonts.sans, color: GRAY });
+  page.drawText("Evaluated by:", { x: rightColX, y: ry, size: 7.5, font: fonts.sansBold, color: GRAY });
+  ry -= 14;
+  page.drawLine({ start: { x: rightColX, y: ry }, end: { x: rightColX + rightColW, y: ry }, thickness: 0.75, color: DARK });
+  ry -= 10;
+  page.drawText("Mechanic on Duty", { x: rightColX, y: ry, size: 7, font: fonts.sans, color: GRAY });
+
+  y -= blockH + 16;
 
   // Footer.
-  const footerY = Math.max(20, Math.min(36, y - 26));
+  const footerY = Math.max(20, Math.min(36, y));
   page.drawText(`Generated ${formatDate(params.generatedAt)} via The VA Atelier for ${client.name}`, {
     x: MARGIN,
     y: footerY,
