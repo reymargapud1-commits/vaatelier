@@ -399,12 +399,15 @@ export const fleetVehicles = sqliteTable("fleet_vehicles", {
 // field except remarks/personInCharge is nullable: a record with no
 // actualOdo/pmsDate yet is just a planned slot. "Last completed PMS" for
 // the overdue calculation (see lib/fleet-pms.ts) = the most recent row
-// with both actualOdo and pmsDate set.
+// with both actualOdo and pmsDate set. planOdo/actualOdo are free text
+// (not a number) because not every truck has an odometer - some trucks
+// are tracked by a date instead (e.g. "10/28/2026") rather than a km
+// reading, so the field has to hold either.
 export const fleetPmsRecords = sqliteTable("fleet_pms_records", {
   id: text("id").primaryKey(),
   vehicleId: text("vehicle_id").notNull().references(() => fleetVehicles.id),
-  planOdo: integer("plan_odo"),
-  actualOdo: integer("actual_odo"),
+  planOdo: text("plan_odo"),
+  actualOdo: text("actual_odo"),
   mileage: integer("mileage"),
   pmsDate: integer("pms_date", { mode: "timestamp" }),
   remarks: text("remarks").notNull().default(""),

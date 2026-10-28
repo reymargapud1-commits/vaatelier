@@ -41,8 +41,8 @@ export async function POST(req: Request, { params }: { params: { truckId: string
   await db.insert(fleetPmsRecords).values({
     id,
     vehicleId: params.truckId,
-    planOdo: planOdoRaw ? Number(planOdoRaw) : null,
-    actualOdo: actualOdoRaw ? Number(actualOdoRaw) : null,
+    planOdo: planOdoRaw || null,
+    actualOdo: actualOdoRaw || null,
     mileage: mileageRaw ? Number(mileageRaw) : null,
     pmsDate: new Date(pmsDateRaw),
     remarks,

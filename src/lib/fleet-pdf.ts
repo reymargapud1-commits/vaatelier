@@ -325,8 +325,8 @@ export async function generateFleetPmsReportPdf(params: FleetPmsReportParams): P
       }
       const row: RowData = {
         date: r.pmsDate ? formatDateShort(r.pmsDate) : "-",
-        planOdo: r.planOdo != null ? r.planOdo.toLocaleString("en-PH") : "-",
-        actualOdo: r.actualOdo != null ? r.actualOdo.toLocaleString("en-PH") : "-",
+        planOdo: r.planOdo || "-",
+        actualOdo: r.actualOdo || "-",
         mileage: r.mileage != null ? r.mileage.toLocaleString("en-PH") : "-",
         remarks: r.remarks || "-",
         personInCharge: r.personInCharge || "-",

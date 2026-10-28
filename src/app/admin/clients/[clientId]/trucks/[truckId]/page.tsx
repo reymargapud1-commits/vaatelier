@@ -188,11 +188,11 @@ export default async function TruckDetailPage({
               </div>
               <div>
                 <label className="mb-1 block text-sm font-medium text-gray-700">Plan Odo</label>
-                <input name="planOdo" type="number" min="0" className="input" />
+                <input name="planOdo" className="input" placeholder="e.g. 45,000 or 10/28/2026" />
               </div>
               <div>
                 <label className="mb-1 block text-sm font-medium text-gray-700">Actual Odo</label>
-                <input name="actualOdo" type="number" min="0" className="input" />
+                <input name="actualOdo" className="input" placeholder="e.g. 45,000 or 10/28/2026" />
               </div>
               <div>
                 <label className="mb-1 block text-sm font-medium text-gray-700">Mileage</label>
@@ -237,10 +237,8 @@ export default async function TruckDetailPage({
                   {records.map((r) => (
                     <tr key={r.id}>
                       <td className="px-4 py-3 text-gray-700">{fmtDate(r.pmsDate)}</td>
-                      <td className="px-4 py-3 text-gray-700">{r.planOdo != null ? r.planOdo.toLocaleString("en-PH") : "—"}</td>
-                      <td className="px-4 py-3 text-gray-700">
-                        {r.actualOdo != null ? r.actualOdo.toLocaleString("en-PH") : "—"}
-                      </td>
+                      <td className="px-4 py-3 text-gray-700">{r.planOdo || "—"}</td>
+                      <td className="px-4 py-3 text-gray-700">{r.actualOdo || "—"}</td>
                       <td className="px-4 py-3 text-gray-700">{r.mileage != null ? r.mileage.toLocaleString("en-PH") : "—"}</td>
                       <td className="px-4 py-3 text-gray-700">{r.remarks || "—"}</td>
                       <td className="px-4 py-3 text-gray-700">{r.personInCharge || "—"}</td>
