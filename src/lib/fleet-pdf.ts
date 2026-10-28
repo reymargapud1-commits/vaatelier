@@ -610,15 +610,5 @@ export async function generateFleetPmsChecklistPdf(params: FleetPmsChecklistPara
 
   y -= blockH + 16;
 
-  // Footer.
-  const footerY = Math.max(20, Math.min(36, y));
-  page.drawText(`Generated ${formatDate(params.generatedAt)} via The VA Atelier for ${client.name}`, {
-    x: MARGIN,
-    y: footerY,
-    size: 6.5,
-    font: fonts.sans,
-    color: LIGHT_GRAY,
-  });
-
   return pdfDoc.save();
 }
