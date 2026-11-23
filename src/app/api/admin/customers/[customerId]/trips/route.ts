@@ -45,6 +45,18 @@ export async function POST(req: Request, { params }: { params: { customerId: str
     return new NextResponse("Invalid amount", { status: 400 });
   }
 
+  // VA Rate only applies to "direct" mode customers (see schema.ts) - sent
+  // as a separate field by the form only when that mode is active, so it's
+  // simply absent (stays null) for a "commission" mode customer.
+  const vaRateRaw = form.get("vaRate");
+  let vaRate: number | null = null;
+  if (vaRateRaw !== null && String(vaRateRaw).trim() !== "") {
+    vaRate = Number(vaRateRaw);
+    if (isNaN(vaRate) || vaRate < 0) {
+      return new NextResponse("Invalid VA Atelier rate", { status: 400 });
+    }
+  }
+
   await db.insert(deliveryTrips).values({
     id: randomUUID(),
     customerId: customer.id,
@@ -60,6 +72,7 @@ export async function POST(req: Request, { params }: { params: { customerId: str
     waybillNumber: String(form.get("waybillNumber") || "").trim(),
     remarks: String(form.get("remarks") || "").trim(),
     amountRate,
+    vaRate,
   });
 
   return NextResponse.redirect(

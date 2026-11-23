@@ -5,6 +5,7 @@ import { authOptions } from "@/lib/auth";
 import { db } from "@/db";
 import { users, staffPayrollRuns, staffProfiles } from "@/db/schema";
 import { generatePayslipPdf } from "@/lib/staff-pdf";
+import { listPresentDates } from "@/lib/staff-payroll";
 
 // Served to the staff member themselves (their own payslip) OR an admin
 // (viewing/downloading any staff member's payslip from /admin/staff) - same
@@ -39,6 +40,12 @@ export async function GET(req: Request, { params }: { params: { payrollId: strin
   }
 
   const coachName = process.env.COACH_NAME || "Reymar Gapud";
+  // A frozen payroll run only stores start/end + the day COUNT, not which
+  // specific days - re-derive the list from the time log for display. If
+  // entries were edited/deleted after this run was generated, the chips
+  // shown here may no longer exactly match daysPresent; that's fine, this is
+  // a display aid, not the source of truth for pay (the frozen numbers are).
+  const presentDates = await listPresentDates(payroll.userId, { start: payroll.periodStart, end: payroll.periodEnd });
 
   try {
     const pdfBytes = await generatePayslipPdf({
@@ -54,6 +61,7 @@ export async function GET(req: Request, { params }: { params: { payrollId: strin
       payrollId: payroll.id,
       generatedAt: payroll.generatedAt,
       coachName,
+      presentDates,
     });
 
     return new NextResponse(new Uint8Array(pdfBytes), {
