@@ -203,6 +203,8 @@ export async function seedDatabase() {
 
   await seedPersonalClients();
   await seedJjts();
+  await seedRjc();
+  await seedJmdCustomers();
 
   console.log("Seed complete.");
 }
@@ -276,4 +278,70 @@ async function seedJjts() {
   });
 
   console.log("Seeded personal client: JJTS Enterprises (fleet PMS monitoring)");
+}
+
+// R.J.C Trucking Services - Reymar's other trucking subcontractor, parallel
+// to JJTS, but (unlike JJTS) with no fleet/PMS monitoring - engaged purely
+// as a truck "vendor" for the JMD billing arrangement below.
+async function seedRjc() {
+  const existing = await db.query.personalClients.findFirst({
+    where: eq(personalClients.id, "rjc"),
+  });
+  if (existing) return;
+
+  await db.insert(personalClients).values({
+    id: "rjc",
+    name: "R.J.C Trucking Services",
+    industry: "Trucking Services",
+    businessAddress: "",
+    email: "",
+    tin: "",
+    commissionRatePerTrip: 0,
+    preparedByName: "",
+    preparedByTitle: "",
+    confirmedByName: "",
+    confirmedByTitle: "",
+    nextInvoiceNumber: 1,
+  });
+
+  console.log("Seeded personal client: R.J.C Trucking Services");
+}
+
+// J.M.D Southern Industrial Trading Inc. - a trucking customer Reymar
+// personally services using JJTS's and RJC's trucks as subcontractors, at
+// a different (lower) rate than what JMD actually pays him. To JJTS/RJC it
+// looks like JMD is their own direct customer (so each needs its own
+// Billing Statement + Acknowledgement Receipt "from" JJTS/RJC "to" JMD, at
+// the subcon rate - deliveryTrips.amountRate); in reality JMD pays Reymar
+// directly, so The VA Atelier also needs its own Billing Statement + AR
+// straight to JMD, at the real rate (deliveryTrips.vaRate). Hence
+// billingMode: "direct" on both rows - see schema.ts and lib/billing-pdf.ts.
+// One JMD customer row per vendor (not one shared row) since each vendor
+// has its own BS/AR numbering sequence to JMD.
+async function seedJmdCustomers() {
+  const existingUnderJjts = await db.query.personalClientCustomers.findFirst({
+    where: eq(personalClientCustomers.id, "jjts-jmd"),
+  });
+  if (!existingUnderJjts) {
+    await db.insert(personalClientCustomers).values({
+      id: "jjts-jmd",
+      personalClientId: "jjts",
+      name: "J.M.D Southern Industrial Trading Inc.",
+      billingMode: "direct",
+    });
+    console.log("Seeded customer: J.M.D Southern Industrial Trading Inc. (under JJTS Enterprises)");
+  }
+
+  const existingUnderRjc = await db.query.personalClientCustomers.findFirst({
+    where: eq(personalClientCustomers.id, "rjc-jmd"),
+  });
+  if (!existingUnderRjc) {
+    await db.insert(personalClientCustomers).values({
+      id: "rjc-jmd",
+      personalClientId: "rjc",
+      name: "J.M.D Southern Industrial Trading Inc.",
+      billingMode: "direct",
+    });
+    console.log("Seeded customer: J.M.D Southern Industrial Trading Inc. (under R.J.C Trucking Services)");
+  }
 }

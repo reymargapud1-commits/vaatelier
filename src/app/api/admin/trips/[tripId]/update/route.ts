@@ -57,6 +57,16 @@ export async function POST(req: Request, { params }: { params: { tripId: string 
     return new NextResponse("Invalid amount", { status: 400 });
   }
 
+  // See trips/route.ts (add delivery) for why this is only sometimes sent.
+  const vaRateRaw = form.get("vaRate");
+  let vaRate: number | null = null;
+  if (vaRateRaw !== null && String(vaRateRaw).trim() !== "") {
+    vaRate = Number(vaRateRaw);
+    if (isNaN(vaRate) || vaRate < 0) {
+      return new NextResponse("Invalid VA Atelier rate", { status: 400 });
+    }
+  }
+
   await db
     .update(deliveryTrips)
     .set({
@@ -72,6 +82,7 @@ export async function POST(req: Request, { params }: { params: { tripId: string 
       waybillNumber: String(form.get("waybillNumber") || "").trim(),
       remarks: String(form.get("remarks") || "").trim(),
       amountRate,
+      vaRate,
     })
     .where(eq(deliveryTrips.id, trip.id));
 
