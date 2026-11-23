@@ -239,26 +239,6 @@ export const personalClientCustomers = sqliteTable("personal_client_customers", 
   // on the customer's page so it can be set to continue an existing
   // paper-trail sequence.
   nextBsNumber: integer("next_bs_number").notNull().default(1),
-  // "commission" (default, e.g. 5RJSL -> Paintplas): Generate Billing
-  // produces a Billing Statement (personalClient -> customer) plus a flat
-  // Commission Invoice (The VA Atelier -> personalClient). "direct" (e.g.
-  // JJTS/RJC -> JMD): Reymar is actually the one paid by this customer, but
-  // fronts it to the personalClient as if the customer pays THEM directly
-  // (see lib/billing-pdf.ts) - so Generate Billing instead produces that
-  // same Billing Statement (at deliveryTrips.amountRate, the subcon rate
-  // Reymar actually pays the personalClient) PLUS a second, real Billing
-  // Statement from The VA Atelier straight to the customer (at
-  // deliveryTrips.vaRate, what the customer actually pays Reymar) - no
-  // Commission Invoice in this mode. Either mode's batches can later get
-  // Acknowledgement Receipts once marked paid.
-  billingMode: text("billing_mode").notNull().default("commission"),
-  // AR numbering for the personalClient -> customer Acknowledgement
-  // Receipt (either mode, once a batch is marked paid).
-  nextArNumber: integer("next_ar_number").notNull().default(1),
-  // "direct" mode only: The VA Atelier's own Billing Statement + AR
-  // numbering straight to this customer.
-  vaNextBsNumber: integer("va_next_bs_number").notNull().default(1),
-  vaNextArNumber: integer("va_next_ar_number").notNull().default(1),
   createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
 });
 
@@ -368,16 +348,8 @@ export const deliveryTrips = sqliteTable("delivery_trips", {
   waybillNumber: text("waybill_number").notNull().default(""),
   remarks: text("remarks").notNull().default(""),
   // Plain pesos, VAT-exclusive - matches the source paper billing
-  // statement, which enters and displays this figure the same way. For a
-  // "direct" mode customer (see personalClientCustomers.billingMode) this
-  // is the subcon rate Reymar actually pays the personalClient - what
-  // their own (fronted) Billing Statement to the customer shows.
+  // statement, which enters and displays this figure the same way.
   amountRate: real("amount_rate").notNull(),
-  // "direct" mode only (null otherwise): the real, full rate the customer
-  // actually pays Reymar for this trip - what The VA Atelier's own direct
-  // Billing Statement to the customer shows. Always >= amountRate; the
-  // difference is Reymar's margin.
-  vaRate: real("va_rate"),
   // Set once this trip is included in a "Generate Billing" batch - from
   // then on it's excluded from the unbilled list and can't be picked again.
   billingBatchId: text("billing_batch_id").references(() => billingBatches.id),
@@ -395,25 +367,7 @@ export const billingBatches = sqliteTable("billing_batches", {
   subtotal: real("subtotal").notNull(),
   vatAmount: real("vat_amount").notNull(),
   totalToCustomer: real("total_to_customer").notNull(),
-  // "commission" mode batches only - the flat Commission Invoice total
-  // (The VA Atelier -> personalClient). Left 0 for "direct" mode batches,
-  // which use the va* fields below instead.
   commissionTotal: real("commission_total").notNull(),
-  // "direct" mode only (null otherwise) - The VA Atelier's own Billing
-  // Statement straight to the customer, computed from deliveryTrips.vaRate
-  // the same way bsNumber/subtotal/vatAmount/totalToCustomer above are
-  // computed from amountRate.
-  vaBsNumber: text("va_bs_number"),
-  vaSubtotal: real("va_subtotal"),
-  vaVatAmount: real("va_vat_amount"),
-  vaTotal: real("va_total"),
-  // Set once this batch is marked paid - unlocks downloading the
-  // Acknowledgement Receipt(s) for it. arNumber is the personalClient ->
-  // customer AR; vaArNumber ("direct" mode only) is The VA Atelier's own
-  // AR straight to the customer.
-  paidAt: integer("paid_at", { mode: "timestamp" }),
-  arNumber: text("ar_number"),
-  vaArNumber: text("va_ar_number"),
   createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()).notNull(),
 });
 

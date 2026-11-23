@@ -71,13 +71,6 @@
       "when": 1793159945600,
       "tag": "0009_greedy_bullseye",
       "breakpoints": true
-    },
-    {
-      "idx": 10,
-      "version": "6",
-      "when": 1795139240019,
-      "tag": "0010_dizzy_vulture",
-      "breakpoints": true
     }
   ]
 }

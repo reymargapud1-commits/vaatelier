@@ -39,40 +39,15 @@ export async function POST(req: Request, { params }: { params: { batchId: string
 
   await db.delete(billingBatches).where(eq(billingBatches.id, batch.id));
 
-  // Roll back the BS # sequence(s) - and, if this batch was ever marked
-  // paid, the AR # sequence(s) too - only if this batch was the latest one
+  // Roll back the BS # sequence only if this batch was the latest one
   // issued to this customer (i.e. nothing has been numbered after it yet).
-  // "direct" mode batches (customer.billingMode) also have their own
-  // vaBsNumber/vaArNumber sequence (The VA Atelier -> customer), rolled
-  // back the same way.
   if (customer) {
-    const rollback: Partial<typeof customer> = {};
-
     const batchBsNumber = parseInt(batch.bsNumber, 10);
     if (!isNaN(batchBsNumber) && customer.nextBsNumber === batchBsNumber + 1) {
-      rollback.nextBsNumber = batchBsNumber;
-    }
-    if (batch.vaBsNumber) {
-      const batchVaBsNumber = parseInt(batch.vaBsNumber, 10);
-      if (!isNaN(batchVaBsNumber) && customer.vaNextBsNumber === batchVaBsNumber + 1) {
-        rollback.vaNextBsNumber = batchVaBsNumber;
-      }
-    }
-    if (batch.arNumber) {
-      const batchArNumber = parseInt(batch.arNumber, 10);
-      if (!isNaN(batchArNumber) && customer.nextArNumber === batchArNumber + 1) {
-        rollback.nextArNumber = batchArNumber;
-      }
-    }
-    if (batch.vaArNumber) {
-      const batchVaArNumber = parseInt(batch.vaArNumber, 10);
-      if (!isNaN(batchVaArNumber) && customer.vaNextArNumber === batchVaArNumber + 1) {
-        rollback.vaNextArNumber = batchVaArNumber;
-      }
-    }
-
-    if (Object.keys(rollback).length > 0) {
-      await db.update(personalClientCustomers).set(rollback).where(eq(personalClientCustomers.id, customer.id));
+      await db
+        .update(personalClientCustomers)
+        .set({ nextBsNumber: batchBsNumber })
+        .where(eq(personalClientCustomers.id, customer.id));
     }
   }
 

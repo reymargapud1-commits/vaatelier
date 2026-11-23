@@ -56,8 +56,6 @@ export default async function CustomerMonitoringPage({
     .limit(10);
 
   const unbilledSubtotal = unbilledTrips.reduce((s, t) => s + t.amountRate, 0);
-  const isDirect = customer.billingMode === "direct";
-  const unbilledVaSubtotal = unbilledTrips.reduce((s, t) => s + (t.vaRate ?? 0), 0);
 
   return (
     <>
@@ -126,25 +124,10 @@ export default async function CustomerMonitoringPage({
                 <input name="remarks" className="input" />
               </div>
               <div>
-                <label className="mb-1 block text-sm font-medium text-gray-700">
-                  {isDirect ? `${client.name} Rate (₱, VAT-exclusive)` : "Amount Rate (₱, VAT-exclusive)"}
-                </label>
+                <label className="mb-1 block text-sm font-medium text-gray-700">Amount Rate (₱, VAT-exclusive)</label>
                 <input name="amountRate" type="number" step="0.01" min="0" required className="input" />
               </div>
             </div>
-            {isDirect && (
-              <div className="grid gap-3 sm:grid-cols-2">
-                <div>
-                  <label className="mb-1 block text-sm font-medium text-gray-700">
-                    The VA Atelier Rate (₱, VAT-exclusive)
-                  </label>
-                  <input name="vaRate" type="number" step="0.01" min="0" required className="input" />
-                  <p className="mt-1 text-xs text-gray-500">
-                    The real rate {customer.name} actually pays you for this trip.
-                  </p>
-                </div>
-              </div>
-            )}
             <button type="submit" className="btn-primary">
               Add Delivery
             </button>
@@ -155,13 +138,7 @@ export default async function CustomerMonitoringPage({
           <div className="mb-3 flex items-center justify-between">
             <h2 className="font-bold text-gray-900">Unbilled Deliveries ({unbilledTrips.length})</h2>
             <p className="text-sm text-gray-500">
-              {isDirect
-                ? `${client.name}: ₱${unbilledSubtotal.toLocaleString("en-PH", {
-                    minimumFractionDigits: 2,
-                  })} · The VA Atelier: ₱${unbilledVaSubtotal.toLocaleString("en-PH", {
-                    minimumFractionDigits: 2,
-                  })}`
-                : `Subtotal: ₱${unbilledSubtotal.toLocaleString("en-PH", { minimumFractionDigits: 2 })}`}
+              Subtotal: ₱{unbilledSubtotal.toLocaleString("en-PH", { minimumFractionDigits: 2 })}
             </p>
           </div>
 
@@ -189,8 +166,7 @@ export default async function CustomerMonitoringPage({
                       <th className="px-3 py-2 font-medium">DR/SI #</th>
                       <th className="px-3 py-2 font-medium">Waybill #</th>
                       <th className="px-3 py-2 font-medium">Remarks</th>
-                      <th className="px-3 py-2 font-medium">{isDirect ? client.name : "Amount"}</th>
-                      {isDirect && <th className="px-3 py-2 font-medium">The VA Atelier</th>}
+                      <th className="px-3 py-2 font-medium">Amount</th>
                       <th className="px-3 py-2"></th>
                     </tr>
                   </thead>
@@ -199,7 +175,7 @@ export default async function CustomerMonitoringPage({
                       editingTripId === t.id ? (
                         <tr key={t.id} className="bg-amber-50">
                           <td className="px-3 py-2"></td>
-                          <td colSpan={isDirect ? 13 : 12} className="px-3 py-3">
+                          <td colSpan={12} className="px-3 py-3">
                             <form
                               action={`/api/admin/trips/${t.id}/update`}
                               method="POST"
@@ -276,7 +252,7 @@ export default async function CustomerMonitoringPage({
                                 </div>
                                 <div>
                                   <label className="mb-1 block text-xs font-medium text-gray-700">
-                                    {isDirect ? `${client.name} Rate (₱, VAT-exclusive)` : "Amount Rate (₱, VAT-exclusive)"}
+                                    Amount Rate (₱, VAT-exclusive)
                                   </label>
                                   <input
                                     name="amountRate"
@@ -289,24 +265,6 @@ export default async function CustomerMonitoringPage({
                                   />
                                 </div>
                               </div>
-                              {isDirect && (
-                                <div className="grid gap-3 sm:grid-cols-2">
-                                  <div>
-                                    <label className="mb-1 block text-xs font-medium text-gray-700">
-                                      The VA Atelier Rate (₱, VAT-exclusive)
-                                    </label>
-                                    <input
-                                      name="vaRate"
-                                      type="number"
-                                      step="0.01"
-                                      min="0"
-                                      required
-                                      defaultValue={t.vaRate ?? ""}
-                                      className="input"
-                                    />
-                                  </div>
-                                </div>
-                              )}
                               <div className="flex items-center gap-3">
                                 <button type="submit" className="btn-primary">
                                   Save Changes
@@ -341,13 +299,6 @@ export default async function CustomerMonitoringPage({
                           <td className="px-3 py-2 text-gray-700">
                             ₱{t.amountRate.toLocaleString("en-PH", { minimumFractionDigits: 2 })}
                           </td>
-                          {isDirect && (
-                            <td className="px-3 py-2 text-gray-700">
-                              {t.vaRate != null
-                                ? `₱${t.vaRate.toLocaleString("en-PH", { minimumFractionDigits: 2 })}`
-                                : "—"}
-                            </td>
-                          )}
                           <td className="px-3 py-2 whitespace-nowrap">
                             <Link
                               href={`/admin/clients/${client.id}/customers/${customer.id}?edit=${t.id}`}
@@ -373,20 +324,9 @@ export default async function CustomerMonitoringPage({
                   Generate Billing for Checked Deliveries
                 </button>
                 <p className="text-xs text-gray-500">
-                  {isDirect ? (
-                    <>
-                      This creates Billing Statement #{String(customer.nextBsNumber).padStart(4, "0")} ({client.name}{" "}
-                      → {customer.name}) and The VA Atelier's own Billing Statement #
-                      {String(customer.vaNextBsNumber).padStart(4, "0")} (The VA Atelier → {customer.name}) - both
-                      from the deliveries checked above.
-                    </>
-                  ) : (
-                    <>
-                      This creates Billing Statement #{String(customer.nextBsNumber).padStart(4, "0")} to{" "}
-                      {customer.name}, and Invoice #VA-{String(client.nextInvoiceNumber).padStart(4, "0")} for your
-                      commission from {client.name} - both from the deliveries checked above.
-                    </>
-                  )}
+                  This creates Billing Statement #{String(customer.nextBsNumber).padStart(4, "0")} to{" "}
+                  {customer.name}, and Invoice #VA-{String(client.nextInvoiceNumber).padStart(4, "0")} for your
+                  commission from {client.name} - both from the deliveries checked above.
                 </p>
               </div>
             </>
