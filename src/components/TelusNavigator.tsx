@@ -5,7 +5,9 @@ import { useEffect } from "react";
 /**
  * PureFibre Call Navigator - live-call SOP/script reference for the TELUS
  * PureFibre winback cold-calling script (separate client work, not VA
- * Atelier students). Ported from a standalone HTML tool into this app so
+ * Atelier students), plus a Products & Services tab covering TELUS's
+ * Internet/TV/Home Phone/Mobility/Security/Add-ons lineup with its own
+ * persuasive scripts. Ported from a standalone HTML tool into this app so
  * Reymar has one-stop access from the admin portal he already uses daily.
  *
  * All CSS classes, the CSS custom-property scope, and the global helper
@@ -61,7 +63,7 @@ const PFN_CSS = `
 
   /* ---------- sticky header ---------- */
   .pfn-topbar{
-    position:sticky; top:calc(var(--pfn-navbar-offset, 0px) + env(safe-area-inset-top,0px)); z-index:30;
+    position:sticky; top:env(safe-area-inset-top,0px); z-index:30;
     background:var(--bg);
     padding-top:calc(env(safe-area-inset-top,0px) + 14px);
     padding-bottom:10px;
@@ -97,6 +99,28 @@ const PFN_CSS = `
   .pfn-search-clear.pfn-show{display:block;}
   .pfn-no-results{display:none; text-align:center; color:var(--muted); padding:40px 10px; font-size:14px;}
   .pfn-no-results.pfn-show{display:block;}
+
+  /* ---------- top-level tab switch: Call Script vs Products & Services ---------- */
+  .pfn-tabswitch{display:flex; gap:8px; margin-top:10px;}
+  .pfn-tab-btn{
+    flex:1; padding:9px 8px; border-radius:9px; border:1px solid var(--border);
+    background:var(--surface); color:var(--muted); font-family:inherit; font-size:13px; font-weight:700;
+    cursor:pointer;
+  }
+  .pfn-tab-btn.pfn-active{background:var(--accent); border-color:var(--accent); color:var(--accent-fg);}
+  .pfn-tabpane{display:none;}
+  .pfn-tabpane.pfn-active{display:block;}
+
+  /* compact reference rows for long catalogs (theme packs, etc.) */
+  .pfn-ref-grid{display:grid; grid-template-columns:1fr; gap:6px;}
+  @media (min-width:560px){ .pfn-ref-grid{grid-template-columns:1fr 1fr;} }
+  .pfn-ref-row{
+    background:var(--bg); border:1px solid var(--border); border-radius:8px; padding:7px 10px;
+    display:flex; justify-content:space-between; gap:10px; font-size:12.5px;
+  }
+  .pfn-ref-row[hidden]{display:none;}
+  .pfn-ref-row .pfn-k{color:var(--muted);}
+  .pfn-ref-row .pfn-v{font-weight:700; font-variant-numeric:tabular-nums;}
 
   /* ---------- nav drawer (quick jump) ---------- */
   .pfn-nav-grid{
@@ -205,9 +229,14 @@ const PFN_MARKUP = `
       <input id="searchBox" type="text" inputmode="search" placeholder="Search a line, objection, or keyword (e.g. &quot;drilling&quot;, &quot;ID&quot;, &quot;contract&quot;)&hellip;" oninput="pfnFilterSOP(this.value)">
       <button class="pfn-search-clear" id="clearBtn" onclick="pfnClearSearch()">&times;</button>
     </div>
+    <div class="pfn-tabswitch" role="tablist" aria-label="Navigator sections">
+      <button type="button" class="pfn-tab-btn pfn-active" id="tabBtnCallScript" onclick="return pfnShowTab('callscript')">&#128222; Call Script</button>
+      <button type="button" class="pfn-tab-btn" id="tabBtnProducts" onclick="return pfnShowTab('products')">&#128176; Products &amp; Services</button>
+    </div>
   </div>
 </div>
 
+<div class="pfn-tabpane pfn-active" id="tabCallScript">
 <div class="pfn-wrap">
 
   <nav class="pfn-nav-grid" aria-label="Quick jump">
@@ -706,14 +735,289 @@ const PFN_MARKUP = `
     </details>
   </section>
 
-  <p class="pfn-no-results" id="noResults">No matches — try a different keyword.</p>
+  <p class="pfn-no-results">No matches — try a different keyword.</p>
 
-  <footer>PureFibre Call Navigator &middot; internal use only &middot; built for live calls</footer>
 </div>
+</div>
+
+<div class="pfn-tabpane" id="tabProducts">
+<div class="pfn-wrap">
+
+  <nav class="pfn-nav-grid" aria-label="Quick jump">
+    <a href="#p-internet" onclick="return pfnJumpTo('p-internet')">Internet</a>
+    <a href="#p-tv" onclick="return pfnJumpTo('p-tv')">TV</a>
+    <a href="#p-homephone" onclick="return pfnJumpTo('p-homephone')">Home Phone</a>
+    <a href="#p-mobility" onclick="return pfnJumpTo('p-mobility')">Mobility</a>
+    <a href="#p-security" onclick="return pfnJumpTo('p-security')">Security</a>
+    <a href="#p-addons" onclick="return pfnJumpTo('p-addons')">Add-ons</a>
+  </nav>
+
+  <section id="p-internet-section">
+    <div class="pfn-section-head"><h2>Internet</h2></div>
+
+    <details class="pfn-card" id="p-internet" data-searchable open>
+      <summary>&#127760; Internet Plans</summary>
+      <div class="pfn-card-body">
+        <div class="pfn-facts-grid">
+          <div class="pfn-fact"><span class="pfn-k">1.5 Gig — best value, lead with this</span><span class="pfn-v">$85/mo ($95 until AutoPay)</span></div>
+          <div class="pfn-fact"><span class="pfn-k">500 Mbps — budget option</span><span class="pfn-v">$70/mo ($80 until AutoPay)</span></div>
+          <div class="pfn-fact"><span class="pfn-k">3 Gig</span><span class="pfn-v">$95/mo ($110 until AutoPay)</span></div>
+          <div class="pfn-fact"><span class="pfn-k">1 Gig — being phased out</span><span class="pfn-v">$85/mo ($95 until AutoPay)</span></div>
+          <div class="pfn-fact"><span class="pfn-k">5 Gig — WiFi 7 hardware included</span><span class="pfn-v">$130/mo ($140 until AutoPay)</span></div>
+          <div class="pfn-fact"><span class="pfn-k">TELUS Internet (non-fibre, up to 150 Mbps)</span><span class="pfn-v">$60/mo ($65 until AutoPay)</span></div>
+          <div class="pfn-fact"><span class="pfn-k">TELUS Wireless Home Internet (non-fibre, 25–200 Mbps, SIM incl.)</span><span class="pfn-v">$55/mo ($60 until AutoPay)</span></div>
+          <div class="pfn-fact"><span class="pfn-k">All Gig-level plans include</span><span class="pfn-v">Free install + 5-Year Price Guarantee</span></div>
+        </div>
+
+        <div class="pfn-script-block">
+          <p class="pfn-script-text">Honestly, the plan most of our customers go with is the 1.5 Gig — it's actually our best value option because it's priced exactly the same as our older 1 Gig plan, just a lot faster. That's $85 a month, or $95 until you're set up on AutoPay.</p>
+          <button class="pfn-copy-btn" onclick="pfnCopyNearby(this)">Copy</button>
+        </div>
+        <div class="pfn-script-block">
+          <p class="pfn-script-text">If budget's the main thing, we also have a 500 Megabit option at $70 a month — still plenty fast for everyday streaming, video calls, and browsing.</p>
+          <button class="pfn-copy-btn" onclick="pfnCopyNearby(this)">Copy</button>
+        </div>
+        <div class="pfn-script-block">
+          <p class="pfn-script-text">And if you've got a lot of people on the network at once, or you're serious about gaming and 4K streaming, we go up to 3 Gig at $95 a month, or even 5 Gig at $130 a month, which comes with our newest WiFi 7 equipment included.</p>
+          <button class="pfn-copy-btn" onclick="pfnCopyNearby(this)">Copy</button>
+        </div>
+        <div class="pfn-script-block">
+          <p class="pfn-script-text">Every one of our Gig-level plans comes with free installation and a 5-year price guarantee, so what you sign up for today is what you'll keep paying.</p>
+          <button class="pfn-copy-btn" onclick="pfnCopyNearby(this)">Copy</button>
+        </div>
+        <div class="pfn-script-block">
+          <p class="pfn-script-text">If fibre isn't available at your address just yet, no worries — we can still get you connected through TELUS Internet, up to 150 Megabits unlimited, at $60 a month, or our Wireless Home Internet option at $55 a month.</p>
+          <button class="pfn-copy-btn" onclick="pfnCopyNearby(this)">Copy</button>
+        </div>
+
+        <div class="pfn-callout pfn-good"><b>Agent note</b>1 Gig is being phased out and costs the same as 1.5 Gig — always lead with 1.5 Gig, not 1 Gig.</div>
+      </div>
+    </details>
+  </section>
+
+  <section id="p-tv-section">
+    <div class="pfn-section-head"><h2>TV</h2></div>
+
+    <details class="pfn-card" id="p-tv" data-searchable>
+      <summary>&#128250; TV Packages</summary>
+      <div class="pfn-card-body">
+        <div class="pfn-facts-grid">
+          <div class="pfn-fact"><span class="pfn-k">Core</span><span class="pfn-v">$40/mo</span></div>
+          <div class="pfn-fact"><span class="pfn-k">Core + Pick 5</span><span class="pfn-v">$32/mo</span></div>
+          <div class="pfn-fact"><span class="pfn-k">Core + 1 Premium</span><span class="pfn-v">$32/mo</span></div>
+          <div class="pfn-fact"><span class="pfn-k">Core + 3 Theme Packs (PVR incl.)</span><span class="pfn-v">$35/mo</span></div>
+          <div class="pfn-fact"><span class="pfn-k">2 Theme Packs + 1 Premium (PVR incl.)</span><span class="pfn-v">$42/mo</span></div>
+          <div class="pfn-fact"><span class="pfn-k">1 Theme Pack + 2 Premium (PVR incl.)</span><span class="pfn-v">$47/mo</span></div>
+          <div class="pfn-fact"><span class="pfn-k">4 Theme Packs + 1 Premium (PVR incl.)</span><span class="pfn-v">$55/mo</span></div>
+          <div class="pfn-fact"><span class="pfn-k">3 Theme Packs + 2 Premium (PVR incl.)</span><span class="pfn-v">$62/mo</span></div>
+          <div class="pfn-fact"><span class="pfn-k">7 Theme Packs + 1 Premium (PVR incl.)</span><span class="pfn-v">$70/mo</span></div>
+          <div class="pfn-fact"><span class="pfn-k">11 Theme Packs + 2 Premium (PVR incl.)</span><span class="pfn-v">$100/mo</span></div>
+          <div class="pfn-fact"><span class="pfn-k">Extra TV box</span><span class="pfn-v">$10/box</span></div>
+          <div class="pfn-fact"><span class="pfn-k">Every package</span><span class="pfn-v">Free on the TELUS TV+ app</span></div>
+        </div>
+
+        <div class="pfn-script-block">
+          <p class="pfn-script-text">Want me to check if we can bundle in TV as well? Our Core package covers all your basics for $40 a month.</p>
+          <button class="pfn-copy-btn" onclick="pfnCopyNearby(this)">Copy</button>
+        </div>
+        <div class="pfn-script-block">
+          <p class="pfn-script-text">If you want a bit more variety, Core plus 3 Theme Packs is actually cheaper at $35 a month, and that tier already comes with a PVR included so you can record and replay your shows.</p>
+          <button class="pfn-copy-btn" onclick="pfnCopyNearby(this)">Copy</button>
+        </div>
+        <div class="pfn-script-block">
+          <p class="pfn-script-text">For the channel lovers, we go all the way up to 11 Theme Packs with 2 Premium channels for $100 a month — and every package works right on the TELUS TV+ app too, so you can watch from your phone or tablet.</p>
+          <button class="pfn-copy-btn" onclick="pfnCopyNearby(this)">Copy</button>
+        </div>
+        <div class="pfn-script-block">
+          <p class="pfn-script-text">And here's a nice closer — if you qualify on an eligible package, we can throw in a free PS5, or a 55-inch Samsung 4K HDR TV, your choice.</p>
+          <button class="pfn-copy-btn" onclick="pfnCopyNearby(this)">Copy</button>
+        </div>
+
+        <div class="pfn-callout pfn-warn"><b>Agent note</b>Core + Pick 5 and Core + 1 Premium ($32/mo) are manual fallback tiers — only offer these if the TV Package Recommender tool doesn't cover the household's channels. Lead with Core, or a Theme Pack tier, first.</div>
+      </div>
+    </details>
+  </section>
+
+  <section id="p-homephone-section">
+    <div class="pfn-section-head"><h2>Home Phone</h2></div>
+
+    <details class="pfn-card" id="p-homephone" data-searchable>
+      <summary>&#9742;&#65039; Home Phone</summary>
+      <div class="pfn-card-body">
+        <div class="pfn-callout pfn-warn"><b>New activations only</b>Home Phone must be activated together with Internet, or Internet + TV — it cannot stand alone.</div>
+
+        <div class="pfn-facts-grid">
+          <div class="pfn-fact"><span class="pfn-k">Home Phone Lite (1 feature)</span><span class="pfn-v">$5.89/mo</span></div>
+          <div class="pfn-fact"><span class="pfn-k">Home Phone (7 features: Display, Waiting, Voicemail, Forwarding, 3-Way, Return, Screen)</span><span class="pfn-v">$17.89/mo</span></div>
+          <div class="pfn-fact"><span class="pfn-k">World 60 Unlimited Long Distance</span><span class="pfn-v">$26/mo</span></div>
+          <div class="pfn-fact"><span class="pfn-k">Unlimited US &amp; Canada</span><span class="pfn-v">$18/mo</span></div>
+          <div class="pfn-fact"><span class="pfn-k">300 Min US &amp; Canada</span><span class="pfn-v">$10/mo</span></div>
+          <div class="pfn-fact"><span class="pfn-k">Asia Long Distance</span><span class="pfn-v">$7/mo</span></div>
+          <div class="pfn-fact"><span class="pfn-k">India 1000 Min</span><span class="pfn-v">$5/mo</span></div>
+          <div class="pfn-fact"><span class="pfn-k">Philippines 500 Min</span><span class="pfn-v">$5/mo</span></div>
+          <div class="pfn-fact"><span class="pfn-k">China 1000 Min</span><span class="pfn-v">$5/mo</span></div>
+          <div class="pfn-fact"><span class="pfn-k">International calls incl. US</span><span class="pfn-v">10&cent;/min</span></div>
+        </div>
+
+        <div class="pfn-script-block">
+          <p class="pfn-script-text">A lot of customers still like keeping a home phone line too — great for emergencies, or for older family members in the house. Our basic line is just $5.89 a month.</p>
+          <button class="pfn-copy-btn" onclick="pfnCopyNearby(this)">Copy</button>
+        </div>
+        <div class="pfn-script-block">
+          <p class="pfn-script-text">If you'd rather have the full set of calling features — call display, call waiting, voicemail, call forwarding, three-way calling, call return, and call screen — that's $17.89 a month for all seven.</p>
+          <button class="pfn-copy-btn" onclick="pfnCopyNearby(this)">Copy</button>
+        </div>
+        <div class="pfn-script-block">
+          <p class="pfn-script-text">And if anyone in the house still calls overseas, we can bundle that in too — Philippines 500 minutes is just $5 a month, India 1000 minutes is also $5, and if you need broader coverage, Asia Long Distance is $7 a month.</p>
+          <button class="pfn-copy-btn" onclick="pfnCopyNearby(this)">Copy</button>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <section id="p-mobility-section">
+    <div class="pfn-section-head"><h2>Mobility</h2></div>
+
+    <details class="pfn-card" id="p-mobility" data-searchable>
+      <summary>&#128241; Mobility</summary>
+      <div class="pfn-card-body">
+        <div class="pfn-callout pfn-warn">
+          <b>Process notes — read before quoting</b>
+          Mobility is a separate quote-only flow: include it in your total, but it will NOT show up on the customer's Home Services confirmation email, so always say the mobile price out loud. Don't mix Personal, Business, and EPP/RBC plans in one quote — pick one category. Prices already include PAB; turning PAB off adds $10/line.
+        </div>
+
+        <div class="pfn-facts-grid">
+          <div class="pfn-fact"><span class="pfn-k">Koodo Canada-only 60GB</span><span class="pfn-v">$45/line</span></div>
+          <div class="pfn-fact"><span class="pfn-k">Koodo CAN-US-MEX 60GB (roaming, 5G speed, 27 countries)</span><span class="pfn-v">$50/line</span></div>
+          <div class="pfn-fact"><span class="pfn-k">Koodo Canada Talk &amp; Text Only</span><span class="pfn-v">$25/line</span></div>
+          <div class="pfn-fact"><span class="pfn-k">M&amp;H manager-approved discount</span><span class="pfn-v">Eligible TELUS/Koodo personal or TELUS EPP only — not Business</span></div>
+        </div>
+
+        <div class="pfn-script-block">
+          <p class="pfn-script-text">Quick question — are you on TELUS or Koodo mobile already?</p>
+          <button class="pfn-copy-btn" onclick="pfnCopyNearby(this)">Copy</button>
+        </div>
+        <p class="pfn-wait-note">If yes, this ties directly into the Real MNH discount flow in the Call Script tab.</p>
+        <div class="pfn-script-block">
+          <p class="pfn-script-text">If not, we can actually bundle in a mobile line with your internet today — our Koodo Canada-only plan is $45 a month for 60 gigs, or if you travel to the US or Mexico, we have 60 gigs with roaming for $50 a month.</p>
+          <button class="pfn-copy-btn" onclick="pfnCopyNearby(this)">Copy</button>
+        </div>
+        <div class="pfn-script-block">
+          <p class="pfn-script-text">And if data's not really a priority, we do have a simple talk-and-text-only line for $25 a month.</p>
+          <button class="pfn-copy-btn" onclick="pfnCopyNearby(this)">Copy</button>
+        </div>
+
+        <p class="pfn-wait-note">Only Koodo consumer pricing is loaded here. Send the TELUS Personal / Business / EPP tabs too if you want those added.</p>
+      </div>
+    </details>
+  </section>
+
+  <section id="p-security-section">
+    <div class="pfn-section-head"><h2>Security</h2></div>
+
+    <details class="pfn-card" id="p-security" data-searchable>
+      <summary>&#128274; Home Security</summary>
+      <div class="pfn-card-body">
+        <div class="pfn-facts-grid">
+          <div class="pfn-fact"><span class="pfn-k">Self-Monitored (HomeView)</span><span class="pfn-v">$23/mo ($18 service + $5 hardware)</span></div>
+          <div class="pfn-fact"><span class="pfn-k">Professionally Monitored</span><span class="pfn-v">$83.19/mo ($55 service + $28.19 equipment)</span></div>
+          <div class="pfn-fact"><span class="pfn-k">Self-monitored install</span><span class="pfn-v">$0 self-install, or $200 one-time optional pro install</span></div>
+          <div class="pfn-fact"><span class="pfn-k">Professionally monitored install</span><span class="pfn-v">$125 one-time, required</span></div>
+        </div>
+
+        <div class="pfn-script-block">
+          <p class="pfn-script-text">Since you're already setting up your internet with us, a lot of customers like adding home security while we're at it. The self-monitored option is $23 a month — you manage everything yourself through the app, and it comes with an outdoor camera, which you can swap for an indoor or doorbell camera instead.</p>
+          <button class="pfn-copy-btn" onclick="pfnCopyNearby(this)">Copy</button>
+        </div>
+        <div class="pfn-script-block">
+          <p class="pfn-script-text">If you want the full package — professional monitoring, alarm response, the works — that's $83.19 a month, and it comes with a complete kit: control panel, outdoor camera, smart door lock, two door or window sensors, a motion sensor, a smoke and heat sensor, and a flood sensor.</p>
+          <button class="pfn-copy-btn" onclick="pfnCopyNearby(this)">Copy</button>
+        </div>
+
+        <div class="pfn-callout pfn-warn"><b>Agent note</b>Professionally monitored security requires a $125 one-time professional installation — it's not optional like the self-monitored option.</div>
+      </div>
+    </details>
+  </section>
+
+  <section id="p-addons-section">
+    <div class="pfn-section-head"><h2>Add-ons</h2></div>
+
+    <details class="pfn-card" id="p-addons" data-searchable>
+      <summary>&#10133; Streaming &amp; Extras</summary>
+      <div class="pfn-card-body">
+        <div class="pfn-callout pfn-good"><b>Quote-only</b>All add-ons below can go into your quoted total, but won't appear on the customer's Home Services confirmation email — always confirm the add-on price with them directly.</div>
+
+        <div class="pfn-script-block">
+          <p class="pfn-script-text">Want to add any entertainment extras while we're at it? We've got Netflix, Disney+, Crave, Apple TV+, and more — either on their own, or bundled into a Stream+ package, which works out cheaper than paying for each one separately.</p>
+          <button class="pfn-copy-btn" onclick="pfnCopyNearby(this)">Copy</button>
+        </div>
+
+        <div class="pfn-facts-grid">
+          <div class="pfn-fact"><span class="pfn-k">Stream+ Basic (Netflix &amp; Disney+ w/ads, Amazon Prime, TELUS Films+50 channels)</span><span class="pfn-v">$23/mo</span></div>
+          <div class="pfn-fact"><span class="pfn-k">Stream+ Premium (Netflix &amp; Disney+ Premium, Amazon Prime, TELUS Films+50 channels)</span><span class="pfn-v">$43/mo</span></div>
+          <div class="pfn-fact"><span class="pfn-k">Netflix</span><span class="pfn-v">$20/mo</span></div>
+          <div class="pfn-fact"><span class="pfn-k">Apple TV+</span><span class="pfn-v">$13/mo</span></div>
+          <div class="pfn-fact"><span class="pfn-k">Disney+</span><span class="pfn-v">$15/mo</span></div>
+          <div class="pfn-fact"><span class="pfn-k">Crave</span><span class="pfn-v">$22/mo</span></div>
+          <div class="pfn-fact"><span class="pfn-k">Hayu</span><span class="pfn-v">$7/mo</span></div>
+        </div>
+
+        <div class="pfn-script-block">
+          <p class="pfn-script-text">If you've got a big house or some dead zones, Wifi Plus is just $10 a month for whole-home WiFi support. And we can also set you up with a free TELUS email address, no extra charge.</p>
+          <button class="pfn-copy-btn" onclick="pfnCopyNearby(this)">Copy</button>
+        </div>
+        <div class="pfn-facts-grid">
+          <div class="pfn-fact"><span class="pfn-k">Wifi Plus (whole-home WiFi support)</span><span class="pfn-v">$10/mo</span></div>
+          <div class="pfn-fact"><span class="pfn-k">TELUS Email</span><span class="pfn-v">Included, no monthly charge</span></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="pfn-card" data-searchable>
+      <summary>&#128250; Theme Packs &amp; Specialty Channels (26)</summary>
+      <div class="pfn-card-body">
+        <div class="pfn-ref-grid">
+          <div class="pfn-ref-row" data-searchable><span class="pfn-k">Extra regular theme pack</span><span class="pfn-v">$11</span></div>
+          <div class="pfn-ref-row" data-searchable><span class="pfn-k">Sportsnet &amp; Beyond</span><span class="pfn-v">$13</span></div>
+          <div class="pfn-ref-row" data-searchable><span class="pfn-k">TSN &amp; Beyond</span><span class="pfn-v">$13</span></div>
+          <div class="pfn-ref-row" data-searchable><span class="pfn-k">WWE Network</span><span class="pfn-v">$15</span></div>
+          <div class="pfn-ref-row" data-searchable><span class="pfn-k">Fairchild TV1 HD</span><span class="pfn-v">$12</span></div>
+          <div class="pfn-ref-row" data-searchable><span class="pfn-k">GMA Pinoy TV</span><span class="pfn-v">$12</span></div>
+          <div class="pfn-ref-row" data-searchable><span class="pfn-k">TFC</span><span class="pfn-v">$15</span></div>
+          <div class="pfn-ref-row" data-searchable><span class="pfn-k">South Asian Super Pack</span><span class="pfn-v">$16</span></div>
+          <div class="pfn-ref-row" data-searchable><span class="pfn-k">BeIN Sports Pack</span><span class="pfn-v">$15</span></div>
+          <div class="pfn-ref-row" data-searchable><span class="pfn-k">SHUDDER</span><span class="pfn-v">$7</span></div>
+          <div class="pfn-ref-row" data-searchable><span class="pfn-k">ACORN TV</span><span class="pfn-v">$10</span></div>
+          <div class="pfn-ref-row" data-searchable><span class="pfn-k">IFC Films Unlimited</span><span class="pfn-v">$6</span></div>
+          <div class="pfn-ref-row" data-searchable><span class="pfn-k">STARZ</span><span class="pfn-v">$10</span></div>
+          <div class="pfn-ref-row" data-searchable><span class="pfn-k">Discovery+</span><span class="pfn-v">$9</span></div>
+          <div class="pfn-ref-row" data-searchable><span class="pfn-k">Abu Dhabi TV</span><span class="pfn-v">$15</span></div>
+          <div class="pfn-ref-row" data-searchable><span class="pfn-k">All TV Korean</span><span class="pfn-v">$15</span></div>
+          <div class="pfn-ref-row" data-searchable><span class="pfn-k">All TV K Korean</span><span class="pfn-v">$15</span></div>
+          <div class="pfn-ref-row" data-searchable><span class="pfn-k">Discovery Velocity</span><span class="pfn-v">$5</span></div>
+          <div class="pfn-ref-row" data-searchable><span class="pfn-k">Fairchild TV1 HD/OD</span><span class="pfn-v">$12</span></div>
+          <div class="pfn-ref-row" data-searchable><span class="pfn-k">Nippon TV</span><span class="pfn-v">$7</span></div>
+          <div class="pfn-ref-row" data-searchable><span class="pfn-k">OTN Greek</span><span class="pfn-v">$15</span></div>
+          <div class="pfn-ref-row" data-searchable><span class="pfn-k">RTVI Russian</span><span class="pfn-v">$15</span></div>
+          <div class="pfn-ref-row" data-searchable><span class="pfn-k">VGN TV Vietnamese</span><span class="pfn-v">$9</span></div>
+          <div class="pfn-ref-row" data-searchable><span class="pfn-k">Korean All TV Pack</span><span class="pfn-v">$25</span></div>
+          <div class="pfn-ref-row" data-searchable><span class="pfn-k">Japanese Super Pack</span><span class="pfn-v">$30</span></div>
+          <div class="pfn-ref-row" data-searchable><span class="pfn-k">Russian Pack</span><span class="pfn-v">$9</span></div>
+        </div>
+        <p class="pfn-wait-note">All theme packs shown are bundle promo pricing, quote-only (not on the confirmation email).</p>
+      </div>
+    </details>
+  </section>
+
+  <p class="pfn-no-results">No matches — try a different keyword.</p>
+
+</div>
+</div>
+
+<footer>PureFibre Call Navigator &middot; internal use only &middot; built for live calls</footer>
 
 <button class="pfn-back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
 </div>
-
 `;
 
 export default function TelusNavigator() {
@@ -739,9 +1043,9 @@ export default function TelusNavigator() {
     window.addEventListener("resize", updateNavbarOffset);
 
     // Raw <script> tags inside dangerouslySetInnerHTML never execute, so the
-    // navigator's behavior (copy-to-clipboard, quick-jump, live search) is
-    // defined here instead and attached to window, exactly like the
-    // original standalone page's inline onclick="..."/oninput="..."
+    // navigator's behavior (copy-to-clipboard, quick-jump, live search, tab
+    // switching) is defined here instead and attached to window, exactly
+    // like the original standalone page's inline onclick="..."/oninput="..."
     // attributes expect.
     function pfnCopyNearby(btn: any) {
       var block = btn.closest(".pfn-script-block");
@@ -795,14 +1099,15 @@ export default function TelusNavigator() {
       q = q.trim().toLowerCase();
       var clearBtn: any = document.getElementById("clearBtn");
       if (clearBtn) clearBtn.classList.toggle("pfn-show", q.length > 0);
-      var items = document.querySelectorAll("[data-searchable]");
+      var activePane: any = document.querySelector(".pfn-tabpane.pfn-active") || document;
+      var items = activePane.querySelectorAll("[data-searchable]");
       var anyMatch = false;
       items.forEach(function (el: any) {
         var match = !q || el.textContent.toLowerCase().indexOf(q) !== -1;
         el.hidden = !match;
         if (match && q) {
           anyMatch = true;
-          el.open = true;
+          if (el.tagName === "DETAILS") el.open = true;
           var p: any = el.parentElement ? el.parentElement.closest("details") : null;
           while (p) {
             p.open = true;
@@ -811,8 +1116,8 @@ export default function TelusNavigator() {
           }
         }
       });
-      var noResults: any = document.getElementById("noResults");
-      if (noResults) noResults.classList.toggle("pfn-show", !!q && !anyMatch);
+      var noResultsEl: any = activePane.querySelector(".pfn-no-results");
+      if (noResultsEl) noResultsEl.classList.toggle("pfn-show", !!q && !anyMatch);
     }
 
     function pfnClearSearch() {
@@ -823,11 +1128,31 @@ export default function TelusNavigator() {
       box.focus();
     }
 
+    function pfnShowTab(name: any) {
+      var panes: any = {
+        callscript: document.getElementById("tabCallScript"),
+        products: document.getElementById("tabProducts"),
+      };
+      var btns: any = {
+        callscript: document.getElementById("tabBtnCallScript"),
+        products: document.getElementById("tabBtnProducts"),
+      };
+      Object.keys(panes).forEach(function (key) {
+        var isActive = key === name;
+        if (panes[key]) panes[key].classList.toggle("pfn-active", isActive);
+        if (btns[key]) btns[key].classList.toggle("pfn-active", isActive);
+      });
+      pfnClearSearch();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return false;
+    }
+
     (window as any).pfnCopyNearby = pfnCopyNearby;
     (window as any).pfnJumpTo = pfnJumpTo;
     (window as any).pfnFilterSOP = pfnFilterSOP;
     (window as any).pfnClearSearch = pfnClearSearch;
     (window as any).pfnFallbackCopy = pfnFallbackCopy;
+    (window as any).pfnShowTab = pfnShowTab;
 
     return () => {
       window.removeEventListener("resize", updateNavbarOffset);
@@ -838,6 +1163,7 @@ export default function TelusNavigator() {
       delete (window as any).pfnFilterSOP;
       delete (window as any).pfnClearSearch;
       delete (window as any).pfnFallbackCopy;
+      delete (window as any).pfnShowTab;
     };
   }, []);
 
